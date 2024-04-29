@@ -1,46 +1,46 @@
 
 <script  lang="ts" setup>
 import videoURL from '@/assets/video/lg_part_2nd.mp4'
-import { MultipleLangFileNameEunm } from '@/model'
+import { MultipleLangFileNameEunm, VideoMaskEnum } from '@/model'
 import PartSTContent from '@/views/LiveGame/components/PartNDContent.vue'
 </script>
 
 <template>
     <div>
-        <div class="lg-nd-wrap">
-            <video muted loop="true" autoplay="true" class="lg-part-video">
-                <source :src="videoURL" type="video/mp4" />
-            </video>
-            <div class="lg-nd-content">
-                <span
-                    class="lg-nd-title"
-                    v-t="MultipleLangFileNameEunm.OurGamesAndProducts"
-                ></span>
-                <span
-                    class="lg-nd-name"
-                    v-t="MultipleLangFileNameEunm.ManBetXSport"
-                ></span>
-
-                <span
-                    v-t="MultipleLangFileNameEunm.OurGamesAndProductsTips"
-                    class="lg-nd-tips"
-                ></span>
-                <span
-                    v-t="MultipleLangFileNameEunm.OurGamesAndProductsContent"
-                    class="lg-nd-text"
-                ></span>
-                <PartSTContent></PartSTContent>
-
-                <div class="lg-btn-wrap">
+        <video-back-ground :src="videoURL" :mask="VideoMaskEnum.Both">
+            <div class="lg-nd-wrap">
+                <div class="lg-nd-content">
+                    <span class="lg-nd-title">{{
+                        $t(MultipleLangFileNameEunm.OurGamesAndProducts)
+                    }}</span>
                     <span
-                        v-t="MultipleLangFileNameEunm.SpButtonText"
-                        class="lg-btn-text"
+                        class="lg-nd-name"
+                        v-t="MultipleLangFileNameEunm.ManBetXSport"
                     ></span>
-                </div>
-            </div>
 
-            <div class="lg-nd-mask"></div>
-        </div>
+                    <span
+                        v-t="MultipleLangFileNameEunm.OurGamesAndProductsTips"
+                        class="lg-nd-tips"
+                    ></span>
+                    <span
+                        v-t="
+                            MultipleLangFileNameEunm.OurGamesAndProductsContent
+                        "
+                        class="lg-nd-text"
+                    ></span>
+                    <PartSTContent></PartSTContent>
+
+                    <div class="lg-btn-wrap">
+                        <span
+                            v-t="MultipleLangFileNameEunm.SpButtonText"
+                            class="lg-btn-text"
+                        ></span>
+                    </div>
+                </div>
+
+                <!-- <div class="lg-nd-mask"></div> -->
+            </div>
+        </video-back-ground>
     </div>
 </template>
 
@@ -98,16 +98,11 @@ import PartSTContent from '@/views/LiveGame/components/PartNDContent.vue'
         linear-gradient(180deg, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 1) 100%);
 }
 .lg-nd-wrap {
-    position: relative;
+    padding: 50px 32px;
 }
 .lg-nd-content {
-    width: calc(100% - 160px);
     padding: 30px 40px 29px 40px;
     background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 100px;
-    left: 40px;
-    z-index: 777;
 }
 .lg-btn-wrap {
     width: 490px;

@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { APP_ID } from '@/model'
 // import { setupI18n} from '@/i18n'
 import { setupI18n} from '@/i18n'
 import storage from '@/config/storage'
@@ -13,4 +14,4 @@ import App from './App.vue'
 const app = createApp(App)
 app.config.globalProperties.$storage = storage
 app.use(setupI18n)
-app.mount('#app')
+app.mount(APP_ID)

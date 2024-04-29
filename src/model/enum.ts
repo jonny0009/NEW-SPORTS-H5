@@ -44,3 +44,9 @@ export enum StorageLangNameEnum {
 }
 
 export const DefaultLanguage = MultipleLangEunm.US //默认语言
+
+export enum VideoMaskEnum { 
+    Top = 'Top',
+    Bottom = 'Bottom',
+    Both = 'Both'
+}

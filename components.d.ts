@@ -7,11 +7,11 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     VanImage: typeof import('vant/es')['Image']
     VanPopover: typeof import('vant/es')['Popover']
     VanRow: typeof import('vant/es')['Row']
     VanTab: typeof import('vant/es')['Tab']
     VanTabs: typeof import('vant/es')['Tabs']
+    VideoBackGround: typeof import('./src/components/VideoBackGround.vue')['default']
   }
 }

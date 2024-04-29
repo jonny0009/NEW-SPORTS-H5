@@ -20,10 +20,10 @@ export const getTabsOptions = () => {
             key:MultipleLangFileNameEunm.LiveGame,
             fileName: i18n.global.t(MultipleLangFileNameEunm.LiveGame)
         },
-        {
-            component: Sport,
-            key:MultipleLangFileNameEunm.AboutUs,
-            fileName: i18n.global.t(MultipleLangFileNameEunm.AboutUs)
-        }
+        // {
+        //     component: Sport,
+        //     key:MultipleLangFileNameEunm.AboutUs,
+        //     fileName: i18n.global.t(MultipleLangFileNameEunm.AboutUs)
+        // }
     ]
 } 

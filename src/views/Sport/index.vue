@@ -2,56 +2,42 @@
 <script  lang="ts" setup>
 import videoURL from '@/assets/video/home.mp4'
 import logoURL from '@/assets/image/sp_logo.png'
-import { MultipleLangFileNameEunm } from '@/model'
+import { MultipleLangFileNameEunm, VideoMaskEnum } from '@/model'
+import VideoBackGround from '@/components/VideoBackGround.vue'
 </script>
 
 <template>
     <div>
-        <!-- <span v-t="MultipleLangFileNameEunm.Sport"></span> -->
-        <!-- poster="@/assets/image/nav_tab_icon.png" -->
-        <video muted loop="true" autoplay="true" class="sp-video">
-            <source :src="videoURL" type="video/mp4" />
-        </video>
-        <div class="sp-wrap">
-            <div class="sp-content">
-                <van-image class="sp-logo-img" :src="logoURL" />
-                <span
-                    class="sp-supplier-tips"
-                    v-t="MultipleLangFileNameEunm.SupplierTips"
-                ></span>
-                <span
-                    v-t="MultipleLangFileNameEunm.PlatformAdvantages"
-                    class="sp-platform-advantages"
-                ></span>
-                <div class="sp-btn-wrap">
+        <video-back-ground :src="videoURL" :mask="VideoMaskEnum.Bottom">
+            <div class="sp-wrap">
+                <div class="sp-content">
+                    <van-image class="sp-logo-img" :src="logoURL" />
+                    <span class="sp-supplier-tips">{{
+                        $t(MultipleLangFileNameEunm.SupplierTips)
+                    }}</span>
                     <span
-                        v-t="MultipleLangFileNameEunm.SpButtonText"
-                        class="sp-btn-text"
+                        v-t="MultipleLangFileNameEunm.PlatformAdvantages"
+                        class="sp-platform-advantages"
                     ></span>
+                    <div class="sp-btn-wrap">
+                        <span
+                            v-t="MultipleLangFileNameEunm.SpButtonText"
+                            class="sp-btn-text"
+                        ></span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </video-back-ground>
     </div>
 </template>
 
 <style scoped lang="less">
-.sp-video {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: relative;
-}
 .sp-wrap {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 .sp-logo-img {
     ::v-deep img {
