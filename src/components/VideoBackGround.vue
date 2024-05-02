@@ -1,6 +1,6 @@
 <script lang="ts">
-import { ref, onMounted,computed, defineComponent ,PropType} from 'vue'
-import { VideoMaskType,VideoMaskEnum, APP_ID } from '@/model'
+import { ref, onMounted, defineComponent, PropType } from 'vue'
+import { VideoMaskType, VideoMaskEnum, APP_ID } from '@/model'
 export default defineComponent({
     props: {
         src: String,
@@ -11,8 +11,8 @@ export default defineComponent({
 
         const clientHeight = ref(0)
         const contanier = ref<any>(null)
-        const linearGradient = VideoMaskType[mask!] 
-        
+        const linearGradient = VideoMaskType[mask!]
+
         const onResize = () => {
             const app = document.querySelector(APP_ID)!
             const resizeObserver = new ResizeObserver(() => {
@@ -20,7 +20,6 @@ export default defineComponent({
             })
             resizeObserver.observe(app)
         }
-        computed(()=>console.log(props,'props'))
 
         onMounted(() => onResize())
 
@@ -32,30 +31,38 @@ export default defineComponent({
         }
     }
 })
-
 </script>
 
 <template>
-    <div ref="contanier" class="video-background" :style="{ background: linearGradient }">
-        <video autoplay loop muted :src="src" :style="{ height: `${clientHeight}px` }"></video>
+    <div
+        ref="contanier"
+        class="video-wrap"
+        :style="{ background: linearGradient }"
+    >
+        <video
+            loop
+            muted
+            autoplay
+            :src="src"
+            :style="{ height: `${clientHeight}px` }"
+        ></video>
         <slot></slot>
     </div>
 </template>
 
-<style scoped>
-.video-background {
+<style scoped lang="less">
+.video-wrap {
     width: 100%;
     height: auto;
     position: relative;
-}
-
-.video-background video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -999;
-    object-fit: cover;
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -999;
+        object-fit: cover;
+    }
 }
 </style>

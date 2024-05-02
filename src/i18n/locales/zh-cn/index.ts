@@ -1,6 +1,8 @@
 import { MultipleLangFileNameEunm } from '@/model'
 
 export default {
+    [MultipleLangFileNameEunm.WholeTextBotton]: '现在就试试',
+
     [MultipleLangFileNameEunm.Sport]: '运动',
     [MultipleLangFileNameEunm.LiveGame]: '现场游戏',
     [MultipleLangFileNameEunm.AboutUs]: '关于我们',
@@ -34,5 +36,43 @@ export default {
     [MultipleLangFileNameEunm.VideoAnimation]: "视频动画",
     [MultipleLangFileNameEunm.ZeroCostWatchGame]: "零成本观看游戏",
     [MultipleLangFileNameEunm.EarlySettlement]: "提前结算",
+    [MultipleLangFileNameEunm.AboutUsContent]: "ManBetX Sports自2020年ManBetX集团成立以来，一直致力于为用户打造顶级体育服务、视频直播娱乐平台和公平公正的博彩平台。",
+    [MultipleLangFileNameEunm.AboutUsTips]: "无论您身在何处，都可以随时享受现场互动。",
+
+    [MultipleLangFileNameEunm.InternationalCertification]: "国际认证",
+    [MultipleLangFileNameEunm.InternationalCertificationContent]: "稳定安全，获得多项国际执照和认证，并获得马耳他政府颁发的多项国际认证。",
+    [MultipleLangFileNameEunm.VariousWaysToPlay]: "多种玩法",
+    [MultipleLangFileNameEunm.VariousWaysToPlayContent]: "一站式游戏体验，可以看体育赛事，可以玩百场好路，不错过任何一个赚钱的机会。",
+    [MultipleLangFileNameEunm.TrueAndFair]: "真实公平",
+    [MultipleLangFileNameEunm.TrueAndFairContent]: "提供行业线上线下同步的真实场景；最自然的区块链技术保证了去中心化的游戏体验。",
+    [MultipleLangFileNameEunm.ProfessionalAnchor]: "专业主播",
+    [MultipleLangFileNameEunm.ProfessionalAnchorContent]: "数千名来自各国的专业体育彩票直播主播讲球讲路，为新老用户提供及时的服务和娱乐互动服务。",
+
+    [MultipleLangFileNameEunm.PremierLeagueWolves]: "英超狼队",
+    [MultipleLangFileNameEunm.PremierLeagueCrystalPalace]: "英超水晶宫",
+    [MultipleLangFileNameEunm.OfficialPartner]: "官方合作伙伴",
+    [MultipleLangFileNameEunm.JerseysAndMajorSponsors]: "球衣和主要赞助商",
+    [MultipleLangFileNameEunm.AsiaOfficialPartner]: "亚洲官方合作伙伴",
+    [MultipleLangFileNameEunm.SerieTeamsSponsorship]: "意甲13支\n球队赞助",
+    [MultipleLangFileNameEunm.PremierLeagueOfficial]: "英超官方",
+    [MultipleLangFileNameEunm.RCDEspanyoldeBarcelona]: "RCD Espanyol de Barcelona",
+    [MultipleLangFileNameEunm.RealMadridCF]: "皇家马德里",
+    [MultipleLangFileNameEunm.LaLigaOfficial]: "西甲官方",
+    [MultipleLangFileNameEunm.TheOnlyOfficialPartnerInAsia]: "亚洲唯一的官方合作伙伴",
+
+    [MultipleLangFileNameEunm.BusinessCooperation]: "商业合作",
+    [MultipleLangFileNameEunm.BusinessCooperationStContent]: "只需查找以下联系方式，不要信任他人，小心上当受骗。",
+    [MultipleLangFileNameEunm.BusinessCooperationNdContent]: "如果您需要咨询，请填写以下表格，我们将尽快与您联系。",
+    [MultipleLangFileNameEunm.BusinessCooperationRdContent]: "此表格将提供您的个人联系信息和其他信息，以便我们能够更有效地回应您的查询，并方便本网站及时了解您的需求和帮助。",
+
+    
+    [MultipleLangFileNameEunm.Name]: "姓名",
+    [MultipleLangFileNameEunm.Telegram]: "电报",
+    [MultipleLangFileNameEunm.ContactNumber]: "联系电话",
+    [MultipleLangFileNameEunm.ContactMethod]: "联系方式",
+    [MultipleLangFileNameEunm.YourProblem]: "你的具体要求或你想问的问题",
+    [MultipleLangFileNameEunm.CompanyInformation]: 'ManBetX Sport拥有由英国格雷斯岛（IMG）和菲律宾政府委员会（PAGCOR）颁发的合法执照，在英属维尔京群岛注册，是一家得到国际协会认可的合法公司'
+
     
 }
+

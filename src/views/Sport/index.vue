@@ -2,8 +2,7 @@
 <script  lang="ts" setup>
 import videoURL from '@/assets/video/home.mp4'
 import logoURL from '@/assets/image/sp_logo.png'
-import { MultipleLangFileNameEunm, VideoMaskEnum } from '@/model'
-import VideoBackGround from '@/components/VideoBackGround.vue'
+import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
 </script>
 
 <template>
@@ -19,12 +18,12 @@ import VideoBackGround from '@/components/VideoBackGround.vue'
                         v-t="MultipleLangFileNameEunm.PlatformAdvantages"
                         class="sp-platform-advantages"
                     ></span>
-                    <div class="sp-btn-wrap">
-                        <span
-                            v-t="MultipleLangFileNameEunm.SpButtonText"
-                            class="sp-btn-text"
-                        ></span>
-                    </div>
+
+                    <van-row justify="center" class="sp-btn-wrap">
+                        <botton-confirm
+                            :size="BottonSize.Middle"
+                        ></botton-confirm>
+                    </van-row>
                 </div>
             </div>
         </video-back-ground>
@@ -67,19 +66,6 @@ import VideoBackGround from '@/components/VideoBackGround.vue'
     font-style: italic;
 }
 .sp-btn-wrap {
-    width: 357px;
-    height: 63px;
     margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('@/assets/image/middle_btn_border.png') center center
-        no-repeat;
-    background-size: cover;
-}
-.sp-btn-text {
-    font-size: 28px;
-    z-index: 999;
-    color: #000000;
 }
 </style>

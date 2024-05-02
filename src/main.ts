@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import { APP_ID } from '@/model'
-// import { setupI18n} from '@/i18n'
-import { setupI18n} from '@/i18n'
+import { setupI18n } from '@/i18n'
 import storage from '@/config/storage'
 
 import 'amfe-flexible'

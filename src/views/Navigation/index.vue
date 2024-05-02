@@ -6,7 +6,7 @@ import langUrl from '@/assets/image/nav_lang.png'
 import langIconUrl from '@/assets/image/nav_lang_icon.png'
 
 import {
-    getTabsOptions,
+    useTabsOptions,
     SELECTED_COLOR,
     TAB_BACK_GROUND,
     TITLE_ACTIVE_COLOR,
@@ -45,7 +45,7 @@ export default defineComponent({
         const tabClientHeight = ref(0)
         const state = reactive<any>({ langOptions: [] })
 
-        const tabsOptions = computed(() => getTabsOptions())
+        const tabsOptions = computed(() => useTabsOptions())
 
         const localLang = proxy.$storage.getStore(
             StorageLangNameEnum.LOCAL_LANGUAGE_NAME
@@ -157,7 +157,7 @@ export default defineComponent({
             class="nav-mask-model"
             :style="{
                 position: !!tabScrollTop ? 'fixed' : 'absolute',
-                background: !!tabScrollTop ? 'rgba(0, 0, 0, 0.8)' : 'none'
+                background: !!tabScrollTop ? '#000' : 'none'
             }"
         ></div>
     </div>

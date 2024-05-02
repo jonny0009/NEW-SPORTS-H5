@@ -1,8 +1,7 @@
 
 <script  lang="ts" setup>
 import videoURL from '@/assets/video/lg_part_3rd.mp4'
-import { MultipleLangFileNameEunm, VideoMaskEnum } from '@/model'
-import VideoBackGround from '@/components/VideoBackGround.vue'
+import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
 import PartSTContent from '@/views/LiveGame/components/PartNDContent.vue'
 </script>
 
@@ -30,14 +29,14 @@ import PartSTContent from '@/views/LiveGame/components/PartNDContent.vue'
                         "
                         class="lg-nd-text"
                     ></span>
+
                     <PartSTContent></PartSTContent>
 
-                    <div class="lg-btn-wrap">
-                        <span
-                            v-t="MultipleLangFileNameEunm.SpButtonText"
-                            class="lg-btn-text"
-                        ></span>
-                    </div>
+                    <van-row justify="center">
+                        <botton-confirm
+                            :size="BottonSize.Large"
+                        ></botton-confirm>
+                    </van-row>
                 </div>
             </div>
         </video-back-ground>
@@ -90,21 +89,5 @@ import PartSTContent from '@/views/LiveGame/components/PartNDContent.vue'
 .lg-nd-content {
     padding: 30px 40px 29px 40px;
     background: rgba(0, 0, 0, 0.5);
-}
-.lg-btn-wrap {
-    width: 490px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('@/assets/image/large_btn_border.png') center center
-        no-repeat;
-    background-size: cover;
-    margin: 50px auto auto auto;
-}
-.lg-btn-text {
-    font-size: 28px;
-    z-index: 1;
-    color: #000000;
 }
 </style>

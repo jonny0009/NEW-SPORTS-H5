@@ -7,6 +7,10 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BottonConfirm: typeof import('./src/components/BottonConfirm.vue')['default']
+    CopyRight: typeof import('./src/components/CopyRight.vue')['default']
+    VanCol: typeof import('vant/es')['Col']
+    VanDivider: typeof import('vant/es')['Divider']
     VanImage: typeof import('vant/es')['Image']
     VanPopover: typeof import('vant/es')['Popover']
     VanRow: typeof import('vant/es')['Row']

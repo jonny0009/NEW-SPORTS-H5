@@ -6,14 +6,7 @@ import PartRdView from './components/PartRDView/index.vue'
 </script>
 
 <template>
-    <div>
-        <div class="lg-wrap">
-            <PartSTView></PartSTView>
-            <PartNDView></PartNDView>
-            <PartRdView></PartRdView>
-        </div>
-    </div>
+    <PartSTView></PartSTView>
+    <PartNDView></PartNDView>
+    <PartRdView></PartRdView>
 </template>
-
-<style scoped lang="less">
-</style>

@@ -1,6 +1,8 @@
 import { MultipleLangFileNameEunm } from '@/model'
 
 export default {
+    [MultipleLangFileNameEunm.WholeTextBotton]: 'Try it Now',
+
     [MultipleLangFileNameEunm.Sport]: 'Sport',
     [MultipleLangFileNameEunm.LiveGame]: 'Live Game',
     [MultipleLangFileNameEunm.AboutUs]: 'About Us',
@@ -34,5 +36,44 @@ export default {
     [MultipleLangFileNameEunm.VideoAnimation]: "Video \nAnimation",
     [MultipleLangFileNameEunm.ZeroCostWatchGame]: "Zero Cost \nWatch Game",
     [MultipleLangFileNameEunm.EarlySettlement]: "Early \nSettlement",
+    [MultipleLangFileNameEunm.AboutUsContent]: "ManBetX Sports Since the establishment of ManBetX Group in 2020, it has been committed to creating top sports services, a live video entertainment platform and a fair and just betting platform for users.",
+    [MultipleLangFileNameEunm.AboutUsTips]: "No matter where you are, you can enjoy live interaction at any time.",
+
+    [MultipleLangFileNameEunm.InternationalCertification]: "International Certification",
+    [MultipleLangFileNameEunm.InternationalCertificationContent]: "It is stable and safe and has won a number of international licenses and certifications, and has received a number of international certifications issued by the Maltese government.",
+    [MultipleLangFileNameEunm.VariousWaysToPlay]: "Various Ways To Play",
+    [MultipleLangFileNameEunm.VariousWaysToPlayContent]: "One-stop game experience, you can watch sports events, you can play hundreds of games and good roads, and don't miss any chance to make money.",
+    [MultipleLangFileNameEunm.TrueAndFair]: "True And Fair",
+    [MultipleLangFileNameEunm.TrueAndFairContent]: "Provide the real scene of online and offline synchronization in the industry; the most natural blockchain technology ensures a decentralized gaming experience.",
+    [MultipleLangFileNameEunm.ProfessionalAnchor]: "Professional Anchor",
+    [MultipleLangFileNameEunm.ProfessionalAnchorContent]: "Thousands of professional live sports lottery anchors from various countries talk about the ball and the road, providing timely services and entertainment interactive services for new and old users.",
     
+    [MultipleLangFileNameEunm.PremierLeagueWolves]: "Premier League \n Wolves",
+    [MultipleLangFileNameEunm.PremierLeagueCrystalPalace]: "Premier League \n Crystal Palace",
+    [MultipleLangFileNameEunm.OfficialPartner]: "Official Partner",
+    [MultipleLangFileNameEunm.JerseysAndMajorSponsors]: "Jerseys and \n Major sponsors",
+    [MultipleLangFileNameEunm.AsiaOfficialPartner]: "Asia Official Partner",
+    [MultipleLangFileNameEunm.SerieTeamsSponsorship]: "Serie A 13 Teams \n Sponsorship",
+    [MultipleLangFileNameEunm.PremierLeagueOfficial]: "Premier League \n Official",
+    [MultipleLangFileNameEunm.RCDEspanyoldeBarcelona]: "RCD Espanyol \n de Barcelona",
+    [MultipleLangFileNameEunm.RealMadridCF]: "Real Madrid CF",
+    [MultipleLangFileNameEunm.LaLigaOfficial]: "La Liga official",
+    [MultipleLangFileNameEunm.TheOnlyOfficialPartnerInAsia]: "The only official partner \n in Asia",
+
+    [MultipleLangFileNameEunm.BusinessCooperation]: "Business Cooperation",
+    [MultipleLangFileNameEunm.BusinessCooperationStContent]: "Only look for the following contact information, do not trust others, and be careful not to be deceived.",
+    [MultipleLangFileNameEunm.BusinessCooperationNdContent]: "If you need consultation, please fill out the form below and we will contact you as soon as possible.",
+    [MultipleLangFileNameEunm.BusinessCooperationRdContent]: "This form will provide your personal contact information and other information, so we can respond to your inquiry more effectively and facilitate this site to understand your needs and help in a timely manner.",
+
+    
+    [MultipleLangFileNameEunm.Name]: "Name",
+    [MultipleLangFileNameEunm.Telegram]: "Telegram",
+    [MultipleLangFileNameEunm.ContactNumber]: "Contact \nNumber",
+    [MultipleLangFileNameEunm.ContactMethod]: "Contact \nMethod",
+    [MultipleLangFileNameEunm.YourProblem]: "Your specific requirements or questions you \n want to ask",
+    [MultipleLangFileNameEunm.CompanyInformation]: 'ManBetX Sport has a legal license issued by the British Isle of Grace (IMG) and the Philippine Government Commission (PAGCOR), registered in the British Virgin Islands, and is a legal company recognized by international associations'
+
+
+
+
 }

@@ -1,6 +1,6 @@
 
 <script  lang="ts" setup>
-import { MultipleLangFileNameEunm } from '@/model'
+import { MultipleLangFileNameEunm, BottonSize } from '@/model'
 import PartSTContent from '@/views/LiveGame/components/PartSTContent.vue'
 </script>
 
@@ -16,12 +16,10 @@ import PartSTContent from '@/views/LiveGame/components/PartSTContent.vue'
                 v-t="MultipleLangFileNameEunm.ProductAdvantagesTips"
             ></span>
             <PartSTContent></PartSTContent>
-            <div class="lg-btn-wrap">
-                <span
-                    v-t="MultipleLangFileNameEunm.SpButtonText"
-                    class="lg-btn-text"
-                ></span>
-            </div>
+
+            <van-row justify="center" class="lg-btn-wrap">
+                <botton-confirm :size="BottonSize.Middle"></botton-confirm>
+            </van-row>
         </div>
     </div>
 </template>
@@ -48,19 +46,6 @@ import PartSTContent from '@/views/LiveGame/components/PartSTContent.vue'
     background-size: cover;
 }
 .lg-btn-wrap {
-    width: 357px;
-    height: 63px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('@/assets/image/middle_btn_border.png') center center
-        no-repeat;
-    background-size: cover;
-    margin: 50px auto auto auto;
-}
-.lg-btn-text {
-    font-size: 28px;
-    z-index: 999;
-    color: #000000;
+    margin-top: 50px;
 }
 </style>
