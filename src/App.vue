@@ -4,5 +4,7 @@ import NavView from '@/views/Navigation/index.vue'
 </script>
 
 <template>
-    <nav-view></nav-view>
+    <div>
+        <nav-view></nav-view>
+    </div>
 </template>
