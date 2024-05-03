@@ -19,6 +19,8 @@ import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
                         class="sp-platform-advantages"
                     ></span>
 
+                    <span>测试发布</span>
+
                     <van-row justify="center" class="sp-btn-wrap">
                         <botton-confirm
                             :size="BottonSize.Middle"
