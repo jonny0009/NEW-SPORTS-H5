@@ -1,0 +1,16 @@
+{
+  "background_color":"purple",
+  "theme_color":"#fff",
+  "description":"OG",
+  "display":"fullscreen",
+  "icons": [
+    {
+      "src": "/OGlogo.jpg",
+      "sizes": "256x256",
+      "type": "image/jpg"
+    }
+  ],
+  "name":"OG娱乐",
+  "short_name":"OG娱乐",
+  "start_url":"/start"
+}

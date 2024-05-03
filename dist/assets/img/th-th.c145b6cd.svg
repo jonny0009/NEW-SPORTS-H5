@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Country Flags/Asia/flag_Thailand_TH</title>
+    <defs>
+        <circle id="path-1" cx="28" cy="28" r="28"></circle>
+        <rect id="path-3" x="0" y="0" width="78.4" height="56" rx="4"></rect>
+    </defs>
+    <g id="Country-Flags/Asia/flag_Thailand_TH" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="蒙版" fill="#D8D8D8" xlink:href="#path-1"></use>
+        <g id="TH" mask="url(#mask-2)">
+            <g transform="translate(-11.000000, 0.000000)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <rect stroke="#F5F5F5" stroke-width="1" x="0.5" y="0.5" width="77.4" height="55" rx="4"></rect>
+                <rect id="Rectangle-2" stroke="none" fill="#F12532" fill-rule="evenodd" mask="url(#mask-4)" x="0" y="0" width="78.4" height="11.2"></rect>
+                <rect id="Rectangle-2" stroke="none" fill="#F12532" fill-rule="evenodd" mask="url(#mask-4)" x="0" y="44.8" width="78.4" height="11.2"></rect>
+                <rect id="Rectangle-2-Copy-4" stroke="none" fill="#322B6C" fill-rule="evenodd" mask="url(#mask-4)" x="0" y="18.6666667" width="78.4" height="18.6666667"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

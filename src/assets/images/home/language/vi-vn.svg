@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Country Flags/Asia/flag_Vietnam_VN</title>
+    <defs>
+        <circle id="path-1" cx="28" cy="28" r="28"></circle>
+        <rect id="path-3" x="0" y="0" width="78.4" height="56" rx="4"></rect>
+    </defs>
+    <g id="Country-Flags/Asia/flag_Vietnam_VN" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="蒙版" fill="#D8D8D8" xlink:href="#path-1"></use>
+        <g id="VN" mask="url(#mask-2)">
+            <g transform="translate(-11.000000, 0.000000)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Mask" stroke="none" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <rect id="Mask-Copy" stroke="none" fill="#EA403F" fill-rule="evenodd" mask="url(#mask-4)" x="0" y="0" width="78.4" height="56"></rect>
+                <polygon id="Star-8" stroke="none" fill="#FFFE4E" fill-rule="evenodd" mask="url(#mask-4)" points="39.2 34.5520003 29.3252078 41.5914855 32.9686775 30.0246794 23.2222505 22.8085145 35.3488309 22.6993204 39.2 11.2 43.0511691 22.6993204 55.1777495 22.8085145 45.4313225 30.0246794 49.0747922 41.5914855"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

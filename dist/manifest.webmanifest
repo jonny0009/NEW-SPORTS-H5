@@ -1,0 +1,16 @@
+{
+  "background_color":"purple",
+  "theme_color":"#fff",
+  "description":"7lucky",
+  "display":"fullscreen",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "256x256",
+      "type": "image/jpg"
+    }
+  ],
+  "name":"七星娱乐",
+  "short_name":"七星娱乐",
+  "start_url":"/start"
+}

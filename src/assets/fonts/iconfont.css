@@ -1,0 +1,786 @@
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 400; src: local("Lato Regular"), local("Lato-Regular"), url("./Lato-Regular.ttf") format("truetype"); }
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 700;  src: local("Lato Bold"), local("Lato-Bold"), url("./Lato-Bold.ttf") format("truetype"); }
+
+
+@font-face {
+	font-family: "icomoon";
+	src:url("./icomoon_wlb.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "ai_icomoon";
+	src:url("./icomoon.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+[class^="icon-"], [class*=" icon-"] ,.btn-refresh,.btn-toggle,.ddl-arrow,#ui-datepicker-div{
+	font-family: "icomoon";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-cancel_r:before {
+  content: "\e952";
+}
+.icon-checked_r:before {
+  content: "\e953";
+}
+
+.icon-i_amkt:before {
+  content: "\e94c";
+}
+.icon-base_1 .path1:before {
+  content: "\e936";
+  color: rgb(230, 215, 194);
+}
+.icon-base_1 .path2:before {
+  content: "\e937";
+  margin-left: -1.3828125em;
+  color: rgb(214, 111, 40);
+}
+.icon-base_1 .path3:before {
+  content: "\e938";
+  margin-left: -1.3828125em;
+  color: rgb(230, 215, 194);
+}
+.icon-base_1_2 .path1:before {
+  content: "\e939";
+  color: rgb(214, 111, 40);
+}
+.icon-base_1_2 .path2:before {
+  content: "\e93a";
+  margin-left: -1.3828125em;
+  color: rgb(214, 111, 40);
+}
+.icon-base_1_2 .path3:before {
+  content: "\e93b";
+  margin-left: -1.3828125em;
+  color: rgb(230, 215, 194);
+}
+.icon-base_1_2_3:before {
+  content: "\e93c";
+}
+.icon-base_1_3 .path1:before {
+  content: "\e93d";
+  color: rgb(230, 215, 194);
+}
+.icon-base_1_3 .path2:before {
+  content: "\e93e";
+  margin-left: -1.3828125em;
+  color: rgb(214, 111, 40);
+}
+.icon-base_1_3 .path3:before {
+  content: "\e93f";
+  margin-left: -1.3828125em;
+  color: rgb(214, 111, 40);
+}
+.icon-base_2 .path1:before {
+  content: "\e940";
+  color: rgb(214, 111, 40);
+}
+.icon-base_2 .path2:before {
+  content: "\e941";
+  margin-left: -1.3828125em;
+  color: rgb(230, 215, 194);
+}
+.icon-base_2 .path3:before {
+  content: "\e942";
+  margin-left: -1.3828125em;
+  color: rgb(230, 215, 194);
+}
+.icon-base_2_3 .path1:before {
+  content: "\e943";
+  color: rgb(214, 111, 40);
+}
+.icon-base_2_3 .path2:before {
+  content: "\e944";
+  margin-left: -1.3828125em;
+  color: rgb(230, 215, 194);
+}
+.icon-base_2_3 .path3:before {
+  content: "\e945";
+  margin-left: -1.3828125em;
+  color: rgb(214, 111, 40);
+}
+.icon-base_3 .path1:before {
+  content: "\e946";
+  color: rgb(230, 215, 194);
+}
+.icon-base_3 .path2:before {
+  content: "\e947";
+  margin-left: -1.3828125em;
+  color: rgb(230, 215, 194);
+}
+.icon-base_3 .path3:before {
+  content: "\e948";
+  margin-left: -1.3828125em;
+  color: rgb(214, 111, 40);
+}
+.icon-base_empty:before {
+  content: "\e949";
+}
+.icon-firsthalf:before {
+  content: "\e94a";
+}
+.icon-secondhalf:before {
+  content: "\e94b";
+}
+.circle {
+    border-radius: 50%;
+}
+.left {
+    float: left !important;
+}
+.right {
+    float: right !important;
+}
+
+.icon-remove_c:before {
+  content: "\e932";
+}
+
+
+
+.icon-bgfield:before {
+    content: "\e931";
+}
+.icon-play:before {
+    content: "\e930";
+}
+.icon-racing_m:before {
+    content: "\e928";
+}
+.icon-minur_thin:before {
+    content: "\e924";
+}
+.icon-plus_thin:before {
+    content: "\e925";
+}
+.icon-keyboard:before {
+    content: "\e922";
+}
+.icon-keyboard-back:before {
+    content: "\e923";
+}
+.icon-In-Play_m:before {
+    content: "\e908";
+}
+.icon-RedCard4:before {
+	content: "\e911";
+}
+.icon-RedCard5:before {
+	content: "\e912";
+}
+.icon-keno:before {
+    content: "\e91d";
+}
+.icon-pokerchip:before {
+    content: "\e91e";
+}
+.icon-livecasino:before {
+    content: "\e91f";
+}
+.icon-esports:before {
+    content: "\e920";
+}
+.icon-sportsbk:before {
+    content: "\e921";
+}
+.icon-user:before {
+    content: "\e919";
+}
+.icon-userlogged:before {
+    content: "\e91a";
+}
+.icon-MenuIcon:before {
+    content: "\e65c";
+}
+.icon-Quicklinks:before {
+    content: "\e918";
+}
+.icon-tick:before {
+    content: "\e917";
+}
+.icon-expandsq:before {
+    content: "\e915";
+}
+.icon-round-plus:before {
+	content: "\e913";
+}
+.icon-round-minur:before {
+	content: "\e914";
+}
+.icon-BackArrowWithTail:before {
+    content: "\e670";
+}
+.icon-RedCard4:before {
+	content: "\e911";
+}
+.icon-RedCard5:before {
+	content: "\e912";
+}
+.icon-addSelectToBetSlip:before {
+	content: "\e910";
+}
+.icon-StartingSoon_m:before {
+    content: "\e909";
+}
+.icon-home:before {
+	content: "\e90f";
+}
+.icon-add-round:before {
+	content: "\e90e";
+}
+.icon-champ_flat:before {
+	content: "\e90d";
+}
+.icon-addedtomyfav:before {
+	content: "\e666";
+}
+.icon-removedtomyfav:before {
+	content: "\e667";
+}
+.icon-AddSelectiontobetSlipIcon:before {
+	content: "\e62c";
+}
+
+.icon-AddSelectiontobetSlipIconplus:before {
+	content: "\e62d";
+}
+
+.icon-AddtoMyCompetitionsright:before,.rt-time .btn-toggle:before {
+	content: "\e62e";
+}
+
+.icon-Iconbg:before {
+	content: "\e960";
+}
+
+.icon-InfoIcon:before {
+	content: "\e631";
+}
+
+.icon-MainMarketsleftbg:before {
+	content: "\e632";
+}
+
+.icon-MainMarketsHideleftminur:before ,.rt-time .btn-toggle.expand:before{
+	content: "\e633";
+}
+
+.icon-MainMarketsHidemiddle:before {
+	content: "\e634";
+}
+
+.icon-MainMarketsHideright:before {
+	content: "\e635";
+}
+
+.icon-MainMarketsshowleft:before {
+	content: "\e636";
+}
+.icon-MainMarketsshowleft:before {
+	content: "\e637";
+
+}
+
+
+
+.icon-NeutralN:before {
+	content: "\e639";
+}
+
+.icon-RedCard:before {
+	content: "\e63a";
+}
+
+.icon-RedCard2:before {
+	content: "\e63b";
+}
+
+.icon-RedCard3:before {
+	content: "\e63d";
+}
+
+.icon-removeIcon:before {
+	content: "\e63e";
+}
+
+.icon-7:before {
+	content: "\e600";
+}
+
+.icon-ArcheryShooting:before {
+	content: "\e601";
+}
+
+.icon-32:before {
+	content: "\e602";
+}
+
+.icon-AussieRules:before {
+	content: "\e603";
+}
+
+.icon-9:before {
+	content: "\e604";
+}
+
+.icon-4:before {
+	content: "\e605";
+}
+
+.icon-2:before {
+	content: "\e606";
+}
+
+.icon-19:before {
+	content: "\e607";
+}
+.icon-33:before {
+	content: "\e90c";
+}
+
+
+.icon-27:before {
+	content: "\e608";
+}
+
+.icon-8:before {
+	content: "\e609";
+}
+
+.icon-18:before {
+	content: "\e60a";
+}
+
+.icon-30:before {
+	content: "\e60b";
+}
+
+.icon-25:before {
+	content: "\e60c";
+}
+
+.icon-23:before {
+	content: "\e60d";
+}
+
+.icon-29:before {
+	content: "\e60e";
+}
+
+.icon-10:before {
+	content: "\e60f";
+}
+
+.icon-1:before {
+	content: "\e610";
+}
+
+.icon-24:before {
+	content: "\e611";
+}
+
+.icon-5:before {
+	content: "\e612";
+}
+
+.icon-31:before {
+	content: "\e613";
+}
+
+.icon-16:before {
+	content: "\e614";
+}
+
+.icon-26:before {
+	content: "\e615";
+}
+
+.icon-JudoWrestlingTaekwando:before {
+	content: "\e616";
+}
+
+.icon-Lacrosse:before {
+	content: "\e617";
+}
+
+.icon-6:before {
+	content: "\e618";
+}
+
+.icon-MedalSportsMedalBetting:before {
+	content: "\e619";
+}
+
+.icon-11:before {
+	content: "\e61a";
+}
+
+.icon-15:before {
+	content: "\e61b";
+}
+
+.icon-17:before {
+	content: "\e61c";
+}
+
+.icon-OlympicsWorldGames:before {
+	content: "\e61d";
+}
+
+.icon-RowingCanoeing:before {
+	content: "\e61e";
+}
+
+.icon-14:before {
+	content: "\e61f";
+}
+
+.icon-21:before {
+	content: "\e620";
+}
+
+.icon-22:before {
+	content: "\e621";
+}
+
+.icon-Specials:before {
+	content: "\e622";
+}
+
+.icon-34:before {
+	content: "\e623";
+}
+
+.icon-20:before {
+	content: "\e624";
+}
+
+.icon-3:before {
+	content: "\e625";
+}
+
+.icon-13:before {
+	content: "\e626";
+}
+
+.icon-28:before {
+	content: "\e627";
+}
+.icon-39:before {
+	content: "\e800";
+}
+.icon-40:before {
+	content: "\e801";
+}
+
+
+
+.icon-Weightlifting:before {
+	content: "\e628";
+}
+
+.icon-WinterOlympics:before {
+	content: "\e629";
+}
+
+.icon-WinterSports:before {
+	content: "\e62a";
+}
+
+.icon-TV:before {
+	content: "\e62b";
+}
+.icon-login:before {
+  content: "\e94d";
+}
+.icon-CheckIcon:before {
+	content: "\e62f";
+}
+
+.icon-RefreshIcon:before,.btn-refresh:before {
+	content: "\e63c";
+}
+
+.icon-WarningIcon:before {
+	content: "\e641";
+}
+
+.icon-StarUnselected:before {
+	content: "\e647";
+}
+
+.icon-Stats:before {
+	content: "\e648";
+}
+
+.icon-TV2:before {
+	content: "\e649";
+}
+
+.icon-ArrowDown:before,.btn-toggle:before {
+	content: "\e64a";
+}
+
+.icon-ArrowMoreBets:before {
+	content: "\e64b";
+}
+
+.icon-ArrowUp:before ,.expand.btn-toggle:before{
+	content: "\e64c";
+}
+
+.icon-DoubleArrowHorizontalLeft:before {
+	content: "\e64d";
+}
+
+.icon-DoubleArrowHorizontalRight:before {
+	content: "\e64e";
+}
+
+.icon-RemovedtoMyMarketsorEvents:before {
+	content: "\e64f";
+}
+
+.icon-InfoSingle:before {
+	content: "\e650";
+}
+
+.icon-Lock:before {
+	content: "\e651";
+}
+
+.icon-Maximize:before {
+	content: "\e652";
+}
+
+.icon-Minimized:before {
+	content: "\e653";
+}
+
+.icon-PopIn:before {
+	content: "\e654";
+}
+
+.icon-PopUp:before {
+	content: "\e655";
+}
+
+.icon-SortIcon:before {
+	content: "\e656";
+}
+
+.icon-TVMenu:before {
+	content: "\e657";
+}
+
+.icon-TVPopupHideTV:before {
+	content: "\e658";
+}
+
+.icon-TVPopupShowTV:before {
+	content: "\e659";
+}
+
+.icon-Xbutton:before {
+	content: "\e65a";
+}
+
+.icon-InPlay:before {
+	content: "\e65b";
+}
+
+.icon-MenuMobile:before {
+	content: "\e65c";
+}
+
+.icon-MyCompetitions:before {
+	content: "\e65d";
+}
+
+.icon-Sports:before {
+	content: "\e65e";
+}
+
+.icon-SportsHome:before {
+	content: "\e65f";
+}
+
+.icon-StartingSoon:before {
+	content: "\e660";
+}
+
+.icon-NetSportsServerDots:before {
+	content: "\e661";
+}
+
+.icon-Pitch:before {
+	content: "\e662";
+}
+
+.icon-ContactUs:before {
+	content: "\e669";
+}
+
+.icon-FAQs:before {
+	content: "\e66a";
+}
+
+.icon-Help:before {
+	content: "\e66b";
+}
+
+.icon-InfoCenter:before {
+	content: "\e66c";
+}
+
+.icon-Lobby:before {
+	content: "\e66d";
+}
+
+.icon-Results:before {
+	content: "\e66e";
+}
+
+.icon-Rules:before {
+	content: "\e66f";
+}
+
+.icon-Refresh:before {
+	content: "\e680";
+}
+
+.icon-SortCompetition:before {
+	content: "\e681";
+}
+
+.icon-SortDropdownArrow:before,.ddl-arrow:before {
+	content: "\e682";
+  position:relative;
+  top:-1px;
+}
+
+.icon-SortTime:before {
+	content: "\e683";
+}
+
+.icon-BackArrow:before {
+	content: "\e684";
+}
+
+.icon-Double-Arrow-vertical-top:before {
+    content: "\e642";
+}
+.icon-Double-Arrow-vertical-bottom:before {
+    content: "\e640";
+}
+.icon-live:before {
+	content: "\e643";
+}
+.icon-check:before {
+	content: "\e644";
+}
+.icon-fav-thin:before {
+	content: "\e645";
+}
+
+.icon-i-s:before {
+  content: "\e664";
+  position:absolute;
+  top:0px;
+  left:0px;
+  font-size: 21px;
+  height:23px;
+}
+.icon-cancel:before{
+	content: "\e665";
+}
+.icon-l-more:before {
+	content: "\e646";
+  position:relative;
+
+  left:1px;
+}
+.icon-world-cup .path1:before {
+    content: "\e958";
+    color: rgb(195, 148, 49);
+}
+.icon-world-cup .path2:before {
+    content: "\e959";
+    margin-left: -1em;
+    color: rgb(221, 160, 54);
+}
+.icon-speaker:before {
+    content: "\e95a";
+}
+.icon-cancelled:before {
+    content: "\e95b";
+}
+.icon-cash:before {
+    content: "\e95c";
+}
+.icon-cash-out:before {
+    content: "\e95d";
+}
+.icon-noAvailable_Flag:before {
+    content: "\e95e";
+}
+.icon-cancelled-full:before {
+    content: "\e95f";
+}
+.icon-doubleArrow-left:before {
+  content: "\e671";
+}
+.icon-doubleArrow-right:before {
+  content: "\e672";
+}
+.icon-intl-normal .path1:before {
+  content: "\e673";
+}
+.icon-intl-normal .path2:before {
+  content: "\e674";
+  margin-left: -1em;
+}
+.icon-intl-active:before {
+  content: "\e675";
+}
+
+.ai-sport-icon {
+	font-family: "ai_icomoon";
+}
+
+.icon-OP_BD:before {
+  content: "\e900";
+}
+.icon-OP_BS:before {
+  content: "\e901";
+}
+.icon-OP_GY:before {
+  content: "\e902";
+}
+.icon-OP_SB:before {
+  content: "\e903";
+}
+.icon-OP_WS:before {
+  content: "\e904";
+}
+.icon-OP:before {
+  content: "\e905";
+}
+.icon-TT:before {
+  content: "\e906";
+}
+

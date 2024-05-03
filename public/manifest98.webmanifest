@@ -1,0 +1,16 @@
+{
+  "background_color":"purple",
+  "theme_color":"#fff",
+  "description":"98",
+  "display":"fullscreen",
+  "icons": [
+    {
+      "src": "/98logo.png",
+      "sizes": "256x256",
+      "type": "image/jpg"
+    }
+  ],
+  "name":"98娱乐",
+  "short_name":"98娱乐",
+  "start_url":"/start"
+}
