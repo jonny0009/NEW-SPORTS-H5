@@ -44,13 +44,13 @@ import { PartSTcontentOptions } from '@/views/LiveGame/constants'
 }
 
 .lg-st-content-title {
-    display: block;
+    // display: block;
     font-size: 26px;
     color: #ffffff;
     font-style: italic;
 }
 .lg-st-content-tips {
-    display: block;
+    // display: block;
     font-size: 20px;
     color: #ffffff;
     font-style: italic;
