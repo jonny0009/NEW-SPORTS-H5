@@ -1,19 +1,14 @@
 <script lang="ts" setup>
-// import { defineProps } from 'vue'
-import { MultipleLangFileNameEunm } from '@/model'
+import { defineProps } from 'vue'
+import { BottonSize, MultipleLangFileNameEunm } from '@/model'
 
-// const { size } = defineProps(['size'])
-// const style = size === BottonSize.Middle ? 'botton-xs-wrap' : 'botton-xl-wrap'
+const { size } = defineProps(['size'])
+const style = size === BottonSize.Middle ? 'botton-xs-wrap' : 'botton-xl-wrap'
 </script>
 
 <template>
     <div>
-        <!-- <div :class="[style, 'botton-wrap']">
-            <span class="botton-text">{{
-                $t(MultipleLangFileNameEunm.WholeTextBotton)
-            }}</span>
-        </div> -->
-        <div :class="['botton-xs-wrap', 'botton-wrap']">
+        <div :class="[style, 'botton-wrap']">
             <span class="botton-text">{{
                 $t(MultipleLangFileNameEunm.WholeTextBotton)
             }}</span>
