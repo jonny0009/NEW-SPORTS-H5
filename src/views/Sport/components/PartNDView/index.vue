@@ -5,11 +5,11 @@ import ContentView from './ContentView.vue'
 
 <template>
     <div>
-        <div class="sf-wrap">
-            <div class="sf-content-title">
+        <div class="sp-wrap">
+            <div class="sp-content-title">
                 {{ $t(MultipleLangFileNameEunm.ProductAdvantages) }}
             </div>
-            <div class="sf-content-text">
+            <div class="sp-content-text">
                 {{ $t(MultipleLangFileNameEunm.ProductAdvantagesTips) }}
             </div>
 
@@ -50,11 +50,7 @@ import ContentView from './ContentView.vue'
     color: #ff8727;
     text-align: center;
 }
-<<<<<<< Updated upstream
-.sf-content-text {
-=======
 .sp-content-text {
->>>>>>> Stashed changes
     font-size: 24px;
     line-height: 30px;
     margin-top: 20px;
