@@ -15,7 +15,7 @@ import ContentView from './ContentView.vue'
 
             <content-view></content-view>
 
-            <van-row justify="center" class="sf-content-btn">
+            <van-row justify="center" class="sp-content-btn">
                 <botton-confirm :size="BottonSize.Middle"></botton-confirm>
             </van-row>
         </div>
@@ -25,11 +25,11 @@ import ContentView from './ContentView.vue'
 <style scoped lang="less">
 @fontsize: 24px;
 @lineheight: 30px;
-.sf-head-wrap {
+.sp-head-wrap {
     background: #000;
     padding: 50px 40px 28px 40px;
 }
-.sf-head-img {
+.sp-head-img {
     img {
         width: 100%;
         height: 454px;
@@ -37,33 +37,37 @@ import ContentView from './ContentView.vue'
         display: inline-block;
     }
 }
-.sf-wrap {
+.sp-wrap {
     padding: 75px 40px 29px 40px;
     background: url(@/assets/image/lg_part_st_bg.png) no-repeat center center,
         linear-gradient(0, #000 100%, #000 100%);
     background-position: top 150px left 50%;
     background-size: cover;
 }
-.sf-content-title {
+.sp-content-title {
     display: block;
     font-size: 32px;
     color: #ff8727;
     text-align: center;
 }
+<<<<<<< Updated upstream
 .sf-content-text {
+=======
+.sp-content-text {
+>>>>>>> Stashed changes
     font-size: 24px;
     line-height: 30px;
     margin-top: 20px;
     color: #ffffff;
     display: inline-block;
 }
-.sf-content-tips {
+.sp-content-tips {
     font-size: @fontsize;
     line-height: @lineheight;
     color: #ffffff;
     display: inline-block;
 }
-.sf-content-btn {
+.sp-content-btn {
     margin-top: 80px;
 }
 </style>
