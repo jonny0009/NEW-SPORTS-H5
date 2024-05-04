@@ -31,6 +31,7 @@ import {
 
 interface TabItem {
     name: number
+    isFixed: boolean
     scrollTop: number
 }
 
@@ -42,7 +43,7 @@ export default defineComponent({
 
         const tabSelected = ref(0)
         const tabScrollTop = ref(0)
-        const tabClientHeight = ref(0)
+
         const state = reactive<any>({ langOptions: [] })
 
         const tabsOptions = computed(() => useTabsOptions())
@@ -71,10 +72,17 @@ export default defineComponent({
             )
         }
 
-        const onScrollTab = ({ scrollTop }: TabItem) =>
-            (tabScrollTop.value = scrollTop)
+        const onScrollTab = ({ scrollTop }: TabItem) => {
+            tabScrollTop.value = scrollTop
+        }
 
-        const onSelectTab = ({ name }: TabItem) => (tabSelected.value = name)
+        const onSelectTab = ({ name }: TabItem) => {
+            tabSelected.value = name
+        }
+
+        const onBeforeChange = () => {
+            return true
+        }
 
         onChangeLangOption(localLang || DefaultLanguage)
 
@@ -88,7 +96,6 @@ export default defineComponent({
             tabsOptions,
             tabSelected,
             tabScrollTop,
-            tabClientHeight,
 
             TAB_BACK_GROUND,
             TITLE_ACTIVE_COLOR,
@@ -97,7 +104,7 @@ export default defineComponent({
             onSelectTab,
             onScrollTab,
             onSelectLang,
-
+            onBeforeChange,
             MultipleLangFileNameEunm
         }
     }
@@ -141,6 +148,7 @@ export default defineComponent({
             :active="tabSelected"
             @scroll="onScrollTab"
             @click-tab="onSelectTab"
+            :before-change="onBeforeChange"
             :background="TAB_BACK_GROUND"
             :title-active-color="TITLE_ACTIVE_COLOR"
             :title-inactive-color="TITLE_INACTIVE_COLOR"
@@ -148,8 +156,9 @@ export default defineComponent({
             <van-tab
                 :key="item.key"
                 :title="item.fileName"
-                v-for="item in tabsOptions"
+                v-for="(item, index) in tabsOptions"
             >
+                <div v-show="!!index" class="nav-scroll-mask"></div>
                 <component :is="item.component"></component>
             </van-tab>
         </van-tabs>
@@ -215,6 +224,11 @@ export default defineComponent({
 
 ::v-deep .van-popover__content {
     border-radius: 5px;
+}
+.nav-scroll-mask {
+    width: 100vw;
+    height: 30px;
+    background-color: #000;
 }
 
 ::v-deep .van-tabs__wrap {

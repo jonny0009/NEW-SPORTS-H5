@@ -46,5 +46,28 @@ export default defineConfig({
             ]
         },
         devSourcemap: true
-    }
+    },
+    // build: {
+    //     rollupOptions: {
+    //         output: {
+    //             manualChunks: (assetInfo) => { 
+    //                 console.log(assetInfo, 'assetInfo')
+    //                 // const imgs = ['.png','.jpg']
+    //                 if (assetInfo.includes('.less') || assetInfo.includes('.css')) {
+    //                     return 'css/[name].[hash][extname]';
+    //                  }
+    //                 if (assetInfo.includes('.png') || assetInfo.includes('.jpg')) {
+    //                     return 'img/[name].[hash][extname]';
+    //                  }
+    //             }
+    //             chunkFileNames: 'js/[name].[hash].js',
+    //             manualChunks(id) {
+    //                 if (id.includes('node_modules')) {
+    //                     return 'vendor'
+    //                 }
+    //             }
+    //         },
+    //         cssCodeSplit:true
+    //     }
+    // }
 });
