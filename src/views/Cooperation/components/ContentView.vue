@@ -118,6 +118,7 @@ import { MultipleLangFileNameEunm } from '@/model'
 .bc-form-st-input {
     width: 180px;
     height: 29px;
+    border-radius: 0;
 }
 
 .bc-form-part-nd {
@@ -125,6 +126,7 @@ import { MultipleLangFileNameEunm } from '@/model'
 }
 .bc-form-nd-input {
     width: 300px;
+    border-radius: 0;
 }
 .bc-form-part-rd {
     margin-top: 28px;
@@ -138,6 +140,7 @@ import { MultipleLangFileNameEunm } from '@/model'
 .bc-form-input {
     border: none;
     font-size: 24px;
+    border-radius: 0;
     color: #ffffff;
     background: rgba(255, 255, 255, 0.34);
 }

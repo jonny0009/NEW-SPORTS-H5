@@ -1,40 +1,40 @@
 
 <script  lang="ts" setup>
-import { PartNDcontentOptions } from '@/views/LiveGame/constants'
+import { PartRDcontentOptions } from '../../constants'
 </script>
 
 <template>
-    <div class="lg-nd-wrap">
-        <div class="lg-nd-content">
+    <div class="sp-nd-wrap">
+        <div class="sp-nd-content">
             <div
-                class="lg-nd-content-wrap"
-                v-for="(item, index) in PartNDcontentOptions"
+                class="sp-nd-content-wrap"
+                v-for="(item, index) in PartRDcontentOptions"
                 :key="index"
             >
-                <van-image class="lg-nd-icon" :src="item.icon" />
-                <span class="lg-nd-content" v-t="item.fileName"></span>
+                <van-image class="sp-nd-icon" :src="item.icon" />
+                <span class="sp-nd-content">{{ $t(item.fileName) }}</span>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped lang="less">
-.lg-nd-wrap {
+.sp-nd-wrap {
     margin-top: 30px;
 }
-.lg-nd-content {
+.sp-nd-content {
     display: flex;
     justify-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.lg-nd-content-wrap {
+.sp-nd-content-wrap {
     width: 50%;
     display: flex;
     align-items: center;
     margin-bottom: 40px;
 }
-.lg-nd-icon {
+.sp-nd-icon {
     ::v-deep img {
         width: 36px;
         height: 36px;
@@ -42,7 +42,7 @@ import { PartNDcontentOptions } from '@/views/LiveGame/constants'
         margin-right: 10px;
     }
 }
-.lg-nd-content {
+.sp-nd-content {
     font-size: 22px;
     color: #ffffff;
     white-space: pre-wrap;

@@ -2,33 +2,28 @@
 <script  lang="ts" setup>
 import videoURL from '@/assets/video/lg_part_2nd.mp4'
 import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
-import PartSTContent from '@/views/LiveGame/components/PartNDContent.vue'
+import ContentView from './ContentView.vue'
 </script>
 
 <template>
     <div>
         <video-back-ground :src="videoURL" :mask="VideoMaskEnum.Both">
-            <div class="lg-nd-wrap">
-                <div class="lg-nd-content">
-                    <span class="lg-nd-title">{{
+            <div class="lg-rd-wrap">
+                <div class="lg-rd-content">
+                    <span class="lg-rd-title">{{
                         $t(MultipleLangFileNameEunm.OurGamesAndProducts)
                     }}</span>
-                    <span
-                        class="lg-nd-name"
-                        v-t="MultipleLangFileNameEunm.ManBetXSport"
-                    ></span>
+                    <span class="lg-rd-name">{{
+                        $t(MultipleLangFileNameEunm.ManBetXSport)
+                    }}</span>
 
-                    <span
-                        v-t="MultipleLangFileNameEunm.OurGamesAndProductsTips"
-                        class="lg-nd-tips"
-                    ></span>
-                    <span
-                        v-t="
-                            MultipleLangFileNameEunm.OurGamesAndProductsContent
-                        "
-                        class="lg-nd-text"
-                    ></span>
-                    <PartSTContent></PartSTContent>
+                    <span class="lg-rd-tips">{{
+                        $t(MultipleLangFileNameEunm.OurGamesAndProductsTips)
+                    }}</span>
+                    <span class="lg-rd-text">{{
+                        $t(MultipleLangFileNameEunm.OurGamesAndProductsContent)
+                    }}</span>
+                    <content-view></content-view>
 
                     <van-row justify="center">
                         <botton-confirm
@@ -49,14 +44,14 @@ import PartSTContent from '@/views/LiveGame/components/PartNDContent.vue'
     object-fit: cover;
 }
 
-.lg-nd-title {
+.lg-rd-title {
     display: block;
     font-size: 32px;
     color: #ff8727;
     text-align: center;
 }
 
-.lg-nd-name {
+.lg-rd-name {
     display: block;
     font-size: 26px;
     color: #ffffff;
@@ -65,7 +60,7 @@ import PartSTContent from '@/views/LiveGame/components/PartNDContent.vue'
     font-style: italic;
 }
 
-.lg-nd-tips {
+.lg-rd-tips {
     display: block;
     font-size: 26px;
     color: #ffffff;
@@ -73,7 +68,7 @@ import PartSTContent from '@/views/LiveGame/components/PartNDContent.vue'
     font-style: italic;
 }
 
-.lg-nd-text {
+.lg-rd-text {
     display: block;
     font-size: 24px;
     color: #ffffff;
@@ -81,10 +76,10 @@ import PartSTContent from '@/views/LiveGame/components/PartNDContent.vue'
     line-height: 40px;
     margin-bottom: 10px;
 }
-.lg-nd-wrap {
+.lg-rd-wrap {
     padding: 50px 32px;
 }
-.lg-nd-content {
+.lg-rd-content {
     padding: 30px 40px 29px 40px;
     background: rgba(0, 0, 0, 0.5);
 }
