@@ -27,21 +27,21 @@ export default {
     [MultipleLangFileNameEunm.HighQualityDockingServiceContent]: "7/24 hours of professional customer service manager & technical manager, at any time to provide you with orders, technology implementation, and DIY independent APP customization guidance to enhance your product market competitiveness.",
 
 
-    // [MultipleLangFileNameEunm.GlobalCommunityPromotion]: "Global community promotion",
-    // [MultipleLangFileNameEunm.StandardizeOrderPushModel]: "Standardize order push model",
-    // [MultipleLangFileNameEunm.GlobalCommunityPromotionContent]: "Join the community, share your bets with players around the world, get more inspiration and strategies, and experience exciting gaming fun together, giving you more wisdom and control.",
+    [MultipleLangFileNameEunm.GlobalCommunityPromotion]: "Global community promotion",
+    [MultipleLangFileNameEunm.StandardizeOrderPushModel]: "Standardize order push model",
+    [MultipleLangFileNameEunm.GlobalCommunityPromotionContent]: "Join the community, share your bets with players around the world, get more inspiration and strategies, and experience exciting gaming fun together, giving you more wisdom and control.",
     
-    // [MultipleLangFileNameEunm.UserInterface]: "User interface",
-    // [MultipleLangFileNameEunm.SimpleAndEasyToUnderstandInterfaceDesign]: "Simple and easy-to-understand interface design",
-    // [MultipleLangFileNameEunm.UserInterfaceContent]: "The interface design is simple and clear, making it easy to operate, quickly find the functions you need, focus on the game experience, avoid tedious operations, and enjoy the fun of the game.",
+    [MultipleLangFileNameEunm.UserInterface]: "User interface",
+    [MultipleLangFileNameEunm.SimpleAndEasyToUnderstandInterfaceDesign]: "Simple and easy-to-understand interface design",
+    [MultipleLangFileNameEunm.UserInterfaceContent]: "The interface design is simple and clear, making it easy to operate, quickly find the functions you need, focus on the game experience, avoid tedious operations, and enjoy the fun of the game.",
     
-    // [MultipleLangFileNameEunm.SmartDescriptionRules]: "Smart description rules",
-    // [MultipleLangFileNameEunm.MakeItEasyForNewbiesToGetStarted]: "Make it easy for newbies to get started",
-    // [MultipleLangFileNameEunm.SmartDescriptionRulesContent]: "It presents you the key points of the main handicap gameplay, allowing you to easily understand the details of popular gameplay. Whether you are a novice or an experienced player, you can easily get started and quickly integrate into the Bluetooth gaming world.",
+    [MultipleLangFileNameEunm.SmartDescriptionRules]: "Smart description rules",
+    [MultipleLangFileNameEunm.MakeItEasyForNewbiesToGetStarted]: "Make it easy for newbies to get started",
+    [MultipleLangFileNameEunm.SmartDescriptionRulesContent]: "It presents you the key points of the main handicap gameplay, allowing you to easily understand the details of popular gameplay. Whether you are a novice or an experienced player, you can easily get started and quickly integrate into the Bluetooth gaming world.",
     
-    // [MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchor]: "Live broadcast of the game by anchor",
-    // [MultipleLangFileNameEunm.EventLiveInteraction]: "Event live interaction",
-    // [MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchorContent]: "Master professional skills and explain accurately; be enthusiastic and interactive; be humorous and entertainment first; be careful and attentive to meet your needs. You will enjoy a professional, enthusiastic, funny and considerate live streaming experience!",
+    [MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchor]: "Live broadcast of the game by anchor",
+    [MultipleLangFileNameEunm.EventLiveInteraction]: "Event live interaction",
+    [MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchorContent]: "Master professional skills and explain accurately; be enthusiastic and interactive; be humorous and entertainment first; be careful and attentive to meet your needs. You will enjoy a professional, enthusiastic, funny and considerate live streaming experience!",
 
 
 

@@ -38,7 +38,33 @@ export const PartNDcontentOptions = [
         tips: MultipleLangFileNameEunm.MakeYourProductUnique,
         title: MultipleLangFileNameEunm.HighQualityDockingService,
         content: MultipleLangFileNameEunm.HighQualityDockingServiceContent,
-    }
+    },
+
+
+    {
+        icon: icon4stURL,
+        tips: MultipleLangFileNameEunm.StandardizeOrderPushModel,
+        title: MultipleLangFileNameEunm.GlobalCommunityPromotion,
+        content: MultipleLangFileNameEunm.GlobalCommunityPromotionContent,
+    },
+    {
+        icon: icon4stURL,
+        tips: MultipleLangFileNameEunm.SimpleAndEasyToUnderstandInterfaceDesign,
+        title: MultipleLangFileNameEunm.UserInterface,
+        content: MultipleLangFileNameEunm.UserInterfaceContent,
+    },
+    {
+        icon: icon4stURL,
+        tips: MultipleLangFileNameEunm.MakeItEasyForNewbiesToGetStarted,
+        title: MultipleLangFileNameEunm.SmartDescriptionRules,
+        content: MultipleLangFileNameEunm.SmartDescriptionRulesContent,
+    },
+    {
+        icon: icon4stURL,
+        tips: MultipleLangFileNameEunm.EventLiveInteraction,
+        title: MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchor,
+        content: MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchorContent,
+    },
 ]
 
 export const PartRDcontentOptions = [

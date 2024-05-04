@@ -25,6 +25,23 @@ export default {
     [MultipleLangFileNameEunm.HighQualityDockingService]: "高质量对接服务",
     [MultipleLangFileNameEunm.MakeYourProductUnique]: "让您的产品独一无二",
     [MultipleLangFileNameEunm.HighQualityDockingServiceContent]: "7/24小时专业客服经理兼技术经理，随时为您提供订单、技术落地、DIY独立APP定制指导，提升您的产品市场竞争力。",
+
+    [MultipleLangFileNameEunm.GlobalCommunityPromotion]: "该项目无需任何身份验证即可访问。全球社区推广",
+    [MultipleLangFileNameEunm.StandardizeOrderPushModel]: "标准化订单推送模式",
+    [MultipleLangFileNameEunm.GlobalCommunityPromotionContent]: "加入社区，与世界各地的玩家分享你的赌注，获得更多灵感和策略，一起体验激动人心的游戏乐趣，给你更多的智慧和控制力。",
+    
+    [MultipleLangFileNameEunm.UserInterface]: "用户界面",
+    [MultipleLangFileNameEunm.SimpleAndEasyToUnderstandInterfaceDesign]: "简单易懂的界面设计",
+    [MultipleLangFileNameEunm.UserInterfaceContent]: "界面设计简洁明了，易于操作，快速找到所需功能，专注于游戏体验，避免繁琐的操作，享受游戏乐趣。",
+    
+    [MultipleLangFileNameEunm.SmartDescriptionRules]: "智能描述规则",
+    [MultipleLangFileNameEunm.MakeItEasyForNewbiesToGetStarted]: "让新手更容易上手",
+    [MultipleLangFileNameEunm.SmartDescriptionRulesContent]: "它向您介绍了主要障碍游戏的要点，让您轻松了解流行游戏的细节。无论您是新手还是经验丰富的玩家，都可以轻松入门并快速融入蓝牙游戏世界。",
+    
+    [MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchor]: "主播直播比赛",
+    [MultipleLangFileNameEunm.EventLiveInteraction]: "活动现场互动",
+    [MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchorContent]: "掌握专业技能，解释准确；热情和互动；幽默风趣，娱乐至上；要细心周到地满足你的需求。您将享受专业、热情、有趣和周到的直播体验！",
+
     [MultipleLangFileNameEunm.OurGamesAndProducts]: "我们的游戏和产品",
     [MultipleLangFileNameEunm.ManBetXSport]: "ManBetX Sport",
     [MultipleLangFileNameEunm.OurGamesAndProductsTips]: "高投入，多种游戏类型，直播覆盖三级以上联赛",

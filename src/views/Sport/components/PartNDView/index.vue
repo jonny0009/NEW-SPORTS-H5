@@ -39,10 +39,10 @@ import ContentView from './ContentView.vue'
 }
 .sp-wrap {
     padding: 75px 40px 29px 40px;
-    background: url(@/assets/image/lg_part_st_bg.png) no-repeat center center,
+    background: url(@/assets/image/lg_part_st_bg.png) no-repeat,
         linear-gradient(0, #000 100%, #000 100%);
-    background-position: top 150px left 50%;
-    background-size: cover;
+    background-position: top 150px center;
+    background-size: 200%;
 }
 .sp-content-title {
     display: block;
