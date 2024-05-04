@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { contactAddressOptions } from '../constants'
-import { MultipleLangFileNameEunm } from '@/model'
+import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
 </script>
 
 <template>
@@ -61,6 +61,13 @@ import { MultipleLangFileNameEunm } from '@/model'
                     class="bc-form-rd-textarea bc-form-input"
                 ></textarea>
             </div>
+
+            <van-row justify="center" class="bc-content-btn">
+                <botton-confirm
+                    :size="BottonSize.Middle"
+                    :type="BottonType.Submit"
+                ></botton-confirm>
+            </van-row>
         </div>
     </div>
 </template>
@@ -143,5 +150,8 @@ import { MultipleLangFileNameEunm } from '@/model'
     border-radius: 0;
     color: #ffffff;
     background: rgba(255, 255, 255, 0.34);
+}
+.bc-content-btn {
+    margin-top: 30px;
 }
 </style>

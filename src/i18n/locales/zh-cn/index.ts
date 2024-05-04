@@ -1,6 +1,7 @@
 import { MultipleLangFileNameEunm } from '@/model'
 
 export default {
+    [MultipleLangFileNameEunm.SubmitTextBotton]: '提交',
     [MultipleLangFileNameEunm.WholeTextBotton]: '现在就试试',
 
     [MultipleLangFileNameEunm.Sport]: '运动',

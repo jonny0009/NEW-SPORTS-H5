@@ -5,6 +5,7 @@ export enum MultipleLangEunm {
 
 export enum MultipleLangFileNameEunm {
     WholeTextBotton = 'WholeTextBotton',
+    SubmitTextBotton = 'SubmitTextBotton',
 
     Sport = 'Sport',
     LiveGame = 'LiveGame',
@@ -104,6 +105,11 @@ export enum VideoMaskEnum {
 export enum BottonSize {
     Large = 'Large',
     Middle = 'Middle',
+}
+
+export enum BottonType {
+    Link = 'Link',
+    Submit = 'Submit',
 }
 
 export const COPY_RIGHT_TEXT = 'COPYRIGHT © 1998 - 2024 7lucky. \n ALL RIGHTSRESERVED 7lucky. \n Group Copyright Violators will be prosecuted'

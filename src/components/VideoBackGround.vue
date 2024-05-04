@@ -4,10 +4,11 @@ import { VideoMaskType, VideoMaskEnum } from '@/model'
 export default defineComponent({
     props: {
         src: String,
+        image: String,
         mask: Object as PropType<VideoMaskEnum>
     },
     setup(props) {
-        const { src, mask } = props
+        const { src, image, mask } = props
 
         const clientHeight = ref(0)
         const contanier = ref<any>(null)
@@ -15,6 +16,7 @@ export default defineComponent({
 
         return {
             src,
+            image,
             contanier,
             clientHeight,
             linearGradient
@@ -25,8 +27,16 @@ export default defineComponent({
 
 <template>
     <div class="video-background" :style="{ background: linearGradient }">
-        <video autoplay loop muted playsinline class="video-element" :src="src">
-            <!-- <source src="path-to-your-video.mp4" type="video/mp4" /> -->
+        <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="video-element"
+            :poster="image"
+            :src="src"
+        >
+            <!-- <source :src="image" type="video/mp4" /> -->
             <!-- 提供其他视频格式以便跨浏览器兼容性 -->
             <!-- <source src="path-to-your-video.webm" type="video/webm"> -->
             Your browser does not support the video tag.

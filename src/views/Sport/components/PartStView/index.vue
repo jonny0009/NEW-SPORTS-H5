@@ -1,13 +1,19 @@
 
 <script  lang="ts" setup>
-import videoURL from '@/assets/video/home.mp4'
 import logoURL from '@/assets/image/sp_logo.png'
+import videoURL from '@/assets/video/sp_part_01.mp4'
+import videoBGURL from '@/assets/video/sp_part_bg_01.jpg'
 import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
 </script>
 
 <template>
     <div>
-        <video-back-ground :src="videoURL" :mask="VideoMaskEnum.Bottom">
+        <video-back-ground
+            :src="videoURL"
+            :image="videoBGURL"
+            picture
+            :mask="VideoMaskEnum.Bottom"
+        >
             <div class="sp-wrap">
                 <div class="sp-content">
                     <van-image class="sp-logo-img" :src="logoURL" />

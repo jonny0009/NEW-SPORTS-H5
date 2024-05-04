@@ -1,12 +1,18 @@
 <script lang="ts" setup>
 import { VideoMaskEnum, MultipleLangFileNameEunm, BottonSize } from '@/model'
-import videoURL from '@/assets/video/spon_bg.mp4'
+import videoURL from '@/assets/video/spon_part_01.mp4'
+import videoBGURL from '@/assets/video/span_part_bg_01.jpg'
+
 import ContentView from './components/ContentView.vue'
 </script>
 
 <template>
     <div>
-        <video-back-ground :src="videoURL" :mask="VideoMaskEnum.Both">
+        <video-back-ground
+            :src="videoURL"
+            :image="videoBGURL"
+            :mask="VideoMaskEnum.Both"
+        >
             <div class="spon-wrap">
                 <span class="spon-title">{{
                     $t(MultipleLangFileNameEunm.Sponsorship)

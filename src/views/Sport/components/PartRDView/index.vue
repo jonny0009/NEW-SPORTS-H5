@@ -1,13 +1,18 @@
 
 <script  lang="ts" setup>
-import videoURL from '@/assets/video/lg_part_2nd.mp4'
+import videoURL from '@/assets/video/sp_part_02.mp4'
+import videoBGURL from '@/assets/video/sp_part_bg_02.jpg'
 import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
 import ContentView from './ContentView.vue'
 </script>
 
 <template>
     <div>
-        <video-back-ground :src="videoURL" :mask="VideoMaskEnum.Both">
+        <video-back-ground
+            :src="videoURL"
+            :image="videoBGURL"
+            :mask="VideoMaskEnum.Both"
+        >
             <div class="lg-rd-wrap">
                 <div class="lg-rd-content">
                     <span class="lg-rd-title">{{
