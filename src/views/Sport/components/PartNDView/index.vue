@@ -57,12 +57,12 @@ import ContentView from './ContentView.vue'
 <template>
     <div>
         <div class="sf-wrap">
-            <span class="sf-content-title">{{
-                $t(MultipleLangFileNameEunm.ProductAdvantages)
-            }}</span>
-            <span class="sf-content-text">{{
-                $t(MultipleLangFileNameEunm.ProductAdvantagesTips)
-            }}</span>
+            <div class="sf-content-title">
+                {{ $t(MultipleLangFileNameEunm.ProductAdvantages) }}
+            </div>
+            <div class="sf-content-text">
+                {{ $t(MultipleLangFileNameEunm.ProductAdvantagesTips) }}
+            </div>
 
             <content-view></content-view>
 
@@ -89,11 +89,11 @@ import ContentView from './ContentView.vue'
     }
 }
 .sf-wrap {
-    // padding: 75px 40px 29px 40px;
-    // background: url(@/assets/image/lg_part_st_bg.png) no-repeat center center,
-    //     linear-gradient(0, #000 100%, #000 100%);
-    // // background-position: top 150px left 50%;
-    // background-size: cover;
+    padding: 75px 40px 29px 40px;
+    background: url(@/assets/image/lg_part_st_bg.png) no-repeat center center,
+        linear-gradient(0, #000 100%, #000 100%);
+    background-position: top 150px left 50%;
+    background-size: cover;
 }
 .sf-content-title {
     display: block;
