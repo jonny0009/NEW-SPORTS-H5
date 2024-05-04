@@ -2,7 +2,12 @@
 <script  lang="ts" setup>
 import videoURL from '@/assets/video/sp_part_02.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_02.jpg'
-import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
+import {
+    MultipleLangFileNameEunm,
+    VideoMaskEnum,
+    BottonSize,
+    BottonType
+} from '@/model'
 import ContentView from './ContentView.vue'
 </script>
 
@@ -32,6 +37,7 @@ import ContentView from './ContentView.vue'
 
                     <van-row justify="center">
                         <botton-confirm
+                            :type="BottonType.Link"
                             :size="BottonSize.Large"
                         ></botton-confirm>
                     </van-row>

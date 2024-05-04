@@ -3,7 +3,12 @@
 import logoURL from '@/assets/image/sp_logo.png'
 import videoURL from '@/assets/video/sp_part_01.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_01.jpg'
-import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
+import {
+    MultipleLangFileNameEunm,
+    VideoMaskEnum,
+    BottonSize,
+    BottonType
+} from '@/model'
 </script>
 
 <template>
@@ -26,6 +31,7 @@ import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
 
                     <van-row justify="center" class="sp-btn-wrap">
                         <botton-confirm
+                            :type="BottonType.Link"
                             :size="BottonSize.Middle"
                         ></botton-confirm>
                     </van-row>
