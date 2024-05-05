@@ -1,6 +1,7 @@
 import { MultipleLangFileNameEunm } from '@/model'
 
 export default {
+    [MultipleLangFileNameEunm.Copysuccessful]: '复制成功',
     [MultipleLangFileNameEunm.SubmitTextBotton]: '提交',
     [MultipleLangFileNameEunm.WholeTextBotton]: '现在就试试',
 

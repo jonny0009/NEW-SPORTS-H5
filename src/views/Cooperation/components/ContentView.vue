@@ -1,6 +1,28 @@
 <script lang="ts" setup>
-import { contactAddressOptions } from '../constants'
+import 'vant/es/toast/style'
+import { i18n } from '@/i18n'
+import { showToast } from 'vant'
+import useClipboard from 'vue-clipboard3'
+import { contactAddressOptions, AddreessType } from '../constants'
 import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
+
+const { toClipboard } = useClipboard()
+
+const onCopy = async (msg: string) => {
+    const text = i18n.global.t(MultipleLangFileNameEunm.Copysuccessful)
+    try {
+        await toClipboard(msg)
+        showToast(`${text}: ${msg}`)
+    } catch (e) {}
+}
+
+const onJump = (link: string) => {
+    link && window.open(`https://t.me/${link}`, '_blank')
+}
+
+const onClick = (type: AddreessType, mes: string) => {
+    type === AddreessType.Copy ? onCopy(mes) : onJump(mes)
+}
 </script>
 
 <template>
@@ -15,7 +37,14 @@ import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
                     :src="item.icon"
                     class="bc-addreess-icon"
                 ></van-image>
-                <span class="bc-addreess-text">{{ item.addreess }}</span>
+                <div
+                    @click="onClick(item.type, i)"
+                    v-for="(i, index) in item.addreess"
+                    class="bc-addreess-text"
+                    :key="index"
+                >
+                    {{ i }}
+                </div>
             </div>
         </van-row>
 
@@ -95,8 +124,6 @@ import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
     font-size: 18px;
     line-height: 24px;
     color: #ffffff;
-    display: block;
-    white-space: pre-wrap;
 }
 .bc-form-wrap {
     flex: 1;

@@ -80,10 +80,6 @@ export default defineComponent({
             tabSelected.value = name
         }
 
-        const onBeforeChange = () => {
-            return true
-        }
-
         onChangeLangOption(localLang || DefaultLanguage)
 
         return {
@@ -104,7 +100,6 @@ export default defineComponent({
             onSelectTab,
             onScrollTab,
             onSelectLang,
-            onBeforeChange,
             MultipleLangFileNameEunm
         }
     }
@@ -148,7 +143,6 @@ export default defineComponent({
             :active="tabSelected"
             @scroll="onScrollTab"
             @click-tab="onSelectTab"
-            :before-change="onBeforeChange"
             :background="TAB_BACK_GROUND"
             :title-active-color="TITLE_ACTIVE_COLOR"
             :title-inactive-color="TITLE_INACTIVE_COLOR"
@@ -158,8 +152,10 @@ export default defineComponent({
                 :title="item.fileName"
                 v-for="(item, index) in tabsOptions"
             >
-                <div v-show="!!index" class="nav-scroll-mask"></div>
-                <component :is="item.component"></component>
+                <div>
+                    <div v-show="!!index" class="nav-scroll-mask"></div>
+                    <component :is="item.component"></component>
+                </div>
             </van-tab>
         </van-tabs>
         <div

@@ -74,8 +74,8 @@ const options = computed(() => useSponContentOptions())
 .spon-content-img {
     margin: 0 10px;
     ::v-deep img {
-        width: 34.7px;
-        height: 34.7px;
+        width: 44.7px;
+        height: 44.7px;
         object-fit: contain;
     }
 }
@@ -83,7 +83,7 @@ const options = computed(() => useSponContentOptions())
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .spon-img-container {
     margin-bottom: 20px;

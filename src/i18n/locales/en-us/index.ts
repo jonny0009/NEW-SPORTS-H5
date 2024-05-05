@@ -1,6 +1,7 @@
 import { MultipleLangFileNameEunm } from '@/model'
 
 export default {
+    [MultipleLangFileNameEunm.Copysuccessful]: 'copy successful',
     [MultipleLangFileNameEunm.SubmitTextBotton]: 'submit',
     [MultipleLangFileNameEunm.WholeTextBotton]: 'Try it Now',
 
