@@ -72,6 +72,7 @@ import ContentView from './components/ContentView.vue'
     line-height: @lineheight;
     color: #ffffff;
     display: inline-block;
+    margin-top: 10px;
 }
 .sf-content-btn {
     margin-top: 80px;
