@@ -48,7 +48,6 @@ import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
     background-size: 200%;
 }
 .sp-content-title {
-    display: block;
     font-size: 32px;
     color: #ff8727;
     text-align: center;
@@ -58,7 +57,6 @@ import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
     line-height: 30px;
     margin-top: 20px;
     color: #ffffff;
-    display: inline-block;
 }
 .sp-content-tips {
     font-size: @fontsize;
