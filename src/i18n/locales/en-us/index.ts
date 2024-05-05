@@ -4,6 +4,7 @@ export default {
     [MultipleLangFileNameEunm.Copysuccessful]: 'copy successful',
     [MultipleLangFileNameEunm.SubmitTextBotton]: 'submit',
     [MultipleLangFileNameEunm.WholeTextBotton]: 'Try it Now',
+    [MultipleLangFileNameEunm.LoginForFreeBotton]: 'Login For Free',
 
     [MultipleLangFileNameEunm.Sport]: 'Sport',
     [MultipleLangFileNameEunm.LiveGame]: 'Live Game',

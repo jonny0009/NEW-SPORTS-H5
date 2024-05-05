@@ -1,6 +1,6 @@
 <script  lang="ts" setup>
 import ContentView from './ContentView.vue'
-import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
+import { MultipleLangFileNameEunm, BottonSize } from '@/model'
 </script>
 
 <template>
@@ -17,8 +17,8 @@ import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
 
             <van-row justify="center" class="sp-content-btn">
                 <botton-confirm
-                    :type="BottonType.Link"
                     :size="BottonSize.Middle"
+                    :text="MultipleLangFileNameEunm.WholeTextBotton"
                 ></botton-confirm>
             </van-row>
         </div>

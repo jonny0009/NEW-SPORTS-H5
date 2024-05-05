@@ -7,6 +7,7 @@ export enum MultipleLangFileNameEunm {
     Copysuccessful = 'Copysuccessful',
     WholeTextBotton = 'WholeTextBotton',
     SubmitTextBotton = 'SubmitTextBotton',
+    LoginForFreeBotton = 'LoginForFreeBotton',
 
     Sport = 'Sport',
     LiveGame = 'LiveGame',

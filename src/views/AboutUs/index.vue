@@ -1,7 +1,7 @@
 
 <script  lang="ts" setup>
 import headURL from '@/assets/image/sf_head_bg.jpg'
-import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
+import { MultipleLangFileNameEunm, BottonSize } from '@/model'
 import ContentView from './components/ContentView.vue'
 </script>
 
@@ -27,7 +27,7 @@ import ContentView from './components/ContentView.vue'
             <van-row justify="center" class="sf-content-btn">
                 <botton-confirm
                     :size="BottonSize.Middle"
-                    :type="BottonType.Link"
+                    :text="MultipleLangFileNameEunm.WholeTextBotton"
                 ></botton-confirm>
             </van-row>
         </div>

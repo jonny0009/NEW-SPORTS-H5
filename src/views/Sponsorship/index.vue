@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-import {
-    VideoMaskEnum,
-    MultipleLangFileNameEunm,
-    BottonSize,
-    BottonType
-} from '@/model'
+import { VideoMaskEnum, MultipleLangFileNameEunm, BottonSize } from '@/model'
 import videoURL from '@/assets/video/spon_part_01.mp4'
 import videoBGURL from '@/assets/video/span_part_bg_01.jpg'
 
@@ -25,8 +20,8 @@ import ContentView from './components/ContentView.vue'
                 <content-view></content-view>
                 <van-row justify="center" class="spon-btn">
                     <botton-confirm
-                        :type="BottonType.Link"
                         :size="BottonSize.Middle"
+                        :text="MultipleLangFileNameEunm.WholeTextBotton"
                     ></botton-confirm>
                 </van-row>
             </div>

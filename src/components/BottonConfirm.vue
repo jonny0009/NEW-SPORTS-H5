@@ -1,12 +1,8 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue'
-import { BottonType, BottonSize, MultipleLangFileNameEunm } from '@/model'
+import { BottonSize } from '@/model'
 
-const { size, type } = defineProps(['size', 'type'])
-const text =
-    type === BottonType.Submit
-        ? MultipleLangFileNameEunm.SubmitTextBotton
-        : MultipleLangFileNameEunm.WholeTextBotton
+const { size, text } = defineProps(['size', 'text'])
 const style = size === BottonSize.Middle ? 'botton-xs-wrap' : 'botton-xl-wrap'
 </script>
 

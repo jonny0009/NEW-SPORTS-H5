@@ -4,6 +4,7 @@ export default {
     [MultipleLangFileNameEunm.Copysuccessful]: '复制成功',
     [MultipleLangFileNameEunm.SubmitTextBotton]: '提交',
     [MultipleLangFileNameEunm.WholeTextBotton]: '现在就试试',
+    [MultipleLangFileNameEunm.LoginForFreeBotton]: '免费登录',
 
     [MultipleLangFileNameEunm.Sport]: '运动',
     [MultipleLangFileNameEunm.LiveGame]: '现场游戏',

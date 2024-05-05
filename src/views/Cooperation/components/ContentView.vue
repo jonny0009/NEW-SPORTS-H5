@@ -4,7 +4,7 @@ import { i18n } from '@/i18n'
 import { showToast } from 'vant'
 import useClipboard from 'vue-clipboard3'
 import { contactAddressOptions, AddreessType } from '../constants'
-import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
+import { MultipleLangFileNameEunm, BottonSize } from '@/model'
 
 const { toClipboard } = useClipboard()
 
@@ -94,7 +94,7 @@ const onClick = (type: AddreessType, mes: string) => {
             <van-row justify="center" class="bc-content-btn">
                 <botton-confirm
                     :size="BottonSize.Middle"
-                    :type="BottonType.Submit"
+                    :text="MultipleLangFileNameEunm.SubmitTextBotton"
                 ></botton-confirm>
             </van-row>
         </div>
