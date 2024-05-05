@@ -10,6 +10,7 @@ import { VantResolver } from "@vant/auto-import-resolver";
 
 export default defineConfig({
     base: '/start',
+    // base: './',
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src')

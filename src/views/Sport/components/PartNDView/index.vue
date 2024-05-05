@@ -1,6 +1,6 @@
 <script  lang="ts" setup>
-import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
 import ContentView from './ContentView.vue'
+import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
 </script>
 
 <template>
