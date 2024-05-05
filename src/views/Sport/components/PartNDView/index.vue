@@ -51,12 +51,14 @@ import { MultipleLangFileNameEunm, BottonSize, BottonType } from '@/model'
     font-size: 32px;
     color: #ff8727;
     text-align: center;
+    display: block;
 }
 .sp-content-text {
     font-size: 24px;
     line-height: 30px;
     margin-top: 20px;
     color: #ffffff;
+    display: block;
 }
 .sp-content-tips {
     font-size: @fontsize;
