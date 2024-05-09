@@ -5,6 +5,10 @@ export default {
     [MultipleLangFileNameEunm.SubmitTextBotton]: '提交',
     [MultipleLangFileNameEunm.WholeTextBotton]: '现在就试试',
     [MultipleLangFileNameEunm.LoginForFreeBotton]: '免费登录',
+    [MultipleLangFileNameEunm.SportsManBetXBotton]: 'ManBetX 体育',
+    [MultipleLangFileNameEunm.LiveGameManBetXBotton]: 'ManBetX 真人',
+
+    [MultipleLangFileNameEunm.AboutManBetX]:'关于 ManBetX',
 
     [MultipleLangFileNameEunm.Sport]: '运动',
     [MultipleLangFileNameEunm.LiveGame]: '现场游戏',
@@ -46,7 +50,7 @@ export default {
     [MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchorContent]: "掌握专业技能，解释准确；热情和互动；幽默风趣，娱乐至上；要细心周到地满足你的需求。您将享受专业、热情、有趣和周到的直播体验！",
 
     [MultipleLangFileNameEunm.OurGamesAndProducts]: "我们的游戏和产品",
-    [MultipleLangFileNameEunm.ManBetXSport]: "ManBetX Sport",
+    [MultipleLangFileNameEunm.ManBetXSport]: "ManBetX 体育",
     [MultipleLangFileNameEunm.OurGamesAndProductsTips]: "高投入，多种游戏类型，直播覆盖三级以上联赛",
     [MultipleLangFileNameEunm.OurGamesAndProductsContent]: "我们每天在世界各地提供2000多场体育赛事，提供最佳赔率和终极体验；提前结算，提前一步实现盈利；使用数据分析随时跟踪赛点；我们还拥有游戏内直播主播带货服务，并为行业商家提供数据服务支持，提高产品市场竞争力。",
     [MultipleLangFileNameEunm.HighGamesCoverage]: "高游戏覆盖率",
@@ -73,6 +77,7 @@ export default {
     [MultipleLangFileNameEunm.OfficialPartner]: "官方合作伙伴",
     [MultipleLangFileNameEunm.JerseysAndMajorSponsors]: "球衣和主要赞助商",
     [MultipleLangFileNameEunm.AsiaOfficialPartner]: "亚洲官方合作伙伴",
+    [MultipleLangFileNameEunm.SponsorshipContent]:"ManBetX万博体育赞助跨足全球引领未来！心系全球体育赛事，倾情携手五大联赛以及豪门俱乐部，并赞助多家职业联赛以及各大国际赛事。ManBetX万博体育赞助永不停歇，初心引领伟大征程！",
     [MultipleLangFileNameEunm.SerieTeamsSponsorship]: "意甲13支\n球队赞助",
     [MultipleLangFileNameEunm.PremierLeagueOfficial]: "英超官方",
     [MultipleLangFileNameEunm.RCDEspanyoldeBarcelona]: "RCD Espanyol de Barcelona",

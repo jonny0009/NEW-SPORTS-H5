@@ -30,7 +30,7 @@ const options = computed(() => useSelfContentOptions())
     margin-top: 45px;
 }
 .sf-content-icon {
-    ::v-deep img {
+    :deep(img) {
         width: 50px;
         height: 44.2px;
         object-fit: contain;

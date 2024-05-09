@@ -113,7 +113,7 @@ const onClick = (type: AddreessType, mes: string) => {
     align-items: center;
 }
 .bc-addreess-icon {
-    ::v-deep img {
+    :deep(img) {
         width: 51px;
         height: 50px;
         object-fit: contain;

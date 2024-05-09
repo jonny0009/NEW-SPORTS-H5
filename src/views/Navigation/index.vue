@@ -1,5 +1,6 @@
 
 <script  lang="ts" >
+// import 'amfe-flexible'
 import { useI18n } from 'vue-i18n'
 import logoUrl from '@/assets/image/nav_logo.png'
 import langUrl from '@/assets/image/nav_lang.png'
@@ -175,7 +176,7 @@ export default defineComponent({
 }
 .nav-logo-img {
     margin-left: 26px;
-    ::v-deep img {
+    :deep(img) {
         width: 36px;
         height: 35px;
         object-fit: contain;
@@ -183,7 +184,7 @@ export default defineComponent({
 }
 .nav-lang-img {
     margin-right: 10px;
-    ::v-deep img {
+    :deep(img) {
         width: 30px;
         height: 30px;
         object-fit: contain;
@@ -191,7 +192,7 @@ export default defineComponent({
 }
 
 .nav-lang-icon {
-    ::v-deep img {
+    :deep(img) {
         width: 14px;
         height: 8px;
         object-fit: contain;
@@ -214,11 +215,11 @@ export default defineComponent({
     z-index: 777;
 }
 
-::v-deep .van-sticky--fixed {
+:deep(.van-sticky--fixed) {
     z-index: 999;
 }
 
-::v-deep .van-popover__content {
+:deep(.van-popover__content) {
     border-radius: 5px;
 }
 .nav-scroll-mask {
@@ -227,7 +228,7 @@ export default defineComponent({
     background-color: #000;
 }
 
-::v-deep .van-tabs__wrap {
+:deep(.van-tabs__wrap) {
     width: 78vw;
     left: 11vw;
     z-index: 999;
@@ -235,11 +236,11 @@ export default defineComponent({
     position: absolute !important;
     top: 0;
 }
-::v-deep .van-tabs__nav {
+:deep(.van-tabs__nav) {
     padding-left: 0px;
     padding-right: 0px;
 }
-::v-deep .van-tabs__line {
+:deep(.van-tabs__line) {
     background: url('@/assets/image/nav_tab_icon.png') no-repeat;
     background-size: cover;
 }

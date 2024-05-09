@@ -32,7 +32,7 @@ import lineRightURL from '@/assets/image/spon_line_right.png'
 }
 .spon-left-line {
     flex: 1;
-    ::v-deep img {
+    :deep(img) {
         height: 1px;
         width: 100%;
         object-fit: contain;
@@ -40,7 +40,7 @@ import lineRightURL from '@/assets/image/spon_line_right.png'
 }
 .spon-right-line {
     flex: 1;
-    ::v-deep img {
+    :deep(img) {
         height: 1px;
         width: 100%;
         object-fit: contain;

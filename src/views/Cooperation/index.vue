@@ -65,7 +65,7 @@ import ContentView from './components/ContentView.vue'
 }
 .bc-img {
     margin-top: 40px;
-    ::v-deep img {
+    :deep(img) {
         width: 100%;
         height: 85px;
         object-fit: contain;

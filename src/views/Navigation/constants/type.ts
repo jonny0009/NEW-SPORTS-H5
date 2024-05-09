@@ -39,4 +39,4 @@ export const useTabsOptions = () => {
             fileName: i18n.global.t(MultipleLangFileNameEunm.Cooperation)
         }
     ]
-} 
+}

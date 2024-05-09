@@ -45,7 +45,7 @@ import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
     align-items: center;
 }
 .sp-logo-img {
-    ::v-deep img {
+    :deep(img) {
         width: 340px;
         height: 172.4px;
         object-fit: contain;

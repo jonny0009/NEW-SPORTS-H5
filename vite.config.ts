@@ -1,5 +1,5 @@
-import path from 'path'
 import { defineConfig } from "vite";
+import { fileURLToPath, URL } from 'node:url'
 import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
@@ -13,7 +13,7 @@ export default defineConfig({
     // base: './',
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, './src')
+            '@': fileURLToPath(new URL('./src', import.meta.url))
         },
         extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"]
     },
@@ -39,36 +39,28 @@ export default defineConfig({
             plugins: [
                 postCssPxtoRem({
                     rootValue({ file }: any) {
-                        return file.indexOf('vant') !== -1 ? 37.5 : 75;
+                        if (file && file.indexOf('vant')>-1) { 
+                            return 37.5
+                        }
+                        if (file && (file.indexOf('pc')>-1 || file.indexOf('swiper')>-1)) { 
+                            return 192
+                        }
+                        return 75
                     },
                     propList: ['*'],
-                    selectorBlackList: ['norem']
+                    selectorBlackList: ['norem',/^\.v-/],
+                    exclude: /node_modules/
                 })
-            ]
+            ],
         },
-        devSourcemap: true
     },
-    // build: {
-    //     rollupOptions: {
-    //         output: {
-    //             manualChunks: (assetInfo) => { 
-    //                 console.log(assetInfo, 'assetInfo')
-    //                 // const imgs = ['.png','.jpg']
-    //                 if (assetInfo.includes('.less') || assetInfo.includes('.css')) {
-    //                     return 'css/[name].[hash][extname]';
-    //                  }
-    //                 if (assetInfo.includes('.png') || assetInfo.includes('.jpg')) {
-    //                     return 'img/[name].[hash][extname]';
-    //                  }
-    //             }
-    //             chunkFileNames: 'js/[name].[hash].js',
-    //             manualChunks(id) {
-    //                 if (id.includes('node_modules')) {
-    //                     return 'vendor'
-    //                 }
-    //             }
-    //         },
-    //         cssCodeSplit:true
-    //     }
-    // }
+    build: {
+        rollupOptions: {
+            output: {
+                chunkFileNames: 'assets/js/[name]-[hash].js',
+                entryFileNames: 'assets/js/[name]-[hash].js',
+                assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
+            }
+        }
+    }
 });

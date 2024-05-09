@@ -35,7 +35,7 @@ import { PartRDcontentOptions } from '../../constants'
     margin-bottom: 40px;
 }
 .sp-nd-icon {
-    ::v-deep img {
+    :deep(img) {
         width: 36px;
         height: 36px;
         object-fit: contain;

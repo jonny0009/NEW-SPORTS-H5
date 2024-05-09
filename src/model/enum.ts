@@ -8,6 +8,9 @@ export enum MultipleLangFileNameEunm {
     WholeTextBotton = 'WholeTextBotton',
     SubmitTextBotton = 'SubmitTextBotton',
     LoginForFreeBotton = 'LoginForFreeBotton',
+    SportsManBetXBotton = 'SportsManBetXBotton',
+    LiveGameManBetXBotton = 'LiveGameManBetXBotton',
+    AboutManBetX = 'AboutManBetX',
 
     Sport = 'Sport',
     LiveGame = 'LiveGame',
@@ -73,6 +76,7 @@ export enum MultipleLangFileNameEunm {
     OfficialPartner = 'OfficialPartner',
     JerseysAndMajorSponsors = 'JerseysAndMajorSponsors',
     AsiaOfficialPartner = 'AsiaOfficialPartner',
+    SponsorshipContent = 'SponsorshipContent',
     SerieTeamsSponsorship = 'SerieTeamsSponsorship',
     PremierLeagueOfficial = 'PremierLeagueOfficial',
     RCDEspanyoldeBarcelona = 'RCDEspanyoldeBarcelona',
@@ -107,11 +111,23 @@ export enum VideoMaskEnum {
 export enum BottonSize {
     Large = 'Large',
     Middle = 'Middle',
+    Selected = 'Selected'
 }
 
 export enum BottonType {
     Link = 'Link',
     Submit = 'Submit',
+}
+
+
+export enum SwiperActiveIndex {
+    SportPartSt = 'SportPartSt',
+    SportPartNd = 'SportPartNd',
+    LiveGamePartSt = 'LiveGamePartSt',
+    LiveGamePartNd = 'LiveGamePartNd',
+    AboutUs = 'AboutUs',
+    Sponsorship = 'Sponsorship',
+    Cooperation = 'Cooperation',
 }
 
 export const COPY_RIGHT_TEXT = 'COPYRIGHT © 1998 - 2024 7lucky. \n ALL RIGHTSRESERVED 7lucky. \n Group Copyright Violators will be prosecuted'

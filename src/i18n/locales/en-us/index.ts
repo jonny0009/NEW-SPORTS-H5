@@ -5,6 +5,10 @@ export default {
     [MultipleLangFileNameEunm.SubmitTextBotton]: 'submit',
     [MultipleLangFileNameEunm.WholeTextBotton]: 'Try it Now',
     [MultipleLangFileNameEunm.LoginForFreeBotton]: 'Login For Free',
+    [MultipleLangFileNameEunm.SportsManBetXBotton]: 'ManBetX Sport',
+    [MultipleLangFileNameEunm.LiveGameManBetXBotton]: 'ManBetX Baccarat',
+
+    [MultipleLangFileNameEunm.AboutManBetX]:'About ManBetX',
 
     [MultipleLangFileNameEunm.Sport]: 'Sport',
     [MultipleLangFileNameEunm.LiveGame]: 'Live Game',
@@ -76,6 +80,7 @@ export default {
     [MultipleLangFileNameEunm.OfficialPartner]: "Official Partner",
     [MultipleLangFileNameEunm.JerseysAndMajorSponsors]: "Jerseys and \n Major sponsors",
     [MultipleLangFileNameEunm.AsiaOfficialPartner]: "Asia Official Partner",
+    [MultipleLangFileNameEunm.SponsorshipContent]: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     [MultipleLangFileNameEunm.SerieTeamsSponsorship]: "Serie A 13 Teams \n Sponsorship",
     [MultipleLangFileNameEunm.PremierLeagueOfficial]: "Premier League \n Official",
     [MultipleLangFileNameEunm.RCDEspanyoldeBarcelona]: "RCD Espanyol \n de Barcelona",
@@ -83,7 +88,7 @@ export default {
     [MultipleLangFileNameEunm.LaLigaOfficial]: "La Liga official",
     [MultipleLangFileNameEunm.TheOnlyOfficialPartnerInAsia]: "The only official partner \n in Asia",
 
-    [MultipleLangFileNameEunm.BusinessCooperation]: "Business Cooperation",
+    [MultipleLangFileNameEunm.BusinessCooperation]: "Business \nCooperation",
     [MultipleLangFileNameEunm.BusinessCooperationStContent]: "Only look for the following contact information, do not trust others, and be careful not to be deceived.",
     [MultipleLangFileNameEunm.BusinessCooperationNdContent]: "If you need consultation, please fill out the form below and we will contact you as soon as possible.",
     [MultipleLangFileNameEunm.BusinessCooperationRdContent]: "This form will provide your personal contact information and other information, so we can respond to your inquiry more effectively and facilitate this site to understand your needs and help in a timely manner.",

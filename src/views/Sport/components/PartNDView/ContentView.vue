@@ -37,7 +37,7 @@ import { PartNDcontentOptions } from '../../constants'
 }
 
 .sp-nd-icon {
-    ::v-deep img {
+    :deep(img) {
         margin-right: 20px;
         width: 48.4px;
         height: 50px;

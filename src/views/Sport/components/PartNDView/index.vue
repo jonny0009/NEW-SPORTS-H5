@@ -26,8 +26,8 @@ import { MultipleLangFileNameEunm, BottonSize } from '@/model'
 </template>
 
 <style scoped lang="less">
-@fontsize: 24px;
-@lineheight: 30px;
+// @fontsize: 24px;
+// @lineheight: 30px;
 .sp-head-wrap {
     background: #000;
     padding: 50px 40px 28px 40px;
@@ -57,12 +57,6 @@ import { MultipleLangFileNameEunm, BottonSize } from '@/model'
     line-height: 30px;
     margin-top: 20px;
     color: #ffffff;
-}
-.sp-content-tips {
-    font-size: @fontsize;
-    line-height: @lineheight;
-    color: #ffffff;
-    display: inline-block;
 }
 .sp-content-btn {
     margin-top: 80px;
