@@ -150,7 +150,7 @@ export default defineComponent({
             <van-tab
                 :key="item.key"
                 :title="item.fileName"
-                v-for="item in tabsOptions"
+                v-for="(item, index) in tabsOptions"
             >
                 <div>
                     <div v-show="!!index" class="nav-scroll-mask"></div>
