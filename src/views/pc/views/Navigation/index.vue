@@ -4,6 +4,7 @@
 import { useI18n } from 'vue-i18n'
 import { ref, getCurrentInstance, onMounted, computed } from 'vue'
 import { LanguageOptions, StorageLangNameEnum } from '@/model'
+import { Mousewheel } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import {
     useTabsOptions,
@@ -16,7 +17,8 @@ import 'swiper/css'
 const tabSelected = ref('')
 const LangSelected = ref('')
 const swiperIndex = ref('') //用于执行动画特效
-const mySwiper = ref<any>(null)
+const myRowSwiper = ref<any>(null)
+const myColumnSwiper = ref<any>(null)
 const navRef = ref<any>(null)
 const navHeadHeight = ref(0)
 const langOptions = ref(LanguageOptions)
@@ -42,7 +44,7 @@ const onChangePage = (value: string) => {
     if (!!value) {
         tabSelected.value = value
         const index = TabsIndexToSwiper[value]
-        mySwiper.value && mySwiper.value.slideTo(index)
+        myRowSwiper.value && myRowSwiper.value.slideTo(index)
     }
 }
 //切换swiper
@@ -51,9 +53,12 @@ const slideWrapChange = (swiper: any) => {
     const activeSlideEl = swiper.slides[activeIndex]
     const index = activeSlideEl.dataset.extraInfo
     const value = swiperIndexToTabs[activeIndex]
-
     swiperIndex.value = index
     tabSelected.value = value
+}
+
+const onColumnChangePage = (index: number) => {
+    myColumnSwiper.value.slideTo(index)
 }
 
 //切换swiper
@@ -66,8 +71,11 @@ const slideChildChange = (swiper: any) => {
 }
 
 //实例化
-const onSwiper = (swiper: any) => {
-    mySwiper.value = swiper
+const onRowSwiper = (swiper: any) => {
+    myRowSwiper.value = swiper
+}
+const onColumnSwiper = (swiper: any) => {
+    myColumnSwiper.value = swiper
 }
 const onSelectLang = (value: string) => {
     location.reload()
@@ -143,8 +151,11 @@ onMounted(() => {
 
         <swiper
             class="swiperBox"
+            :loop="false"
+            :mousewheel="true"
+            @swiper="onRowSwiper"
             direction="vertical"
-            @swiper="onSwiper"
+            :modules="[Mousewheel]"
             @slideChange="slideWrapChange"
         >
             <swiper-slide
@@ -153,7 +164,11 @@ onMounted(() => {
                 :data-extra-info="item.index"
             >
                 <swiper-slide v-if="!!item.children">
-                    <swiper class="swiperBox" @slideChange="slideChildChange">
+                    <swiper
+                        class="swiperBox"
+                        @swiper="onColumnSwiper"
+                        @slideChange="slideChildChange"
+                    >
                         <swiper-slide
                             v-for="child in item.children"
                             :key="child.index"
@@ -164,12 +179,12 @@ onMounted(() => {
                                 :is="child.component"
                                 :paddingTop="navHeadHeight"
                                 :swiperIndex="swiperIndex"
+                                @update:change="onColumnChangePage"
                             ></component>
                         </swiper-slide>
                     </swiper>
                 </swiper-slide>
                 <component
-                    class="swiper-slide-item"
                     :is="item.component"
                     :paddingTop="navHeadHeight"
                     :swiperIndex="swiperIndex"

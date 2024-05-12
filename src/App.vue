@@ -1,20 +1,22 @@
 
 <script  lang="ts" setup>
 import { useMobile } from '@/hooks'
-import { onMounted, onUnmounted, ref } from 'vue'
+import { ref } from 'vue'
 import NavAppView from '@/views/Navigation/index.vue'
 import NavPcView from '@/views/pc/index.vue'
 
 const isMobile = ref(useMobile())
 
-const checkWindons = () => location.reload()
+// onMounted,onUnmounted,
 
-onMounted(() => {
-    window.addEventListener('resize', checkWindons)
-})
-onUnmounted(() => {
-    window.removeEventListener('resize', checkWindons)
-})
+// const checkWindons = () => location.reload()
+
+// onMounted(() => {
+//     window.addEventListener('resize', checkWindons)
+// })
+// onUnmounted(() => {
+//     window.removeEventListener('resize', checkWindons)
+// })
 </script>
 
 <template>

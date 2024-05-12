@@ -2,9 +2,16 @@
 <script  lang="ts" setup>
 import videoURL from '@/assets/video/lg_part_01.mp4'
 import videoBGURL from '@/assets/video/lg_part_bg_01.jpg'
+import { defineProps } from 'vue'
+import { BottonType } from './constants'
 import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
 import ContentView from './components/ContentView.vue'
+import ManbetBotton from './components/ManbetBotton.vue'
 const props = defineProps(['paddingTop'])
+const emit = defineEmits(['update:change'])
+const onChangeTab = (index: number) => {
+    emit('update:change', index)
+}
 </script>
 
 <template>
@@ -23,21 +30,10 @@ const props = defineProps(['paddingTop'])
                             <span class="lg-nd-title">{{
                                 $t(MultipleLangFileNameEunm.OurGamesAndProducts)
                             }}</span>
-
-                            <div class="lg-nd-botton">
-                                <botton-confirm-pc
-                                    :text="
-                                        MultipleLangFileNameEunm.SportsManBetXBotton
-                                    "
-                                    :size="BottonSize.Middle"
-                                ></botton-confirm-pc>
-                                <botton-confirm-pc
-                                    :text="
-                                        MultipleLangFileNameEunm.LiveGameManBetXBotton
-                                    "
-                                    :size="BottonSize.Selected"
-                                ></botton-confirm-pc>
-                            </div>
+                            <manbet-botton
+                                :active="BottonType.Bacccarat"
+                                @update:change="onChangeTab"
+                            ></manbet-botton>
                         </div>
                         <div>
                             <span class="lg-nd-name">{{

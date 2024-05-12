@@ -9,7 +9,6 @@ import { options } from '../constants'
             <div class="lg-nd-content" v-for="(child, i) in item" :key="i">
                 <van-image class="lg-nd-icon" :src="child.icon" />
                 <span class="lg-nd-text">{{ $t(child.fileName) }}</span>
-                <!-- <span class="lg-nd-content">{{ 24323423424324 }}</span> -->
             </div>
         </div>
     </div>

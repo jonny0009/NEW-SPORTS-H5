@@ -15,12 +15,6 @@ watch(
     (newValue) => {
         const [swiperIndex] = newValue
         isAnimated.value = swiperIndex === SwiperActiveIndex.SportPartNd
-        console.log(
-            swiperIndex,
-            SwiperActiveIndex.SportPartNd,
-            isAnimated.value,
-            'swiperIndex'
-        )
     },
     { deep: true }
 )
@@ -63,7 +57,7 @@ watch(
     }
 }
 .sp-wrap {
-    height: 100%;
+    height: 100vh;
     padding: 0px 119px;
     background: url(@/assets/image/lg_part_st_bg.png) no-repeat,
         linear-gradient(0, #000 100%, #000 100%);
