@@ -38,7 +38,7 @@ import ContentView from './components/ContentView.vue'
 
 <style lang="less" scoped>
 .bc-wrap {
-    padding: 100px 40px 30px 40px;
+    padding: 80px 40px 30px 40px;
     background: url(@/assets/image/bc_bg.jpg) no-repeat;
     background-size: cover;
 }

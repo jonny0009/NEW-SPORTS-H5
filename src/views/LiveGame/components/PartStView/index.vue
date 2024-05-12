@@ -89,7 +89,7 @@ import ContentView from './ContentView.vue'
     margin-bottom: 10px;
 }
 .lg-rd-wrap {
-    padding: 80px 32px;
+    padding: 50px 32px;
 }
 .lg-rd-content {
     padding: 30px 40px 29px 40px;

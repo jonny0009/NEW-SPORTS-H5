@@ -153,7 +153,7 @@ export default defineComponent({
                 v-for="item in tabsOptions"
             >
                 <div>
-                    <!-- <div v-show="!!index" class="nav-scroll-mask"></div> -->
+                    <div v-show="!!index" class="nav-scroll-mask"></div>
                     <component :is="item.component"></component>
                 </div>
             </van-tab>

@@ -37,7 +37,7 @@ import ContentView from './components/ContentView.vue'
 
 <style lang="less" scoped>
 .spon-wrap {
-    padding: 100px 0 60px 0;
+    padding: 80px 0 60px 0;
 }
 .spon-title {
     display: block;
