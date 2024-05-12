@@ -1,6 +1,6 @@
 
 <script  lang="ts" setup>
-import { PartRDcontentOptions } from '../../constants'
+import { options } from '../../constants'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import { PartRDcontentOptions } from '../../constants'
         <div class="sp-nd-content">
             <div
                 class="sp-nd-content-wrap"
-                v-for="(item, index) in PartRDcontentOptions"
+                v-for="(item, index) in options"
                 :key="index"
             >
                 <van-image class="sp-nd-icon" :src="item.icon" />

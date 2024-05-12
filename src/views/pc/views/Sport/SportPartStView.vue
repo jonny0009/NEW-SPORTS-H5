@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import logoURL from '@/assets/image/pc_sport_logo.png'
+import logoURL from '@/assets/image/sport_logo.png'
 import videoURL from '@/assets/video/sp_part_01.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_01.jpg'
 import { defineProps, watch, ref } from 'vue'
@@ -7,7 +7,8 @@ import {
     VideoMaskEnum,
     MultipleLangFileNameEunm,
     BottonSize,
-    SwiperActiveIndex
+    SwiperActiveIndex,
+    BottonLinkType
 } from '@/model'
 
 const isAnimate = ref(false)
@@ -46,6 +47,7 @@ watch(
                     <van-row justify="center" class="sp-btn-wrap">
                         <botton-confirm-pc
                             :size="BottonSize.Middle"
+                            :link="BottonLinkType.Home"
                             :text="MultipleLangFileNameEunm.WholeTextBotton"
                         ></botton-confirm-pc>
                     </van-row>

@@ -4,7 +4,12 @@ import videoURL from '@/assets/video/lg_part_01.mp4'
 import videoBGURL from '@/assets/video/lg_part_bg_01.jpg'
 import { defineProps } from 'vue'
 import { BottonType } from './constants'
-import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
+import {
+    MultipleLangFileNameEunm,
+    VideoMaskEnum,
+    BottonSize,
+    BottonLinkType
+} from '@/model'
 import ContentView from './components/ContentView.vue'
 import ManbetBotton from './components/ManbetBotton.vue'
 const props = defineProps(['paddingTop'])
@@ -55,10 +60,11 @@ const onChangeTab = (index: number) => {
                         </div>
                         <van-row justify="center">
                             <botton-confirm-pc
+                                :size="BottonSize.Large"
+                                :link="BottonLinkType.Casino"
                                 :text="
                                     MultipleLangFileNameEunm.LoginForFreeBotton
                                 "
-                                :size="BottonSize.Large"
                             ></botton-confirm-pc>
                         </van-row>
                     </div>

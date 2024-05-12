@@ -3,7 +3,8 @@ import { defineProps, ref, watch } from 'vue'
 import {
     MultipleLangFileNameEunm,
     BottonSize,
-    SwiperActiveIndex
+    SwiperActiveIndex,
+    BottonLinkType
 } from '@/model'
 import ContentView from './components/PartNDView/index.vue'
 
@@ -39,6 +40,7 @@ watch(
                 <van-row justify="center">
                     <botton-confirm-pc
                         :size="BottonSize.Middle"
+                        :link="BottonLinkType.Home"
                         :text="MultipleLangFileNameEunm.WholeTextBotton"
                     ></botton-confirm-pc>
                 </van-row>

@@ -1,9 +1,14 @@
 
 <script  lang="ts" setup>
-import logoURL from '@/assets/image/sp_logo.png'
+import logoURL from '@/assets/image/sport_logo.png'
 import videoURL from '@/assets/video/sp_part_01.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_01.jpg'
-import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
+import {
+    MultipleLangFileNameEunm,
+    VideoMaskEnum,
+    BottonSize,
+    BottonLinkType
+} from '@/model'
 </script>
 
 <template>
@@ -25,10 +30,11 @@ import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
                     }}</span>
 
                     <van-row justify="center" class="sp-btn-wrap">
-                        <botton-confirm
+                        <botton-confirm-app
+                            :link="BottonLinkType.Home"
                             :size="BottonSize.Middle"
                             :text="MultipleLangFileNameEunm.WholeTextBotton"
-                        ></botton-confirm>
+                        ></botton-confirm-app>
                     </van-row>
                 </div>
             </div>

@@ -1,11 +1,17 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue'
-import { BottonSize } from '@/model'
+import { getStore } from '@/config/storage'
+import {
+    BottonSize,
+    BottonLinkSource,
+    BottonLinkType,
+    StorageLangNameEnum
+} from '@/model'
 import xsURL from '@/assets/image/middle_btn_border.png'
 import xlURL from '@/assets/image/large_btn_border.png'
 import sdURL from '@/assets/image/middle_selected_btn_border.png'
 
-const { size, text } = defineProps(['size', 'text'])
+const { size, text, link } = defineProps(['size', 'text', 'link'])
 const imgStyle: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: 'botton-xs-img',
     [BottonSize.Large]: 'botton-xl-img',
@@ -18,11 +24,17 @@ const imgSource: { [key in BottonSize]: string } = {
 }
 const style = imgStyle[size as BottonSize]
 const source = imgSource[size as BottonSize]
+
+const onJump = () => {
+    const source = BottonLinkSource[link as BottonLinkType]
+    const lang = getStore(StorageLangNameEnum.LOCAL_LANGUAGE_NAME)
+    source && window.open(source + `?lang=${lang}`, '_blank')
+}
 </script>
 
 <template>
     <div>
-        <div class="botton-wrap">
+        <div class="botton-wrap" @click="onJump">
             <span class="botton-text">{{ $t(text) }}</span>
             <img :src="source" :class="[style]" alt="" />
         </div>

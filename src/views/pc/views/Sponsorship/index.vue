@@ -1,9 +1,13 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue'
-import { VideoMaskEnum, MultipleLangFileNameEunm, BottonSize } from '@/model'
+import {
+    VideoMaskEnum,
+    MultipleLangFileNameEunm,
+    BottonSize,
+    BottonLinkType
+} from '@/model'
 import videoURL from '@/assets/video/spon_part_01.mp4'
 import videoBGURL from '@/assets/video/span_part_bg_01.jpg'
-
 import ContentView from './components/ContentView.vue'
 
 const props = defineProps(['paddingTop'])
@@ -32,6 +36,7 @@ const props = defineProps(['paddingTop'])
                         <van-row justify="center" class="spon-btn">
                             <botton-confirm-pc
                                 :size="BottonSize.Middle"
+                                :link="BottonLinkType.Home"
                                 :text="MultipleLangFileNameEunm.WholeTextBotton"
                             ></botton-confirm-pc>
                         </van-row>

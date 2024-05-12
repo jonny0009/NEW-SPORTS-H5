@@ -2,7 +2,12 @@
 <script  lang="ts" setup>
 import videoURL from '@/assets/video/sp_part_02.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_02.jpg'
-import { MultipleLangFileNameEunm, VideoMaskEnum, BottonSize } from '@/model'
+import {
+    MultipleLangFileNameEunm,
+    VideoMaskEnum,
+    BottonSize,
+    BottonLinkType
+} from '@/model'
 import ContentView from './ContentView.vue'
 </script>
 
@@ -31,10 +36,11 @@ import ContentView from './ContentView.vue'
                     <content-view></content-view>
 
                     <van-row justify="center">
-                        <botton-confirm
+                        <botton-confirm-app
                             :size="BottonSize.Large"
+                            :link="BottonLinkType.Casino"
                             :text="MultipleLangFileNameEunm.LoginForFreeBotton"
-                        ></botton-confirm>
+                        ></botton-confirm-app>
                     </van-row>
                 </div>
             </div>

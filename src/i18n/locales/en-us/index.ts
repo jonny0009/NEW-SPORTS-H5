@@ -63,6 +63,7 @@ export default {
     [MultipleLangFileNameEunm.VideoAnimation]: "Video \nAnimation",
     [MultipleLangFileNameEunm.ZeroCostWatchGame]: "Zero Cost \nWatch Game",
     [MultipleLangFileNameEunm.EarlySettlement]: "Early \nSettlement",
+    [MultipleLangFileNameEunm.CustomizedDesignCustomizedSkin]: "Customized design-\ncustomized skin",
     [MultipleLangFileNameEunm.AboutUsContent]: "ManBetX Sports Since the establishment of ManBetX Group in 2020, it has been committed to creating top sports services, a live video entertainment platform and a fair and just betting platform for users.",
     [MultipleLangFileNameEunm.AboutUsTips]: "No matter where you are, you can enjoy live interaction at any time.",
 
@@ -99,7 +100,10 @@ export default {
     [MultipleLangFileNameEunm.ContactNumber]: "Contact \nNumber",
     [MultipleLangFileNameEunm.ContactMethod]: "Contact \nMethod",
     [MultipleLangFileNameEunm.YourProblem]: "Your specific requirements or questions you \n want to ask",
-    [MultipleLangFileNameEunm.CompanyInformation]: 'ManBetX Sport has a legal license issued by the British Isle of Grace (IMG) and the Philippine Government Commission (PAGCOR), registered in the British Virgin Islands, and is a legal company recognized by international associations'
+    [MultipleLangFileNameEunm.CompanyInformation]: 'ManBetX Sport has a legal license issued by the British Isle of Grace (IMG) and the Philippine Government Commission (PAGCOR), registered in the British Virgin Islands, and is a legal company recognized by international associations',
+
+
+    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 7lucky. ALL RIGHTSRESERVED \n7lucky. Group Copyright Violators will be prosecuted",
 
 
 

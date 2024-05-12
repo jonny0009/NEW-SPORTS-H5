@@ -29,7 +29,7 @@ import ContentView from './components/ContentView.vue'
 
             <van-divider />
 
-            <copy-right></copy-right>
+            <copy-right-app></copy-right-app>
         </div>
     </div>
 </template>

@@ -1,14 +1,25 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue'
-import { BottonSize } from '@/model'
-
-const { size, text } = defineProps(['size', 'text'])
+import { getStore } from '@/config/storage'
+import {
+    BottonSize,
+    BottonLinkSource,
+    StorageLangNameEnum,
+    BottonLinkType
+} from '@/model'
+const { size, text, link } = defineProps(['size', 'text', 'link'])
 const style = size === BottonSize.Middle ? 'botton-xs-wrap' : 'botton-xl-wrap'
+
+const onJump = () => {
+    const source = BottonLinkSource[link as BottonLinkType]
+    const lang = getStore(StorageLangNameEnum.LOCAL_LANGUAGE_NAME)
+    source && window.open(source + `?lang=${lang}`, '_blank')
+}
 </script>
 
 <template>
     <div>
-        <div :class="[style, 'botton-wrap']">
+        <div :class="[style, 'botton-wrap']" @click="onJump">
             <span class="botton-text">{{ $t(text) }}</span>
         </div>
     </div>

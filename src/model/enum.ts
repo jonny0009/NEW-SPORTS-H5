@@ -1,6 +1,6 @@
 export enum MultipleLangEunm {
-    CN = 'zh-CN',
-    US = 'en-US'
+    CN = 'zh-cn',
+    US = 'en-us'
 }
 
 export enum MultipleLangFileNameEunm {
@@ -59,6 +59,7 @@ export enum MultipleLangFileNameEunm {
     VideoAnimation = 'VideoAnimation',
     ZeroCostWatchGame = 'ZeroCostWatchGame',
     EarlySettlement = 'EarlySettlement',
+    CustomizedDesignCustomizedSkin = 'CustomizedDesignCustomizedSkin',
     AboutUsContent = 'AboutUsContent',
     AboutUsTips = 'AboutUsTips',
 
@@ -94,6 +95,8 @@ export enum MultipleLangFileNameEunm {
     ContactMethod = 'ContactMethod',
     YourProblem = 'YourProblem',
     CompanyInformation = 'CompanyInformation',
+
+    CopyRight = 'CopyRight',
 }
 
 export enum StorageLangNameEnum {
@@ -114,9 +117,9 @@ export enum BottonSize {
     Selected = 'Selected'
 }
 
-export enum BottonType {
-    Link = 'Link',
-    Submit = 'Submit',
+export enum BottonLinkType { 
+    Home = 'Home',
+    Casino = 'Casino'
 }
 
 
@@ -130,4 +133,8 @@ export enum SwiperActiveIndex {
     Cooperation = 'Cooperation',
 }
 
-export const COPY_RIGHT_TEXT = 'COPYRIGHT © 1998 - 2024 7lucky. \n ALL RIGHTSRESERVED 7lucky. \n Group Copyright Violators will be prosecuted'
+export enum ContactInformation { 
+    Telegram = 'Telegram',
+    Email = 'Email',
+    Skype = 'Skype',
+}

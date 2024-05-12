@@ -4,6 +4,10 @@ import icon1stURL from '@/assets/image/lg_part_1st_icon.png'
 import icon2stURL from '@/assets/image/lg_part_2st_icon.png'
 import icon3stURL from '@/assets/image/lg_part_3st_icon.png'
 import icon4stURL from '@/assets/image/lg_part_4st_icon.png'
+import icon5stURL from '@/assets/image/lg_part_5st_icon.png'
+import icon6stURL from '@/assets/image/lg_part_6st_icon.png'
+import icon7stURL from '@/assets/image/lg_part_7st_icon.png'
+import icon8stURL from '@/assets/image/lg_part_8st_icon.png'
 
 import icon1ndURL from '@/assets/image/lg_part_1nd_icon.png'
 import icon2ndURL from '@/assets/image/lg_part_2nd_icon.png'
@@ -42,25 +46,25 @@ export const PartNDcontentOptions = [
 
 
     {
-        icon: icon4stURL,
+        icon: icon5stURL,
         tips: MultipleLangFileNameEunm.StandardizeOrderPushModel,
         title: MultipleLangFileNameEunm.GlobalCommunityPromotion,
         content: MultipleLangFileNameEunm.GlobalCommunityPromotionContent,
     },
     {
-        icon: icon4stURL,
+        icon: icon6stURL,
         tips: MultipleLangFileNameEunm.SimpleAndEasyToUnderstandInterfaceDesign,
         title: MultipleLangFileNameEunm.UserInterface,
         content: MultipleLangFileNameEunm.UserInterfaceContent,
     },
     {
-        icon: icon4stURL,
+        icon: icon7stURL,
         tips: MultipleLangFileNameEunm.MakeItEasyForNewbiesToGetStarted,
         title: MultipleLangFileNameEunm.SmartDescriptionRules,
         content: MultipleLangFileNameEunm.SmartDescriptionRulesContent,
     },
     {
-        icon: icon4stURL,
+        icon: icon8stURL,
         tips: MultipleLangFileNameEunm.EventLiveInteraction,
         title: MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchor,
         content: MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchorContent,

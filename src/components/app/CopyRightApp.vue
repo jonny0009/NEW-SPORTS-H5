@@ -1,10 +1,12 @@
 <script lang="ts" setup>
-import { COPY_RIGHT_TEXT } from '@/model'
+import { MultipleLangFileNameEunm } from '@/model'
 </script>
 
 <template>
     <div style="">
-        <div class="copy-right-text">{{ COPY_RIGHT_TEXT }}</div>
+        <div class="copy-right-text">
+            {{ $t(MultipleLangFileNameEunm.CopyRight) }}
+        </div>
     </div>
 </template>
 

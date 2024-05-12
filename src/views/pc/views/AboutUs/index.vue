@@ -4,6 +4,7 @@ import { ref, watch, defineProps } from 'vue'
 import headURL from '@/assets/image/sf_head_bg.jpg'
 import {
     BottonSize,
+    BottonLinkType,
     SwiperActiveIndex,
     MultipleLangFileNameEunm
 } from '@/model'
@@ -63,6 +64,7 @@ watch(
                 >
                     <botton-confirm-pc
                         :size="BottonSize.Middle"
+                        :link="BottonLinkType.Home"
                         :text="MultipleLangFileNameEunm.WholeTextBotton"
                     ></botton-confirm-pc>
                 </van-row>

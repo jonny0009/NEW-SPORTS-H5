@@ -32,7 +32,7 @@ export const contactAddressOptions = [
         addreess: [
             '@mxwin9527',
             '+1 206 202 1645',
-            '+1 (201) 275-0546'
+            '+1(201)2750546'
         ]
     },
 ]

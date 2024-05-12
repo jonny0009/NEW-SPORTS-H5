@@ -92,10 +92,10 @@ const onClick = (type: AddreessType, mes: string) => {
             </div>
 
             <van-row justify="center" class="bc-content-btn">
-                <botton-confirm
+                <botton-confirm-app
                     :size="BottonSize.Middle"
                     :text="MultipleLangFileNameEunm.SubmitTextBotton"
-                ></botton-confirm>
+                ></botton-confirm-app>
             </van-row>
         </div>
     </div>

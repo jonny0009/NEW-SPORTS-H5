@@ -185,6 +185,7 @@ onMounted(() => {
                     </swiper>
                 </swiper-slide>
                 <component
+                    class="swiper-slide-item"
                     :is="item.component"
                     :paddingTop="navHeadHeight"
                     :swiperIndex="swiperIndex"

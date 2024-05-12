@@ -60,6 +60,7 @@ export default {
     [MultipleLangFileNameEunm.VideoAnimation]: "视频动画",
     [MultipleLangFileNameEunm.ZeroCostWatchGame]: "零成本观看游戏",
     [MultipleLangFileNameEunm.EarlySettlement]: "提前结算",
+    [MultipleLangFileNameEunm.CustomizedDesignCustomizedSkin]: "客制化设计-自定义皮肤",
     [MultipleLangFileNameEunm.AboutUsContent]: "ManBetX Sports自2020年ManBetX集团成立以来，一直致力于为用户打造顶级体育服务、视频直播娱乐平台和公平公正的博彩平台。",
     [MultipleLangFileNameEunm.AboutUsTips]: "无论您身在何处，都可以随时享受现场互动。",
 
@@ -96,8 +97,9 @@ export default {
     [MultipleLangFileNameEunm.ContactNumber]: "联系电话",
     [MultipleLangFileNameEunm.ContactMethod]: "联系方式",
     [MultipleLangFileNameEunm.YourProblem]: "你的具体要求或你想问的问题",
-    [MultipleLangFileNameEunm.CompanyInformation]: 'ManBetX Sport拥有由英国格雷斯岛（IMG）和菲律宾政府委员会（PAGCOR）颁发的合法执照，在英属维尔京群岛注册，是一家得到国际协会认可的合法公司'
-
+    [MultipleLangFileNameEunm.CompanyInformation]: 'ManBetX Sport拥有由英国格雷斯岛（IMG）和菲律宾政府委员会（PAGCOR）颁发的合法执照，在英属维尔京群岛注册，是一家得到国际协会认可的合法公司',
+    
+    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 7lucky. ALL RIGHTSRESERVED \n7lucky集团版权所有违者必究",
     
 }
 

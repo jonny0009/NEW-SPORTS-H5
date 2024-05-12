@@ -1,6 +1,6 @@
 
 <script  lang="ts" setup>
-import { options } from '../constants'
+import { options } from '../../constants'
 </script>
 
 <template>

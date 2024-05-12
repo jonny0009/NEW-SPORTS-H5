@@ -8,6 +8,7 @@ import icon4ndURL from '@/assets/image/lg_part_4nd_icon.png'
 import icon5ndURL from '@/assets/image/lg_part_5nd_icon.png'
 import icon6ndURL from '@/assets/image/lg_part_6nd_icon.png'
 import icon7ndURL from '@/assets/image/lg_part_7nd_icon.png'
+import icon8ndURL from '@/assets/image/lg_part_8nd_icon.png'
 
 
 export const options = [
@@ -38,5 +39,9 @@ export const options = [
     {
         icon: icon7ndURL,
         fileName:MultipleLangFileNameEunm.EarlySettlement
+    },
+    {
+        icon: icon8ndURL,
+        fileName:MultipleLangFileNameEunm.CustomizedDesignCustomizedSkin
     }
 ]

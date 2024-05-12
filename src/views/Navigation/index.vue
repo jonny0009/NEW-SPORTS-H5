@@ -1,4 +1,3 @@
-
 <script  lang="ts" >
 // import 'amfe-flexible'
 import { useI18n } from 'vue-i18n'
