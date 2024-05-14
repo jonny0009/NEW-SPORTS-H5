@@ -14,6 +14,8 @@ export enum MultipleLangFileNameEunm {
     LiveGameManBetXBotton = 'LiveGameManBetXBotton',
     AboutManBetX = 'AboutManBetX',
 
+    Logo = 'Logo',
+    ProductAdv = 'ProductAdv',
     Sports = 'Sports',
     LiveGame = 'LiveGame',
     AboutUs = 'AboutUs',
@@ -139,6 +141,8 @@ export enum BottonLinkType {
 
 
 export enum SwiperActiveIndex {
+    Logo = 'Logo',
+    ProductAdvNd = 'ProductAdvNd',
     SportPartSt = 'SportPartSt',
     SportPartNd = 'SportPartNd',
     LiveGamePartSt = 'LiveGamePartSt',

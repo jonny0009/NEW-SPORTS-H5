@@ -3,7 +3,7 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 import { ref, getCurrentInstance, onMounted, computed } from 'vue'
-import { LanguageOptions, StorageLangNameEnum } from '@/model'
+import { LanguageOptions, MultipleLangFileNameEunm, StorageLangNameEnum } from '@/model'
 import { Mousewheel } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import {
@@ -27,24 +27,31 @@ const { locale } = useI18n()
 const { proxy } = getCurrentInstance() as any
 
 const tabsOptions = computed(() => {
-    const array = useTabsOptions().map((item) => ({
+    const { tabList, logo } = useTabsOptions()
+    const list = tabList.map((item) => ({
+        ...item,
         id: item.key,
         label: item.fileName
     }))
-    const options = [...new Map(array.map((item) => [item.id, item])).values()]
 
-    return options
+    return { list, logo}
 })
 
 const components = computed(() => {
-    return useTabsOptions()
+    return useTabsOptions()?.list
 })
 //切换菜单
 const onChangePage = (value: string) => {
     if (!!value) {
-        tabSelected.value = value
-        const index = TabsIndexToSwiper[value]
-        myRowSwiper.value && myRowSwiper.value.slideTo(index)
+      tabSelected.value = value
+      const index = TabsIndexToSwiper[value]
+      myRowSwiper.value && myRowSwiper.value.slideTo(index)
+      if (value === MultipleLangFileNameEunm.LiveGame) {
+        onColumnChangePage(1)
+        tabSelected.value = MultipleLangFileNameEunm.LiveGame
+      } else if (value === MultipleLangFileNameEunm.Sports) {
+        onColumnChangePage(0)
+      }
     }
 }
 //切换swiper
@@ -54,7 +61,9 @@ const slideWrapChange = (swiper: any) => {
     const index = activeSlideEl.dataset.extraInfo
     const value = swiperIndexToTabs[activeIndex]
     swiperIndex.value = index
-    tabSelected.value = value
+    if (value !== MultipleLangFileNameEunm.LiveGame) {
+      tabSelected.value = value
+    }
 }
 
 const onColumnChangePage = (index: number) => {
@@ -84,23 +93,9 @@ const onSelectLang = (value: string) => {
     proxy.$storage.setStore(StorageLangNameEnum.LOCAL_LANGUAGE_NAME, value)
 }
 
-const getIndexOptions = () => {
-    const options: string[] = []
-    const fn = (arr: any[]) => {
-        arr.forEach((item) => {
-            if (Array.isArray(item.children)) {
-                fn(item.children)
-            } else {
-                options.push(item.index)
-            }
-        })
-    }
-    fn(useTabsOptions())
-    return options
-}
-
 onMounted(() => {
-    swiperIndex.value = getIndexOptions()[0]
+    const { logo } = useTabsOptions()
+    swiperIndex.value = logo.key
     navHeadHeight.value = navRef.value.clientHeight
     LangSelected.value = proxy.$storage.getStore(
         StorageLangNameEnum.LOCAL_LANGUAGE_NAME
@@ -110,10 +105,11 @@ onMounted(() => {
 <template>
     <div>
         <div class="nav-wrap" ref="navRef">
-            <img src="@/assets/image/pc_logo.png" alt="" class="nav-logo-img" />
+            
+            <img @click="onChangePage(tabsOptions?.logo?.key)" src="@/assets/image/pc_logo.png" alt="" class="nav-logo-img" />
             <tabs-view
                 class="nav-tabs"
-                :tabs="tabsOptions"
+                :tabs="tabsOptions?.list"
                 :selected="tabSelected"
                 @update:selected="onChangePage"
             ></tabs-view>

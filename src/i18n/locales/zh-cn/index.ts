@@ -10,6 +10,7 @@ export default {
 
     [MultipleLangFileNameEunm.AboutManBetX]:'关于 ManBetX',
 
+    [MultipleLangFileNameEunm.ProductAdv]: '产品优势',
     [MultipleLangFileNameEunm.Sports]: '体育',
     [MultipleLangFileNameEunm.LiveGame]: '真人',
     [MultipleLangFileNameEunm.AboutUs]: '关于我们',
