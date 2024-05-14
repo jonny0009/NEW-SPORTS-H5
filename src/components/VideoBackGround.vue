@@ -52,14 +52,13 @@ export default defineComponent({
             <!-- <source src="path-to-your-video.webm" type="video/webm"> -->
             Your browser does not support the video tag.
         </video>
-        
-        <!-- 页面其他内容 -->
-        <div class="content">
-          <slot></slot>
-          <audio :id="`audio_${src}`" ref="audioRef" style="width: 0;height: 0;overflow: hidden; visibility: hidden; opacity: 0;" controls>
+        <audio ref="audioRef" style="width: 0;height: 0;overflow: hidden; visibility: hidden; opacity: 0;" controls>
             <source :src="src" type="video/mp4">
             Your browser does not support the audio tag.
           </audio>
+        <!-- 页面其他内容 -->
+        <div class="content">
+          <slot></slot>
         </div>
     </div>
 </template>
