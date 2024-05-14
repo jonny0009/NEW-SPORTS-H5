@@ -19,8 +19,8 @@ export default {
 
 
 
-    [MultipleLangFileNameEunm.SupplierTips]: '全球选择一站式电子商务API供应商',
-    [MultipleLangFileNameEunm.PlatformAdvantages]: '极速稳定·沉浸式体验·各种游戏·真实公平',
+    [MultipleLangFileNameEunm.SupplierTips]: '全球首选电商式一站式API供应商',
+    [MultipleLangFileNameEunm.PlatformAdvantages]: '极速稳定·沉浸体验·游戏多样·公平公正',
     [MultipleLangFileNameEunm.SpButtonText]: '现在就试试',
     [MultipleLangFileNameEunm.ProductAdvantages]: '产品优势',
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: '为每一个综合站，体育站，真人站等现金或信用站，提供完整、高效和稳定的一站式专业游戏供应商服务。',

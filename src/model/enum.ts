@@ -147,7 +147,7 @@ export enum SwiperActiveIndex {
     LiveGamePartNd = 'LiveGamePartNd',
     AboutUs = 'AboutUs',
     Sponsorship = 'Sponsorship',
-    Cooperation = 'Cooperation',
+    ContactUs = 'ContactUs',
 }
 
 export enum ContactInformation { 
@@ -161,5 +161,5 @@ export enum TabsNamePc {
     LiveGame = 'LiveGame',
     AboutUs = 'AboutUs',
     Sponsorship = 'Sponsorship',
-    Cooperation = 'Cooperation',
+    ContactUs = 'ContactUs',
 }

@@ -51,9 +51,9 @@ export const useTabsOptions = () => {
         },
         {
             component: Cooperation,
-            index: SwiperActiveIndex.Cooperation,
-            key:MultipleLangFileNameEunm.Cooperation,
-            fileName: i18n.global.t(MultipleLangFileNameEunm.Cooperation)
+            index: SwiperActiveIndex.ContactUs,
+            key:MultipleLangFileNameEunm.ContactUs,
+            fileName: i18n.global.t(MultipleLangFileNameEunm.ContactUs)
         }
     ]
 }
@@ -64,7 +64,7 @@ export const swiperIndexToTabs: { [key in number]: any } = {
     [2]: MultipleLangFileNameEunm.LiveGame,
     [3]: MultipleLangFileNameEunm.AboutUs,
     [4]: MultipleLangFileNameEunm.Sponsorship,
-    [5]: MultipleLangFileNameEunm.Cooperation,
+    [5]: MultipleLangFileNameEunm.ContactUs,
 }
 
 export const TabsIndexToSwiper: { [key in string]: any } = {
@@ -72,5 +72,5 @@ export const TabsIndexToSwiper: { [key in string]: any } = {
     [MultipleLangFileNameEunm.LiveGame]: 2,
     [MultipleLangFileNameEunm.AboutUs]: 3,
     [MultipleLangFileNameEunm.Sponsorship]: 4,
-    [MultipleLangFileNameEunm.Cooperation]: 5,
+    [MultipleLangFileNameEunm.ContactUs]: 5,
 }

@@ -10,7 +10,6 @@ export const contactAddressOptions = [
         icon: mailURL,
         type:AddreessType.Copy,
         addreess: [
-            '6qxyc7nt@gmail.com ',
             '6qxyc7nt@gmail.com',
             'l36773502@gmail.com'
         ]
@@ -29,7 +28,6 @@ export const contactAddressOptions = [
         icon: tgURL,
         type:AddreessType.Jump,
         addreess: [
-            '@mxwin9527',
             '+1 206 202 1645',
             '+1 234 529 4040'
         ]
