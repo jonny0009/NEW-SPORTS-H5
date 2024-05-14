@@ -12,6 +12,7 @@
         "@vitejs/plugin-legacy": "^5.3.2",
         "amfe-flexible": "^2.2.1",
         "animate.css": "^4.1.1",
+        "axios": "^1.6.8",
         "element-plus": "^2.7.2",
         "loadsh": "^0.0.4",
         "postcss-pxtorem": "^5.1.1",
@@ -21,7 +22,8 @@
         "vue": "^3.4.21",
         "vue-clipboard3": "^2.0.0",
         "vue-i18n": "^9.13.1",
-        "vuetify": "^3.6.0-beta.0.0"
+        "vuetify": "^3.6.0-beta.0.0",
+        "vuex": "^4.0.2"
     },
     "devDependencies": {
         "@types/node": "^20.12.7",

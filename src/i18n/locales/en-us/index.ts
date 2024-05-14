@@ -4,7 +4,7 @@ export default {
     [MultipleLangFileNameEunm.Copysuccessful]: 'copy successful',
     [MultipleLangFileNameEunm.SubmitTextBotton]: 'submit',
     [MultipleLangFileNameEunm.WholeTextBotton]: 'Try it Now',
-    [MultipleLangFileNameEunm.LoginForFreeBotton]: 'Login For Free',
+    [MultipleLangFileNameEunm.GamePalyDome]: 'Login For Free',
     [MultipleLangFileNameEunm.SportsManBetXBotton]: 'ManBetX Sport',
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: 'ManBetX Baccarat',
 
@@ -53,6 +53,7 @@ export default {
 
 
     [MultipleLangFileNameEunm.OurGamesAndProducts]: "Our Games And Products",
+
     [MultipleLangFileNameEunm.ManBetXSport]: "ManBetX Sport",
     [MultipleLangFileNameEunm.OurGamesAndProductsTips]: "High Payout, Various Games Type, Live broadcast covers leagues above level 3",
     [MultipleLangFileNameEunm.OurGamesAndProductsContent]: "We provide 2,000+ sports events around the world every day, with the best odds and the ultimate experience; settle in advance to make profits one step ahead; use data analysis to keep track of match points at any time; we also have in-game live broadcast anchor delivery services, and provide industry merchants with Data service support improves product market competitiveness.",
@@ -64,24 +65,43 @@ export default {
     [MultipleLangFileNameEunm.ZeroCostWatchGame]: "Zero Cost \nWatch Game",
     [MultipleLangFileNameEunm.EarlySettlement]: "Early \nSettlement",
     [MultipleLangFileNameEunm.CustomizedDesignCustomizedSkin]: "Customized design-\ncustomized skin",
+
+
+    [MultipleLangFileNameEunm.ManBetXRealPerson]: "ManBetX Sport",
+    [MultipleLangFileNameEunm.OurGamesAndProductsPersonTips]: "High Payout, Various Games Type, Live broadcast covers leagues above level 3",
+    [MultipleLangFileNameEunm.OurGamesAndProductsPersonContent]: "We provide 2,000+ sports events around the world every day, with the best odds and the ultimate experience; settle in advance to make profits one step ahead; use data analysis to keep track of match points at any time; we also have in-game live broadcast anchor delivery services, and provide industry merchants with Data service support improves product market competitiveness.",
+    [MultipleLangFileNameEunm.Fair0penAndJust]: "High Games \n Coverage",
+    [MultipleLangFileNameEunm.RapidBettingInMilliseconds]: "High Payout",
+    [MultipleLangFileNameEunm.TheBestPathLiesInControl]: "Interactive \nLive Commerce",
+    [MultipleLangFileNameEunm.SexyAnchorInteraction]: "Video \nAnimation",
+    [MultipleLangFileNameEunm.ImmersiveMipaiExperience]: "Zero Cost \nWatch Game",
+    [MultipleLangFileNameEunm.ManagementSystem]: "Early \nSettlement",
+    [MultipleLangFileNameEunm.MultipleBets]: "Customized design-\ncustomized skin",
+    [MultipleLangFileNameEunm.BlockchainBaccarat]: "Multi-application \n Terminal",
+
+
     [MultipleLangFileNameEunm.AboutUsContent]: "ManBetX Sports Since the establishment of ManBetX Group in 2020, it has been committed to creating top sports services, a live video entertainment platform and a fair and just betting platform for users.",
     [MultipleLangFileNameEunm.AboutUsTips]: "No matter where you are, you can enjoy live interaction at any time.",
 
-    [MultipleLangFileNameEunm.InternationalCertification]: "International Certification",
-    [MultipleLangFileNameEunm.InternationalCertificationContent]: "It is stable and safe and has won a number of international licenses and certifications, and has received a number of international certifications issued by the Maltese government.",
-    [MultipleLangFileNameEunm.VariousWaysToPlay]: "Various Ways To Play",
-    [MultipleLangFileNameEunm.VariousWaysToPlayContent]: "One-stop game experience, you can watch sports events, you can play hundreds of games and good roads, and don't miss any chance to make money.",
-    [MultipleLangFileNameEunm.TrueAndFair]: "True And Fair",
-    [MultipleLangFileNameEunm.TrueAndFairContent]: "Provide the real scene of online and offline synchronization in the industry; the most natural blockchain technology ensures a decentralized gaming experience.",
+
     [MultipleLangFileNameEunm.ProfessionalAnchor]: "Professional Anchor",
     [MultipleLangFileNameEunm.ProfessionalAnchorContent]: "Thousands of professional live sports lottery anchors from various countries talk about the ball and the road, providing timely services and entertainment interactive services for new and old users.",
+    [MultipleLangFileNameEunm.TrueAndFair]: "True And Fair",
+    [MultipleLangFileNameEunm.TrueAndFairContent]: "Provide the real scene of online and offline synchronization in the industry; the most natural blockchain technology ensures a decentralized gaming experience.",
+    [MultipleLangFileNameEunm.VariousWaysToPlay]: "Various Ways To Play",
+    [MultipleLangFileNameEunm.VariousWaysToPlayContent]: "One-stop game experience, you can watch sports events, you can play hundreds of games and good roads, and don't miss any chance to make money.",
+    [MultipleLangFileNameEunm.InternationalCertification]: "International Certification",
+    [MultipleLangFileNameEunm.InternationalCertificationContent]: "It is stable and safe and has won a number of international licenses and certifications, and has received a number of international certifications issued by the Maltese government.",
     
+    
+    
+    
+    [MultipleLangFileNameEunm.SponsorshipContent]: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     [MultipleLangFileNameEunm.PremierLeagueWolves]: "Premier League \n Wolves",
     [MultipleLangFileNameEunm.PremierLeagueCrystalPalace]: "Premier League \n Crystal Palace",
     [MultipleLangFileNameEunm.OfficialPartner]: "Official Partner",
     [MultipleLangFileNameEunm.JerseysAndMajorSponsors]: "Jerseys and \n Major sponsors",
     [MultipleLangFileNameEunm.AsiaOfficialPartner]: "Asia Official Partner",
-    [MultipleLangFileNameEunm.SponsorshipContent]: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.",
     [MultipleLangFileNameEunm.SerieTeamsSponsorship]: "Serie A 13 Teams \n Sponsorship",
     [MultipleLangFileNameEunm.PremierLeagueOfficial]: "Premier League \n Official",
     [MultipleLangFileNameEunm.RCDEspanyoldeBarcelona]: "RCD Espanyol \n de Barcelona",

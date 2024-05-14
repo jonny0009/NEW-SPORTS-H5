@@ -9,7 +9,6 @@ import {
 } from '@/model'
 import ContentView from './ContentView.vue'
 </script>
-
 <template>
     <div>
         <video-back-ground
@@ -23,14 +22,18 @@ import ContentView from './ContentView.vue'
                         $t(MultipleLangFileNameEunm.OurGamesAndProducts)
                     }}</span>
                     <span class="lg-nd-name">{{
-                        $t(MultipleLangFileNameEunm.ManBetXSport)
+                        $t(MultipleLangFileNameEunm.ManBetXRealPerson)
                     }}</span>
 
                     <span class="lg-nd-tips">{{
-                        $t(MultipleLangFileNameEunm.OurGamesAndProductsTips)
+                        $t(
+                            MultipleLangFileNameEunm.OurGamesAndProductsPersonTips
+                        )
                     }}</span>
                     <span class="lg-nd-text">{{
-                        $t(MultipleLangFileNameEunm.OurGamesAndProductsContent)
+                        $t(
+                            MultipleLangFileNameEunm.OurGamesAndProductsPersonContent
+                        )
                     }}</span>
 
                     <content-view></content-view>
@@ -39,7 +42,7 @@ import ContentView from './ContentView.vue'
                         <botton-confirm-app
                             :size="BottonSize.Large"
                             :link="BottonLinkType.Casino"
-                            :text="MultipleLangFileNameEunm.LoginForFreeBotton"
+                            :text="MultipleLangFileNameEunm.GamePalyDome"
                         ></botton-confirm-app>
                     </van-row>
                 </div>

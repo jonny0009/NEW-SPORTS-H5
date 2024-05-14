@@ -14,6 +14,7 @@ declare module 'vue' {
     PopoverView: typeof import('./src/components/pc/PopoverView.vue')['default']
     ScrollView: typeof import('./src/components/ScrollView.vue')['default']
     TabsView: typeof import('./src/components/pc/TabsView.vue')['default']
+    TabsViewApp: typeof import('./src/components/app/TabsViewApp.vue')['default']
     VanCol: typeof import('vant/es')['Col']
     VanDivider: typeof import('vant/es')['Divider']
     VanImage: typeof import('vant/es')['Image']

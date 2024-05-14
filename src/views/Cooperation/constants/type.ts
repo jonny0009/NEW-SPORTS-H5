@@ -21,7 +21,6 @@ export const contactAddressOptions = [
         type:AddreessType.Copy,
         addreess: [
             'live:.cid.dd9a22bb322592db',
-            'live:.cid.dd9a22bb322592db',
             'live:.cid.8f51e12a2522eb58'
         ]
     },

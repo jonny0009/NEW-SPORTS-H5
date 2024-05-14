@@ -46,7 +46,7 @@ const onCopy = async (msg: string) => {
 }
 
 const onJump = (link: string) => {
-    const str = link.trim()
+    const str = link.replace(/\s*/g, '')
     str && window.open(`https://t.me/${str}`, '_blank')
 }
 </script>

@@ -21,7 +21,6 @@ export const contactAddressOptions = [
         type:AddreessType.Copy,
         addreess: [
             'live:.cid.dd9a22bb322592db',
-            'live:.cid.dd9a22bb322592db',
             'live:.cid.8f51e12a2522eb58'
         ]
     },
@@ -32,7 +31,7 @@ export const contactAddressOptions = [
         addreess: [
             '@mxwin9527',
             '+1 206 202 1645',
-            '+12062021645'
+            '+1 234 529 4040'
         ]
     },
 ]

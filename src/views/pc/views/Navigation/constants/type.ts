@@ -33,8 +33,8 @@ export const useTabsOptions = () => {
             index: SwiperActiveIndex.LiveGamePartSt,
             fileName: i18n.global.t(MultipleLangFileNameEunm.LiveGame),
             children: [
-                { component: LiveGamePartNdView, index: SwiperActiveIndex.LiveGamePartNd },
-                { component: LiveGamePartStView, index: SwiperActiveIndex.LiveGamePartSt }
+                { component: LiveGamePartStView, index: SwiperActiveIndex.LiveGamePartSt },
+                { component: LiveGamePartNdView, index: SwiperActiveIndex.LiveGamePartNd }
             ]
         },
         {

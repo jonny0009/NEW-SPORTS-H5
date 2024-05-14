@@ -1,6 +1,6 @@
 
 <script  lang="ts" setup>
-import { options } from '../../constants'
+import { personOptions } from '../../constants'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import { options } from '../../constants'
         <div class="sp-nd-content">
             <div
                 class="sp-nd-content-wrap"
-                v-for="(item, index) in options"
+                v-for="(item, index) in personOptions"
                 :key="index"
             >
                 <van-image class="sp-nd-icon" :src="item.icon" />

@@ -7,7 +7,9 @@ export enum MultipleLangFileNameEunm {
     Copysuccessful = 'Copysuccessful',
     WholeTextBotton = 'WholeTextBotton',
     SubmitTextBotton = 'SubmitTextBotton',
-    LoginForFreeBotton = 'LoginForFreeBotton',
+    GamePalyDome = 'GamePalyDome',
+
+    
     SportsManBetXBotton = 'SportsManBetXBotton',
     LiveGameManBetXBotton = 'LiveGameManBetXBotton',
     AboutManBetX = 'AboutManBetX',
@@ -60,6 +62,19 @@ export enum MultipleLangFileNameEunm {
     ZeroCostWatchGame = 'ZeroCostWatchGame',
     EarlySettlement = 'EarlySettlement',
     CustomizedDesignCustomizedSkin = 'CustomizedDesignCustomizedSkin',
+
+    ManBetXRealPerson='ManBetXRealPerson',
+    OurGamesAndProductsPersonTips='OurGamesAndProductsPersonTips',
+    OurGamesAndProductsPersonContent='OurGamesAndProductsPersonContent',
+    Fair0penAndJust='Fair0penAndJust',
+    RapidBettingInMilliseconds='RapidBettingInMilliseconds',
+    TheBestPathLiesInControl='TheBestPathLiesInControl',
+    SexyAnchorInteraction='SexyAnchorInteraction',
+    ImmersiveMipaiExperience='ImmersiveMipaiExperience',
+    ManagementSystem='ManagementSystem',
+    MultipleBets='MultipleBets',
+    BlockchainBaccarat='BlockchainBaccarat',
+
     AboutUsContent = 'AboutUsContent',
     AboutUsTips = 'AboutUsTips',
 
@@ -137,4 +152,12 @@ export enum ContactInformation {
     Telegram = 'Telegram',
     Email = 'Email',
     Skype = 'Skype',
+}
+
+export enum TabsNamePc { 
+    Sport = 'Sport',
+    LiveGame = 'LiveGame',
+    AboutUs = 'AboutUs',
+    Sponsorship = 'Sponsorship',
+    Cooperation = 'Cooperation',
 }

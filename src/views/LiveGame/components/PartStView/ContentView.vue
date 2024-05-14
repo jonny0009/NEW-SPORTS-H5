@@ -1,6 +1,6 @@
 
 <script  lang="ts" setup>
-import { options } from '../../constants'
+import { sportsOptions } from '../../constants'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import { options } from '../../constants'
         <div class="lg-nd-content">
             <div
                 class="lg-nd-content-wrap"
-                v-for="(item, index) in options"
+                v-for="(item, index) in sportsOptions"
                 :key="index"
             >
                 <van-image class="lg-nd-icon" :src="item.icon" />

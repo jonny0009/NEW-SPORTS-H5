@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { APP_ID } from '@/model'
 import { setupI18n } from '@/i18n'
+import store from '@/store'
 // import { useMobile } from '@/hooks'
 import storage from '@/config/storage'
 
@@ -32,7 +33,8 @@ import App from './App.vue'
 
 const app = createApp(App)
 app.config.globalProperties.$storage = storage
+app.use(store)
 app.use(setupI18n)
 app.use(ElementPuls)
-// app.use(vuetify)
 app.mount(APP_ID)
+

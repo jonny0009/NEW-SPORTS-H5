@@ -1,9 +1,8 @@
-
 <script  lang="ts" setup>
-import videoURL from '@/assets/video/sp_part_02.mp4'
+import videoURL from '@/assets/video/lg_part_01.mp4'
 import videoBGURL from '@/assets/video/lg_part_bg_01.jpg'
 import { defineProps } from 'vue'
-import { BottonType } from './constants'
+import { BottonType, personOptions } from './constants'
 import {
     MultipleLangFileNameEunm,
     VideoMaskEnum,
@@ -36,36 +35,35 @@ const onChangeTab = (index: number) => {
                                 $t(MultipleLangFileNameEunm.OurGamesAndProducts)
                             }}</span>
                             <manbet-botton
-                                :active="BottonType.Sport"
+                                :active="BottonType.Bacccarat"
                                 @update:change="onChangeTab"
                             ></manbet-botton>
                         </div>
-
                         <div>
                             <span class="lg-nd-name">{{
-                                $t(MultipleLangFileNameEunm.ManBetXSport)
+                                $t(MultipleLangFileNameEunm.ManBetXRealPerson)
                             }}</span>
 
                             <span class="lg-nd-tips">{{
                                 $t(
-                                    MultipleLangFileNameEunm.OurGamesAndProductsTips
+                                    MultipleLangFileNameEunm.OurGamesAndProductsPersonTips
                                 )
                             }}</span>
                             <span class="lg-nd-text">{{
                                 $t(
-                                    MultipleLangFileNameEunm.OurGamesAndProductsContent
+                                    MultipleLangFileNameEunm.OurGamesAndProductsPersonContent
                                 )
                             }}</span>
 
-                            <content-view></content-view>
+                            <content-view
+                                :options="personOptions"
+                            ></content-view>
                         </div>
                         <van-row justify="center">
                             <botton-confirm-pc
                                 :size="BottonSize.Large"
                                 :link="BottonLinkType.Casino"
-                                :text="
-                                    MultipleLangFileNameEunm.LoginForFreeBotton
-                                "
+                                :text="MultipleLangFileNameEunm.GamePalyDome"
                             ></botton-confirm-pc>
                         </van-row>
                     </div>
@@ -136,5 +134,9 @@ const onChangeTab = (index: number) => {
 }
 .lg-nd-container-bottom {
     height: 48px;
+}
+.lg-nd-botton {
+    display: flex;
+    justify-content: center;
 }
 </style>

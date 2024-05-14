@@ -1,8 +1,4 @@
-
-
-
-
-<script  lang="ts" >
+<!-- <script  lang="ts" >
 // import 'amfe-flexible'
 import { useI18n } from 'vue-i18n'
 import logoUrl from '@/assets/image/nav_logo.png'
@@ -248,3 +244,143 @@ export default defineComponent({
     background-size: cover;
 }
 </style>
+
+
+<script lang="ts" setup>
+import { debounce } from '@/utils'
+import {
+    useTabsOptions,
+    TAB_BACK_GROUND,
+    TITLE_ACTIVE_COLOR,
+    TITLE_INACTIVE_COLOR
+} from './constants'
+import { computed, onMounted, ref, reactive, watch } from 'vue'
+import { nextTick } from 'process'
+
+const selected = ref('')
+const elementOptions = reactive<any>([])
+const tabsOptions = computed(() => useTabsOptions())
+
+const isScrollAtBottom = () => {
+    return (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight
+    )
+}
+
+const onScrollTab = debounce(() => {
+    let closestAnchorId: any = ''
+    let closestAnchorDistance = Number.MAX_VALUE
+    // 假设你有多个锚点区域
+    const anchors = document.querySelectorAll('[id-component]')
+
+    const anchorPositions = Array.from(anchors).map((anchor) => {
+        return {
+            element: anchor,
+            id: anchor.getAttribute('id-component')
+        }
+    })
+
+    // 滚动事件处理函数
+    anchorPositions.forEach((anchor) => {
+        const rect = anchor.element.getBoundingClientRect()
+        // 获取元素顶部距离视口顶部的距离
+        const distance = Math.abs(rect.top)
+        // 检查这个锚点是否比之前记录的锚点更接近视口顶部
+        if (distance < closestAnchorDistance) {
+            closestAnchorDistance = distance
+            closestAnchorId = anchor.id
+        }
+    })
+    // 更新当前激活的锚点
+    if (closestAnchorId !== selected.value) {
+        selected.value = closestAnchorId
+    }
+
+    //元素高度不够时，滚动底部选择最后一个
+    if (isScrollAtBottom()) {
+        selected.value = anchorPositions[anchorPositions.length - 1]
+            .id as string
+    }
+}, 50)
+
+onMounted(() => {
+    // 监听滚动事件
+    // window.addEventListener('scroll', onScrollTab)
+    // onInitElement()
+    // elementOptions
+    // selected.value = tabsOptions.value[0].fileName
+})
+
+const onScorll = (name: string) => {
+    nextTick(() => {
+        const anchors = document.querySelectorAll('[id-component]')
+        const anchorPositions = Array.from(anchors).map((anchor) => {
+            return {
+                element: anchor,
+                id: anchor.getAttribute('id-component')
+            }
+        })
+        const current = anchorPositions.find((item) => name === item.id)
+        console.log(current, anchorPositions, 'current')
+        if (current?.element) {
+            // selected.value = name
+            current?.element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end'
+            })
+        }
+    })
+}
+
+const onSelectTab = (name: string) => {
+    selected.value = name
+    onScorll(name)
+}
+</script>
+
+
+
+<template>
+    <div>
+        <div class="nav-tabs-wrap">
+            <tabs-view-app
+                :tabs="tabsOptions"
+                :selected="selected"
+                @update:selected="onSelectTab"
+            ></tabs-view-app>
+        </div>
+
+        <div
+            v-for="item in tabsOptions"
+            :id-component="item.id"
+            :key="`${item.id}_component`"
+        >
+            <component :is="item.component"></component>
+        </div>
+    </div>
+</template>
+
+
+
+<style lang="less" scoped>
+.nav-tabs-wrap {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #000;
+}
+.nav-tabs-container {
+    color: red;
+}
+.nav-tabs-item {
+    font-size: 18px;
+    color: #fff;
+}
+:deep(.van-tabs__line) {
+    background: url('@/assets/image/nav_tab_icon.png') no-repeat;
+    background-size: cover;
+}
+</style> -->

@@ -40,3 +40,32 @@ export const useTabsOptions = () => {
         }
     ]
 }
+// export const useTabsOptions = () => { 
+//     return [
+//         {
+//             component: Sport,
+//             id:MultipleLangFileNameEunm.Sport,
+//             label: i18n.global.t(MultipleLangFileNameEunm.Sport)
+//         },
+//         {
+//             component: LiveGame,
+//             id:MultipleLangFileNameEunm.LiveGame,
+//             label: i18n.global.t(MultipleLangFileNameEunm.LiveGame)
+//         },
+//         {
+//             component: AboutUs,
+//             id:MultipleLangFileNameEunm.AboutUs,
+//             label: i18n.global.t(MultipleLangFileNameEunm.AboutUs)
+//         },
+//         {
+//             component: Sponsorship,
+//             id:MultipleLangFileNameEunm.Sponsorship,
+//             label: i18n.global.t(MultipleLangFileNameEunm.Sponsorship)
+//         },
+//         {
+//             component: BusinessCooperation,
+//             id:MultipleLangFileNameEunm.Cooperation,
+//             label: i18n.global.t(MultipleLangFileNameEunm.Cooperation)
+//         }
+//     ]
+// }
