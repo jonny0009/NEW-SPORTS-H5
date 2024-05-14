@@ -125,7 +125,7 @@ export default {
     [MultipleLangFileNameEunm.CompanyInformation]: 'ManBetX Sport has a legal license issued by the British Isle of Grace (IMG) and the Philippine Government Commission (PAGCOR), registered in the British Virgin Islands, and is a legal company recognized by international associations',
 
 
-    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 7lucky. ALL RIGHTSRESERVED \n7lucky. Group Copyright Violators will be prosecuted",
+    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 ManBetX Sports. ALL RIGHTSRESERVED \nManBetX Sports. Group Copyright Violators will be prosecuted",
 
 
 

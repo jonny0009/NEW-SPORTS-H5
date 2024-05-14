@@ -9,6 +9,8 @@ import logoUrl from '@/assets/image/nav_logo.png'
 import langUrl from '@/assets/image/nav_lang.png'
 import langIconUrl from '@/assets/image/nav_lang_icon.png'
 
+import { useLanguages } from '@/hooks'
+
 import {
     useTabsOptions,
     SELECTED_COLOR,
@@ -20,7 +22,6 @@ import {
 import {
     LanguageOptions,
     MultipleLangEunm,
-    DefaultLanguage,
     StorageLangNameEnum,
     MultipleLangFileNameEunm
 } from '@/model'
@@ -56,6 +57,8 @@ export default defineComponent({
             StorageLangNameEnum.LOCAL_LANGUAGE_NAME
         )
 
+        const defaultLang = useLanguages()
+
         const onChangeLangOption = (selected: MultipleLangEunm) => {
             const options = LanguageOptions.map((item) => {
                 return {
@@ -84,7 +87,7 @@ export default defineComponent({
             tabSelected.value = name
         }
 
-        onChangeLangOption(localLang || DefaultLanguage)
+        onChangeLangOption(localLang || defaultLang)
 
         return {
             state,

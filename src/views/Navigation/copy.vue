@@ -16,7 +16,6 @@ import {
 import {
     LanguageOptions,
     MultipleLangEunm,
-    DefaultLanguage,
     StorageLangNameEnum,
     MultipleLangFileNameEunm
 } from '@/model'
@@ -80,7 +79,7 @@ export default defineComponent({
             tabSelected.value = name
         }
 
-        onChangeLangOption(localLang || DefaultLanguage)
+        onChangeLangOption(localLang)
 
         return {
             state,

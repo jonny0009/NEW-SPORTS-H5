@@ -35,8 +35,8 @@ export const useTabsOptions = () => {
         },
         {
             component: BusinessCooperation,
-            key:MultipleLangFileNameEunm.Cooperation,
-            fileName: i18n.global.t(MultipleLangFileNameEunm.Cooperation)
+            key:MultipleLangFileNameEunm.ContactUs,
+            fileName: i18n.global.t(MultipleLangFileNameEunm.ContactUs)
         }
     ]
 }

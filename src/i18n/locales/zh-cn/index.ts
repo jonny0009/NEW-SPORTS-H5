@@ -35,7 +35,7 @@ export default {
     [MultipleLangFileNameEunm.ProfessionalManagementSystemContent]: "易用的商户管理系统，秒级查询用户和注单，24/7客服预警风险，保障稳定利润。",
     [MultipleLangFileNameEunm.HighQualityDockingService]: "优质对接服务",
     [MultipleLangFileNameEunm.MakeYourProductUnique]: "让你产品独一无二",
-    [MultipleLangFileNameEunm.HighQualityDockingServiceContent]: "7/7*24小时的专业人员随时提供服务，以及DIY式的独立指导，提升您的产品市场竞争力。",
+    [MultipleLangFileNameEunm.HighQualityDockingServiceContent]: "7*24小时的专业人员随时提供服务，以及DIY式的独立指导，提升您的产品市场竞争力。",
 
     [MultipleLangFileNameEunm.GlobalCommunityPromotion]: "全球社群推单",
     [MultipleLangFileNameEunm.StandardizeOrderPushModel]: "独一无二推单模式",
@@ -60,11 +60,11 @@ export default {
     [MultipleLangFileNameEunm.HighGamesCoverage]: "超全赛事",
     [MultipleLangFileNameEunm.MultiapplicationTerminal]: "多应用终端",
     [MultipleLangFileNameEunm.HighPayout]: "最佳赔率",
-    [MultipleLangFileNameEunm.InteractiveLiveCommerce]: "游戏-直播新型互动带货模式",
+    [MultipleLangFileNameEunm.InteractiveLiveCommerce]: "游戏-直播\n新型互动带货模式",
     [MultipleLangFileNameEunm.VideoAnimation]: "视频动画",
     [MultipleLangFileNameEunm.ZeroCostWatchGame]: "零成本观赛",
     [MultipleLangFileNameEunm.EarlySettlement]: "提前结算",
-    [MultipleLangFileNameEunm.CustomizedDesignCustomizedSkin]: "客制化设计-自定义皮肤",
+    [MultipleLangFileNameEunm.CustomizedDesignCustomizedSkin]: "客制化设计-\n自定义皮肤",
 
 
     [MultipleLangFileNameEunm.ManBetXRealPerson]: "ManBetX 真人",
@@ -87,7 +87,7 @@ export default {
     [MultipleLangFileNameEunm.ProfessionalAnchorContent]: "数千名来自各国的专业体育与真人主播，深谙赛事，为用户提供及时的娱乐互动。",
     [MultipleLangFileNameEunm.TrueAndFair]: "真实公平",
     [MultipleLangFileNameEunm.TrueAndFairContent]: "提供业内线上线下同步的真实场景，借助自然的区块链技术，确保游戏体验的去中心化。",
-    [MultipleLangFileNameEunm.VariousWaysToPlay]: "多种玩法",
+    [MultipleLangFileNameEunm.VariousWaysToPlay]: "玩法多样",
     [MultipleLangFileNameEunm.VariousWaysToPlayContent]: "一站式游戏体验，观赏体育赛事同时可玩百家跟好路，不错过任何盈利机会。",
     [MultipleLangFileNameEunm.InternationalCertification]: "国际认证",
     [MultipleLangFileNameEunm.InternationalCertificationContent]: "稳定安全，荣获多项国际认证，拥有马其他政府颁发的多项认可。",
@@ -114,14 +114,14 @@ export default {
     [MultipleLangFileNameEunm.BusinessCooperationRdContent]: "该表格将提供您的个人联系信息以及其他信息，因此我们更能有效地回复您的咨询方便本站及时了解您的需求与帮助。",
 
     
-    [MultipleLangFileNameEunm.Name]: "您的称乎",
+    [MultipleLangFileNameEunm.Name]: "您的称呼",
     [MultipleLangFileNameEunm.Telegram]: "电报",
     [MultipleLangFileNameEunm.ContactNumber]: "联络电话",
     [MultipleLangFileNameEunm.ContactMethod]: "通讯方式",
     [MultipleLangFileNameEunm.YourProblem]: "您的具体要求或想询问的问题",
-    [MultipleLangFileNameEunm.CompanyInformation]: '七星娱乐拥有英属恩岛（IMG）和菲律宾政府委员会（PAGCOR）颁发的合法执照，注册于英属维尔京群岛，是受国际协会认可的合法公司；',
+    [MultipleLangFileNameEunm.CompanyInformation]: 'ManBetX Sports拥有英属恩岛（IMG）和菲律宾政府委员会（PAGCOR）颁发的合法执照，注册于英属维尔京群岛，是受国际协会认可的合法公司；',
     
-    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 7lucky. ALL RIGHTSRESERVED \n7lucky集团版权所有违者必究"
+    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 ManBetX Sports. ALL RIGHTSRESERVED \nManBetX Sports.集团版权所有违者必究"
     
 }
 

@@ -120,8 +120,6 @@ export enum StorageLangNameEnum {
     LOCAL_LANGUAGE_NAME = 'LOCAL_LANGUAGE_NAME'
 }
 
-export const DefaultLanguage = MultipleLangEunm.US //默认语言
-
 export enum VideoMaskEnum {
     Top = 'Top',
     Bottom = 'Bottom',
