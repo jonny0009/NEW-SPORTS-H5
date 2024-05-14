@@ -21,6 +21,7 @@ const onChangeTab = (index: number) => {
 <template>
     <div>
         <video-back-ground
+            :type="MultipleLangFileNameEunm.LiveGame"
             :src="videoURL"
             :image="videoBGURL"
             :mask="VideoMaskEnum.Both"

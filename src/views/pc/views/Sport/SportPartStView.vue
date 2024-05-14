@@ -25,6 +25,7 @@ watch(
 </script>
 <template>
     <video-back-ground
+        :type="MultipleLangFileNameEunm.Logo"
         :src="videoURL"
         :image="videoBGURL"
         :mask="VideoMaskEnum.Both"

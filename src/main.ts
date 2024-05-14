@@ -19,6 +19,7 @@ import 'element-plus/dist/index.css'
 
 import './style.less'
 import App from './App.vue'
+import { EventBus } from './EventBus'
 
 // useMobile() && import('amfe-flexible')
 
@@ -36,5 +37,6 @@ app.config.globalProperties.$storage = storage
 app.use(store)
 app.use(setupI18n)
 app.use(ElementPuls)
+app.provide('eventBus', EventBus);
 app.mount(APP_ID)
 

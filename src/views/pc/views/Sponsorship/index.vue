@@ -16,6 +16,7 @@ const props = defineProps(['paddingTop'])
 <template>
     <div>
         <video-back-ground
+            :type="MultipleLangFileNameEunm.Sponsorship"
             :src="videoURL"
             :image="videoBGURL"
             :mask="VideoMaskEnum.Both"

@@ -2,7 +2,7 @@
 
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
-import { ref, getCurrentInstance, onMounted, computed } from 'vue'
+import { ref, getCurrentInstance, onMounted, computed, watch, inject } from 'vue'
 import { LanguageOptions, MultipleLangFileNameEunm, StorageLangNameEnum } from '@/model'
 import { Mousewheel } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -22,9 +22,14 @@ const myColumnSwiper = ref<any>(null)
 const navRef = ref<any>(null)
 const navHeadHeight = ref(0)
 const langOptions = ref(LanguageOptions)
+const eventBus = inject('eventBus');
 
 const { locale } = useI18n()
 const { proxy } = getCurrentInstance() as any
+
+watch(tabSelected, (newValue) => {
+    eventBus.emit('pageChange', newValue);
+});
 
 const tabsOptions = computed(() => {
     const { tabList, logo } = useTabsOptions()
@@ -68,6 +73,7 @@ const slideWrapChange = (swiper: any) => {
 
 const onColumnChangePage = (index: number) => {
     myColumnSwiper.value.slideTo(index)
+    tabSelected.value = index === 1 ? MultipleLangFileNameEunm.LiveGame : MultipleLangFileNameEunm.Sports
 }
 
 //切换swiper

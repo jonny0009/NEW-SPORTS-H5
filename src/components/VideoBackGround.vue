@@ -1,47 +1,59 @@
 <script lang="ts">
-import { ref, defineComponent, PropType } from 'vue'
+import { ref, defineComponent, PropType, inject } from 'vue'
 import { VideoMaskType, VideoMaskEnum } from '@/model'
 export default defineComponent({
     props: {
         src: String,
         image: String,
+        type: String,
         mask: Object as PropType<VideoMaskEnum>
     },
     setup(props) {
-        const { src, image, mask } = props
+        const { src, image, mask, type } = props
 
         const clientHeight = ref(0)
         const videoRef = ref(null);
         const audioRef = ref(null);
         const contanier = ref<any>(null)
         const linearGradient = VideoMaskType[mask!]
+        const eventBus = inject('eventBus');
 
         return {
             src,
             image,
+            type,
             contanier,
             clientHeight,
             linearGradient,
             videoRef,
-            audioRef
+            audioRef,
+            eventBus
         }
     },
     mounted() {
-        // 添加鼠标进入事件监听器
-        this.videoRef.addEventListener("mouseenter", () => {
+      this.eventBus.on('pageChange', (page) => {
+        console.log(page)
+        if (page === this.type) {
+          this.videoRef.currentTime = 0; 
+          this.videoRef.play()
+          this.audioRef.currentTime = 0; 
           this.audioRef.play()
-        });
+        } else {
+          this.videoRef.pause()
+          this.audioRef.pause()
+        }
+        
+      });
     }
 })
 </script>
 
 <template>
-    <div ref="videoRef" class="video-background" :style="{ background: linearGradient }">
+    <div class="video-background" :style="{ background: linearGradient }">
         <video
-            autoplay
-            loop
             muted
             playsinline
+            ref="videoRef"
             class="video-element"
             :poster="image"
             :src="src"
