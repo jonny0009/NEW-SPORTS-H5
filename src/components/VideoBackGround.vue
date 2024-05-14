@@ -11,6 +11,8 @@ export default defineComponent({
         const { src, image, mask } = props
 
         const clientHeight = ref(0)
+        const videoRef = ref(null);
+        const audioRef = ref(null);
         const contanier = ref<any>(null)
         const linearGradient = VideoMaskType[mask!]
 
@@ -19,14 +21,22 @@ export default defineComponent({
             image,
             contanier,
             clientHeight,
-            linearGradient
+            linearGradient,
+            videoRef,
+            audioRef
         }
+    },
+    mounted() {
+        // 添加鼠标进入事件监听器
+        this.videoRef.addEventListener("mouseenter", () => {
+          this.audioRef.play()
+        });
     }
 })
 </script>
 
 <template>
-    <div class="video-background" :style="{ background: linearGradient }">
+    <div ref="videoRef" class="video-background" :style="{ background: linearGradient }">
         <video
             autoplay
             loop
@@ -36,14 +46,20 @@ export default defineComponent({
             :poster="image"
             :src="src"
         >
+            <source :src="src" type="video/mp4">
             <!-- <source :src="image" type="video/mp4" /> -->
             <!-- 提供其他视频格式以便跨浏览器兼容性 -->
             <!-- <source src="path-to-your-video.webm" type="video/webm"> -->
             Your browser does not support the video tag.
         </video>
+        
         <!-- 页面其他内容 -->
         <div class="content">
-            <slot></slot>
+          <slot></slot>
+          <audio :id="`audio_${src}`" ref="audioRef" style="width: 0;height: 0;overflow: hidden; visibility: hidden; opacity: 0;" controls>
+            <source :src="src" type="video/mp4">
+            Your browser does not support the audio tag.
+          </audio>
         </div>
     </div>
 </template>
