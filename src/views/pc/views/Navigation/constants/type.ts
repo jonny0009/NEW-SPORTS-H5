@@ -18,15 +18,15 @@ export const useTabsOptions = () => {
     return [
         {
             component: SportPartStView,
-            key: MultipleLangFileNameEunm.Sport,
+            key: MultipleLangFileNameEunm.Sports,
             index: SwiperActiveIndex.SportPartSt,
-            fileName: i18n.global.t(MultipleLangFileNameEunm.Sport)
+            fileName: i18n.global.t(MultipleLangFileNameEunm.Sports)
         },
         {
             component: SportPartNdView,
-            key: MultipleLangFileNameEunm.Sport,
+            key: MultipleLangFileNameEunm.Sports,
             index: SwiperActiveIndex.SportPartNd,
-            fileName: i18n.global.t(MultipleLangFileNameEunm.Sport)
+            fileName: i18n.global.t(MultipleLangFileNameEunm.Sports)
         },
         {
             key: MultipleLangFileNameEunm.LiveGame,
@@ -59,8 +59,8 @@ export const useTabsOptions = () => {
 }
 
 export const swiperIndexToTabs: { [key in number]: any } = {
-    [0]: MultipleLangFileNameEunm.Sport,
-    [1]: MultipleLangFileNameEunm.Sport,
+    [0]: MultipleLangFileNameEunm.Sports,
+    [1]: MultipleLangFileNameEunm.Sports,
     [2]: MultipleLangFileNameEunm.LiveGame,
     [3]: MultipleLangFileNameEunm.AboutUs,
     [4]: MultipleLangFileNameEunm.Sponsorship,
@@ -68,7 +68,7 @@ export const swiperIndexToTabs: { [key in number]: any } = {
 }
 
 export const TabsIndexToSwiper: { [key in string]: any } = {
-    [MultipleLangFileNameEunm.Sport]: 0,
+    [MultipleLangFileNameEunm.Sports]: 0,
     [MultipleLangFileNameEunm.LiveGame]: 2,
     [MultipleLangFileNameEunm.AboutUs]: 3,
     [MultipleLangFileNameEunm.Sponsorship]: 4,

@@ -10,11 +10,15 @@ export default {
 
     [MultipleLangFileNameEunm.AboutManBetX]:'关于 ManBetX',
 
-    [MultipleLangFileNameEunm.Sport]: '运动',
-    [MultipleLangFileNameEunm.LiveGame]: '现场游戏',
+    [MultipleLangFileNameEunm.Sports]: '体育',
+    [MultipleLangFileNameEunm.LiveGame]: '真人',
     [MultipleLangFileNameEunm.AboutUs]: '关于我们',
     [MultipleLangFileNameEunm.Sponsorship]: '赞助球队',
     [MultipleLangFileNameEunm.Cooperation]: '合作',
+    [MultipleLangFileNameEunm.ContactUs]: '联系我们',
+
+
+
     [MultipleLangFileNameEunm.SupplierTips]: '全球选择一站式电子商务API供应商',
     [MultipleLangFileNameEunm.PlatformAdvantages]: '极速稳定·沉浸式体验·各种游戏·真实公平',
     [MultipleLangFileNameEunm.SpButtonText]: '现在就试试',

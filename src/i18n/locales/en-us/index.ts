@@ -10,11 +10,13 @@ export default {
 
     [MultipleLangFileNameEunm.AboutManBetX]:'About ManBetX',
 
-    [MultipleLangFileNameEunm.Sport]: 'Sport',
+    [MultipleLangFileNameEunm.Sports]: 'Sport',
     [MultipleLangFileNameEunm.LiveGame]: 'Live Game',
     [MultipleLangFileNameEunm.AboutUs]: 'About Us',
     [MultipleLangFileNameEunm.Sponsorship]: 'Sponsorship',
     [MultipleLangFileNameEunm.Cooperation]: 'Cooperation',
+    [MultipleLangFileNameEunm.ContactUs]: 'contact us',
+
     [MultipleLangFileNameEunm.SupplierTips]: 'Global selection One-Stop eCommerce API Supplier',
     [MultipleLangFileNameEunm.PlatformAdvantages]: 'Extremely Fast and Stable · Immersive Experience · Various Games · True and Fair',
     [MultipleLangFileNameEunm.SpButtonText]: 'Try it Now',

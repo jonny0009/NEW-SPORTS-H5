@@ -14,11 +14,13 @@ export enum MultipleLangFileNameEunm {
     LiveGameManBetXBotton = 'LiveGameManBetXBotton',
     AboutManBetX = 'AboutManBetX',
 
-    Sport = 'Sport',
+    Sports = 'Sports',
     LiveGame = 'LiveGame',
     AboutUs = 'AboutUs',
     Sponsorship = 'Sponsorship',
     Cooperation = 'Cooperation',
+    ContactUs = 'ContactUs',
+
     SupplierTips = 'SupplierTips',
     PlatformAdvantages = 'PlatformAdvantages',
     SpButtonText = 'SpButtonText',

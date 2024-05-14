@@ -15,8 +15,8 @@ export const useTabsOptions = () => {
     return [
         {
             component: Sport,
-            key:MultipleLangFileNameEunm.Sport,
-            fileName: i18n.global.t(MultipleLangFileNameEunm.Sport)
+            key:MultipleLangFileNameEunm.Sports,
+            fileName: i18n.global.t(MultipleLangFileNameEunm.Sports)
         },
         {
             component: LiveGame,
