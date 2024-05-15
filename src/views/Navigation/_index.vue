@@ -45,7 +45,6 @@ const onScrollTab = debounce(() => {
     })
     // 更新当前激活的锚点
     if (closestAnchorId !== selected.value) {
-        console.log(closestAnchorId, 'closestAnchorId')
         selected.value = closestAnchorId
     }
 
@@ -74,7 +73,6 @@ const onSelectTab = ({ name }: any) => {
             }
         })
         const current = anchorPositions.find((item) => name === item.id)
-        console.log(current, name, 'name')
         if (current?.element) {
             current?.element.scrollIntoView({ behavior: 'smooth' })
         }

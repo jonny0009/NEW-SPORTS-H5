@@ -1,30 +1,25 @@
 <script  lang="ts" setup>
-import { defineProps, ref, watch } from 'vue'
+import { defineProps, computed } from 'vue'
 import {
     MultipleLangFileNameEunm,
     BottonSize,
     SwiperActiveIndex,
     BottonLinkType
 } from '@/model'
+import { useSwiperStore } from '@/store'
 import ContentView from './components/PartNDView/index.vue'
 
-const props = defineProps(['swiperIndex', 'paddingTop'])
-
-const isAnimated = ref(false)
-watch(
-    () => [props.swiperIndex],
-    (newValue) => {
-        const [swiperIndex] = newValue
-        isAnimated.value = swiperIndex === SwiperActiveIndex.SportPartNd
-    },
-    { deep: true }
+const store = useSwiperStore()
+const props = defineProps(['paddingTop'])
+const isAnimate = computed(
+    () => store.index === SwiperActiveIndex.ProductAdvantages
 )
 </script>
 
 <template>
     <div>
         <div class="sp-wrap">
-            <div :style="{ height: `${paddingTop}px` }"></div>
+            <div :style="{ height: `${props.paddingTop}px` }"></div>
             <div class="sp-content">
                 <div>
                     <div class="sp-content-title">
@@ -35,7 +30,7 @@ watch(
                     </div>
                 </div>
 
-                <content-view v-if="isAnimated"></content-view>
+                <content-view v-if="isAnimate"></content-view>
 
                 <van-row justify="center">
                     <botton-confirm-pc

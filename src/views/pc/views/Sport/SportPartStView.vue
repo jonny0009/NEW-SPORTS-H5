@@ -2,26 +2,13 @@
 import logoURL from '@/assets/image/sport_logo.png'
 import videoURL from '@/assets/video/sp_part_01.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_01.jpg'
-import { defineProps, watch, ref } from 'vue'
 import {
     VideoMaskEnum,
     MultipleLangFileNameEunm,
     BottonSize,
-    SwiperActiveIndex,
+    // SwiperActiveIndex,
     BottonLinkType
 } from '@/model'
-
-const isAnimate = ref(false)
-const props = defineProps(['swiperIndex'])
-
-watch(
-    () => [props.swiperIndex],
-    (newValue) => {
-        const [swiperIndex] = newValue
-        isAnimate.value = swiperIndex === SwiperActiveIndex.SportPartSt
-    },
-    { deep: true }
-)
 </script>
 <template>
     <video-back-ground
@@ -33,11 +20,7 @@ watch(
         <div class="sp-wrap">
             <div>
                 <div class="sp-content">
-                    <van-image
-                        v-if="isAnimate"
-                        class="sp-logo-img animate__animated animate__bounce"
-                        :src="logoURL"
-                    />
+                    <van-image class="sp-logo-img" :src="logoURL" />
                     <span class="sp-supplier-tips">{{
                         $t(MultipleLangFileNameEunm.SupplierTips)
                     }}</span>

@@ -1,6 +1,7 @@
 
 <script  lang="ts" setup>
-import { ref, watch, defineProps } from 'vue'
+import { useSwiperStore } from '@/store'
+import { defineProps, computed } from 'vue'
 import headURL from '@/assets/image/sf_head_bg.jpg'
 import {
     BottonSize,
@@ -9,17 +10,9 @@ import {
     MultipleLangFileNameEunm
 } from '@/model'
 import ContentView from './components/ContentView.vue'
-const props = defineProps(['swiperIndex', 'paddingTop'])
-
-const isAnimated = ref(false)
-watch(
-    () => [props.swiperIndex],
-    (newValue) => {
-        const [swiperIndex] = newValue
-        isAnimated.value = swiperIndex === SwiperActiveIndex.AboutUs
-    },
-    { deep: true }
-)
+const props = defineProps(['paddingTop'])
+const store = useSwiperStore()
+const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
 </script>
 
 <template>

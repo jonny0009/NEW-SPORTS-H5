@@ -15,8 +15,9 @@ export enum MultipleLangFileNameEunm {
     AboutManBetX = 'AboutManBetX',
 
     Logo = 'Logo',
-    ProductAdv = 'ProductAdv',
+    
     Sports = 'Sports',
+    ProductAdvantages = 'ProductAdvantages',
     LiveGame = 'LiveGame',
     AboutUs = 'AboutUs',
     Sponsorship = 'Sponsorship',
@@ -24,9 +25,8 @@ export enum MultipleLangFileNameEunm {
     ContactUs = 'ContactUs',
 
     SupplierTips = 'SupplierTips',
-    PlatformAdvantages = 'PlatformAdvantages',
     SpButtonText = 'SpButtonText',
-    ProductAdvantages = 'ProductAdvantages',
+    PlatformAdvantages = 'PlatformAdvantages',
     ProductAdvantagesTips = 'ProductAdvantagesTips',
     ExtremelyFastExperience = 'ExtremelyFastExperience',
     FastAccess = 'FastAccess',
@@ -142,7 +142,7 @@ export enum BottonLinkType {
 
 export enum SwiperActiveIndex {
     Logo = 'Logo',
-    ProductAdvNd = 'ProductAdvNd',
+    ProductAdvantages = 'ProductAdvantages',
     SportPartSt = 'SportPartSt',
     SportPartNd = 'SportPartNd',
     LiveGamePartSt = 'LiveGamePartSt',

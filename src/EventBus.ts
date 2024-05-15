@@ -12,7 +12,7 @@ export const EventBus = {
   },
 
   // 订阅事件的方法
-  on(event, callback) {
+  on(event:any, callback:any) {
     if (!this.callbacks[event]) {
       // 如果没有该事件的回调函数数组，则初始化一个空数组
       this.callbacks[event] = [];

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue'
+import { useLanguages } from '@/hooks'
 import { getStore } from '@/config/storage'
 import {
     BottonSize,
@@ -12,7 +13,8 @@ const style = size === BottonSize.Middle ? 'botton-xs-wrap' : 'botton-xl-wrap'
 
 const onJump = () => {
     const source = BottonLinkSource[link as BottonLinkType]
-    const lang = getStore(StorageLangNameEnum.LOCAL_LANGUAGE_NAME)
+    const lang =
+        getStore(StorageLangNameEnum.LOCAL_LANGUAGE_NAME) || useLanguages()
     source && window.open(source + `?lang=${lang}`, '_blank')
 }
 </script>

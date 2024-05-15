@@ -10,7 +10,7 @@ export default {
 
     [MultipleLangFileNameEunm.AboutManBetX]:'About ManBetX',
 
-    [MultipleLangFileNameEunm.ProductAdv]: 'Product Advantages',
+    [MultipleLangFileNameEunm.ProductAdvantages]: 'Product Advantages',
     [MultipleLangFileNameEunm.Sports]: 'Sport',
     [MultipleLangFileNameEunm.LiveGame]: 'Live Game',
     [MultipleLangFileNameEunm.AboutUs]: 'About Us',
@@ -21,7 +21,6 @@ export default {
     [MultipleLangFileNameEunm.SupplierTips]: 'Global selection One-Stop eCommerce API Supplier',
     [MultipleLangFileNameEunm.PlatformAdvantages]: 'Extremely Fast and Stable · Immersive Experience · Various Games · True and Fair',
     [MultipleLangFileNameEunm.SpButtonText]: 'Try it Now',
-    [MultipleLangFileNameEunm.ProductAdvantages]: `Product Advantages`,
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: 'Provide complete, efficient and stable one-stop professional game supplier services for every comprehensive station, sports station, real person station and other cash or credit stations.',
     [MultipleLangFileNameEunm.ExtremelyFastExperience]: 'Extremely Fast Experience',
     [MultipleLangFileNameEunm.FastAccess]: '2sec Fast Access',

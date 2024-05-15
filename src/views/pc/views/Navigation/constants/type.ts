@@ -16,90 +16,90 @@ import { MultipleLangFileNameEunm, SwiperActiveIndex } from '@/model'
 
 export const useTabsOptions = () => {
     const tabList = [{
-        key: MultipleLangFileNameEunm.ProductAdv,
-        index: SwiperActiveIndex.ProductAdvNd,
-        fileName: i18n.global.t(MultipleLangFileNameEunm.ProductAdv)
-      }, {
+        key: MultipleLangFileNameEunm.ProductAdvantages,
+        index: SwiperActiveIndex.PlatformAdvantages,
+        fileName: i18n.global.t(MultipleLangFileNameEunm.ProductAdvantages)
+    }, {
         key: MultipleLangFileNameEunm.Sports,
         index: SwiperActiveIndex.LiveGamePartSt,
         fileName: i18n.global.t(MultipleLangFileNameEunm.Sports)
-      },
-      {
+    },
+    {
         key: MultipleLangFileNameEunm.LiveGame,
         index: SwiperActiveIndex.LiveGamePartSt,
         fileName: i18n.global.t(MultipleLangFileNameEunm.LiveGame),
-      },
-      {
+    },
+    {
         index: SwiperActiveIndex.AboutUs,
         key: MultipleLangFileNameEunm.AboutUs,
         fileName: i18n.global.t(MultipleLangFileNameEunm.AboutUs),
-      },
-      {
+    },
+    {
         index: SwiperActiveIndex.LiveGamePartSt,
         key: MultipleLangFileNameEunm.Sponsorship,
         fileName: i18n.global.t(MultipleLangFileNameEunm.Sponsorship)
-      },
-      {
+    },
+    {
         index: SwiperActiveIndex.ContactUs,
         key: MultipleLangFileNameEunm.ContactUs,
         fileName: i18n.global.t(MultipleLangFileNameEunm.ContactUs)
-      }]
-  const componentList = [
-    {
-      component: SportPartStView,
-      key: MultipleLangFileNameEunm.Logo,
-      index: SwiperActiveIndex.Logo,
-      fileName: ''
-    },
-    {
-      component: SportPartNdView,
-      key: MultipleLangFileNameEunm.ProductAdv,
-      index: SwiperActiveIndex.ProductAdvNd,
-      fileName: i18n.global.t(MultipleLangFileNameEunm.ProductAdv)
-    },
-    {
-      key: MultipleLangFileNameEunm.LiveGame,
-      index: SwiperActiveIndex.LiveGamePartSt,
-      fileName: i18n.global.t(MultipleLangFileNameEunm.LiveGame),
-      children: [
-        { component: LiveGamePartStView, index: SwiperActiveIndex.LiveGamePartSt },
-        { component: LiveGamePartNdView, index: SwiperActiveIndex.LiveGamePartNd }
-      ]
-    },
-    {
-      component: AboutUs,
-      index: SwiperActiveIndex.AboutUs,
-      key: MultipleLangFileNameEunm.AboutUs,
-      fileName: i18n.global.t(MultipleLangFileNameEunm.AboutUs),
-    },
-    {
-      component: Sponsorship,
-      index: SwiperActiveIndex.LiveGamePartSt,
-      key: MultipleLangFileNameEunm.Sponsorship,
-      fileName: i18n.global.t(MultipleLangFileNameEunm.Sponsorship)
-    },
-    {
-      component: Cooperation,
-      index: SwiperActiveIndex.ContactUs,
-      key: MultipleLangFileNameEunm.ContactUs,
-      fileName: i18n.global.t(MultipleLangFileNameEunm.ContactUs)
-    }
-  ]
-      return {
+    }]
+    const componentList = [
+        {
+            component: SportPartStView,
+            key: MultipleLangFileNameEunm.Logo,
+            index: SwiperActiveIndex.Logo,
+            fileName: ''
+        },
+        {
+            component: SportPartNdView,
+            key: MultipleLangFileNameEunm.ProductAdvantages,
+            index: SwiperActiveIndex.ProductAdvantages,
+            fileName: i18n.global.t(MultipleLangFileNameEunm.ProductAdvantages)
+        },
+        {
+            key: MultipleLangFileNameEunm.LiveGame,
+            index: SwiperActiveIndex.LiveGamePartSt,
+            fileName: i18n.global.t(MultipleLangFileNameEunm.LiveGame),
+            children: [
+                { component: LiveGamePartStView, index: SwiperActiveIndex.LiveGamePartSt },
+                { component: LiveGamePartNdView, index: SwiperActiveIndex.LiveGamePartNd }
+            ]
+        },
+        {
+            component: AboutUs,
+            index: SwiperActiveIndex.AboutUs,
+            key: MultipleLangFileNameEunm.AboutUs,
+            fileName: i18n.global.t(MultipleLangFileNameEunm.AboutUs),
+        },
+        {
+            component: Sponsorship,
+            index: SwiperActiveIndex.LiveGamePartSt,
+            key: MultipleLangFileNameEunm.Sponsorship,
+            fileName: i18n.global.t(MultipleLangFileNameEunm.Sponsorship)
+        },
+        {
+            component: Cooperation,
+            index: SwiperActiveIndex.ContactUs,
+            key: MultipleLangFileNameEunm.ContactUs,
+            fileName: i18n.global.t(MultipleLangFileNameEunm.ContactUs)
+        }
+    ]
+    return {
         tabList,
         list: componentList,
         logo: {
-          key: MultipleLangFileNameEunm.Logo,
-          type: 'logo',
-          index: SwiperActiveIndex.Logo,
-          fileName: 'logo'
+            key: MultipleLangFileNameEunm.Logo,
+            type: 'logo',
+            index: SwiperActiveIndex.Logo,
+            fileName: 'logo'
         }
-      } 
+    }
 }
 
 export const swiperIndexToTabs: { [key in number]: any } = {
     [0]: MultipleLangFileNameEunm.Logo,
-    [1]: MultipleLangFileNameEunm.ProductAdv,
+    [1]: MultipleLangFileNameEunm.ProductAdvantages,
     [2]: MultipleLangFileNameEunm.Sports,
     [3]: MultipleLangFileNameEunm.AboutUs,
     [4]: MultipleLangFileNameEunm.Sponsorship,
@@ -108,7 +108,7 @@ export const swiperIndexToTabs: { [key in number]: any } = {
 
 export const TabsIndexToSwiper: { [key in string]: any } = {
     [MultipleLangFileNameEunm.Logo]: 0,
-    [MultipleLangFileNameEunm.ProductAdv]: 1,
+    [MultipleLangFileNameEunm.ProductAdvantages]: 1,
     [MultipleLangFileNameEunm.Sports]: 2,
     [MultipleLangFileNameEunm.LiveGame]: 2,
     [MultipleLangFileNameEunm.AboutUs]: 3,

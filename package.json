@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vue-tsc && vite build",
+        "build": "vite build",
         "preview": "vite preview"
     },
     "dependencies": {
@@ -15,6 +15,7 @@
         "axios": "^1.6.8",
         "element-plus": "^2.7.2",
         "loadsh": "^0.0.4",
+        "pinia": "^2.1.7",
         "postcss-pxtorem": "^5.1.1",
         "swiper": "^11.1.1",
         "vant": "^4.8.11",

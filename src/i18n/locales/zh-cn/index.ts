@@ -9,8 +9,7 @@ export default {
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: 'ManBetX 真人',
 
     [MultipleLangFileNameEunm.AboutManBetX]:'关于 ManBetX',
-
-    [MultipleLangFileNameEunm.ProductAdv]: '产品优势',
+    [MultipleLangFileNameEunm.ProductAdvantages]: '产品优势',
     [MultipleLangFileNameEunm.Sports]: '体育',
     [MultipleLangFileNameEunm.LiveGame]: '真人',
     [MultipleLangFileNameEunm.AboutUs]: '关于我们',
@@ -23,7 +22,6 @@ export default {
     [MultipleLangFileNameEunm.SupplierTips]: '全球首选电商式一站式API供应商',
     [MultipleLangFileNameEunm.PlatformAdvantages]: '极速稳定·沉浸体验·游戏多样·公平公正',
     [MultipleLangFileNameEunm.SpButtonText]: '现在就试试',
-    [MultipleLangFileNameEunm.ProductAdvantages]: '产品优势',
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: '为每一个综合站，体育站，真人站等现金或信用站，提供完整、高效和稳定的一站式专业游戏供应商服务。',
     [MultipleLangFileNameEunm.ExtremelyFastExperience]: '快速极速体验',
     [MultipleLangFileNameEunm.FastAccess]: '极速访问 2s',

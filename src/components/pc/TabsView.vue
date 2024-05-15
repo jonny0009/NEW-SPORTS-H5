@@ -15,7 +15,7 @@
     </div>
 </template>
   <script setup>
-import { ref, watch, onMounted, nextTick, computed } from 'vue'
+import { ref, watch, computed, nextTick } from 'vue'
 const props = defineProps({
     tabs: Array,
     selected: String
@@ -71,11 +71,11 @@ watch(
         })
     }
 )
-onMounted(() => {
-    nextTick(() => {
-        selectTab(0) // 初始化选择第一个 tab
-    })
-})
+// onMounted(() => {
+//     nextTick(() => {
+//         selectTab(0) // 初始化选择第一个 tab
+//     })
+// })
 </script>
   <style scoped>
 .tabs-container {

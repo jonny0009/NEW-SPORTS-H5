@@ -22,8 +22,8 @@ export const useTabsOptions = () => {
         },
         {
           component: PartNDView,
-          key: MultipleLangFileNameEunm.ProductAdv,
-          fileName: i18n.global.t(MultipleLangFileNameEunm.ProductAdv)
+          key: MultipleLangFileNameEunm.ProductAdvantages,
+          fileName: i18n.global.t(MultipleLangFileNameEunm.ProductAdvantages)
         },
         {
           component: LiveGamePartSTView,
