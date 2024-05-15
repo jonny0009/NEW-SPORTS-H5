@@ -289,6 +289,7 @@ import {
     StorageLangNameEnum
 } from '@/model'
 import { Mousewheel } from 'swiper/modules'
+import { useSwiperStore } from '@/store'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import {
     useTabsOptions,
@@ -308,6 +309,7 @@ const navHeadHeight = ref(0)
 const langOptions = ref(LanguageOptions)
 const eventBus = inject('eventBus')
 
+const store = useSwiperStore()
 const { locale } = useI18n()
 const { proxy } = getCurrentInstance() as any
 
@@ -353,6 +355,7 @@ const slideWrapChange = (swiper: any) => {
     if (value !== MultipleLangFileNameEunm.LiveGame) {
         tabSelected.value = value
     }
+    store.onChangeSwiper(value)
 }
 
 const onColumnChangePage = (index: number) => {

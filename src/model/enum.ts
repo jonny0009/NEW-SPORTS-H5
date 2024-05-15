@@ -1,6 +1,7 @@
 export enum MultipleLangEunm {
     CN = 'zh-cn',
-    US = 'en-us'
+    US = 'en-us',
+    TW = 'zh-tw',
 }
 
 export enum MultipleLangFileNameEunm {
@@ -25,7 +26,6 @@ export enum MultipleLangFileNameEunm {
     ContactUs = 'ContactUs',
 
     SupplierTips = 'SupplierTips',
-    SpButtonText = 'SpButtonText',
     PlatformAdvantages = 'PlatformAdvantages',
     ProductAdvantagesTips = 'ProductAdvantagesTips',
     ExtremelyFastExperience = 'ExtremelyFastExperience',
