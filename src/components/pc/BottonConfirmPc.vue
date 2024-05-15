@@ -60,7 +60,7 @@ const onJump = () => {
     font-size: 25px;
 }
 .botton-xl-img {
-    width: 500px;
+    width: 550px;
     height: auto;
     position: relative;
 }

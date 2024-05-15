@@ -25,7 +25,6 @@ export default {
     [MultipleLangFileNameEunm.FastAccess]: 'Extremely fast access 2s',
     [MultipleLangFileNameEunm.ExtremelyFastExperienceContent]: 'Extremely fast settlement in 3 minutes, with world-class software and hardware facilities, and professional computer rooms to ensure a smooth and top-notch experience.',
     [MultipleLangFileNameEunm.StableSecurityProtection]: 'Stable security protection',
-    [MultipleLangFileNameEunm.ReliableandSecure]: 'Extremely fast experience',
     [MultipleLangFileNameEunm.StableSecurityProtectionContent]: "We have the world's first-line security protection manufacturers to realize data interoperability across the entire network. Our senior operation and maintenance team protects the system and ensures that the system is stable and foolproof.",
     [MultipleLangFileNameEunm.ProfessionalManagementSystem]: "Professional management system",
     [MultipleLangFileNameEunm.WaterCollectorsHaveNowhereToHide]: "Arbitrage has nowhere to hide",
@@ -121,7 +120,7 @@ export default {
     [MultipleLangFileNameEunm.ContactNumber]: "Contact number",
     [MultipleLangFileNameEunm.ContactMethod]: "communication method",
     [MultipleLangFileNameEunm.YourProblem]: "Your specific requirements or questions you want to ask",
-    [MultipleLangFileNameEunm.CompanyInformation]: 'Seven Star Entertainment has legal licenses issued by the British Isles of Grace (IMG) and the Philippine Government Commission (PAGCOR). It is registered in the British Virgin Islands and is a legal company recognized by international associations;',
+    [MultipleLangFileNameEunm.CompanyInformation]: 'ManBetX Sports Entertainment has legal licenses issued by the British Isles of Grace (IMG) and the Philippine Government Commission (PAGCOR). It is registered in the British Virgin Islands and is a legal company recognized by international associations;',
 
 
     [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 ManBetX Sports. ALL RIGHTSRESERVED \nManBetX Sports Group All rights reserved. Violators will be prosecuted.",

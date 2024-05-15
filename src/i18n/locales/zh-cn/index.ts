@@ -26,7 +26,6 @@ export default {
     [MultipleLangFileNameEunm.FastAccess]: '极速访问 2s',
     [MultipleLangFileNameEunm.ExtremelyFastExperienceContent]: '3分钟极速结算，拥有国际顶尖软硬件设施，配备专业机房，确保流畅顶级体验。',
     [MultipleLangFileNameEunm.StableSecurityProtection]: '稳定安全防护',
-    [MultipleLangFileNameEunm.ReliableandSecure]: '稳定安全防护',
     [MultipleLangFileNameEunm.StableSecurityProtectionContent]: "拥有全球一线安全防护厂商，实现全网数据互通，资深运维团队为系统保驾护航，确保系统稳定万无一失。",
     [MultipleLangFileNameEunm.ProfessionalManagementSystem]: "专业的管理系统",
     [MultipleLangFileNameEunm.WaterCollectorsHaveNowhereToHide]: "打水客无处遁形",

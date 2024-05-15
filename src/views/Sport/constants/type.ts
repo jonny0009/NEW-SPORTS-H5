@@ -27,7 +27,7 @@ export const PartNDcontentOptions = [
     },
     {
         icon: icon2stURL,
-        tips: MultipleLangFileNameEunm.ReliableandSecure,
+        tips: MultipleLangFileNameEunm.StableSecurityProtection,
         title: MultipleLangFileNameEunm.StableSecurityProtection,
         content: MultipleLangFileNameEunm.StableSecurityProtectionContent,
     },

@@ -355,6 +355,12 @@ const slideWrapChange = (swiper: any) => {
     if (value !== MultipleLangFileNameEunm.LiveGame) {
         tabSelected.value = value
     }
+    if (
+        value !== MultipleLangFileNameEunm.Sports ||
+        value !== MultipleLangFileNameEunm.LiveGame
+    ) {
+        myColumnSwiper.value.slideTo(0)
+    }
     store.onChangeSwiper(value)
 }
 

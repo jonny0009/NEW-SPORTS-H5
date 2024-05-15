@@ -25,7 +25,6 @@ export default {
     [MultipleLangFileNameEunm.FastAccess]: '',
     [MultipleLangFileNameEunm.ExtremelyFastExperienceContent]: '',
     [MultipleLangFileNameEunm.StableSecurityProtection]: '',
-    [MultipleLangFileNameEunm.ReliableandSecure]: '',
     [MultipleLangFileNameEunm.StableSecurityProtectionContent]: "",
     [MultipleLangFileNameEunm.ProfessionalManagementSystem]: "",
     [MultipleLangFileNameEunm.WaterCollectorsHaveNowhereToHide]: "",

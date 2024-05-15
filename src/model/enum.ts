@@ -32,7 +32,6 @@ export enum MultipleLangFileNameEunm {
     FastAccess = 'FastAccess',
     ExtremelyFastExperienceContent = 'ExtremelyFastExperienceContent',
     StableSecurityProtection = 'StableSecurityProtection',
-    ReliableandSecure = 'ReliableandSecure',
     StableSecurityProtectionContent = 'StableSecurityProtectionContent',
     ProfessionalManagementSystem = 'ProfessionalManagementSystem',
     WaterCollectorsHaveNowhereToHide = 'WaterCollectorsHaveNowhereToHide',

@@ -32,7 +32,7 @@ export const PartNDcontentOptions = [
         {
             id:uniqueId(),
             icon: icon2stURL,
-            tips: MultipleLangFileNameEunm.ReliableandSecure,
+            tips: MultipleLangFileNameEunm.StableSecurityProtection,
             title: MultipleLangFileNameEunm.StableSecurityProtection,
             content: MultipleLangFileNameEunm.StableSecurityProtectionContent,
             animate:'animate__backInLeft'

@@ -28,7 +28,6 @@ export default {
     [MultipleLangFileNameEunm.FastAccess]: '極速訪問 2s',
     [MultipleLangFileNameEunm.ExtremelyFastExperienceContent]: '3分鐘極速結算，擁有國際頂尖軟硬體設施，配備專業機房，確保流暢頂級體驗。',
     [MultipleLangFileNameEunm.StableSecurityProtection]: '穩定安全防護',
-    [MultipleLangFileNameEunm.ReliableandSecure]: '穩定安全防護',
     [MultipleLangFileNameEunm.StableSecurityProtectionContent]: "擁有全球第一線安全防護廠商，實現全網數據互通，資深運維團隊為系統保駕護航，確保系統穩定萬無一失。",
     [MultipleLangFileNameEunm.ProfessionalManagementSystem]: "專業的管理系統",
     [MultipleLangFileNameEunm.WaterCollectorsHaveNowhereToHide]: "打水客無處遁形",
