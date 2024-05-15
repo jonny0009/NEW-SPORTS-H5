@@ -17,6 +17,7 @@ import {
             :src="videoURL"
             :image="videoBGURL"
             picture
+            :type="MultipleLangFileNameEunm.Logo"
             :mask="VideoMaskEnum.Bottom"
         >
             <div class="sp-wrap">

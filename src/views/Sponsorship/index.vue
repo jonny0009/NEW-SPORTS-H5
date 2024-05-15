@@ -16,6 +16,7 @@ import ContentView from './components/ContentView.vue'
         <video-back-ground
             :src="videoURL"
             :image="videoBGURL"
+            :type="MultipleLangFileNameEunm.Sponsorship"
             :mask="VideoMaskEnum.Both"
         >
             <div class="spon-wrap">

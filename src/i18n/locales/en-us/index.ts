@@ -10,6 +10,7 @@ export default {
 
     [MultipleLangFileNameEunm.AboutManBetX]:'About ManBetX',
 
+    [MultipleLangFileNameEunm.ProductAdv]: 'Product Advantages',
     [MultipleLangFileNameEunm.Sports]: 'Sport',
     [MultipleLangFileNameEunm.LiveGame]: 'Live Game',
     [MultipleLangFileNameEunm.AboutUs]: 'About Us',

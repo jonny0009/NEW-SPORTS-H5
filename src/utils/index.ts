@@ -37,3 +37,24 @@ export function debounce<T extends (...args: any[]) => any>(func: T, wait: numbe
 export function calculateAnimationDelay(index: number, totalItems: number, baseDelay = 0.5) {
     return (totalItems - index - 1) * baseDelay
 }
+
+export function scrollToSmoothly(targetPosition, duration) {
+  const startPosition = window.scrollY || window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const startTime = performance.now();
+
+  function step(currentTime) {
+    const elapsedTime = currentTime - startTime;
+    const progress = Math.min(elapsedTime / duration, 1);
+    window.scrollTo(0, startPosition + distance * easeInOutCubic(progress));
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  }
+
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+  }
+
+  requestAnimationFrame(step);
+}

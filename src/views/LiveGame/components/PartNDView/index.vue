@@ -14,6 +14,7 @@ import ContentView from './ContentView.vue'
         <video-back-ground
             :src="videoURL"
             :image="videoBGURL"
+            :type="MultipleLangFileNameEunm.LiveGame"
             :mask="VideoMaskEnum.Both"
         >
             <div class="lg-nd-wrap">

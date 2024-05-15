@@ -1,6 +1,8 @@
 import { i18n } from '@/i18n'
-import Sport from '@/views/Sport/index.vue'
-import LiveGame from '@/views/LiveGame/index.vue'
+import PartSTView from '@/views/Sport/components/PartStView/index.vue'
+import PartNDView from '@/views/Sport/components/PartNDView/index.vue'
+import LiveGamePartSTView from '@/views/LiveGame/components/PartStView/index.vue'
+import LiveGamePartNDView from '@/views/LiveGame/components/PartNDView/index.vue'
 import AboutUs from '@/views/AboutUs/index.vue'
 import Sponsorship from '@/views/Sponsorship/index.vue'
 import BusinessCooperation from '@/views/Cooperation/index.vue'
@@ -14,12 +16,22 @@ import { MultipleLangFileNameEunm } from '@/model'
 export const useTabsOptions = () => { 
     return [
         {
-            component: Sport,
+          component: PartSTView,
+          key: MultipleLangFileNameEunm.Logo,
+          type: 'logo',
+        },
+        {
+          component: PartNDView,
+          key: MultipleLangFileNameEunm.ProductAdv,
+          fileName: i18n.global.t(MultipleLangFileNameEunm.ProductAdv)
+        },
+        {
+          component: LiveGamePartSTView,
             key:MultipleLangFileNameEunm.Sports,
             fileName: i18n.global.t(MultipleLangFileNameEunm.Sports)
         },
         {
-            component: LiveGame,
+            component: LiveGamePartNDView,
             key:MultipleLangFileNameEunm.LiveGame,
             fileName: i18n.global.t(MultipleLangFileNameEunm.LiveGame)
         },
