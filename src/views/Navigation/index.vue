@@ -101,8 +101,8 @@ export default defineComponent({
             tabSelected.value = e
         }
         const onChangeLogo = () => {
-            // onChangeTab(0)
-            // scrollToSmoothly(0, 300)
+            onChangeTab(0)
+            scrollToSmoothly(0, 300)
         }
 
         const handleAudioChange = () => {
@@ -147,7 +147,7 @@ export default defineComponent({
 
 <template>
     <div :class="['h5-box', tabSelected === 0 ? 'hideLogoLine' : '']">
-        <!-- <div
+        <div
             class="navlogobox"
             @click="onChangeLogo"
             :style="{
@@ -181,7 +181,7 @@ export default defineComponent({
                     </van-row>
                 </template>
             </van-popover>
-        </div> -->
+        </div>
 
         <div @click="handleAudioChange" class="audio-logo-box">
             <img
@@ -197,14 +197,14 @@ export default defineComponent({
                 class="audio-logo"
             />
         </div>
-        <!-- @scroll="onScrollTab"
-            @change="onChangeTab" -->
+        <!-- scrollspy -->
         <van-tabs
             sticky
-            scrollspy
             ref="tabsRef"
             :ellipsis="false"
             :active="tabSelected"
+            @scroll="onScrollTab"
+            @change="onChangeTab"
             @click-tab="onSelectTab"
             :background="TAB_BACK_GROUND"
             :title-active-color="TITLE_ACTIVE_COLOR"
@@ -215,9 +215,9 @@ export default defineComponent({
             <van-tab
                 :key="item.key"
                 :title="item.fileName"
-                v-for="item in tabsOptions"
+                v-for="(item, index) in tabsOptions"
             >
-                <!-- <template v-if="item?.type === 'logo'" #title>
+                <template v-if="item?.type === 'logo'" #title>
                     <div
                         style="opacity: 0; visibility: hidden; cursor: none"
                     ></div>
@@ -225,17 +225,16 @@ export default defineComponent({
                 <div>
                     <div v-show="!!index" class="nav-scroll-mask"></div>
                     <component :is="item.component"></component>
-                </div> -->
-                <component :is="item.component"></component>
+                </div>
             </van-tab>
         </van-tabs>
-        <!-- <div
+        <div
             class="nav-mask-model"
             :style="{
                 position: !!tabScrollTop ? 'fixed' : 'absolute',
                 background: !!tabScrollTop ? '#000' : 'none'
             }"
-        ></div> -->
+        ></div>
     </div>
 </template>
 
@@ -316,28 +315,28 @@ export default defineComponent({
 :deep(.van-popover__content) {
     border-radius: 5px;
 }
-// .nav-scroll-mask {
-//     width: 100vw;
-//     height: 30px;
-//     background-color: #000;
-// }
+.nav-scroll-mask {
+    width: 100vw;
+    height: 30px;
+    background-color: #000;
+}
 
-// :deep(.van-tabs__wrap) {
-//     width: 78vw;
-//     left: 11vw;
-//     z-index: 999;
-//     height: 100px !important;
-//     position: absolute !important;
-//     top: 0;
-// }
-// :deep(.van-tabs__nav) {
-//     padding-left: 0px;
-//     padding-right: 0px;
-// }
-// :deep(.van-tabs__line) {
-//     background: url('@/assets/image/nav_tab_icon.png') no-repeat;
-//     background-size: cover;
-// }
+:deep(.van-tabs__wrap) {
+    width: 78vw;
+    left: 11vw;
+    z-index: 999;
+    height: 100px !important;
+    position: absolute !important;
+    top: 0;
+}
+:deep(.van-tabs__nav) {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+:deep(.van-tabs__line) {
+    background: url('@/assets/image/nav_tab_icon.png') no-repeat;
+    background-size: cover;
+}
 
 .h5-box {
     &.hideLogoLine {
