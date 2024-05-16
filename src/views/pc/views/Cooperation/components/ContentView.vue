@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onSubmitUserInfo } from '@/api'
 import iconURL from '@/assets/image/bc_icon_Triangle.png'
 import {
     BottonSize,
@@ -9,20 +10,32 @@ import {
 } from '@/model'
 
 const formName = ref('')
-const formNumber = ref('')
+const formPhone = ref('')
 const formProblem = ref('')
 const formContactNumber = ref('')
-const selected = ref(ContactInformation.Telegram)
+const formCallType = ref(ContactInformation.Telegram)
 const options = ref([
-    { value: ContactInformation.Telegram, text: ContactInformation.Telegram },
-    { value: ContactInformation.Email, text: ContactInformation.Email },
-    { value: ContactInformation.Skype, text: ContactInformation.Skype }
+    { value: 1, text: ContactInformation.Telegram },
+    { value: 4, text: ContactInformation.Email },
+    { value: 3, text: ContactInformation.Skype }
 ])
 const onSelect = (value: ContactInformation) => {
-    selected.value = value
+    console.log(value, 'value')
+    formCallType.value = value
+}
+const onSubmit = async () => {
+    const useInfo = {
+        nickName: formName.value,
+        phone: formPhone.value,
+        callType: formCallType.value,
+        callPhone: formContactNumber.value,
+        question: formProblem.value
+    }
+    console.log(useInfo, 'useInfo')
+    const res = await onSubmitUserInfo(useInfo)
+    console.log(res, 'res')
 }
 </script>
-
 
 <template>
     <div>
@@ -55,7 +68,7 @@ const onSelect = (value: ContactInformation) => {
                             <input
                                 type="text"
                                 class="bc-form-input"
-                                v-model="formNumber"
+                                v-model="formPhone"
                             />
                         </el-col>
                     </el-row>
@@ -71,7 +84,7 @@ const onSelect = (value: ContactInformation) => {
                 <el-col :span="6">
                     <el-dropdown trigger="click" @command="onSelect">
                         <div class="bc-form-label">
-                            <span>{{ selected }}</span>
+                            <span>{{ formCallType }}</span>
                             <img :src="iconURL" alt="" class="bc-icon-img" />
                         </div>
                         <template #dropdown>
@@ -82,7 +95,7 @@ const onSelect = (value: ContactInformation) => {
                                     :command="item.value"
                                     :style="{
                                         color:
-                                            selected === item.value
+                                            formCallType === item.value
                                                 ? '#ff8727'
                                                 : '#000'
                                     }"
@@ -113,6 +126,7 @@ const onSelect = (value: ContactInformation) => {
 
             <van-row justify="center" class="bc-content-btn">
                 <botton-confirm-pc
+                    @click="onSubmit"
                     :size="BottonSize.Middle"
                     :link="BottonLinkType.Home"
                     :text="MultipleLangFileNameEunm.SubmitTextBotton"

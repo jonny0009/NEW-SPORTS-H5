@@ -36,7 +36,7 @@ const onJump = () => {
 
 <template>
     <div>
-        <div class="botton-wrap" @click="onJump">
+        <div class="botton-wrap">
             <span class="botton-text">{{ $t(text) }}</span>
             <img :src="source" :class="[style]" alt="" />
         </div>

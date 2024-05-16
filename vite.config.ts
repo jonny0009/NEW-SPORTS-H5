@@ -8,6 +8,8 @@ import postCssPxtoRem from 'postcss-pxtorem'
 import { VantResolver } from "@vant/auto-import-resolver";
 
 
+const target = 'https://cn2.manbetx-sports.aisports.io/start/'
+
 export default defineConfig({
     base: '/start/',
     // base: './',
@@ -54,6 +56,17 @@ export default defineConfig({
             ],
         },
     },
+
+    server: {
+        proxy: {
+            '/api': {
+                target,
+                changeOrigin: true,
+                rewrite:(path)=>path.replace(/^\/api/,'')
+            }
+        }
+    },
+
     build: {
         rollupOptions: {
             output: {
