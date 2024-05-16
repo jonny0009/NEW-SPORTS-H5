@@ -224,7 +224,7 @@ export default defineComponent({
                     ></div>
                 </template>
                 <div>
-                    <!-- <div v-show="!!index" class="nav-scroll-mask"></div> -->
+                    <div v-show="!!index" class="nav-scroll-mask"></div>
                     <component :is="item.component"></component>
                 </div>
             </van-tab>
