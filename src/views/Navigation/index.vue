@@ -216,9 +216,9 @@ export default defineComponent({
             <van-tab
                 :key="item.key"
                 :title="item.fileName"
-                v-for="(item, index) in tabsOptions"
+                v-for="item in tabsOptions"
             >
-                <template v-if="item?.type === 'logo'" #title>
+                <!-- <template v-if="item?.type === 'logo'" #title>
                     <div
                         style="opacity: 0; visibility: hidden; cursor: none"
                     ></div>
@@ -226,7 +226,8 @@ export default defineComponent({
                 <div>
                     <div v-show="!!index" class="nav-scroll-mask"></div>
                     <component :is="item.component"></component>
-                </div>
+                </div> -->
+                <component :is="item.component"></component>
             </van-tab>
         </van-tabs>
         <!-- <div
