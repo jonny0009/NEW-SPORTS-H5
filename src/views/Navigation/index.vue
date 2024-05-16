@@ -101,7 +101,7 @@ export default defineComponent({
             tabSelected.value = e
         }
         const onChangeLogo = () => {
-            onChangeTab(0)
+            // onChangeTab(0)
             // scrollToSmoothly(0, 300)
         }
 
@@ -197,15 +197,14 @@ export default defineComponent({
                 class="audio-logo"
             />
         </div>
-
+        <!-- @scroll="onScrollTab"
+            @change="onChangeTab" -->
         <van-tabs
             sticky
             scrollspy
             ref="tabsRef"
             :ellipsis="false"
             :active="tabSelected"
-            @scroll="onScrollTab"
-            @change="onChangeTab"
             @click-tab="onSelectTab"
             :background="TAB_BACK_GROUND"
             :title-active-color="TITLE_ACTIVE_COLOR"
