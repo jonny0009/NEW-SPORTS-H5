@@ -331,14 +331,14 @@ export default defineComponent({
 //     position: absolute !important;
 //     top: 0;
 // }
-:deep(.van-tabs__nav) {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-:deep(.van-tabs__line) {
-    background: url('@/assets/image/nav_tab_icon.png') no-repeat;
-    background-size: cover;
-}
+// :deep(.van-tabs__nav) {
+//     padding-left: 0px;
+//     padding-right: 0px;
+// }
+// :deep(.van-tabs__line) {
+//     background: url('@/assets/image/nav_tab_icon.png') no-repeat;
+//     background-size: cover;
+// }
 
 .h5-box {
     &.hideLogoLine {
