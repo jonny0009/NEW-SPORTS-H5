@@ -80,7 +80,7 @@ const onChangeTab = (index: number) => {
 .lg-nd-title {
     display: block;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
     color: #ff8727;
     text-align: center;
 }

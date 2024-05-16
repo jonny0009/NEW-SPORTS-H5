@@ -36,6 +36,7 @@ import {
 } from "vue";
 import { TabsInstance } from "vant";
 import { scrollToSmoothly } from "@/utils";
+import { useAudioStatus } from "@/store";
 
 interface TabItem {
   name: number;
@@ -49,6 +50,7 @@ export default defineComponent({
     const { locale } = useI18n();
     const { proxy } = getCurrentInstance() as any;
 
+    const audio = useAudioStatus();
     const tabSelected = ref(0);
     const tabScrollTop = ref(0);
     const tabsRef = ref<TabsInstance>();
@@ -100,10 +102,18 @@ export default defineComponent({
       scrollToSmoothly(0, 300)
     };
 
+    const handleAudioChange = () => {
+      audio.toggle()
+      eventBus.emit("pageChange", tabsOptions.value?.[tabSelected.value]?.key);
+    };
+
     onChangeLangOption(localLang || defaultLang);
 
     return {
       state,
+
+      audio,
+handleAudioChange,
 
       langUrl,
       logoUrl,
@@ -167,6 +177,21 @@ export default defineComponent({
       </van-popover>
     </div>
 
+    <div @click="handleAudioChange" class="audio-logo-box">
+      <img
+        v-if="audio.status"
+        src="@/assets/image/audio_open_icon.png"
+        alt=""
+        class="audio-logo"
+      />
+      <img
+        v-else
+        src="@/assets/image/audio_close_icon.png"
+        alt=""
+        class="audio-logo"
+      />
+    </div>
+
     <van-tabs
       sticky
       scrollspy
@@ -208,6 +233,21 @@ export default defineComponent({
 </template>
 
 <style scoped lang="less">
+
+.audio-logo-box {
+  position: fixed;
+  top: 120px;
+  right: 40px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  .audio-logo {
+    width: 36px;
+    height: 36px;
+  }
+}
 .nav-lang-wrap {
   margin-left: 12px;
   margin-right: 20px;

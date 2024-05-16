@@ -113,7 +113,7 @@ const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
 .sf-content-title {
     display: block;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
     color: #ff8727;
 }
 .sf-content-text {

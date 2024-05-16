@@ -64,6 +64,7 @@ import {
     flex-direction: column;
 }
 .sp-supplier-tips {
+    font-weight: 700;
     font-size: 50px;
     line-height: 60px;
     color: #ff8727;

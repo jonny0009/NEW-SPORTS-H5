@@ -62,7 +62,7 @@ const props = defineProps(['paddingTop'])
 }
 .spon-title {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 700;
     color: #ff8727;
     text-align: center;
 }

@@ -78,14 +78,14 @@ const options = computed(() => useSponContentOptions())
 .spon-content-title {
     font-size: 16px;
     color: #ffffff;
-    white-space: pre-wrap;
+    white-space: nowrap;
     text-align: center;
 }
 
 .spon-content-tips {
     font-size: 16px;
     color: #ffffff;
-    white-space: pre-wrap;
+    white-space: nowrap;
     text-align: center;
     margin-top: 2px;
 }

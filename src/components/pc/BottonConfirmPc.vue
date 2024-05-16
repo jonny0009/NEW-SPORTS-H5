@@ -65,12 +65,12 @@ const onJump = () => {
     position: relative;
 }
 .botton-xs-img {
-    width: 300px;
+    width: 360px;
     height: auto;
     position: relative;
 }
 .botton-selected-img {
-    width: 300px;
+    width: 360px;
     height: auto;
     position: relative;
 }
