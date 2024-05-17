@@ -384,7 +384,7 @@ const slideChildChange = (swiper: any) => {
 
 const handleAudioChange = () => {
     audio.toggle()
-    eventBus.emit('pageChange', tabSelected.value)
+    eventBus.emit('pageChange', tabSelected.value, false)
 }
 
 //实例化
