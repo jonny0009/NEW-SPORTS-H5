@@ -109,7 +109,8 @@ export default defineComponent({
             audio.toggle()
             eventBus.emit(
                 'pageChange',
-                tabsOptions.value?.[tabSelected.value]?.key
+                tabsOptions.value?.[tabSelected.value]?.key,
+                false
             )
         }
 
