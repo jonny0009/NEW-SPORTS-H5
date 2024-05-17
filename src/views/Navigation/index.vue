@@ -198,9 +198,10 @@ export default defineComponent({
                 class="audio-logo"
             />
         </div>
-        <!-- scrollspy -->
+        
         <van-tabs
             sticky
+            scrollspy
             ref="tabsRef"
             :ellipsis="false"
             :active="tabSelected"
