@@ -13,6 +13,7 @@ export default defineComponent({
         const { src, image, mask, type } = props
 
         const clientHeight = ref(0)
+        const isPlay = ref(true)
         const audio = useAudioStatus()
         const videoRef = ref(null)
         const audioRef = ref(null)
@@ -30,7 +31,8 @@ export default defineComponent({
             videoRef,
             audioRef,
             eventBus,
-            audio
+            audio,
+            isPlay
         }
     },
     methods: {
@@ -44,7 +46,7 @@ export default defineComponent({
         },
         handlePlay(page, isReload = true) {
             if (!isReload) {
-                if (this.audio.status && page === this.type) {
+                if (this.audio.status && this.isPlay && page === this.type) {
                     this.audioRef.currentTime = this.videoRef.currentTime
                     this.audioRef?.play()
                 } else {
@@ -54,6 +56,7 @@ export default defineComponent({
             }
             if (page === this.type) {
                 this.videoRef.currentTime = 0
+                this.isPlay = true
                 this.videoRef.play()
                 if (!this.audio.status) return
                 this.audioRef.currentTime = 0
@@ -61,7 +64,12 @@ export default defineComponent({
             } else {
                 this.videoRef.pause()
                 this.audioRef.pause()
+                this.isPlay = false
             }
+        },
+        handleVideoEnd() {
+            this.videoRef.currentTime = 0
+            this.isPlay = false
         }
     },
     mounted() {
@@ -69,7 +77,7 @@ export default defineComponent({
             this.handlePlay(page, isReload)
         })
         this.videoRef.addEventListener('ended', () => {
-            this.videoRef.currentTime = 0
+            this.handleVideoEnd()
         })
         this.audioRef.addEventListener('ended', () => {
             // 当视频播放结束时，将当前播放时间设置为 0，回到第一帧
