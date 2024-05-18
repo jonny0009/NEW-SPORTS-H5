@@ -2,7 +2,7 @@
 <script  lang="ts" setup>
 import { useMobile } from '@/hooks'
 import { ref } from 'vue'
-import NavAppView from '@/views/Navigation/_index.vue'
+import NavAppView from '@/views/Navigation/index.vue'
 import NavPcView from '@/views/pc/index.vue'
 
 const isMobile = ref(useMobile())

@@ -8,13 +8,17 @@ import {
 import { computed, onMounted, ref } from 'vue'
 import $ from 'jquery'
 import { throttle } from 'lodash'
+import { MultipleLangFileNameEunm } from '@/model'
 
 const selected = ref('')
 const sections = ref()
+const noScroll = ref(false)
 const tabsOptions = computed(() => useTabsOptions())
 
 const onScrollTab = throttle(() => {
-    const height = $(window).scrollTop()
+  console.log(11111, noScroll.value)
+    if (noScroll.value) return;
+    const height = $(window).scrollTop() + 10
     let tab = tabsOptions.value[0].key
     sections.value.each((index, item) => {
         if (height >= $(item).offset().top) {
@@ -34,11 +38,14 @@ onMounted(() => {
 })
 const onSelectTab = ({ name }: any) => {
     selected.value = name
+    noScroll.value = true
     $('html, body').animate(
         {
-            scrollTop: $(`#${name}_componentEmelent`).offset().top
+            scrollTop: $(`#${name}_componentEmelent`).offset().top + (name === MultipleLangFileNameEunm.ProductAdvantages ? -10 : 1)
         },
-        300
+        300, () => {
+          noScroll.value = false
+        }
     )
 }
 </script>
