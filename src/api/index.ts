@@ -10,5 +10,5 @@ interface UserProfile {
 
 // 用户信息提交
 export const onSubmitUserInfo = async (data: UserProfile): Promise<void> => {
-    return axios.post('/mobile/external/businessConsult', data);
+    return axios.post('/ai/mobile/external/businessConsult', data);
 };

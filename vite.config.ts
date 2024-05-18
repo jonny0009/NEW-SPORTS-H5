@@ -8,7 +8,8 @@ import postCssPxtoRem from 'postcss-pxtorem'
 import { VantResolver } from "@vant/auto-import-resolver";
 
 
-const target = 'https://cn2.manbetx-sports.aisports.io/start/'
+const target = 'https://cn2.manbetx-sports.aisports.io'
+
 
 export default defineConfig({
     base: '/start/',
