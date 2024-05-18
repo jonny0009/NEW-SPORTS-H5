@@ -96,6 +96,7 @@ watch(
     color: #fff;
 }
 .tab-item--active {
+    font-weight: 700;
     color: #ff8727;
 }
 .tab-indicator {

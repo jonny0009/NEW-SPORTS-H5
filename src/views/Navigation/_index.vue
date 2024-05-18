@@ -1,142 +1,101 @@
 <script lang="ts" setup>
-import { debounce } from '@/utils'
 import {
-    useTabsOptions,
-    TAB_BACK_GROUND,
-    TITLE_ACTIVE_COLOR,
-    TITLE_INACTIVE_COLOR
-} from './constants'
-import { computed, onMounted, ref } from 'vue'
-import { nextTick } from 'process'
+  useTabsOptions,
+  TAB_BACK_GROUND,
+  TITLE_ACTIVE_COLOR,
+  TITLE_INACTIVE_COLOR,
+} from "./constants";
+import { computed, onMounted, ref } from "vue";
+import $ from "jquery";
+import { throttle } from 'lodash'
 
-const selected = ref('')
-const tabsOptions = computed(() => useTabsOptions())
+const selected = ref("");
+const sections = ref();
+const tabsOptions = computed(() => useTabsOptions());
 
-const isScrollAtBottom = () => {
-    return (
-        window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight
-    )
-}
-
-const onScrollTab = debounce(() => {
-    let closestAnchorId: any = ''
-    let closestAnchorDistance = Number.MAX_VALUE
-    // 假设你有多个锚点区域
-    const anchors = document.querySelectorAll('[id-component]')
-
-    const anchorPositions = Array.from(anchors).map((anchor) => {
-        return {
-            element: anchor,
-            id: anchor.getAttribute('id-component')
-        }
-    })
-
-    // 滚动事件处理函数
-    anchorPositions.forEach((anchor) => {
-        const rect = anchor.element.getBoundingClientRect()
-        // 获取元素顶部距离视口顶部的距离
-        const distance = Math.abs(rect.top)
-        // 检查这个锚点是否比之前记录的锚点更接近视口顶部
-        if (distance < closestAnchorDistance) {
-            closestAnchorDistance = distance
-            closestAnchorId = anchor.id
-        }
-    })
-    // 更新当前激活的锚点
-    if (closestAnchorId !== selected.value) {
-        selected.value = closestAnchorId
+const onScrollTab = throttle(() => {
+  const height = $(window).scrollTop();
+  let tab = tabsOptions.value[0].key
+  sections.value.each((index, item) => {
+    if (height >= $(item).offset().top) {
+      tab = $(item).attr('id-component')
     }
-
-    //元素高度不够时，滚动底部选择最后一个
-    if (isScrollAtBottom()) {
-        selected.value = anchorPositions[anchorPositions.length - 1]
-            .id as string
-    }
-}, 50)
+  })
+  if (tab !== selected.value) {
+    selected.value = tab
+  }
+}, 50);
 
 onMounted(() => {
-    // 监听滚动事件
-    window.addEventListener('scroll', onScrollTab)
-    selected.value = tabsOptions.value[0].fileName
-})
-// { name }: TabItem
+  // 监听滚动事件
+  $(window).scroll(onScrollTab);
+  sections.value = $(".section");
+  selected.value = tabsOptions.value[0].fileName;
+});
 const onSelectTab = ({ name }: any) => {
-    // tabSelected.value = name
-
-    nextTick(() => {
-        const anchors = document.querySelectorAll('[id-component]')
-        const anchorPositions = Array.from(anchors).map((anchor) => {
-            return {
-                element: anchor,
-                id: anchor.getAttribute('id-component')
-            }
-        })
-        const current = anchorPositions.find((item) => name === item.id)
-        if (current?.element) {
-            current?.element.scrollIntoView({ behavior: 'smooth' })
-        }
-    })
-
-    return true
-}
-// before - change
+  selected.value = name
+  $("html, body").animate(
+    {
+      scrollTop: $(`#${name}_componentEmelent`).offset().top,
+    },
+    300
+  );
+};
 </script>
 
-<!-- :ellipsis="false" -->
-
-
 <template>
-    <div>
-        <div class="nav-tabs-wrap">
-            <van-tabs
-                :ellipsis="false"
-                :active="selected"
-                @click-tab="onSelectTab"
-                :background="TAB_BACK_GROUND"
-                :title-active-color="TITLE_ACTIVE_COLOR"
-                :title-inactive-color="TITLE_INACTIVE_COLOR"
-            >
-                <van-tab
-                    :key="item.key"
-                    :name="item.key"
-                    :title="item.fileName"
-                    v-for="item in tabsOptions"
-                >
-                </van-tab>
-            </van-tabs>
-        </div>
-
-        <div
-            v-for="item in tabsOptions"
-            :id-component="item.key"
-            :key="`${item.key}_component`"
+  <div>
+    <div class="nav-tabs-wrap">
+      <van-tabs
+        :ellipsis="false"
+        :active="selected"
+        @click-tab="onSelectTab"
+        :background="TAB_BACK_GROUND"
+        :title-active-color="TITLE_ACTIVE_COLOR"
+        :title-inactive-color="TITLE_INACTIVE_COLOR"
+      >
+        <van-tab
+          :key="item.key"
+          :name="item.key"
+          :title="item.fileName"
+          v-for="item in tabsOptions"
         >
-            <component :is="item.component"></component>
-        </div>
+        </van-tab>
+      </van-tabs>
     </div>
+
+    <div
+      v-for="item in tabsOptions"
+      :id-component="item.key"
+      :key="`${item.key}_component`"
+      :id="`${item.key}_componentEmelent`"
+      class="section"
+    >
+      <component :is="item.component"></component>
+    </div>
+  </div>
 </template>
 
 
 
 <style lang="less" scoped>
 .nav-tabs-wrap {
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    background: #000;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #000;
 }
 .nav-tabs-container {
-    color: red;
+  color: red;
 }
 .nav-tabs-item {
-    font-size: 18px;
-    color: #fff;
+  font-size: 18px;
+  color: #fff;
 }
 :deep(.van-tabs__line) {
-    background: url('@/assets/image/nav_tab_icon.png') no-repeat;
-    background-size: cover;
+  background: url("@/assets/image/nav_tab_icon.png") no-repeat;
+  background-size: cover;
 }
 </style>
