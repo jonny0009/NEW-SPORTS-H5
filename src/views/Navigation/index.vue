@@ -131,10 +131,12 @@ export default defineComponent({
       console.log(11111, this.noScroll);
       if (this.noScroll) return;
       const height = this.tabScrollTop + 10;
+      const windowHeight = $(window).height() || 0;
       let tab = this.tabsOptions[0].key;
       this.sections.each((index, item) => {
-        if (height >= $(item).offset().top) {
-          tab = $(item).attr("id-component");
+        const nowTab = $(item).attr("id-component");
+        if (height >= ($(item).offset().top - Math.floor(windowHeight / 2))) {
+          tab = nowTab
         }
       });
       if (tab !== this.tabSelected) {
@@ -150,6 +152,8 @@ export default defineComponent({
         addHeight = -10
       } else if (name === MultipleLangFileNameEunm.Logo) {
         addHeight = 0
+      } else if (name === MultipleLangFileNameEunm.ContactUs) {
+        addHeight = -30
       }
       
       $("html, body").animate(
