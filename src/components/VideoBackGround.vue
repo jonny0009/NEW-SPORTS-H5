@@ -72,7 +72,7 @@ export default defineComponent({
     <video
       :id="`${type}_player`"
       playsinline
-      controls preload="auto"
+      preload="auto"
       webkit-playsinline
       x5-playsinline 
       disablepictureinpicture
