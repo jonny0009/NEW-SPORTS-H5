@@ -2,6 +2,15 @@ export enum MultipleLangEunm {
     CN = 'zh-cn',
     US = 'en-us',
     TW = 'zh-tw',
+    VN = 'vi-vn',
+    JP = 'ja-jp',
+    KO = 'ko-kr',
+    TH = 'th-th',
+    ID = 'id-id',
+    TR = 'tr-tr',
+    PT = 'pt-pt',
+    ES = 'es-es',
+    HI = 'hi-in',
 }
 
 export enum MultipleLangFileNameEunm {

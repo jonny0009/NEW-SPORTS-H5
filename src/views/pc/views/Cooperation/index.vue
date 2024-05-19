@@ -101,10 +101,10 @@ const props = defineProps(['paddingTop'])
     align-items: center;
 }
 .bc-container-left {
-    flex: 1;
+    flex: 2;
 }
 .bc-container-right {
-    flex: 1;
+    flex: 2;
     margin-left: 20px;
 }
 .bc-title {

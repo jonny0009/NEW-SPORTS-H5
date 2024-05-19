@@ -121,7 +121,7 @@ const onSubmit = async () => {
             <textarea
                 rows="5"
                 v-model="formProblem"
-                class="bc-form-rd-textarea bc-form-input"
+                class="bc-form-rd-textarea bc-form-textarea"
             ></textarea>
 
             <van-row justify="center" class="bc-content-btn">
@@ -152,6 +152,16 @@ const onSubmit = async () => {
     margin-top: 8px;
 }
 .bc-form-input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    border-radius: 0;
+    color: #ffffff;
+    display: block;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.34);
+}
+.bc-form-textarea {
     width: 100%;
     border: none;
     font-size: 16px;
