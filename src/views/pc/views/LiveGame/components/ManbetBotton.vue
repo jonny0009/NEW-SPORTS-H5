@@ -2,12 +2,16 @@
     <div>
         <div class="lg-nd-botton">
             <botton-confirm-pc
-                :size="btSport"
+                :hover="true"
+                :size="BottonSize.Middle"
+                :selected="props.active === BottonType.Sport"
                 :text="MultipleLangFileNameEunm.SportsManBetXBotton"
                 @click="() => onChangeTab(0)"
             ></botton-confirm-pc>
             <botton-confirm-pc
-                :size="btBacccarat"
+                :hover="true"
+                :size="BottonSize.Middle"
+                :selected="props.active === BottonType.Bacccarat"
                 :text="MultipleLangFileNameEunm.LiveGameManBetXBotton"
                 @click="() => onChangeTab(1)"
             ></botton-confirm-pc>
@@ -20,12 +24,6 @@ import { BottonType } from '../constants'
 import { MultipleLangFileNameEunm, BottonSize } from '@/model'
 const props = defineProps(['active'])
 const emit = defineEmits(['update:change'])
-const btSport =
-    props.active === BottonType.Sport ? BottonSize.Selected : BottonSize.Middle
-const btBacccarat =
-    props.active === BottonType.Bacccarat
-        ? BottonSize.Selected
-        : BottonSize.Middle
 const onChangeTab = (index: number) => {
     emit('update:change', index)
 }

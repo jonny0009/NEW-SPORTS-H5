@@ -142,7 +142,6 @@ export enum VideoMaskEnum {
 export enum BottonSize {
     Large = 'Large',
     Middle = 'Middle',
-    Selected = 'Selected'
 }
 
 export enum BottonLinkType { 

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps } from 'vue'
+import { defineProps, ref } from 'vue'
 import { useLanguages } from '@/hooks'
 import { getStore } from '@/config/storage'
 import {
@@ -12,19 +12,27 @@ import xsURL from '@/assets/image/middle_btn_border.png'
 import xlURL from '@/assets/image/large_btn_border.png'
 import sdURL from '@/assets/image/middle_selected_btn_border.png'
 
-const { size, text, link } = defineProps(['size', 'text', 'link'])
+const { size, text, link, hover, selected } = defineProps([
+    'size',
+    'text',
+    'link',
+    'hover',
+    'selected'
+])
 const imgStyle: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: 'botton-xs-img',
-    [BottonSize.Large]: 'botton-xl-img',
-    [BottonSize.Selected]: 'botton-selected-img'
+    [BottonSize.Large]: 'botton-xl-img'
 }
+
 const imgSource: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: xsURL,
-    [BottonSize.Large]: xlURL,
-    [BottonSize.Selected]: sdURL
+    [BottonSize.Large]: xlURL
 }
 const style = imgStyle[size as BottonSize]
-const source = imgSource[size as BottonSize]
+const urlSource = imgSource[size as BottonSize]
+const textStyle = selected ? 'botton-selected-text' : ''
+
+const imgUrl = ref(urlSource)
 
 const onJump = () => {
     const source = BottonLinkSource[link as BottonLinkType]
@@ -32,13 +40,29 @@ const onJump = () => {
         getStore(StorageLangNameEnum.LOCAL_LANGUAGE_NAME) || useLanguages()
     source && window.open(source + `?lang=${lang}`, '_blank')
 }
+
+const mouseenter = () => {
+    if (hover) {
+        imgUrl.value = sdURL
+    }
+}
+const mouseleave = () => {
+    if (hover) {
+        imgUrl.value = urlSource
+    }
+}
 </script>
 
 <template>
     <div>
-        <div class="botton-wrap" @click="onJump">
-            <span class="botton-text">{{ $t(text) }}</span>
-            <img :src="source" :class="[style]" alt="" />
+        <div
+            class="botton-wrap"
+            @click="onJump"
+            @mouseenter="mouseenter"
+            @mouseleave="mouseleave"
+        >
+            <span :class="['botton-text', textStyle]">{{ $t(text) }}</span>
+            <img :src="imgUrl" :class="[style]" alt="" />
         </div>
     </div>
 </template>
@@ -51,6 +75,7 @@ const onJump = () => {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    // border: 1px solid #red;
 }
 
 .botton-text {
@@ -59,8 +84,9 @@ const onJump = () => {
     font-weight: 400;
     font-size: 25px;
 }
+
 .botton-xl-img {
-    width: 550px;
+    width: 750px;
     height: auto;
     position: relative;
 }
@@ -73,5 +99,14 @@ const onJump = () => {
     width: 360px;
     height: auto;
     position: relative;
+}
+.botton-selected-text {
+    width: 340px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    border: 2px solid #ff8727;
+    border-radius: 50px;
+    display: inline-block;
 }
 </style>

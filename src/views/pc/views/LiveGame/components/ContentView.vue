@@ -1,6 +1,5 @@
 
 <script  lang="ts" setup>
-// import { options } from '../constants'
 const props = defineProps(['options'])
 </script>
 
@@ -46,7 +45,7 @@ const props = defineProps(['options'])
     color: #ffffff;
     white-space: pre-wrap;
     font-style: italic;
-    margin-top: 5px;
+    margin-top: 10px;
     text-align: center;
 }
 </style>

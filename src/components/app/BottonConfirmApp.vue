@@ -10,17 +10,14 @@ import {
 } from '@/model'
 import xsURL from '@/assets/image/middle_btn_border.png'
 import xlURL from '@/assets/image/large_btn_border.png'
-import sdURL from '@/assets/image/middle_selected_btn_border.png'
 const { size, text, link } = defineProps(['size', 'text', 'link'])
 const imgStyle: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: 'botton-xs-img',
-    [BottonSize.Large]: 'botton-xl-img',
-    [BottonSize.Selected]: 'botton-selected-img'
+    [BottonSize.Large]: 'botton-xl-img'
 }
 const imgSource: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: xsURL,
-    [BottonSize.Large]: xlURL,
-    [BottonSize.Selected]: sdURL
+    [BottonSize.Large]: xlURL
 }
 const style = imgStyle[size as BottonSize]
 const source = imgSource[size as BottonSize]
