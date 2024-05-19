@@ -28,7 +28,6 @@ axiosInstance.interceptors.request.use(
 // 响应拦截器
 axiosInstance.interceptors.response.use(
     response => {
-        console.log(response,'response')
         // 在这里处理响应数据，例如只返回 data
         if (response.data.code !== 200) { 
             return Promise.reject(new Error(response.data))
@@ -37,7 +36,6 @@ axiosInstance.interceptors.response.use(
     },
     error => {
         // 在这里处理错误，例如统一的错误提示
-        console.error('An error occurred:', error.message);
         return Promise.reject(error);
     }
 );

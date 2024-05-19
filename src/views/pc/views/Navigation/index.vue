@@ -461,13 +461,13 @@ onMounted(() => {
                 v-if="audio.status"
                 src="@/assets/image/audio_open_icon.png"
                 alt=""
-                class="audio-logo"
+                class="audio-logo-open"
             />
             <img
                 v-else
                 src="@/assets/image/audio_close_icon.png"
                 alt=""
-                class="audio-logo"
+                class="audio-logo-close"
             />
         </div>
 
@@ -522,15 +522,19 @@ onMounted(() => {
 .audio-logo-box {
     position: fixed;
     top: 100px;
-    right: 50px;
+    right: 40px;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    .audio-logo {
-        width: 80px;
-        height: 80px;
+    .audio-logo-open {
+        width: 40px;
+        height: 40px;
+    }
+    .audio-logo-close {
+        width: 40px;
+        height: 40px;
     }
 }
 .nav-wrap {

@@ -1,11 +1,17 @@
 <script lang="ts" setup>
 import 'vant/es/toast/style'
 import { i18n } from '@/i18n'
-import { showToast, showFailToast, showLoadingToast, closeToast } from 'vant'
+import {
+    showToast,
+    showFailToast,
+    showSuccessToast,
+    showLoadingToast,
+    closeToast
+} from 'vant'
 import { ref, reactive } from 'vue'
 import useClipboard from 'vue-clipboard3'
 import { onSubmitUserInfo } from '@/api'
-import { find, get } from 'loadsh'
+import { get } from 'loadsh'
 import iconURL from '@/assets/image/bc_icon_Triangle.png'
 import { contactAddressOptions, AddreessType } from '../constants'
 import {
@@ -77,7 +83,7 @@ const onSubmit = async () => {
         const text = i18n.global.t(
             MultipleLangFileNameEunm.SubmitTextSuccessful
         )
-        showFailToast(text)
+        showSuccessToast(text)
     } catch (err) {
         const text = i18n.global.t(MultipleLangFileNameEunm.SubmitTextFail)
         showFailToast(text)
@@ -127,59 +133,71 @@ const onClick = (type: AddreessType, mes: string) => {
         </van-row>
 
         <div class="bc-form-wrap">
-            <div class="bc-form-part-st">
-                <div class="bc-form-st-content">
-                    <span class="bc-form-label">
-                        {{ $t(MultipleLangFileNameEunm.Name) }}
-                    </span>
-                    <div class="bc-form-margin"></div>
-                    <input
-                        class="bc-form-st-input bc-form-input"
-                        type="text"
-                        v-model="useForm.data.nickName"
-                    />
-                </div>
-                <div class="bc-form-st-content">
-                    <span class="bc-form-label">
-                        {{ $t(MultipleLangFileNameEunm.ContactNumber) }}
-                    </span>
-                    <div class="bc-form-margin"></div>
-                    <input
-                        class="bc-form-st-input bc-form-input"
-                        type="text"
-                        v-model="useForm.data.phone"
-                    />
-                </div>
-            </div>
+            <van-row :gutter="10" align="center" class="bc-form-margin">
+                <van-col :span="12">
+                    <van-row align="center">
+                        <van-col :span="10">
+                            <div class="bc-form-label">
+                                {{ $t(MultipleLangFileNameEunm.Name) }}
+                            </div>
+                        </van-col>
+                        <van-col :span="14" class="bc-form-label">
+                            <input
+                                class="bc-form-input"
+                                type="text"
+                                v-model="useForm.data.nickName"
+                            />
+                        </van-col>
+                    </van-row>
+                </van-col>
 
-            <van-row
-                :wrap="false"
-                align="center"
-                class="bc-form-part-nd"
-                justify="space-between"
-            >
-                <div class="bc-form-label">
-                    {{ $t(MultipleLangFileNameEunm.ContactMethod) }}
-                </div>
-                <div class="bc-form-label" @click="showPicker = true">
-                    <span>{{ callTypeText }}</span>
-                    <van-image :src="iconURL" alt="" class="bc-icon-img" />
-                </div>
-                <input
-                    type="text"
-                    class="bc-form-nd-input bc-form-input"
-                    v-model="useForm.data.callPhone"
-                />
+                <van-col :span="12">
+                    <van-row align="center">
+                        <van-col :span="10">
+                            <div class="bc-form-label">
+                                {{ $t(MultipleLangFileNameEunm.ContactNumber) }}
+                            </div>
+                        </van-col>
+                        <van-col :span="14" class="bc-form-label">
+                            <input
+                                class="bc-form-input"
+                                type="text"
+                                v-model="useForm.data.phone"
+                            />
+                        </van-col>
+                    </van-row>
+                </van-col>
             </van-row>
 
-            <div class="bc-form-part-rd">
-                <div class="bc-form-label">
+            <van-row class="bc-form-margin">
+                <van-col :span="7">
+                    <div class="bc-form-label">
+                        {{ $t(MultipleLangFileNameEunm.ContactMethod) }}
+                    </div>
+                </van-col>
+                <van-col :span="7">
+                    <span class="bc-form-label" @click="showPicker = true">
+                        <span>{{ callTypeText }}</span>
+                        <van-image :src="iconURL" alt="" class="bc-icon-img" />
+                    </span>
+                </van-col>
+                <van-col :span="10">
+                    <input
+                        type="text"
+                        class="bc-form-nd-input bc-form-input"
+                        v-model="useForm.data.callPhone"
+                    />
+                </van-col>
+            </van-row>
+
+            <div class="bc-form-margin">
+                <div class="bc-form-textarea">
                     {{ $t(MultipleLangFileNameEunm.YourProblem) }}
                 </div>
                 <textarea
                     rows="5"
                     v-model="useForm.data.question"
-                    class="bc-form-rd-textarea bc-form-input"
+                    class="bc-form-rd-textarea"
                 ></textarea>
             </div>
 
@@ -233,47 +251,35 @@ const onClick = (type: AddreessType, mes: string) => {
     background: url(@/assets/image/bc_form_bg.png) no-repeat;
     background-size: 100% 100%;
 }
-.bc-form-part-st {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.bc-form-margin {
+    margin-top: 20px;
 }
-.bc-form-st-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 .bc-form-label {
+    width: 100px;
     font-size: 24px;
     color: #ffffff;
     white-space: pre-wrap;
 }
-.bc-form-margin {
-    width: 20px;
-}
-.bc-form-st-input {
-    width: 180px;
-    height: 29px;
-    border-radius: 0;
+
+.bc-form-textarea {
+    font-size: 24px;
+    color: #ffffff;
+    white-space: pre-wrap;
 }
 
-.bc-form-part-nd {
-    margin-top: 30px;
-}
-.bc-form-nd-input {
-    width: 300px;
-    border-radius: 0;
-}
-.bc-form-part-rd {
-    margin-top: 28px;
-    display: flex;
-    flex-direction: column;
-}
 .bc-form-rd-textarea {
-    flex: 1;
     margin-top: 8px;
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    border-radius: 0;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.34);
 }
 .bc-form-input {
+    width: 100%;
     border: none;
     font-size: 24px;
     border-radius: 0;

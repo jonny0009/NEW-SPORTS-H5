@@ -8,8 +8,22 @@ import {
     StorageLangNameEnum,
     BottonLinkType
 } from '@/model'
+import xsURL from '@/assets/image/middle_btn_border.png'
+import xlURL from '@/assets/image/large_btn_border.png'
+import sdURL from '@/assets/image/middle_selected_btn_border.png'
 const { size, text, link } = defineProps(['size', 'text', 'link'])
-const style = size === BottonSize.Middle ? 'botton-xs-wrap' : 'botton-xl-wrap'
+const imgStyle: { [key in BottonSize]: string } = {
+    [BottonSize.Middle]: 'botton-xs-img',
+    [BottonSize.Large]: 'botton-xl-img',
+    [BottonSize.Selected]: 'botton-selected-img'
+}
+const imgSource: { [key in BottonSize]: string } = {
+    [BottonSize.Middle]: xsURL,
+    [BottonSize.Large]: xlURL,
+    [BottonSize.Selected]: sdURL
+}
+const style = imgStyle[size as BottonSize]
+const source = imgSource[size as BottonSize]
 
 const onJump = () => {
     const source = BottonLinkSource[link as BottonLinkType]
@@ -21,8 +35,9 @@ const onJump = () => {
 
 <template>
     <div>
-        <div :class="[style, 'botton-wrap']" @click="onJump">
+        <div class="botton-wrap" @click="onJump">
             <span class="botton-text">{{ $t(text) }}</span>
+            <van-image :src="source" :class="[style]" alt="" />
         </div>
     </div>
 </template>
@@ -37,19 +52,24 @@ const onJump = () => {
 }
 
 .botton-text {
+    position: absolute;
+    z-index: 10;
+    font-weight: 400;
     font-size: 28px;
 }
-.botton-xl-wrap {
-    width: 490px;
-    height: 63px;
-    background: url(@/assets/image/large_btn_border.png) center center no-repeat;
-    background-size: cover;
+.botton-xl-img {
+    width: auto;
+    height: 100px;
+    position: relative;
 }
-.botton-xs-wrap {
-    width: 357px;
-    height: 63px;
-    background: url(@/assets/image/middle_btn_border.png) center center
-        no-repeat;
-    background-size: cover;
+.botton-xs-img {
+    width: 360px;
+    height: auto;
+    position: relative;
+}
+.botton-selected-img {
+    width: 360px;
+    height: auto;
+    position: relative;
 }
 </style>

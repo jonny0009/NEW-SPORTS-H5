@@ -16,8 +16,7 @@ const noScroll = ref(false)
 const tabsOptions = computed(() => useTabsOptions())
 
 const onScrollTab = throttle(() => {
-  console.log(11111, noScroll.value)
-    if (noScroll.value) return;
+    if (noScroll.value) return
     const height = $(window).scrollTop() + 10
     let tab = tabsOptions.value[0].key
     sections.value.each((index, item) => {
@@ -41,10 +40,13 @@ const onSelectTab = ({ name }: any) => {
     noScroll.value = true
     $('html, body').animate(
         {
-            scrollTop: $(`#${name}_componentEmelent`).offset().top + (name === MultipleLangFileNameEunm.ProductAdvantages ? -10 : 1)
+            scrollTop:
+                $(`#${name}_componentEmelent`).offset().top +
+                (name === MultipleLangFileNameEunm.ProductAdvantages ? -10 : 1)
         },
-        300, () => {
-          noScroll.value = false
+        300,
+        () => {
+            noScroll.value = false
         }
     )
 }

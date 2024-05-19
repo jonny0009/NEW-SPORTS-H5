@@ -26,7 +26,6 @@ const dynamicValidateForm = reactive({
 })
 
 const onSelect = (value: ContactInformation) => {
-    console.log(value, 'value')
     formCallType.value = value
 }
 const onSubmit = async () => {

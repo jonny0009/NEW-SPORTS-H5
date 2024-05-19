@@ -9,7 +9,6 @@ declare module 'vue' {
   export interface GlobalComponents {
     BottonConfirmApp: typeof import('./src/components/app/BottonConfirmApp.vue')['default']
     BottonConfirmPc: typeof import('./src/components/pc/BottonConfirmPc.vue')['default']
-    copy: typeof import('./src/components/VideoBackGround copy.vue')['default']
     CopyRightApp: typeof import('./src/components/app/CopyRightApp.vue')['default']
     CopyRightPc: typeof import('./src/components/pc/CopyRightPc.vue')['default']
     PopoverView: typeof import('./src/components/pc/PopoverView.vue')['default']
@@ -20,7 +19,6 @@ declare module 'vue' {
     VanDivider: typeof import('vant/es')['Divider']
     VanImage: typeof import('vant/es')['Image']
     VanPicker: typeof import('vant/es')['Picker']
-    VanPopover: typeof import('vant/es')['Popover']
     VanPopup: typeof import('vant/es')['Popup']
     VanRow: typeof import('vant/es')['Row']
     VanTab: typeof import('vant/es')['Tab']
