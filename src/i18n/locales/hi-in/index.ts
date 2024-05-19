@@ -1,5 +1,8 @@
 import { MultipleLangFileNameEunm } from '@/model'
 export default {
+    [MultipleLangFileNameEunm.SubmitTextFail]: '',
+    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "",
+    [MultipleLangFileNameEunm.PleaseEnter]: "",
     [MultipleLangFileNameEunm.GamePalyDome]: "",
     [MultipleLangFileNameEunm.Copysuccessful]: "",
     [MultipleLangFileNameEunm.SubmitTextBotton]: "",

@@ -1,4 +1,4 @@
-import { MultipleLangEunm, VideoMaskEnum, BottonLinkType } from './enum'
+import { MultipleLangEunm, VideoMaskEnum, BottonLinkType ,ContactInformation} from './enum'
 
 export const LanguageOptions = [
     { value: MultipleLangEunm.CN, text: '简体中文', icon: null, color: '' },
@@ -24,7 +24,13 @@ export const VideoMaskType = {
 
 export const BottonLinkSource: { [key in BottonLinkType]: string } = {
     [BottonLinkType.Home]: 'https://cn2.manbetx-sports.aisports.io/home',
-    [BottonLinkType.Casino]: 'https://cn2.manbetx-sports.aisports.io/casino',
+    [BottonLinkType.Casino]: 'https://cn2.manbetx-sports.aisports.io/casino'
 }
+
+export const ContactInformationOptions = [
+    { value: 1, text: ContactInformation.Telegram },
+    { value: 4, text: ContactInformation.Email },
+    { value: 3, text: ContactInformation.Skype }
+]
 
 export const APP_ID = '#app'

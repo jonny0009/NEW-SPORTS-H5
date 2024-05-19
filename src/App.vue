@@ -32,4 +32,18 @@ const isMobile = ref(useMobile())
 html.bobd {
     height: 100%;
 }
+.el-loading-spinner .path {
+    -webkit-animation: loading-dash 1.5s ease-in-out infinite;
+    animation: loading-dash 1.5s ease-in-out infinite;
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke: #ff8727 !important;
+}
+.el-loading-spinner .el-loading-text {
+    color: rgb(240, 228, 188) !important;
+    margin: 3px 0;
+    font-size: 14px;
+}
 </style>

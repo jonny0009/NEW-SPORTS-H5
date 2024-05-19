@@ -1,12 +1,89 @@
 <script lang="ts" setup>
 import 'vant/es/toast/style'
 import { i18n } from '@/i18n'
-import { showToast } from 'vant'
+import { showToast, showFailToast, showLoadingToast, closeToast } from 'vant'
+import { ref, reactive } from 'vue'
 import useClipboard from 'vue-clipboard3'
+import { onSubmitUserInfo } from '@/api'
+import { find, get } from 'loadsh'
+import iconURL from '@/assets/image/bc_icon_Triangle.png'
 import { contactAddressOptions, AddreessType } from '../constants'
-import { MultipleLangFileNameEunm, BottonSize } from '@/model'
+import {
+    MultipleLangFileNameEunm,
+    BottonSize,
+    ContactInformationOptions
+} from '@/model'
 
 const { toClipboard } = useClipboard()
+const showPicker = ref(false)
+const defalut = get(ContactInformationOptions, '0')
+const callTypeText = ref(defalut.text)
+const callTypeValue = ref([defalut.value])
+
+const infoInit = {
+    nickName: '',
+    phone: '',
+    callType: defalut.value,
+    callPhone: '',
+    question: ''
+}
+const useForm = reactive({
+    data: { ...infoInit }
+})
+
+const onSelect = ({ selectedOptions }: any) => {
+    const item = get(selectedOptions, '0')
+    callTypeText.value = item.text
+    useForm.data.callType = item.value
+    callTypeValue.value = [item.value]
+    showPicker.value = false
+}
+
+const onErrorMsg = (msg: string) => {
+    const text = i18n.global.t(msg)
+    const tips = i18n.global.t(MultipleLangFileNameEunm.PleaseEnter)
+    showFailToast(`${tips}${text}`)
+}
+
+const onSubmit = async () => {
+    if (!useForm.data.nickName) {
+        return onErrorMsg(MultipleLangFileNameEunm.Name)
+    }
+    if (!useForm.data.phone) {
+        return onErrorMsg(MultipleLangFileNameEunm.ContactNumber)
+    }
+    if (!useForm.data.callPhone) {
+        return onErrorMsg(MultipleLangFileNameEunm.ContactMethod)
+    }
+
+    const useInfo = {
+        nickName: useForm.data.nickName,
+        phone: useForm.data.phone,
+        callType: useForm.data.callType,
+        callPhone: useForm.data.callPhone,
+        question: useForm.data.question
+    }
+
+    showLoadingToast({
+        duration: 0,
+        forbidClick: true
+    })
+
+    try {
+        await onSubmitUserInfo(useInfo)
+        closeToast()
+        useForm.data = { ...infoInit }
+        callTypeText.value = defalut.text
+        const text = i18n.global.t(
+            MultipleLangFileNameEunm.SubmitTextSuccessful
+        )
+        showFailToast(text)
+    } catch (err) {
+        const text = i18n.global.t(MultipleLangFileNameEunm.SubmitTextFail)
+        showFailToast(text)
+        closeToast()
+    }
+}
 
 const onCopy = async (msg: string) => {
     const text = i18n.global.t(MultipleLangFileNameEunm.Copysuccessful)
@@ -56,14 +133,22 @@ const onClick = (type: AddreessType, mes: string) => {
                         {{ $t(MultipleLangFileNameEunm.Name) }}
                     </span>
                     <div class="bc-form-margin"></div>
-                    <input class="bc-form-st-input bc-form-input" type="text" />
+                    <input
+                        class="bc-form-st-input bc-form-input"
+                        type="text"
+                        v-model="useForm.data.nickName"
+                    />
                 </div>
                 <div class="bc-form-st-content">
                     <span class="bc-form-label">
                         {{ $t(MultipleLangFileNameEunm.ContactNumber) }}
                     </span>
                     <div class="bc-form-margin"></div>
-                    <input class="bc-form-st-input bc-form-input" type="text" />
+                    <input
+                        class="bc-form-st-input bc-form-input"
+                        type="text"
+                        v-model="useForm.data.phone"
+                    />
                 </div>
             </div>
 
@@ -76,10 +161,15 @@ const onClick = (type: AddreessType, mes: string) => {
                 <div class="bc-form-label">
                     {{ $t(MultipleLangFileNameEunm.ContactMethod) }}
                 </div>
-                <div class="bc-form-label">
-                    {{ $t(MultipleLangFileNameEunm.Telegram) }}
+                <div class="bc-form-label" @click="showPicker = true">
+                    <span>{{ callTypeText }}</span>
+                    <van-image :src="iconURL" alt="" class="bc-icon-img" />
                 </div>
-                <input type="text" class="bc-form-nd-input bc-form-input" />
+                <input
+                    type="text"
+                    class="bc-form-nd-input bc-form-input"
+                    v-model="useForm.data.callPhone"
+                />
             </van-row>
 
             <div class="bc-form-part-rd">
@@ -88,17 +178,28 @@ const onClick = (type: AddreessType, mes: string) => {
                 </div>
                 <textarea
                     rows="5"
+                    v-model="useForm.data.question"
                     class="bc-form-rd-textarea bc-form-input"
                 ></textarea>
             </div>
 
             <van-row justify="center" class="bc-content-btn">
                 <botton-confirm-app
+                    @click="onSubmit"
                     :size="BottonSize.Middle"
                     :text="MultipleLangFileNameEunm.SubmitTextBotton"
                 ></botton-confirm-app>
             </van-row>
         </div>
+
+        <van-popup round position="bottom" v-model:show="showPicker">
+            <van-picker
+                v-model="callTypeValue"
+                :columns="ContactInformationOptions"
+                @cancel="showPicker = false"
+                @confirm="onSelect"
+            />
+        </van-popup>
     </div>
 </template>
 
@@ -181,5 +282,20 @@ const onClick = (type: AddreessType, mes: string) => {
 }
 .bc-content-btn {
     margin-top: 30px;
+}
+:deep(.van-picker__confirm) {
+    color: #ff8727;
+}
+.bc-icon-wrap {
+    display: flex;
+    align-items: center;
+}
+.bc-icon-img {
+    margin-left: 8px;
+    :deep(img) {
+        width: 8px;
+        height: 8px;
+        object-fit: contain;
+    }
 }
 </style>

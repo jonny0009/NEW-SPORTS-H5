@@ -14,6 +14,9 @@ export enum MultipleLangEunm {
 }
 
 export enum MultipleLangFileNameEunm {
+    SubmitTextFail='SubmitTextFail',
+    SubmitTextSuccessful = 'SubmitTextSuccessful',
+    PleaseEnter = 'PleaseEnter',
     Copysuccessful = 'Copysuccessful',
     WholeTextBotton = 'WholeTextBotton',
     SubmitTextBotton = 'SubmitTextBotton',
