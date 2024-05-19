@@ -100,9 +100,10 @@ export default defineComponent({
             autoplay
             muted
             playsinline
+            webkit-playsinline
             ref="videoRef"
+            x5-video-player-type="h5"
             class="video-element"
-            controlsList="nodownload noremoteplaybacknodownload"
             :poster="image"
             :src="src"
         >
