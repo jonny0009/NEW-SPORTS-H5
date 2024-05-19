@@ -117,18 +117,21 @@ export default defineComponent({
   },
   mounted() {
     // 监听滚动事件
-    $(window).scroll(
-      throttle(() => {
-        this.onScrollTab();
-      }, 50)
-    );
+    // $(window).scroll(
+    //   throttle(() => {
+    //     this.onScrollTab();
+    //   }, 50)
+    // );
+    window.addEventListener('scroll', throttle((event) => {
+      event.preventDefault();
+      this.onScrollTab();
+    }, 50), { passive: false });
     this.sections = $(".section");
     this.tabSelected = this.tabsOptions[0].key;
   },
   methods: {
     onScrollTab() {
       this.tabScrollTop = $(window).scrollTop();
-      console.log(11111, this.noScroll);
       if (this.noScroll) return;
       const height = this.tabScrollTop + 10;
       const windowHeight = $(window).height() || 0;
@@ -147,13 +150,9 @@ export default defineComponent({
     onSelectTab({ name }) {
       this.tabSelected = name;
       this.noScroll = true;
-      let addHeight = 1
-      if (name === MultipleLangFileNameEunm.ProductAdvantages) {
-        addHeight = -10
-      } else if (name === MultipleLangFileNameEunm.Logo) {
+      let addHeight = -20
+      if (name === MultipleLangFileNameEunm.Logo) {
         addHeight = 0
-      } else if (name === MultipleLangFileNameEunm.ContactUs) {
-        addHeight = -30
       }
       
       $("html, body").animate(

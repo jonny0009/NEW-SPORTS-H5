@@ -1,5 +1,6 @@
 <script lang="ts">
 import { ref, defineComponent, PropType, inject } from "vue";
+import $ from 'jquery'
 import { VideoMaskType, VideoMaskEnum, MultipleLangFileNameEunm } from "@/model";
 import { useAudioStatus } from "@/store";
 export default defineComponent({
@@ -15,6 +16,7 @@ export default defineComponent({
     const clientHeight = ref(0);
     const audio = useAudioStatus();
     const videoRef = ref(null);
+    const iframeRef = ref(null);
     const contanier = ref<any>(null);
     const linearGradient = VideoMaskType[mask!];
     const eventBus = inject("eventBus");
@@ -29,6 +31,7 @@ export default defineComponent({
       videoRef,
       eventBus,
       audio,
+      iframeRef,
     };
   },
   methods: {
@@ -50,7 +53,70 @@ export default defineComponent({
     },
   },
   mounted() {
-    this.videoRef.muted = !this.audio.status;
+    // this.videoRef.muted = !this.audio.status;
+    // this.videoRef.currentTime = 0;
+    // this.videoRef.removeAttribute('controls');
+
+    // if (this.type === MultipleLangFileNameEunm.Logo) {
+    //   this.videoRef.play()
+    // }
+    // this.eventBus.on("pageChange", (page, isReload = true) => {
+    //   this.handlePlay(page, isReload);
+    // });
+    // this.videoRef.addEventListener("ended", () => {
+    //   this.handleVideoEnd();
+    // });
+    // this.iframeRef
+    this.iframeRef.onload = () => {
+      // 获取 iframe 的文档对象
+      const doc = this.iframeRef.contentDocument || this.iframeRef.contentWindow.document;
+       doc.open();
+            doc.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title></title>
+                </head>
+                <style>
+                  .video-element {
+                    position: absolute !important;
+                    top: 50% !important;
+                    left: 50% !important;
+                    min-width: 100% !important;
+                    min-height: 100% !important;
+                    width: auto !important;
+                    height: auto !important;
+                    transform: translate(-50%, -50%) !important;
+                    z-index: -1 !important;
+                    pointer-events: none !important; /* 防止视频被点击 */
+                    object-fit: cover !important;
+                    scroll-behavior: smooth !important;
+                  }
+                </style>
+                <body>
+                    <video
+                      id="${this.type}_player"
+                      playsinline
+                      controls preload="auto"
+                      webkit-playsinline
+                      x5-playsinline 
+                      disablepictureinpicture
+                      disableremoteplayback
+                      x5-video-player-type="h5"
+                      class="video-element"
+                      poster="${this.image}"
+                      src="${this.src}"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                </body>
+                </html>
+            `);
+            doc.close();
+            this.videoRef = doc.getElementById(`${this.type}_player`)
+            // this.videoRef.muted = !this.audio.status;
     this.videoRef.currentTime = 0;
     this.videoRef.removeAttribute('controls');
 
@@ -63,13 +129,15 @@ export default defineComponent({
     this.videoRef.addEventListener("ended", () => {
       this.handleVideoEnd();
     });
+      // console.log()
+    }
   },
 });
 </script>
 
 <template>
   <div class="video-background" :style="{ background: linearGradient }">
-    <video
+    <!-- <video
       :id="`${type}_player`"
       playsinline
       controls preload="auto"
@@ -85,7 +153,8 @@ export default defineComponent({
     >
       <source :src="src" type="video/mp4" />
       Your browser does not support the video tag.
-    </video>
+    </video> -->
+    <iframe ref="iframeRef" class="video-element" :srcdoc="`<html><body><div id='${`${type}_player`}'></div></body></html>`"></iframe>
     <!-- 页面其他内容 -->
     <div class="content">
       <slot></slot>

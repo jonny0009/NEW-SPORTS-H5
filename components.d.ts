@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     BottonConfirmApp: typeof import('./src/components/app/BottonConfirmApp.vue')['default']
     BottonConfirmPc: typeof import('./src/components/pc/BottonConfirmPc.vue')['default']
+    copy: typeof import('./src/components/VideoBackGround copy.vue')['default']
     CopyRightApp: typeof import('./src/components/app/CopyRightApp.vue')['default']
     CopyRightPc: typeof import('./src/components/pc/CopyRightPc.vue')['default']
     PopoverView: typeof import('./src/components/pc/PopoverView.vue')['default']
@@ -23,5 +24,6 @@ declare module 'vue' {
     VanTab: typeof import('vant/es')['Tab']
     VanTabs: typeof import('vant/es')['Tabs']
     VideoBackGround: typeof import('./src/components/VideoBackGround.vue')['default']
+    'VideoBackGround copy': typeof import('./src/components/VideoBackGround copy.vue')['default']
   }
 }
