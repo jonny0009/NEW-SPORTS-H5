@@ -2,8 +2,14 @@
 import { computed } from 'vue'
 import { useSponContentOptions, OtherTeamOptions } from '../constants'
 import LineView from './LineView.vue'
+import { useSwiperStore } from '@/store';
+import { SwiperActiveIndex } from '@/model/enum';
 
 const options = computed(() => useSponContentOptions())
+const store = useSwiperStore()
+const isAnimate = computed(
+    () => store.index === SwiperActiveIndex.Sponsorship
+)
 </script>
 
 <template>
@@ -17,9 +23,12 @@ const options = computed(() => useSponContentOptions())
                     class="spon-content-container-wrap"
                 >
                     <div
-                        class="spon-content-container"
                         v-for="(child, i) in item"
                         :key="i"
+                        :class="['spon-content-container', 'animate__animated', isAnimate ? '' : 'animate__fadeOutUpBig']"
+                        :style="{
+                          'animation-delay': `${(index * 0.3)+ (i *0.1)}s`,
+                        }"
                     >
                         <img :src="child.icon" class="spon-content-icon" />
                         <strong class="spon-content-title">{{

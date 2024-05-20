@@ -45,7 +45,7 @@ const isAnimate = computed(
                     </div>
                 </div>
 
-                <content-view v-if="isAnimate"></content-view>
+                <content-view :show="isAnimate"></content-view>
 
                 <van-row justify="center">
                     <botton-confirm-pc

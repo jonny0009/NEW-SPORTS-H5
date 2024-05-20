@@ -2,6 +2,9 @@
 import { computed } from 'vue'
 import { useSelfContentOptions } from '../constants'
 const options = computed(() => useSelfContentOptions())
+const props = defineProps({
+        show: Boolean
+    })
 </script>
 
 
@@ -16,7 +19,7 @@ const options = computed(() => useSelfContentOptions())
                 <div
                     v-for="(child, i) in item"
                     :key="i"
-                    class="sf-content animate__animated animate__fadeInRightBig"
+                    :class="['sf-content', 'animate__animated', props.show ? 'animate__fadeInRightBig' : 'animate__fadeOutUpBig']"
                     :style="{
                         'animation-delay': child.animationDelay + 's'
                     }"

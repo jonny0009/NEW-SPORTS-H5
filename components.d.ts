@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     BottonConfirmApp: typeof import('./src/components/app/BottonConfirmApp.vue')['default']
     BottonConfirmPc: typeof import('./src/components/pc/BottonConfirmPc.vue')['default']
+    copy: typeof import('./src/components/VideoBackGround copy.vue')['default']
     CopyRightApp: typeof import('./src/components/app/CopyRightApp.vue')['default']
     CopyRightPc: typeof import('./src/components/pc/CopyRightPc.vue')['default']
     PopoverView: typeof import('./src/components/pc/PopoverView.vue')['default']

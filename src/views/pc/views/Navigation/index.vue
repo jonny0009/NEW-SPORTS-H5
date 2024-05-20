@@ -475,6 +475,7 @@ onMounted(() => {
             class="swiperBox"
             :loop="false"
             :mousewheel="true"
+            :speed="600"
             @swiper="onRowSwiper"
             direction="vertical"
             :modules="[Mousewheel]"
