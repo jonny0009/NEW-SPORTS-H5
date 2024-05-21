@@ -25,7 +25,6 @@ import {
 } from './constants'
 
 import 'swiper/css'
-import { event } from 'jquery'
 
 const tabSelected = ref(MultipleLangFileNameEunm.Logo)
 const LangSelected = ref('')
@@ -63,17 +62,20 @@ const components = computed(() => {
 //切换菜单
 const onChangePage = (value: string) => {
     if (!!value) {
-        // tabSelected.value = value
-        const index = TabsIndexToSwiper[value]
-        const lastIndex = TabsIndexToSwiper[store.index]
+        tabSelected.value = value
+        let val = value
+        
         // myRowSwiper.value && myRowSwiper.value.slideTo(index)
-        // if (value === MultipleLangFileNameEunm.LiveGame) {
-        //     onColumnChangePage(1)
-        //     tabSelected.value = MultipleLangFileNameEunm.LiveGame
-        // } else if (value === MultipleLangFileNameEunm.Sports) {
-        //     onColumnChangePage(0)
-        // }
-        handleMovue({ deltaY: index - lastIndex, index })
+        if (value === MultipleLangFileNameEunm.LiveGame) {
+            onColumnChangePage(1)
+            val = MultipleLangFileNameEunm.Sports
+            tabSelected.value = MultipleLangFileNameEunm.LiveGame
+        } else if (value === MultipleLangFileNameEunm.Sports) {
+            onColumnChangePage(0)
+        }
+        const index = TabsIndexToSwiper[val]
+        const lastIndex = TabsIndexToSwiper[store.index]
+        handleMovue({ deltaY: index - lastIndex, index, tab: tabSelected.value })
     }
 }
 //切换swiper
@@ -149,12 +151,17 @@ const handleMovue = (event) => {
     }
     noScroll.value = true
     const _index = myRowSwiper.value.activeIndex
-    const { deltaY, index } = event
+    const { deltaY, index, tab } = event
     const value = swiperIndexToTabs[_index]
     const nextIndex = index ?? _index + (deltaY < 0 ? -1 : 1)
-    const nextSwiper = swiperIndexToTabs[nextIndex]
-    console.log('onTouchMove', value, store.index, nextSwiper)
+    const nextSwiper = tab ?? swiperIndexToTabs[nextIndex]
 
+    console.log('onTouchMove', value, store.index, nextSwiper)
+    store.onChangeSwiper(swiperIndexToTabs[nextIndex])
+    tabSelected.value = nextSwiper
+    if (nextSwiper === MultipleLangFileNameEunm.Sports) {
+        onColumnChangePage(0)
+    }
     if (
         [
             MultipleLangFileNameEunm.ProductAdvantages,
@@ -162,39 +169,24 @@ const handleMovue = (event) => {
             MultipleLangFileNameEunm.Sponsorship
         ].includes(value)
     ) {
-        store.onChangeSwiper(nextSwiper)
-        tabSelected.value = nextSwiper
+        store.onChangeDealy(0.8)
         setTimeout(() => {
             myRowSwiper.value.slideTo(nextIndex)
             nextTick(() => {
                 noScroll.value = false
             })
-        }, 500)
+        }, 800)
     } else {
         myRowSwiper.value.slideTo(nextIndex)
         nextTick(() => {
+            
             noScroll.value = false
-            store.onChangeSwiper(nextSwiper)
-            tabSelected.value = nextSwiper
         })
     }
 }
 
-const dealyFn = throttle(
-    (event) => {
-        event.preventDefault()
-        handleMovue(event)
-    },
-    500,
-    {
-        leading: true,
-        trailing: false
-    }
-)
-
 const onTouchMove = debounce(
     (event) => {
-        console.log(1111111)
         const _index = myRowSwiper.value.activeIndex
         const tab = swiperIndexToTabs[_index]
         if (
@@ -204,7 +196,9 @@ const onTouchMove = debounce(
                 MultipleLangFileNameEunm.Sponsorship
             ].includes(tab)
         ) {
-            dealyFn(event)
+            // dealyFn(event)
+            event.preventDefault()
+            handleMovue(event)
         } else {
             const _index = myRowSwiper.value.activeIndex
             const { deltaY } = event
@@ -215,11 +209,7 @@ const onTouchMove = debounce(
             myRowSwiper.value.slideTo(nextIndex)
         }
     },
-    50,
-    {
-        leading: true,
-        trailing: false
-    }
+    100,
 )
 </script>
 <template>
@@ -289,7 +279,6 @@ const onTouchMove = debounce(
             class="swiperBox"
             :loop="false"
             :mousewheel="true"
-            :speed="600"
             @swiper="onRowSwiper"
             direction="vertical"
             :autoplay="false"
