@@ -23,10 +23,14 @@ const props = defineProps({
                         :class="[
                             'sp-nd-item',
                             'animate__animated',
-                            props.show ? child.animate : 'animate__fadeOutUpBig'
+                            props.show
+                                ? 'animate__fadeInDownBig'
+                                : 'animate__fadeOutUpBig'
                         ]"
                         :style="{
-                            'animation-delay': `${i * 0.1}s`
+                            'animation-delay': `${
+                                props.show ? i % 2 === 0 * 0.3 : i * 0.1
+                            }s`
                         }"
                     >
                         <div class="sp-nd-content-top">

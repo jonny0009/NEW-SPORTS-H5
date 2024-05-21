@@ -6,14 +6,15 @@ import {
     onMounted,
     computed,
     watch,
-    inject
+    inject,
+    nextTick
 } from 'vue'
 import {
     LanguageOptions,
     MultipleLangFileNameEunm,
     StorageLangNameEnum
 } from '@/model'
-import { debounce } from '@/utils'
+import { debounce, throttle, isNil } from 'lodash'
 import { Mousewheel, Autoplay } from 'swiper/modules'
 import { useAudioStatus, useSwiperStore } from '@/store'
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -24,6 +25,7 @@ import {
 } from './constants'
 
 import 'swiper/css'
+import { event } from 'jquery'
 
 const tabSelected = ref(MultipleLangFileNameEunm.Logo)
 const LangSelected = ref('')
@@ -61,15 +63,17 @@ const components = computed(() => {
 //切换菜单
 const onChangePage = (value: string) => {
     if (!!value) {
-        tabSelected.value = value
+        // tabSelected.value = value
         const index = TabsIndexToSwiper[value]
-        myRowSwiper.value && myRowSwiper.value.slideTo(index)
-        if (value === MultipleLangFileNameEunm.LiveGame) {
-            onColumnChangePage(1)
-            tabSelected.value = MultipleLangFileNameEunm.LiveGame
-        } else if (value === MultipleLangFileNameEunm.Sports) {
-            onColumnChangePage(0)
-        }
+        const lastIndex = TabsIndexToSwiper[store.index]
+        // myRowSwiper.value && myRowSwiper.value.slideTo(index)
+        // if (value === MultipleLangFileNameEunm.LiveGame) {
+        //     onColumnChangePage(1)
+        //     tabSelected.value = MultipleLangFileNameEunm.LiveGame
+        // } else if (value === MultipleLangFileNameEunm.Sports) {
+        //     onColumnChangePage(0)
+        // }
+        handleMovue({ deltaY: index - lastIndex, index })
     }
 }
 //切换swiper
@@ -137,22 +141,86 @@ onMounted(() => {
     )
 })
 
-const onTouchMove = debounce((event) => {
-    event.preventDefault()
-    const _index = myRowSwiper.value.activeIndex
-    const { deltaY } = event
-    const value = swiperIndexToTabs[_index]
-    store.onChangeSwiper(value)
+const noScroll = ref(false)
 
-    slideWrapChange(myRowSwiper.value)
-    setTimeout(() => {
-        if (deltaY < 0) {
-            myRowSwiper.value.slideTo(_index - 1) //up
+const handleMovue = (event) => {
+    if (noScroll.value) {
+        return
+    }
+    noScroll.value = true
+    const _index = myRowSwiper.value.activeIndex
+    const { deltaY, index } = event
+    const value = swiperIndexToTabs[_index]
+    const nextIndex = index ?? _index + (deltaY < 0 ? -1 : 1)
+    const nextSwiper = swiperIndexToTabs[nextIndex]
+    console.log('onTouchMove', value, store.index, nextSwiper)
+
+    if (
+        [
+            MultipleLangFileNameEunm.ProductAdvantages,
+            MultipleLangFileNameEunm.AboutUs,
+            MultipleLangFileNameEunm.Sponsorship
+        ].includes(value)
+    ) {
+        store.onChangeSwiper(nextSwiper)
+        tabSelected.value = nextSwiper
+        setTimeout(() => {
+            myRowSwiper.value.slideTo(nextIndex)
+            nextTick(() => {
+                noScroll.value = false
+            })
+        }, 500)
+    } else {
+        myRowSwiper.value.slideTo(nextIndex)
+        nextTick(() => {
+            noScroll.value = false
+            store.onChangeSwiper(nextSwiper)
+            tabSelected.value = nextSwiper
+        })
+    }
+}
+
+const dealyFn = throttle(
+    (event) => {
+        event.preventDefault()
+        handleMovue(event)
+    },
+    500,
+    {
+        leading: true,
+        trailing: false
+    }
+)
+
+const onTouchMove = debounce(
+    (event) => {
+        console.log(1111111)
+        const _index = myRowSwiper.value.activeIndex
+        const tab = swiperIndexToTabs[_index]
+        if (
+            [
+                MultipleLangFileNameEunm.ProductAdvantages,
+                MultipleLangFileNameEunm.AboutUs,
+                MultipleLangFileNameEunm.Sponsorship
+            ].includes(tab)
+        ) {
+            dealyFn(event)
         } else {
-            myRowSwiper.value.slideTo(_index + 1) //down
+            const _index = myRowSwiper.value.activeIndex
+            const { deltaY } = event
+            const nextIndex = _index + (deltaY < 0 ? -1 : 1)
+            const nextSwiper = swiperIndexToTabs[nextIndex]
+            store.onChangeSwiper(nextSwiper)
+            tabSelected.value = nextSwiper
+            myRowSwiper.value.slideTo(nextIndex)
         }
-    }, 1000)
-}, 1000)
+    },
+    50,
+    {
+        leading: true,
+        trailing: false
+    }
+)
 </script>
 <template>
     <div @wheel="onTouchMove">
