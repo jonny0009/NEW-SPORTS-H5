@@ -1,11 +1,13 @@
 import { MultipleLangFileNameEunm } from '@/model'
 export default {
-    [MultipleLangFileNameEunm.SubmitTextFail]: '',
-    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "",
-    [MultipleLangFileNameEunm.PleaseEnter]: "",
-    [MultipleLangFileNameEunm.GamePalyDome]: "",
-    [MultipleLangFileNameEunm.Copysuccessful]: "",
-    [MultipleLangFileNameEunm.SubmitTextBotton]: "",
+    [MultipleLangFileNameEunm.ConfirmText]: '확인하다',
+    [MultipleLangFileNameEunm.CancelText]: '취소',
+    [MultipleLangFileNameEunm.SubmitTextFail]: '제출 실패',
+    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "성공적으로 제출되었습니다",
+    [MultipleLangFileNameEunm.PleaseEnter]: "들어 오세요",
+    [MultipleLangFileNameEunm.GamePalyDome]: "게임 평가판",
+    [MultipleLangFileNameEunm.Copysuccessful]: "성공적으로 복사되었습니다",
+    [MultipleLangFileNameEunm.SubmitTextBotton]: "제출하다",
     [MultipleLangFileNameEunm.SportsManBetXBotton]: "ManBetX 체육",
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: "ManBetX 실제 사람",
 

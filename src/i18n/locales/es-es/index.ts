@@ -1,11 +1,13 @@
 import { MultipleLangFileNameEunm } from '@/model'
 export default {
-    [MultipleLangFileNameEunm.SubmitTextFail]: '',
-    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "",
-    [MultipleLangFileNameEunm.PleaseEnter]: "",
-    [MultipleLangFileNameEunm.GamePalyDome]: "",
-    [MultipleLangFileNameEunm.Copysuccessful]: "",
-    [MultipleLangFileNameEunm.SubmitTextBotton]: "",
+    [MultipleLangFileNameEunm.ConfirmText]: 'Confirmar',
+    [MultipleLangFileNameEunm.CancelText]: 'Cancelar',
+    [MultipleLangFileNameEunm.SubmitTextFail]: 'Envío fallido',
+    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "Enviado satisfactoriamente",
+    [MultipleLangFileNameEunm.PleaseEnter]: "por favor escribe",
+    [MultipleLangFileNameEunm.GamePalyDome]: "Prueba de juego",
+    [MultipleLangFileNameEunm.Copysuccessful]: "Copiado exitosamente",
+    [MultipleLangFileNameEunm.SubmitTextBotton]: "entregar",
     [MultipleLangFileNameEunm.SportsManBetXBotton]: "ManBetX educación Física",
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: "ManBetX Persona real",
 

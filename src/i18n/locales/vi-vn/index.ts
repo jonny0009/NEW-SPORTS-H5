@@ -1,11 +1,13 @@
 import { MultipleLangFileNameEunm } from '@/model'
 export default {
-    [MultipleLangFileNameEunm.SubmitTextFail]: '',
-    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "",
-    [MultipleLangFileNameEunm.PleaseEnter]: "",
-    [MultipleLangFileNameEunm.GamePalyDome]: "",
-    [MultipleLangFileNameEunm.Copysuccessful]: "",
-    [MultipleLangFileNameEunm.SubmitTextBotton]: "",
+    [MultipleLangFileNameEunm.ConfirmText]: 'xác nhận',
+    [MultipleLangFileNameEunm.CancelText]: 'Hủy bỏ',
+    [MultipleLangFileNameEunm.SubmitTextFail]: 'Gửi không thành công',
+    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "gửi thành công",
+    [MultipleLangFileNameEunm.PleaseEnter]: "vui lòng nhập",
+    [MultipleLangFileNameEunm.GamePalyDome]: "Thử nghiệm trò chơi",
+    [MultipleLangFileNameEunm.Copysuccessful]: "Đã sao chép thành công",
+    [MultipleLangFileNameEunm.SubmitTextBotton]: "nộp",
     [MultipleLangFileNameEunm.SportsManBetXBotton]: "ManBetX Các môn thể thao",
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: "ManBetX Sòng bạc",
 

@@ -10,13 +10,13 @@ import {
 } from '@/model'
 import xsURL from '@/assets/image/middle_btn_border.png'
 import xlURL from '@/assets/image/large_btn_border.png'
-import sdURL from '@/assets/image/middle_selected_btn_border.png'
+import sdxsURL from '@/assets/image/middle_selected_btn_border.png'
+import sdxlURL from '@/assets/image/large_selected_btn_border.png'
 
-const { size, text, link, hover, selected } = defineProps([
+const { size, text, link, selected } = defineProps([
     'size',
     'text',
     'link',
-    'hover',
     'selected'
 ])
 const imgStyle: { [key in BottonSize]: string } = {
@@ -28,8 +28,14 @@ const imgSource: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: xsURL,
     [BottonSize.Large]: xlURL
 }
+
+const imgHoverSource: { [key in BottonSize]: string } = {
+    [BottonSize.Middle]: sdxsURL,
+    [BottonSize.Large]: sdxlURL
+}
 const style = imgStyle[size as BottonSize]
 const urlSource = imgSource[size as BottonSize]
+const urlHonverSource = imgHoverSource[size as BottonSize]
 const textStyle = selected ? 'botton-selected-text' : ''
 
 const imgUrl = ref(urlSource)
@@ -42,14 +48,10 @@ const onJump = () => {
 }
 
 const mouseenter = () => {
-    if (hover) {
-        imgUrl.value = sdURL
-    }
+    imgUrl.value = urlHonverSource
 }
 const mouseleave = () => {
-    if (hover) {
-        imgUrl.value = urlSource
-    }
+    imgUrl.value = urlSource
 }
 </script>
 

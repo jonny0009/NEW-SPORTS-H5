@@ -1,6 +1,8 @@
 import { MultipleLangFileNameEunm } from '@/model'
 
 export default {
+    [MultipleLangFileNameEunm.ConfirmText]: '确认',
+    [MultipleLangFileNameEunm.CancelText]: '取消',
     [MultipleLangFileNameEunm.SubmitTextFail]: '提交失败',
     [MultipleLangFileNameEunm.SubmitTextSuccessful]: '提交成功',
     [MultipleLangFileNameEunm.PleaseEnter]: '请输入',

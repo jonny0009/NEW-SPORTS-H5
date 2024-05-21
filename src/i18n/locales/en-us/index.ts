@@ -1,13 +1,15 @@
 import { MultipleLangFileNameEunm } from '@/model'
 
 export default {
-    [MultipleLangFileNameEunm.SubmitTextFail]: '',
-    [MultipleLangFileNameEunm.SubmitTextSuccessful]: 'Successful',
-    [MultipleLangFileNameEunm.PleaseEnter]: 'Please enter',
-    [MultipleLangFileNameEunm.Copysuccessful]: 'copy successful',
+    [MultipleLangFileNameEunm.ConfirmText]: 'Confirm',
+    [MultipleLangFileNameEunm.CancelText]: 'Cancel',
+    [MultipleLangFileNameEunm.SubmitTextFail]: 'Submission Failed',
+    [MultipleLangFileNameEunm.SubmitTextSuccessful]: 'Submission Successfully',
+    [MultipleLangFileNameEunm.PleaseEnter]: 'Please Enter',
+    [MultipleLangFileNameEunm.Copysuccessful]: 'Copied Successfully',
     [MultipleLangFileNameEunm.SubmitTextBotton]: 'submit',
     [MultipleLangFileNameEunm.WholeTextBotton]: 'Try it Now',
-    [MultipleLangFileNameEunm.GamePalyDome]: 'Login For Free',
+    [MultipleLangFileNameEunm.GamePalyDome]: 'Game trial',
     [MultipleLangFileNameEunm.SportsManBetXBotton]: 'ManBetX Sport',
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: 'ManBetX Baccarat',
 

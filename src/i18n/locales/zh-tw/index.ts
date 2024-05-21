@@ -1,15 +1,17 @@
 import { MultipleLangFileNameEunm } from '@/model'
 
 export default {
-    [MultipleLangFileNameEunm.SubmitTextFail]: '提交失败',
+    [MultipleLangFileNameEunm.ConfirmText]: '確認',
+    [MultipleLangFileNameEunm.CancelText]: '取消',
+    [MultipleLangFileNameEunm.SubmitTextFail]: '提交失敗',
     [MultipleLangFileNameEunm.SubmitTextSuccessful]: '提交成功',
-    [MultipleLangFileNameEunm.PleaseEnter]: '请输入',
-    [MultipleLangFileNameEunm.Copysuccessful]: '复制成功',
+    [MultipleLangFileNameEunm.PleaseEnter]: '請輸入',
+    [MultipleLangFileNameEunm.Copysuccessful]: '複製成功',
     [MultipleLangFileNameEunm.SubmitTextBotton]: '提交',
 
 
     [MultipleLangFileNameEunm.WholeTextBotton]: '立即試玩',
-    [MultipleLangFileNameEunm.GamePalyDome]: '游戏试玩',
+    [MultipleLangFileNameEunm.GamePalyDome]: '遊戲試玩',
     [MultipleLangFileNameEunm.SportsManBetXBotton]: 'ManBetX 體育',
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: 'ManBetX 真人',
 

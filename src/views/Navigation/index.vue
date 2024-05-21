@@ -4,6 +4,7 @@
 
 <script  lang="ts" >
 // import 'amfe-flexible'
+import { i18n } from '@/i18n'
 import { useI18n } from 'vue-i18n'
 import logoUrl from '@/assets/image/nav_logo.png'
 import langUrl from '@/assets/image/nav_lang.png'
@@ -56,6 +57,12 @@ export default defineComponent({
         const state = reactive<any>({ langOptions: [] })
 
         const tabsOptions = computed(() => useTabsOptions())
+        const cancelText = computed(() =>
+            i18n.global.t(MultipleLangFileNameEunm.CancelText)
+        )
+        const confirmText = computed(() =>
+            i18n.global.t(MultipleLangFileNameEunm.ConfirmText)
+        )
 
         const defaultLang = useLanguages()
         const localLang = proxy.$storage.getStore(
@@ -104,7 +111,10 @@ export default defineComponent({
             MultipleLangFileNameEunm,
 
             selectLang,
-            LanguageOptions
+            LanguageOptions,
+
+            cancelText,
+            confirmText
         }
     },
     mounted() {
@@ -278,6 +288,8 @@ export default defineComponent({
                 :columns="LanguageOptions"
                 @cancel="showPicker = false"
                 @confirm="onSelectLang"
+                :cancel-button-text="cancelText"
+                :confirm-button-text="confirmText"
             />
         </van-popup>
     </div>

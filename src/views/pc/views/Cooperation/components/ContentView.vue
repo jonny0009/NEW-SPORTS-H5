@@ -128,9 +128,9 @@ const onSubmit = async () => {
 
             <el-row align="middle" class="ba-form-margin">
                 <el-col :span="6">
-                    <span class="bc-form-label">
+                    <div class="bc-form-label">
                         {{ $t(MultipleLangFileNameEunm.ContactMethod) }}
-                    </span>
+                    </div>
                 </el-col>
                 <el-col :span="6">
                     <el-dropdown trigger="click" @command="onSelect">
@@ -175,9 +175,7 @@ const onSubmit = async () => {
                 class="bc-form-rd-textarea bc-form-textarea"
             ></textarea>
 
-            <i class="el-icon-delete"></i>
-
-            <van-row justify="center" class="bc-content-btn">
+            <van-row justify="center" class="ba-form-margin">
                 <botton-confirm-pc
                     @click="onSubmit"
                     :size="BottonSize.Middle"

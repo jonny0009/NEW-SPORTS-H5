@@ -1,11 +1,13 @@
 import { MultipleLangFileNameEunm } from '@/model'
 export default {
-    [MultipleLangFileNameEunm.SubmitTextFail]: '',
-    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "",
-    [MultipleLangFileNameEunm.PleaseEnter]: "",
-    [MultipleLangFileNameEunm.GamePalyDome]: "",
-    [MultipleLangFileNameEunm.Copysuccessful]: "",
-    [MultipleLangFileNameEunm.SubmitTextBotton]: "",
+    [MultipleLangFileNameEunm.ConfirmText]: 'ยืนยัน',
+    [MultipleLangFileNameEunm.CancelText]: 'ยกเลิก',
+    [MultipleLangFileNameEunm.SubmitTextFail]: 'การส่งล้มเหลว',
+    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "ส่งเรียบร้อยแล้ว",
+    [MultipleLangFileNameEunm.PleaseEnter]: "กรุณาเข้า",
+    [MultipleLangFileNameEunm.GamePalyDome]: "ทดลองเล่นเกม",
+    [MultipleLangFileNameEunm.Copysuccessful]: "คัดลอกเรียบร้อยแล้ว",
+    [MultipleLangFileNameEunm.SubmitTextBotton]: "ส่ง",
     [MultipleLangFileNameEunm.SportsManBetXBotton]: "ManBetX พลศึกษา",
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: "ManBetX คนจริง",
 

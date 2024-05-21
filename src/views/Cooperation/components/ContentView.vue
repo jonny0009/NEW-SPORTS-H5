@@ -171,9 +171,9 @@ const onClick = (type: AddreessType, mes: string) => {
 
             <van-row class="bc-form-margin">
                 <van-col :span="7">
-                    <span class="bc-form-label">
+                    <div class="bc-form-label">
                         {{ $t(MultipleLangFileNameEunm.ContactMethod) }}
-                    </span>
+                    </div>
                 </van-col>
                 <van-col :span="7">
                     <span class="bc-form-label" @click="showPicker = true">

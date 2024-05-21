@@ -2,14 +2,12 @@
     <div>
         <div class="lg-nd-botton">
             <botton-confirm-pc
-                :hover="true"
                 :size="BottonSize.Middle"
                 :selected="props.active === BottonType.Sport"
                 :text="MultipleLangFileNameEunm.SportsManBetXBotton"
                 @click="() => onChangeTab(0)"
             ></botton-confirm-pc>
             <botton-confirm-pc
-                :hover="true"
                 :size="BottonSize.Middle"
                 :selected="props.active === BottonType.Bacccarat"
                 :text="MultipleLangFileNameEunm.LiveGameManBetXBotton"

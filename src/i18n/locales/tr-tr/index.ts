@@ -1,11 +1,13 @@
 import { MultipleLangFileNameEunm } from '@/model'
 export default {
-    [MultipleLangFileNameEunm.SubmitTextFail]: '',
-    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "",
-    [MultipleLangFileNameEunm.PleaseEnter]: "",
-    [MultipleLangFileNameEunm.GamePalyDome]: "",
-    [MultipleLangFileNameEunm.Copysuccessful]: "",
-    [MultipleLangFileNameEunm.SubmitTextBotton]: "",
+    [MultipleLangFileNameEunm.ConfirmText]: 'onaylamak',
+    [MultipleLangFileNameEunm.CancelText]: 'İptal etmek',
+    [MultipleLangFileNameEunm.SubmitTextFail]: 'Gönderim Başarısız',
+    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "Başarıyla gönderildi",
+    [MultipleLangFileNameEunm.PleaseEnter]: "girin lütfen",
+    [MultipleLangFileNameEunm.GamePalyDome]: "Oyun denemesi",
+    [MultipleLangFileNameEunm.Copysuccessful]: "Başarıyla kopyalandı",
+    [MultipleLangFileNameEunm.SubmitTextBotton]: "göndermek",
     [MultipleLangFileNameEunm.SportsManBetXBotton]: "ManBetX beden Eğitimi",
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: "ManBetX gerçek kişi",
 

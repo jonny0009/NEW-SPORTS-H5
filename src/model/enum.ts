@@ -14,6 +14,8 @@ export enum MultipleLangEunm {
 }
 
 export enum MultipleLangFileNameEunm {
+    ConfirmText='ConfirmText',
+    CancelText='CancelText',
     SubmitTextFail='SubmitTextFail',
     SubmitTextSuccessful = 'SubmitTextSuccessful',
     PleaseEnter = 'PleaseEnter',

@@ -1,11 +1,13 @@
 import { MultipleLangFileNameEunm } from '@/model'
 export default {
-    [MultipleLangFileNameEunm.SubmitTextFail]: '',
-    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "",
-    [MultipleLangFileNameEunm.PleaseEnter]: "",
-    [MultipleLangFileNameEunm.GamePalyDome]: "",
-    [MultipleLangFileNameEunm.Copysuccessful]: "",
-    [MultipleLangFileNameEunm.SubmitTextBotton]: "",
+    [MultipleLangFileNameEunm.ConfirmText]: '確認する',
+    [MultipleLangFileNameEunm.CancelText]: 'キャンセル',
+    [MultipleLangFileNameEunm.SubmitTextFail]: '送信に失敗しました',
+    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "正常に送信されました",
+    [MultipleLangFileNameEunm.PleaseEnter]: "入ってください",
+    [MultipleLangFileNameEunm.GamePalyDome]: "ゲームトライアル",
+    [MultipleLangFileNameEunm.Copysuccessful]: "正常にコピーされました",
+    [MultipleLangFileNameEunm.SubmitTextBotton]: "提出する",
     [MultipleLangFileNameEunm.SportsManBetXBotton]: "ManBetX スポーツ",
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: "ManBetX カジノ",
 

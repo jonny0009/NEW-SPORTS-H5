@@ -1,11 +1,13 @@
 import { MultipleLangFileNameEunm } from '@/model'
 export default {
-    [MultipleLangFileNameEunm.SubmitTextFail]: '',
-    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "",
-    [MultipleLangFileNameEunm.PleaseEnter]: "",
-    [MultipleLangFileNameEunm.GamePalyDome]: "",
-    [MultipleLangFileNameEunm.Copysuccessful]: "",
-    [MultipleLangFileNameEunm.SubmitTextBotton]: "",
+    [MultipleLangFileNameEunm.ConfirmText]: 'mengonfirmasi',
+    [MultipleLangFileNameEunm.CancelText]: 'Membatalkan',
+    [MultipleLangFileNameEunm.SubmitTextFail]: 'Pengiriman Gagal',
+    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "Berhasil dikirimkan",
+    [MultipleLangFileNameEunm.PleaseEnter]: "silakan masuk",
+    [MultipleLangFileNameEunm.GamePalyDome]: "Uji coba permainan",
+    [MultipleLangFileNameEunm.Copysuccessful]: "Berhasil disalin",
+    [MultipleLangFileNameEunm.SubmitTextBotton]: "kirim",
     [MultipleLangFileNameEunm.SportsManBetXBotton]: "ManBetX Pendidikan Jasmani",
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: "ManBetX orang asli",
 

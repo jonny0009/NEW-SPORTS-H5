@@ -1,11 +1,13 @@
 import { MultipleLangFileNameEunm } from '@/model'
 export default {
-    [MultipleLangFileNameEunm.SubmitTextFail]: '',
-    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "",
-    [MultipleLangFileNameEunm.PleaseEnter]: "",
-    [MultipleLangFileNameEunm.GamePalyDome]: "",
-    [MultipleLangFileNameEunm.Copysuccessful]: "",
-    [MultipleLangFileNameEunm.SubmitTextBotton]: "",
+    [MultipleLangFileNameEunm.ConfirmText]: 'पुष्टि करना',
+    [MultipleLangFileNameEunm.CancelText]: 'रद्द करना',
+    [MultipleLangFileNameEunm.SubmitTextFail]: 'सबमिशन विफल',
+    [MultipleLangFileNameEunm.SubmitTextSuccessful]: "सफलतापूर्वक जमा",
+    [MultipleLangFileNameEunm.PleaseEnter]: "कृपया दर्ज करें",
+    [MultipleLangFileNameEunm.GamePalyDome]: "खेल परीक्षण",
+    [MultipleLangFileNameEunm.Copysuccessful]: "सफलतापूर्वक कॉपी किया गया",
+    [MultipleLangFileNameEunm.SubmitTextBotton]: "जमा करना",
     [MultipleLangFileNameEunm.SportsManBetXBotton]: "ManBetX व्यायाम शिक्षा",
     [MultipleLangFileNameEunm.LiveGameManBetXBotton]: "ManBetX वास्तविक व्यक्ति",
 
