@@ -4,9 +4,8 @@ import { calculateAnimationDelay } from '@/utils'
 import { PartNDcontentOptions } from '../../constants'
 
 const props = defineProps({
-        show: Boolean
-    })
-
+    show: Boolean
+})
 </script>
 
 <template>
@@ -27,7 +26,7 @@ const props = defineProps({
                             props.show ? child.animate : 'animate__fadeOutUpBig'
                         ]"
                         :style="{
-                            'animation-delay': `${i * 0.1}s`,
+                            'animation-delay': `${i * 0.1}s`
                         }"
                     >
                         <div class="sp-nd-content-top">
