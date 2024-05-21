@@ -5,12 +5,17 @@ import { ref } from 'vue'
 export const useSwiperStore = defineStore(Store.SwiperActiveIndex, {
     state: () => {
         return {
-            index:''
+            index:'',
+            dealy: 0,
         }
     },
     actions: {
         onChangeSwiper(value: string) {
             this.index = value
+            this.dealy = 0
+        },
+        onChangeDealy(value: number) {
+            this.dealy = value
         }
     }
 })

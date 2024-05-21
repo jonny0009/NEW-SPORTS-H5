@@ -1,11 +1,14 @@
 
 <script  lang="ts" setup>
+import { useSwiperStore } from '@/store'
 import { calculateAnimationDelay } from '@/utils'
 import { PartNDcontentOptions } from '../../constants'
 
 const props = defineProps({
     show: Boolean
 })
+
+const store = useSwiperStore()
 </script>
 
 <template>
@@ -29,7 +32,7 @@ const props = defineProps({
                         ]"
                         :style="{
                             'animation-delay': `${
-                                props.show ? i % 2 === 0 * 0.3 : i * 0.1
+                                props.show ? (store.dealy + i * 0.4) : i * 0.2
                             }s`
                         }"
                     >
