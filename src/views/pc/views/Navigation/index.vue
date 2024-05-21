@@ -159,7 +159,9 @@ const handleMovue = (event) => {
     console.log('onTouchMove', value, store.index, nextSwiper)
     store.onChangeSwiper(swiperIndexToTabs[nextIndex])
     tabSelected.value = nextSwiper
-
+    if (nextSwiper === MultipleLangFileNameEunm.Sports) {
+        onColumnChangePage(0)
+    }
     if (
         [
             MultipleLangFileNameEunm.ProductAdvantages,
@@ -167,9 +169,7 @@ const handleMovue = (event) => {
             MultipleLangFileNameEunm.Sponsorship
         ].includes(value)
     ) {
-        if (!isNil(index)) {
-            store.onChangeDealy(0.5)
-        }
+        store.onChangeDealy(0.8)
         setTimeout(() => {
             myRowSwiper.value.slideTo(nextIndex)
             nextTick(() => {
@@ -179,6 +179,7 @@ const handleMovue = (event) => {
     } else {
         myRowSwiper.value.slideTo(nextIndex)
         nextTick(() => {
+            
             noScroll.value = false
         })
     }

@@ -12,7 +12,7 @@ export const useSwiperStore = defineStore(Store.SwiperActiveIndex, {
     actions: {
         onChangeSwiper(value: string) {
             this.index = value
-            this.dealy = 0
+            this.dealy = 0.2
         },
         onChangeDealy(value: number) {
             this.dealy = value
