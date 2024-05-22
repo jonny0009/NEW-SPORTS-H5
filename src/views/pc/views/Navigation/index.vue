@@ -64,7 +64,7 @@ const onChangePage = (value: string) => {
     if (!!value) {
         tabSelected.value = value
         let val = value
-        
+
         // myRowSwiper.value && myRowSwiper.value.slideTo(index)
         if (value === MultipleLangFileNameEunm.LiveGame) {
             onColumnChangePage(1)
@@ -75,7 +75,11 @@ const onChangePage = (value: string) => {
         }
         const index = TabsIndexToSwiper[val]
         const lastIndex = TabsIndexToSwiper[store.index]
-        handleMovue({ deltaY: index - lastIndex, index, tab: tabSelected.value })
+        handleMovue({
+            deltaY: index - lastIndex,
+            index,
+            tab: tabSelected.value
+        })
     }
 }
 //切换swiper
@@ -179,38 +183,38 @@ const handleMovue = (event) => {
     } else {
         myRowSwiper.value.slideTo(nextIndex)
         nextTick(() => {
-            
             noScroll.value = false
         })
     }
 }
 
-const onTouchMove = debounce(
-    (event) => {
+const onTouchMove = debounce((event) => {
+    const { deltaY } = event
+    const _index = myRowSwiper.value.activeIndex
+    if (_index === 5 && deltaY > 0) {
+        return
+    }
+    const tab = swiperIndexToTabs[_index]
+    if (
+        [
+            MultipleLangFileNameEunm.ProductAdvantages,
+            MultipleLangFileNameEunm.AboutUs,
+            MultipleLangFileNameEunm.Sponsorship
+        ].includes(tab)
+    ) {
+        // dealyFn(event)
+        event.preventDefault()
+        handleMovue(event)
+    } else {
         const _index = myRowSwiper.value.activeIndex
-        const tab = swiperIndexToTabs[_index]
-        if (
-            [
-                MultipleLangFileNameEunm.ProductAdvantages,
-                MultipleLangFileNameEunm.AboutUs,
-                MultipleLangFileNameEunm.Sponsorship
-            ].includes(tab)
-        ) {
-            // dealyFn(event)
-            event.preventDefault()
-            handleMovue(event)
-        } else {
-            const _index = myRowSwiper.value.activeIndex
-            const { deltaY } = event
-            const nextIndex = _index + (deltaY < 0 ? -1 : 1)
-            const nextSwiper = swiperIndexToTabs[nextIndex]
-            store.onChangeSwiper(nextSwiper)
-            tabSelected.value = nextSwiper
-            myRowSwiper.value.slideTo(nextIndex)
-        }
-    },
-    100,
-)
+
+        const nextIndex = _index + (deltaY < 0 ? -1 : 1)
+        const nextSwiper = swiperIndexToTabs[nextIndex]
+        store.onChangeSwiper(nextSwiper)
+        tabSelected.value = nextSwiper
+        myRowSwiper.value.slideTo(nextIndex)
+    }
+}, 100)
 </script>
 <template>
     <div @wheel="onTouchMove">
