@@ -173,13 +173,13 @@ const handleMovue = (event) => {
             MultipleLangFileNameEunm.Sponsorship
         ].includes(value)
     ) {
-        store.onChangeDealy(0.8)
+        store.onChangeDealy(0.6)
         setTimeout(() => {
             myRowSwiper.value.slideTo(nextIndex)
             nextTick(() => {
                 noScroll.value = false
             })
-        }, 800)
+        }, 600)
     } else {
         myRowSwiper.value.slideTo(nextIndex)
         nextTick(() => {
@@ -191,7 +191,7 @@ const handleMovue = (event) => {
 const onTouchMove = debounce((event) => {
     const { deltaY } = event
     const _index = myRowSwiper.value.activeIndex
-    if (_index === 5 && deltaY > 0) {
+    if ((_index === 5 && deltaY > 0) || (_index === 0 && deltaY < 0)) {
         return
     }
     const tab = swiperIndexToTabs[_index]

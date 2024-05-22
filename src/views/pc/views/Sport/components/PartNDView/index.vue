@@ -32,7 +32,7 @@ const store = useSwiperStore()
                         ]"
                         :style="{
                             'animation-delay': `${
-                                props.show ? (store.dealy - 0.2 + i * 0.4) : i * 0.2
+                                props.show ? (store.dealy - 0.4 + i * 0.4) : i * 0.2
                             }s`
                         }"
                     >
