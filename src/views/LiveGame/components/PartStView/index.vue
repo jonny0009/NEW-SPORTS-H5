@@ -39,7 +39,7 @@ import ContentView from './ContentView.vue'
                     <van-row justify="center">
                         <botton-confirm-app
                             :size="BottonSize.Large"
-                            :link="BottonLinkType.Casino"
+                            :link="BottonLinkType.Home"
                             :text="MultipleLangFileNameEunm.GamePalyDome"
                         ></botton-confirm-app>
                     </van-row>

@@ -70,6 +70,7 @@ import {
     line-height: 50px;
     color: #ff8727;
     margin-top: 32px;
+    white-space: pre-wrap;
 }
 .sp-platform-advantages {
     line-height: 24px;
@@ -79,6 +80,6 @@ import {
     font-style: italic;
 }
 .sp-btn-wrap {
-    margin-top: 50px;
+    margin-top: 100px;
 }
 </style>

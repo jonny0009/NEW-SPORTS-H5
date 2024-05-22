@@ -99,5 +99,5 @@ export default {
     [MultipleLangFileNameEunm.ContactMethod]: "iletişim yöntemi",
     [MultipleLangFileNameEunm.YourProblem]: "Özel gereksinimleriniz veya sormak istediğiniz sorular",
     [MultipleLangFileNameEunm.CompanyInformation]: "Seven Star Entertainment, Britanya Grace Adaları (IMG) ve Filipin Hükümet Komisyonu (PAGCOR) tarafından verilen yasal lisanslara sahiptir. Britanya Virjin Adaları'nda kayıtlı ve uluslararası dernekler tarafından tanınan yasal bir şirkettir;",
-    [MultipleLangFileNameEunm.CopyRight]: "TELİF HAKKI © 1998 - 2024 ManBetX Sports TÜM HAKLARI SAKLIDIR \\nManBetX Sports Group Tüm hakları saklıdır."
+    [MultipleLangFileNameEunm.CopyRight]: "TELİF HAKKI © 1998 - 2024 ManBetX Sports TÜM HAKLARI SAKLIDIR ManBetX Sports Group Tüm hakları saklıdır."
 }

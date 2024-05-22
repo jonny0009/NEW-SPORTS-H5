@@ -24,7 +24,7 @@ export default {
 
 
 
-    [MultipleLangFileNameEunm.SupplierTips]: '全球首选电商式一站式API供应商',
+    [MultipleLangFileNameEunm.SupplierTips]: '全球首选电商式\n一站式API供应商',
     [MultipleLangFileNameEunm.PlatformAdvantages]: '极速稳定·沉浸体验·游戏多样·公平公正',
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: '为每一个综合站，体育站，真人站等现金或信用站，提供完整、高效和稳定的一站式专业游戏供应商服务。',
     [MultipleLangFileNameEunm.ExtremelyFastExperience]: '快速极速体验',
@@ -89,7 +89,7 @@ export default {
     [MultipleLangFileNameEunm.ProfessionalAnchorContent]: "数千名来自各国的专业体育与真人主播，深谙赛事，为用户提供及时的娱乐互动。",
     [MultipleLangFileNameEunm.TrueAndFair]: "真实公平",
     [MultipleLangFileNameEunm.TrueAndFairContent]: "提供业内线上线下同步的真实场景，借助自然的区块链技术，确保游戏体验的去中心化。",
-    [MultipleLangFileNameEunm.VariousWaysToPlay]: "玩法多样",
+    [MultipleLangFileNameEunm.VariousWaysToPlay]: "多样玩法",
     [MultipleLangFileNameEunm.VariousWaysToPlayContent]: "一站式游戏体验，观赏体育赛事同时可玩百家跟好路，不错过任何盈利机会。",
     [MultipleLangFileNameEunm.InternationalCertification]: "国际认证",
     [MultipleLangFileNameEunm.InternationalCertificationContent]: "稳定安全，荣获多项国际认证，拥有马其他政府颁发的多项认可。",

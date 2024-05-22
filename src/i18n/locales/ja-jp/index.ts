@@ -99,5 +99,5 @@ export default {
     [MultipleLangFileNameEunm.ContactMethod]: "通信方法",
     [MultipleLangFileNameEunm.YourProblem]: "特定の要件や尋ねたい質問",
     [MultipleLangFileNameEunm.CompanyInformation]: "Seven Star Entertainment は、イギリス領グレース諸島 (IMG) およびフィリピン政府委員会 (PAGCOR) から発行された法的ライセンスを取得しており、イギリス領ヴァージン諸島で登録されており、国際協会によって認められた合法的な会社です。",
-    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 ManBetX Sports.ALL RIGHTSRESERVED \\nManBetX Sports Group 違反者は起訴されます。"
+    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 ManBetX Sports.ALL RIGHTSRESERVED ManBetX Sports Group 違反者は起訴されます。"
 }

@@ -299,15 +299,15 @@ export default defineComponent({
 .audio-logo-box {
     position: fixed;
     top: 120px;
-    right: 40px;
+    right: 35px;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     .audio-logo {
-        width: 36px;
-        height: 36px;
+        width: 45px;
+        height: 45px;
     }
 }
 .nav-lang-wrap {
@@ -410,5 +410,10 @@ export default defineComponent({
 }
 :deep(.van-picker__confirm) {
     color: #ff8727;
+}
+:deep(.van-tab--active) {
+    .van-tab__text {
+        font-weight: 999 !important;
+    }
 }
 </style>

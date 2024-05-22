@@ -99,5 +99,5 @@ export default {
     [MultipleLangFileNameEunm.ContactMethod]: "método de comunicação",
     [MultipleLangFileNameEunm.YourProblem]: "Seus requisitos específicos ou perguntas que você deseja fazer",
     [MultipleLangFileNameEunm.CompanyInformation]: "A Seven Star Entertainment possui licenças legais emitidas pelas Ilhas Britânicas de Grace (IMG) e pela Comissão do Governo das Filipinas (PAGCOR). Está registrada nas Ilhas Virgens Britânicas e é uma empresa legal reconhecida por associações internacionais;",
-    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 ManBetX Sports TODOS OS DIREITOS RESERVADOS \\nManBetX Sports Group Todos os direitos reservados."
+    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 ManBetX Sports TODOS OS DIREITOS RESERVADOS ManBetX Sports Group Todos os direitos reservados."
 }

@@ -64,7 +64,7 @@ const onChangeTab = (index: number) => {
                         <van-row justify="center">
                             <botton-confirm-pc
                                 :size="BottonSize.Large"
-                                :link="BottonLinkType.Casino"
+                                :link="BottonLinkType.Home"
                                 :text="MultipleLangFileNameEunm.GamePalyDome"
                             ></botton-confirm-pc>
                         </van-row>

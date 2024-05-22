@@ -9,7 +9,7 @@ export const LanguageOptions = [
     { value: MultipleLangEunm.KO, text: '한국인', icon: null, color: '' },
     { value: MultipleLangEunm.TH, text: 'ไทย', icon: null, color: '' },
     { value: MultipleLangEunm.ID, text: 'bahasa indonesia', icon: null, color: '' },
-    { value: MultipleLangEunm.TR, text: 'İngilizce', icon: null, color: '' },
+    { value: MultipleLangEunm.TR, text: 'Türkçe', icon: null, color: '' },
     { value: MultipleLangEunm.PT, text: 'Português', icon: null, color: '' },
     { value: MultipleLangEunm.ES, text: 'español', icon: null, color: '' },
     { value: MultipleLangEunm.HI, text: 'हिंदी', icon: null, color: '' },

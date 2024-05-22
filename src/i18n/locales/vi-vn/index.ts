@@ -99,5 +99,5 @@ export default {
     [MultipleLangFileNameEunm.ContactMethod]: "phương pháp giao tiếp",
     [MultipleLangFileNameEunm.YourProblem]: "Yêu cầu cụ thể hoặc câu hỏi bạn muốn hỏi",
     [MultipleLangFileNameEunm.CompanyInformation]: "Seven Star Entertainment có giấy phép hợp pháp do British Isles of Grace (IMG) và Ủy ban Chính phủ Philippines (PAGCOR) cấp. Nó được đăng ký tại Quần đảo Virgin thuộc Anh và là công ty hợp pháp được các hiệp hội quốc tế công nhận;",
-    [MultipleLangFileNameEunm.CopyRight]: "BẢN QUYỀN © 1998 - 2024 ManBetX Sports. TẤT CẢ QUYỀN ĐƯỢC ĐẢM BẢO \\nManBetX Sports Group Mọi người vi phạm sẽ bị truy tố."
+    [MultipleLangFileNameEunm.CopyRight]: "BẢN QUYỀN © 1998 - 2024 ManBetX Sports. TẤT CẢ QUYỀN ĐƯỢC ĐẢM BẢO ManBetX Sports Group Mọi người vi phạm sẽ bị truy tố."
 }

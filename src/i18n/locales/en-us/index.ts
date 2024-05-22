@@ -23,7 +23,7 @@ export default {
     [MultipleLangFileNameEunm.Cooperation]: '',
     [MultipleLangFileNameEunm.ContactUs]: 'Contact us',
 
-    [MultipleLangFileNameEunm.SupplierTips]: "The world's preferred one-stop API provider",
+    [MultipleLangFileNameEunm.SupplierTips]: "The world's preferred \n one-stop API provider",
     [MultipleLangFileNameEunm.PlatformAdvantages]: 'Extremely fast and stable, immersive experience, diverse games, fair and just',
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: 'For every comprehensive station, sports station, real-person stations and other cash or credit stations, providing complete, efficient and stable one-stop professional game supplier services. ',
     [MultipleLangFileNameEunm.ExtremelyFastExperience]: 'Extremely fast experience',
@@ -128,7 +128,7 @@ export default {
     [MultipleLangFileNameEunm.CompanyInformation]: 'ManBetX Sports Entertainment has legal licenses issued by the British Isles of Grace (IMG) and the Philippine Government Commission (PAGCOR). It is registered in the British Virgin Islands and is a legal company recognized by international associations;',
 
 
-    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 ManBetX Sports. ALL RIGHTSRESERVED \nManBetX Sports Group All rights reserved. Violators will be prosecuted.",
+    [MultipleLangFileNameEunm.CopyRight]: "COPYRIGHT © 1998 - 2024 ManBetX Sports. ALL RIGHTSRESERVED ManBetX Sports Group All rights reserved. Violators will be prosecuted.",
 
 
 

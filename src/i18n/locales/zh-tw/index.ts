@@ -26,7 +26,7 @@ export default {
 
 
 
-    [MultipleLangFileNameEunm.SupplierTips]: '全球首選電商一站式API供應商',
+    [MultipleLangFileNameEunm.SupplierTips]: '全球首選電商\n一站式API供應商',
     [MultipleLangFileNameEunm.PlatformAdvantages]: '極速穩定·沉浸體驗·遊戲多元·公平公正',
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: '為每一個綜合站，體育站，真人站等現金或信用站，提供完整、高效和穩定的一站式專業遊戲供應商服務。 ',
     [MultipleLangFileNameEunm.ExtremelyFastExperience]: '極速體驗',
@@ -91,7 +91,7 @@ export default {
     [MultipleLangFileNameEunm.ProfessionalAnchorContent]: "數千名來自各國的專業運動與真人主播，深諳賽事，提供用戶及時的娛樂互動。",
     [MultipleLangFileNameEunm.TrueAndFair]: "真實公平",
     [MultipleLangFileNameEunm.TrueAndFairContent]: "提供業內線上線下同步的真實場景，借助自然的區塊鏈技術，確保遊戲體驗的去中心化。",
-    [MultipleLangFileNameEunm.VariousWaysToPlay]: "多種玩法",
+    [MultipleLangFileNameEunm.VariousWaysToPlay]: "多樣玩法",
     [MultipleLangFileNameEunm.VariousWaysToPlayContent]: "一站式遊戲體驗，觀賞體育賽事同時可玩百家跟好路，不錯過任何獲利機會。",
     [MultipleLangFileNameEunm.InternationalCertification]: "國際認證",
     [MultipleLangFileNameEunm.InternationalCertificationContent]: "穩定安全，榮獲多項國際認證，擁有馬其他政府頒發的多項認可。",
@@ -118,7 +118,7 @@ export default {
     [MultipleLangFileNameEunm.BusinessCooperationRdContent]: "此表格將提供您的個人聯絡資訊以及其他信息，因此我們更能有效地回覆您的諮詢方便本站及時了解您的需求與幫助。",
 
     
-    [MultipleLangFileNameEunm.Name]: "您的稱乎",
+    [MultipleLangFileNameEunm.Name]: "您的稱呼",
     [MultipleLangFileNameEunm.Telegram]: "电报",
     [MultipleLangFileNameEunm.ContactNumber]: "聯絡電話",
     [MultipleLangFileNameEunm.ContactMethod]: "通訊方式",

@@ -99,5 +99,5 @@ export default {
     [MultipleLangFileNameEunm.ContactMethod]: "metode komunikasi",
     [MultipleLangFileNameEunm.YourProblem]: "Persyaratan spesifik Anda atau pertanyaan yang ingin Anda tanyakan",
     [MultipleLangFileNameEunm.CompanyInformation]: "Seven Star Entertainment memiliki lisensi resmi yang dikeluarkan oleh British Isles of Grace (IMG) dan Komisi Pemerintah Filipina (PAGCOR). Perusahaan ini terdaftar di British Virgin Islands dan merupakan perusahaan legal yang diakui oleh asosiasi internasional;",
-    [MultipleLangFileNameEunm.CopyRight]: "HAK CIPTA © 1998 - 2024 ManBetX Sports. SEMUA HAK DILINDUNGI \\nManBetX Sports Group Semua hak dilindungi undang-undang."
+    [MultipleLangFileNameEunm.CopyRight]: "HAK CIPTA © 1998 - 2024 ManBetX Sports. SEMUA HAK DILINDUNGI ManBetX Sports Group Semua hak dilindungi undang-undang."
 }
