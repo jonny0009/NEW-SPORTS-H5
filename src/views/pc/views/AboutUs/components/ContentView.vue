@@ -4,9 +4,9 @@ import { computed } from 'vue'
 import { useSelfContentOptions } from '../constants'
 const options = computed(() => useSelfContentOptions())
 const props = defineProps({
-    show: Boolean
-})
-const store = useSwiperStore()
+        show: Boolean
+    })
+    const store = useSwiperStore()
 </script>
 
 
@@ -21,16 +21,9 @@ const store = useSwiperStore()
                 <div
                     v-for="(child, i) in item"
                     :key="i"
-                    :class="[
-                        'sf-content',
-                        'animate__animated',
-                        props.show && 'animate__fadeInRightBig'
-                    ]"
+                    :class="['sf-content', 'animate__animated', props.show ? 'animate__fadeInRightBig' : 'animate__fadeOutUpBig']"
                     :style="{
-                        'animation-delay':
-                            (props.show ? store.dealy : 0) +
-                            child.animationDelay +
-                            's'
+                        'animation-delay': ((props.show ? store.dealy : 0) + child.animationDelay) + 's'
                     }"
                 >
                     <img :src="child.icon" class="sf-content-icon" />

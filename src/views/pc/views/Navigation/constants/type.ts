@@ -17,7 +17,7 @@ import { MultipleLangFileNameEunm, SwiperActiveIndex } from '@/model'
 export const useTabsOptions = () => {
     const tabList = [{
         key: MultipleLangFileNameEunm.ProductAdvantages,
-        index: SwiperActiveIndex.ProductAdvantages,
+        index: SwiperActiveIndex.PlatformAdvantages,
         fileName: i18n.global.t(MultipleLangFileNameEunm.ProductAdvantages)
     }, {
         key: MultipleLangFileNameEunm.Sports,

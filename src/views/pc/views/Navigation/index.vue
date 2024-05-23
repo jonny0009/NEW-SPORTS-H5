@@ -65,6 +65,7 @@ const onChangePage = (value: string) => {
         tabSelected.value = value
         let val = value
 
+        // myRowSwiper.value && myRowSwiper.value.slideTo(index)
         if (value === MultipleLangFileNameEunm.LiveGame) {
             onColumnChangePage(1)
             val = MultipleLangFileNameEunm.Sports
@@ -73,13 +74,12 @@ const onChangePage = (value: string) => {
             onColumnChangePage(0)
         }
         const index = TabsIndexToSwiper[val]
-        myRowSwiper.value && myRowSwiper.value.slideTo(index)
-        // const lastIndex = TabsIndexToSwiper[store.index]
-        // handleMovue({
-        //     deltaY: index - lastIndex,
-        //     index,
-        //     tab: tabSelected.value
-        // })
+        const lastIndex = TabsIndexToSwiper[store.index]
+        handleMovue({
+            deltaY: index - lastIndex,
+            index,
+            tab: tabSelected.value
+        })
     }
 }
 //切换swiper
@@ -98,7 +98,7 @@ const slideWrapChange = (swiper: any) => {
     ) {
         myColumnSwiper.value.slideTo(0)
     }
-    store.onChangeSwiper(value)
+    // store.onChangeSwiper(value)
 }
 
 const onColumnChangePage = (index: number) => {
@@ -149,76 +149,75 @@ onMounted(() => {
 
 const noScroll = ref(false)
 
-// const handleMovue = (event) => {
-//     if (noScroll.value) {
-//         return
-//     }
-//     noScroll.value = true
-//     const _index = myRowSwiper.value.activeIndex
-//     const { deltaY, index, tab } = event
-//     const value = swiperIndexToTabs[_index]
-//     const nextIndex = index ?? _index + (deltaY < 0 ? -1 : 1)
-//     const nextSwiper = tab ?? swiperIndexToTabs[nextIndex]
+const handleMovue = (event) => {
+    if (noScroll.value) {
+        return
+    }
+    noScroll.value = true
+    const _index = myRowSwiper.value.activeIndex
+    const { deltaY, index, tab } = event
+    const value = swiperIndexToTabs[_index]
+    const nextIndex = index ?? _index + (deltaY < 0 ? -1 : 1)
+    const nextSwiper = tab ?? swiperIndexToTabs[nextIndex]
 
-//     console.log('onTouchMove', value, store.index, nextSwiper)
-//     store.onChangeSwiper(swiperIndexToTabs[nextIndex])
-//     tabSelected.value = nextSwiper
-//     if (nextSwiper === MultipleLangFileNameEunm.Sports) {
-//         onColumnChangePage(0)
-//     }
-//     if (
-//         [
-//             MultipleLangFileNameEunm.ProductAdvantages,
-//             MultipleLangFileNameEunm.AboutUs,
-//             MultipleLangFileNameEunm.Sponsorship
-//         ].includes(value)
-//     ) {
-//         store.onChangeDealy(0.6)
-//         setTimeout(() => {
-//             myRowSwiper.value.slideTo(nextIndex)
-//             nextTick(() => {
-//                 noScroll.value = false
-//             })
-//         }, 600)
-//     } else {
-//         myRowSwiper.value.slideTo(nextIndex)
-//         nextTick(() => {
-//             noScroll.value = false
-//         })
-//     }
-// }
+    console.log('onTouchMove', value, store.index, nextSwiper)
+    store.onChangeSwiper(swiperIndexToTabs[nextIndex])
+    tabSelected.value = nextSwiper
+    if (nextSwiper === MultipleLangFileNameEunm.Sports) {
+        onColumnChangePage(0)
+    }
+    if (
+        [
+            MultipleLangFileNameEunm.ProductAdvantages,
+            MultipleLangFileNameEunm.AboutUs,
+            MultipleLangFileNameEunm.Sponsorship
+        ].includes(value)
+    ) {
+        store.onChangeDealy(0.6)
+        setTimeout(() => {
+            myRowSwiper.value.slideTo(nextIndex)
+            nextTick(() => {
+                noScroll.value = false
+            })
+        }, 600)
+    } else {
+        myRowSwiper.value.slideTo(nextIndex)
+        nextTick(() => {
+            noScroll.value = false
+        })
+    }
+}
 
-// const onTouchMove = debounce((event) => {
-//     const { deltaY } = event
-//     const _index = myRowSwiper.value.activeIndex
-//     if ((_index === 5 && deltaY > 0) || (_index === 0 && deltaY < 0)) {
-//         return
-//     }
-//     const tab = swiperIndexToTabs[_index]
-//     if (
-//         [
-//             MultipleLangFileNameEunm.ProductAdvantages,
-//             MultipleLangFileNameEunm.AboutUs,
-//             MultipleLangFileNameEunm.Sponsorship
-//         ].includes(tab)
-//     ) {
-//         // dealyFn(event)
-//         event.preventDefault()
-//         handleMovue(event)
-//     } else {
-//         const _index = myRowSwiper.value.activeIndex
+const onTouchMove = debounce((event) => {
+    const { deltaY } = event
+    const _index = myRowSwiper.value.activeIndex
+    if ((_index === 5 && deltaY > 0) || (_index === 0 && deltaY < 0)) {
+        return
+    }
+    const tab = swiperIndexToTabs[_index]
+    if (
+        [
+            MultipleLangFileNameEunm.ProductAdvantages,
+            MultipleLangFileNameEunm.AboutUs,
+            MultipleLangFileNameEunm.Sponsorship
+        ].includes(tab)
+    ) {
+        // dealyFn(event)
+        event.preventDefault()
+        handleMovue(event)
+    } else {
+        const _index = myRowSwiper.value.activeIndex
 
-//         const nextIndex = _index + (deltaY < 0 ? -1 : 1)
-//         const nextSwiper = swiperIndexToTabs[nextIndex]
-//         store.onChangeSwiper(nextSwiper)
-//         tabSelected.value = nextSwiper
-//         myRowSwiper.value.slideTo(nextIndex)
-//     }
-// }, 20)
-// @wheel="onTouchMove"
+        const nextIndex = _index + (deltaY < 0 ? -1 : 1)
+        const nextSwiper = swiperIndexToTabs[nextIndex]
+        store.onChangeSwiper(nextSwiper)
+        tabSelected.value = nextSwiper
+        myRowSwiper.value.slideTo(nextIndex)
+    }
+}, 100)
 </script>
 <template>
-    <div>
+    <div @wheel="onTouchMove">
         <div class="nav-wrap" ref="navRef">
             <img
                 @click="onChangePage(tabsOptions?.logo?.key)"
@@ -288,8 +287,6 @@ const noScroll = ref(false)
             direction="vertical"
             :autoplay="false"
             :allow-touch-move="false"
-            :modules="[Mousewheel]"
-            @slideChange="slideWrapChange"
         >
             <swiper-slide
                 v-for="item in components"

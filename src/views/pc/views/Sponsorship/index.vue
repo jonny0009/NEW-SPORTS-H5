@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps } from 'vue'
+import { defineProps, computed } from 'vue'
 import {
     VideoMaskEnum,
     MultipleLangFileNameEunm,
@@ -7,27 +7,15 @@ import {
     BottonLinkType,
     SwiperActiveIndex
 } from '@/model'
-// import { useSwiperStore } from '@/store'
+import { useSwiperStore } from '@/store'
 import videoURL from '@/assets/video/spon_part_01.mp4'
 import videoBGURL from '@/assets/video/span_part_bg_01.jpg'
 import ContentView from './components/ContentView.vue'
 
-// const store = useSwiperStore()
+const store = useSwiperStore()
 const props = defineProps(['paddingTop'])
-// const isAnimate = computed(() => store.index === SwiperActiveIndex.Sponsorship)
+const isAnimate = computed(() => store.index === SwiperActiveIndex.Sponsorship)
 </script>
-
-<!-- :class="[
-    'spon-content',
-    'animate__animated',
-    !isAnimate && 'animate__fadeOutUpBig'
-]"
-
-:class="[
-    'spon-title ',
-    'animate__animated',
-    !isAnimate && 'animate__fadeOutUpBig'
-]" -->
 
 <template>
     <div>
@@ -41,10 +29,22 @@ const props = defineProps(['paddingTop'])
                 <div :style="{ height: `${props.paddingTop}px` }"></div>
                 <div class="spon-contanier">
                     <div>
-                        <div class="spon-title">
+                        <div
+                            :class="[
+                                'spon-title ',
+                                'animate__animated',
+                                !isAnimate && 'animate__fadeOutUpBig'
+                            ]"
+                        >
                             {{ $t(MultipleLangFileNameEunm.Sponsorship) }}
                         </div>
-                        <div class="spon-content">
+                        <div
+                            :class="[
+                                'spon-content',
+                                'animate__animated',
+                                !isAnimate && 'animate__fadeOutUpBig'
+                            ]"
+                        >
                             {{
                                 $t(MultipleLangFileNameEunm.SponsorshipContent)
                             }}
