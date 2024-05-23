@@ -53,8 +53,9 @@ import {
 }
 .sp-logo-img {
     :deep(img) {
-        width: 340px;
-        height: 172.4px;
+        width: 400px;
+        height: auto;
+        // height: 172.4px;
         object-fit: contain;
     }
 }
@@ -66,6 +67,7 @@ import {
     flex-direction: column;
 }
 .sp-supplier-tips {
+    font-weight: 600;
     font-size: 40px;
     line-height: 50px;
     color: #ff8727;

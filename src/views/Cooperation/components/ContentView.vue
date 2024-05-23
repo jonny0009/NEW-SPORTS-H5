@@ -8,7 +8,7 @@ import {
     showLoadingToast,
     closeToast
 } from 'vant'
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import useClipboard from 'vue-clipboard3'
 import { onSubmitUserInfo } from '@/api'
 import { get } from 'loadsh'
@@ -36,6 +36,13 @@ const infoInit = {
 const useForm = reactive({
     data: { ...infoInit }
 })
+
+const cancelText = computed(() =>
+    i18n.global.t(MultipleLangFileNameEunm.CancelText)
+)
+const confirmText = computed(() =>
+    i18n.global.t(MultipleLangFileNameEunm.ConfirmText)
+)
 
 const onSelect = ({ selectedOptions }: any) => {
     const item = get(selectedOptions, '0')
@@ -204,7 +211,7 @@ const onClick = (type: AddreessType, mes: string) => {
             <van-row justify="center" class="bc-content-btn">
                 <botton-confirm-app
                     @click="onSubmit"
-                    :size="BottonSize.Middle"
+                    :size="BottonSize.Submit"
                     :text="MultipleLangFileNameEunm.SubmitTextBotton"
                 ></botton-confirm-app>
             </van-row>
@@ -216,6 +223,8 @@ const onClick = (type: AddreessType, mes: string) => {
                 :columns="ContactInformationOptions"
                 @cancel="showPicker = false"
                 @confirm="onSelect"
+                :cancel-button-text="cancelText"
+                :confirm-button-text="confirmText"
             />
         </van-popup>
     </div>

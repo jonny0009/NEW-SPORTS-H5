@@ -41,6 +41,7 @@ import ContentView from './components/ContentView.vue'
     padding: 80px 0 60px 0;
 }
 .spon-title {
+    font-weight: 600;
     display: block;
     font-size: 32px;
     color: #ff8727;

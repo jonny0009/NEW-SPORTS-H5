@@ -21,17 +21,20 @@ const { size, text, link, selected } = defineProps([
 ])
 const imgStyle: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: 'botton-xs-img',
-    [BottonSize.Large]: 'botton-xl-img'
+    [BottonSize.Large]: 'botton-xl-img',
+    [BottonSize.Submit]: 'botton-sb-img'
 }
 
 const imgSource: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: xsURL,
-    [BottonSize.Large]: xlURL
+    [BottonSize.Large]: xlURL,
+    [BottonSize.Submit]: xsURL
 }
 
 const imgHoverSource: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: sdxsURL,
-    [BottonSize.Large]: sdxlURL
+    [BottonSize.Large]: sdxlURL,
+    [BottonSize.Submit]: sdxsURL
 }
 const style = imgStyle[size as BottonSize]
 const urlSource = imgSource[size as BottonSize]
@@ -94,6 +97,11 @@ const mouseleave = () => {
 }
 .botton-xs-img {
     width: 360px;
+    height: auto;
+    position: relative;
+}
+.botton-sb-img {
+    width: 300px;
     height: auto;
     position: relative;
 }

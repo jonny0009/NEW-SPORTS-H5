@@ -411,9 +411,11 @@ export default defineComponent({
 :deep(.van-picker__confirm) {
     color: #ff8727;
 }
-:deep(.van-tab--active) {
-    .van-tab__text {
-        font-weight: 999 !important;
-    }
-}
+// :deep(.van-tab__text) {
+//     font-weight: 300;
+// }
+// :deep(.van-tab--active .van-tab__text) {
+//     font-weight: 900;
+//     // color: red;
+// }
 </style>

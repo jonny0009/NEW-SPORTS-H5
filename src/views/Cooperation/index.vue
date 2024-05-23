@@ -43,6 +43,7 @@ import ContentView from './components/ContentView.vue'
     background-size: cover;
 }
 .bc-title {
+    font-weight: 600;
     font-size: 32px;
     color: #ff8727;
     text-align: center;

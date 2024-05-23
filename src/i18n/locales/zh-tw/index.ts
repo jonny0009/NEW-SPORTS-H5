@@ -26,7 +26,7 @@ export default {
 
 
 
-    [MultipleLangFileNameEunm.SupplierTips]: '全球首選電商\n一站式API供應商',
+    [MultipleLangFileNameEunm.SupplierTips]: '全球首選\n電商一站式API供應商',
     [MultipleLangFileNameEunm.PlatformAdvantages]: '極速穩定·沉浸體驗·遊戲多元·公平公正',
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: '為每一個綜合站，體育站，真人站等現金或信用站，提供完整、高效和穩定的一站式專業遊戲供應商服務。 ',
     [MultipleLangFileNameEunm.ExtremelyFastExperience]: '極速體驗',

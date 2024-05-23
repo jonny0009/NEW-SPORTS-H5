@@ -56,6 +56,7 @@ import ContentView from './components/ContentView.vue'
     background-size: cover;
 }
 .sf-content-title {
+    font-weight: 600;
     display: block;
     font-size: 32px;
     color: #ff8727;

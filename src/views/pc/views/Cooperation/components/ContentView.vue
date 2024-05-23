@@ -178,7 +178,7 @@ const onSubmit = async () => {
             <van-row justify="center" class="ba-form-margin">
                 <botton-confirm-pc
                     @click="onSubmit"
-                    :size="BottonSize.Middle"
+                    :size="BottonSize.Submit"
                     :text="MultipleLangFileNameEunm.SubmitTextBotton"
                 ></botton-confirm-pc>
             </van-row>

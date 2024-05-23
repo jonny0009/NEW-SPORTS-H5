@@ -10,7 +10,7 @@ const props = defineProps({
 
 const store = useSwiperStore()
 </script>
-
+<!-- animate__bounceInLeft animate__bounceInRight -->
 <template>
     <div>
         <div class="sp-nd-wrap">
@@ -27,12 +27,16 @@ const store = useSwiperStore()
                             'sp-nd-item',
                             'animate__animated',
                             props.show
-                                ? 'animate__fadeInDownBig'
+                                ? index > 0
+                                    ? 'animate__bounceInRight'
+                                    : 'animate__bounceInLeft'
                                 : 'animate__fadeOutUpBig'
                         ]"
                         :style="{
                             'animation-delay': `${
-                                props.show ? (store.dealy - 0.4 + i * 0.4) : i * 0.2
+                                props.show
+                                    ? store.dealy - 0.4 + i * 0.4
+                                    : i * 0.2
                             }s`
                         }"
                     >

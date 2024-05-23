@@ -13,11 +13,13 @@ import xlURL from '@/assets/image/large_btn_border.png'
 const { size, text, link } = defineProps(['size', 'text', 'link'])
 const imgStyle: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: 'botton-xs-img',
-    [BottonSize.Large]: 'botton-xl-img'
+    [BottonSize.Large]: 'botton-xl-img',
+    [BottonSize.Submit]: 'botton-sb-img'
 }
 const imgSource: { [key in BottonSize]: string } = {
     [BottonSize.Middle]: xsURL,
-    [BottonSize.Large]: xlURL
+    [BottonSize.Large]: xlURL,
+    [BottonSize.Submit]: xsURL
 }
 const style = imgStyle[size as BottonSize]
 const source = imgSource[size as BottonSize]
@@ -61,6 +63,11 @@ const onJump = () => {
 }
 .botton-xs-img {
     width: 360px;
+    height: auto;
+    position: relative;
+}
+.botton-sb-img {
+    width: 300px;
     height: auto;
     position: relative;
 }

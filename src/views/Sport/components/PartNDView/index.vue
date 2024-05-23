@@ -49,6 +49,7 @@ import { MultipleLangFileNameEunm, BottonSize, BottonLinkType } from '@/model'
     background-size: 200%;
 }
 .sp-content-title {
+    font-weight: 600;
     font-size: 32px;
     color: #ff8727;
     text-align: center;

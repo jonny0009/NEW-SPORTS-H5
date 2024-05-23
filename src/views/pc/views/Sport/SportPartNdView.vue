@@ -19,6 +19,8 @@ const isAnimate = computed(
 )
 </script>
 
+
+
 <template>
     <video-back-ground
         :type="MultipleLangFileNameEunm.ProductAdvantages"
@@ -27,20 +29,40 @@ const isAnimate = computed(
         :mask="VideoMaskEnum.Both"
     >
         <div class="sp-wrap">
-            <div class="sp-bg">
-                <img
-                    class="sp-bgimg"
-                    src="@/assets/image/lg_part_st_bg.png"
-                    alt=""
-                />
+            <div>
+                <div class="sp-bg">
+                    <img
+                        :class="[
+                            'sp-bgimg',
+                            'animate__animated',
+                            isAnimate
+                                ? 'animate__bounceInRight'
+                                : 'animate__fadeOutUpBig'
+                        ]"
+                        src="@/assets/image/lg_part_st_bg.png"
+                        alt=""
+                    />
+                </div>
             </div>
             <div :style="{ height: `${props.paddingTop}px` }"></div>
             <div class="sp-content">
                 <div>
-                    <div class="sp-content-title">
+                    <div
+                        :class="[
+                            'sp-content-title',
+                            'animate__animated',
+                            !isAnimate && 'animate__fadeOutUpBig'
+                        ]"
+                    >
                         {{ $t(MultipleLangFileNameEunm.ProductAdvantages) }}
                     </div>
-                    <div class="sp-content-text">
+                    <div
+                        :class="[
+                            'sp-content-text',
+                            'animate__animated',
+                            !isAnimate && 'animate__fadeOutUpBig'
+                        ]"
+                    >
                         {{ $t(MultipleLangFileNameEunm.ProductAdvantagesTips) }}
                     </div>
                 </div>
@@ -71,21 +93,23 @@ const isAnimate = computed(
 .sp-wrap {
     height: 100vh;
     padding: 0px 119px;
-
     display: flex;
     flex-direction: column;
     position: relative;
     .sp-bg {
         position: absolute;
-        left: 0;
+        right: 0;
         z-index: -1;
         width: 100vw;
         height: 100%;
         background-color: #000;
         .sp-bgimg {
+            position: absolute;
+            top: 20%;
+            right: 20%;
             width: 40%;
             opacity: 0.8;
-            transform: translate(50vw, 8vh);
+            // transform: translate(50vw, 8vh);
         }
     }
 }
