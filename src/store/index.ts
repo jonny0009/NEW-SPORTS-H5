@@ -1,17 +1,22 @@
 import { createPinia ,defineStore} from 'pinia'
 import { Store } from './constants'
 import { ref } from 'vue'
-
+import { MultipleLangFileNameEunm } from '@/model'
+import { TabsIndexToSwiper } from '@/views/pc/views/Navigation/constants'
 export const useSwiperStore = defineStore(Store.SwiperActiveIndex, {
     state: () => {
         return {
-            index:'',
+            isAnimate:false,
+            index:MultipleLangFileNameEunm.Logo,
             dealy: 0,
         }
     },
     actions: {
         onChangeSwiper(value: string) {
-            this.index = value
+            const beforeIndex = TabsIndexToSwiper[this.index]
+            const currentIndex = TabsIndexToSwiper[value]
+            this.index = value as MultipleLangFileNameEunm
+            this.isAnimate = currentIndex > beforeIndex 
             this.dealy = 0.2
         },
         onChangeDealy(value: number) {

@@ -26,11 +26,10 @@ const store = useSwiperStore()
                         :class="[
                             'sp-nd-item',
                             'animate__animated',
-                            props.show
-                                ? index > 0
-                                    ? 'animate__bounceInRight'
-                                    : 'animate__bounceInLeft'
-                                : 'animate__fadeOutUpBig'
+                            props.show &&
+                                (index > 0
+                                    ? 'animate__fadeInRightBig'
+                                    : 'animate__fadeInLeftBig')
                         ]"
                         :style="{
                             'animation-delay': `${

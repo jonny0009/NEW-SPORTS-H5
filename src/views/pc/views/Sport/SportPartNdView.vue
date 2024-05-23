@@ -11,12 +11,11 @@ import { useSwiperStore } from '@/store'
 import videoURL from '@/assets/video/sp_part_01.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_01.jpg'
 import ContentView from './components/PartNDView/index.vue'
+import { TabsIndexToSwiper } from '@/views/pc/views/Navigation/constants'
 
 const store = useSwiperStore()
 const props = defineProps(['paddingTop'])
-const isAnimate = computed(
-    () => store.index === SwiperActiveIndex.ProductAdvantages
-)
+const isAnimate = computed(() => store.isAnimate)
 </script>
 
 
@@ -35,9 +34,7 @@ const isAnimate = computed(
                         :class="[
                             'sp-bgimg',
                             'animate__animated',
-                            isAnimate
-                                ? 'animate__bounceInRight'
-                                : 'animate__fadeOutUpBig'
+                            isAnimate && 'animate__fadeInRightBig'
                         ]"
                         src="@/assets/image/lg_part_st_bg.png"
                         alt=""
@@ -47,22 +44,10 @@ const isAnimate = computed(
             <div :style="{ height: `${props.paddingTop}px` }"></div>
             <div class="sp-content">
                 <div>
-                    <div
-                        :class="[
-                            'sp-content-title',
-                            'animate__animated',
-                            !isAnimate && 'animate__fadeOutUpBig'
-                        ]"
-                    >
+                    <div class="sp-content-title">
                         {{ $t(MultipleLangFileNameEunm.ProductAdvantages) }}
                     </div>
-                    <div
-                        :class="[
-                            'sp-content-text',
-                            'animate__animated',
-                            !isAnimate && 'animate__fadeOutUpBig'
-                        ]"
-                    >
+                    <div class="sp-content-text">
                         {{ $t(MultipleLangFileNameEunm.ProductAdvantagesTips) }}
                     </div>
                 </div>

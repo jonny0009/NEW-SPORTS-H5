@@ -12,7 +12,8 @@ import {
 import ContentView from './components/ContentView.vue'
 const props = defineProps(['paddingTop'])
 const store = useSwiperStore()
-const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
+// const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
+const isAnimate = computed(() => store.isAnimate)
 </script>
 
 <template>
@@ -23,12 +24,14 @@ const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
                 <div class="sf-container">
                     <div
                         :class="[
-                          'sf-container-left',
-                          'animate__animated',
-                          isAnimated ? 'animate__bounceInLeft' : 'animate__fadeOutUpBig'
+                            'sf-container-left',
+                            'animate__animated',
+                            isAnimate && 'animate__bounceInLeft'
                         ]"
                         :style="{
-                           'animation-delay': `${isAnimated ? store.dealy : 0.3}s`,
+                            'animation-delay': `${
+                                isAnimate ? store.dealy : 0.3
+                            }s`
                         }"
                     >
                         <img :src="headURL" class="sf-head-img" alt="" />
@@ -36,9 +39,14 @@ const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
 
                     <div class="sf-container-right">
                         <div
-                            :class="['animate__animated', isAnimated ? 'animate__fadeInRightBig' : 'animate__fadeOutUpBig']"
+                            :class="[
+                                'animate__animated',
+                                isAnimate && 'animate__fadeInRightBig'
+                            ]"
                             :style="{
-                              'animation-delay': `${isAnimated ? store.dealy : 0}s`,
+                                'animation-delay': `${
+                                    isAnimate ? store.dealy : 0
+                                }s`
                             }"
                         >
                             <div class="sf-content-title">
@@ -54,16 +62,20 @@ const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
                             </div>
                         </div>
 
-                        <content-view :show="isAnimated"></content-view>
+                        <content-view :show="isAnimate"></content-view>
                     </div>
                 </div>
 
                 <van-row
                     justify="center"
                     :style="{
-                           'animation-delay': `${isAnimated ? store.dealy : 0.3}s`,
-                        }"
-                    :class="['sf-content-btn', 'animate__animated', isAnimated ? 'animate__fadeInUpBig' : 'animate__fadeOutUpBig']"
+                        'animation-delay': `${isAnimate ? store.dealy : 0.3}s`
+                    }"
+                    :class="[
+                        'sf-content-btn',
+                        'animate__animated',
+                        isAnimate && 'animate__fadeInUpBig'
+                    ]"
                 >
                     <botton-confirm-pc
                         :size="BottonSize.Middle"
