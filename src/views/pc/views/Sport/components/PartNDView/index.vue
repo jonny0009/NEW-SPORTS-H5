@@ -87,10 +87,15 @@ const store = useSwiperStore()
 
 .sp-nd-icon {
     :deep(img) {
-        margin-right: 20px;
-        width: 40px;
+        margin-right: 5px;
+        width: 60px;
         height: auto;
         object-fit: contain;
+        cursor: pointer;
+        transition: all 0.6s;
+    }
+    :deep(img:hover) {
+        transform: scale(1.2);
     }
 }
 

@@ -39,8 +39,8 @@ import { PartNDcontentOptions } from '../../constants'
 .sp-nd-icon {
     :deep(img) {
         margin-right: 20px;
-        width: 48.4px;
-        height: 50px;
+        width: 80px;
+        height: auto;
         object-fit: contain;
     }
 }

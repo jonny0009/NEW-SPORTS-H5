@@ -62,17 +62,17 @@ const onJump = () => {
     position: relative;
 }
 .botton-xs-img {
-    width: 360px;
+    width: 450px;
     height: auto;
     position: relative;
 }
 .botton-sb-img {
-    width: 300px;
+    width: 400px;
     height: auto;
     position: relative;
 }
 .botton-selected-img {
-    width: 360px;
+    width: 450px;
     height: auto;
     position: relative;
 }

@@ -296,7 +296,7 @@ const onClick = (type: AddreessType, mes: string) => {
     background: rgba(255, 255, 255, 0.34);
 }
 .bc-content-btn {
-    margin-top: 30px;
+    // margin-top: 5px;
 }
 :deep(.van-picker__confirm) {
     color: #ff8727;

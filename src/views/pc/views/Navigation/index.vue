@@ -402,4 +402,11 @@ const onTouchMove = debounce((event) => {
 :deep(.el-dropdown-menu__item) {
     background: none !important;
 }
+
+:deep(.tab-item) {
+    font-weight: 600;
+}
+:deep(.tab-item:hover) {
+    color: #ff8727;
+}
 </style>

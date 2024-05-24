@@ -36,8 +36,8 @@ import { personOptions } from '../../constants'
 }
 .sp-nd-icon {
     :deep(img) {
-        width: 36px;
-        height: 36px;
+        width: 60px;
+        height: auto;
         object-fit: contain;
         margin-right: 10px;
     }

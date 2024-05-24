@@ -102,7 +102,7 @@ const isAnimate = computed(
         z-index: -1;
         width: 100vw;
         height: 100%;
-        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.5);
         .sp-bgimg {
             position: absolute;
             top: 20%;

@@ -230,7 +230,7 @@ const onSubmit = async () => {
 }
 
 .ba-form-margin {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 .bc-icon-img {
     width: 8px;

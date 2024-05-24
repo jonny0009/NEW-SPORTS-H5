@@ -66,7 +66,7 @@ import {
     flex-direction: column;
 }
 .sp-supplier-tips {
-    font-weight: 600;
+    font-weight: 900;
     font-size: 40px;
     line-height: 50px;
     color: #ff8727;
@@ -81,6 +81,6 @@ import {
     font-style: italic;
 }
 .sp-btn-wrap {
-    margin-top: 150px;
+    margin-top: 300px;
 }
 </style>
