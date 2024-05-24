@@ -69,6 +69,7 @@ import ContentView from './ContentView.vue'
 }
 
 .lg-nd-name {
+    font-weight: 600;
     display: block;
     font-size: 26px;
     color: #ffffff;

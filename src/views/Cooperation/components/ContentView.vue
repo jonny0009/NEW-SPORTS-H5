@@ -243,8 +243,8 @@ const onClick = (type: AddreessType, mes: string) => {
 }
 .bc-addreess-icon {
     :deep(img) {
-        width: 51px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
         object-fit: contain;
     }
 }

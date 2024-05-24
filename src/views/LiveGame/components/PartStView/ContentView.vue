@@ -36,8 +36,8 @@ import { sportsOptions } from '../../constants'
 }
 .lg-nd-icon {
     :deep(img) {
-        width: 36px;
-        height: 36px;
+        width: 60px;
+        height: 60px;
         object-fit: contain;
         margin-right: 10px;
     }

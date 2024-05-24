@@ -54,6 +54,11 @@ import {
         width: 334.4px;
         height: 190px;
         object-fit: contain;
+        cursor: pointer;
+        transition: all 0.6s;
+    }
+    :deep(img:hover) {
+        transform: scale(1.2);
     }
 }
 .sp-content {

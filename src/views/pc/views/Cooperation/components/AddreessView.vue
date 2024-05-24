@@ -59,9 +59,14 @@ const onJump = (link: string) => {
     display: flex;
 }
 .bc-addreess-icon {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+:deep(.bc-addreess-icon:hover) {
+    transform: scale(1.2);
 }
 .bc-addreess-text-wrap {
     margin-left: 15px;

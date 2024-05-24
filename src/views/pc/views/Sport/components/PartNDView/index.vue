@@ -92,7 +92,7 @@ const store = useSwiperStore()
         height: auto;
         object-fit: contain;
         cursor: pointer;
-        transition: all 0.6s;
+        transition: all 0.3s;
     }
     :deep(img:hover) {
         transform: scale(1.2);
@@ -100,12 +100,14 @@ const store = useSwiperStore()
 }
 
 .sp-nd-content-title {
+    font-weight: 900;
     display: block;
     font-size: 16px;
     color: #ffffff;
     font-style: italic;
 }
 .sp-nd-content-tips {
+    font-weight: 900;
     display: block;
     font-size: 12px;
     color: #ffffff;

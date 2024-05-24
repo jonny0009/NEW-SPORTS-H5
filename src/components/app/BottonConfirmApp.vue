@@ -58,7 +58,8 @@ const onJump = () => {
 }
 .botton-xl-img {
     width: auto;
-    height: 100px;
+    height: 110px;
+    object-fit: contain;
     position: relative;
 }
 .botton-xs-img {

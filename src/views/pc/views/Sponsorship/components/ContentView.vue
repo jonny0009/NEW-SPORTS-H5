@@ -2,14 +2,12 @@
 import { computed } from 'vue'
 import { useSponContentOptions, OtherTeamOptions } from '../constants'
 import LineView from './LineView.vue'
-import { useSwiperStore } from '@/store';
-import { SwiperActiveIndex } from '@/model/enum';
+import { useSwiperStore } from '@/store'
+import { SwiperActiveIndex } from '@/model/enum'
 
 const options = computed(() => useSponContentOptions())
 const store = useSwiperStore()
-const isAnimate = computed(
-    () => store.index === SwiperActiveIndex.Sponsorship
-)
+const isAnimate = computed(() => store.index === SwiperActiveIndex.Sponsorship)
 </script>
 
 <template>
@@ -25,9 +23,13 @@ const isAnimate = computed(
                     <div
                         v-for="(child, i) in item"
                         :key="i"
-                        :class="['spon-content-container', 'animate__animated', isAnimate ? '' : 'animate__fadeOutUpBig']"
+                        :class="[
+                            'spon-content-container',
+                            'animate__animated',
+                            isAnimate ? '' : 'animate__fadeOutUpBig'
+                        ]"
                         :style="{
-                          'animation-delay': `${(index * 0.3)+ (i *0.1)}s`,
+                            'animation-delay': `${index * 0.3 + i * 0.1}s`
                         }"
                     >
                         <img :src="child.icon" class="spon-content-icon" />
@@ -68,6 +70,11 @@ const isAnimate = computed(
     width: 100px;
     height: 100px;
     object-fit: contain;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+:deep(.spon-content-icon:hover) {
+    transform: scale(1.2);
 }
 .spon-content-center {
     flex: 2;
@@ -103,6 +110,11 @@ const isAnimate = computed(
     width: 44.7px;
     height: 44.7px;
     object-fit: contain;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+:deep(.spon-content-img:hover) {
+    transform: scale(1.5);
 }
 .spon-img-wrap {
     display: flex;

@@ -46,12 +46,14 @@ import { PartNDcontentOptions } from '../../constants'
 }
 
 .sp-nd-content-title {
+    font-weight: 900;
     display: block;
     font-size: 26px;
     color: #ffffff;
     font-style: italic;
 }
 .sp-nd-content-tips {
+    font-weight: 900;
     display: block;
     font-size: 20px;
     color: #ffffff;

@@ -31,8 +31,8 @@ const options = computed(() => useSelfContentOptions())
 }
 .sf-content-icon {
     :deep(img) {
-        width: 50px;
-        height: 44.2px;
+        width: 80px;
+        height: auto;
         object-fit: contain;
     }
 }

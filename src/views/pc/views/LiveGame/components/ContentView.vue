@@ -37,6 +37,11 @@ const props = defineProps(['options'])
         width: 48px;
         height: 48px;
         object-fit: contain;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    :deep(img:hover) {
+        transform: scale(1.5);
     }
 }
 .lg-nd-text {

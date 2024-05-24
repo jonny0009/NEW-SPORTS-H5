@@ -214,7 +214,7 @@ const onTouchMove = debounce((event) => {
         tabSelected.value = nextSwiper
         myRowSwiper.value.slideTo(nextIndex)
     }
-}, 50)
+}, 30)
 </script>
 <template>
     <div @wheel.prevent="onTouchMove">
