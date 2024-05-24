@@ -211,6 +211,7 @@ const onSubmit = async () => {
     height: 30px;
     background: rgba(255, 255, 255, 0.34);
     position: relative;
+    padding-left: 10px;
 }
 .text-error-tips {
     position: absolute;
@@ -226,6 +227,7 @@ const onSubmit = async () => {
     border-radius: 0;
     color: #ffffff;
     display: block;
+    padding-left: 10px;
     background: rgba(255, 255, 255, 0.34);
 }
 

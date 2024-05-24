@@ -34,8 +34,8 @@ const props = defineProps(['options'])
 }
 .lg-nd-icon {
     :deep(img) {
-        width: 48px;
-        height: 48px;
+        width: 45px;
+        height: 45px;
         object-fit: contain;
         cursor: pointer;
         transition: all 0.3s;

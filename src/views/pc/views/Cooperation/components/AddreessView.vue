@@ -59,8 +59,8 @@ const onJump = (link: string) => {
     display: flex;
 }
 .bc-addreess-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     cursor: pointer;
     transition: all 0.3s;

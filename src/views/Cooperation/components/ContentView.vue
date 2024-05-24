@@ -285,6 +285,7 @@ const onClick = (type: AddreessType, mes: string) => {
     font-size: 24px;
     border-radius: 0;
     color: #ffffff;
+    padding-left: 10px;
     background: rgba(255, 255, 255, 0.34);
 }
 .bc-form-input {
@@ -293,6 +294,7 @@ const onClick = (type: AddreessType, mes: string) => {
     font-size: 24px;
     border-radius: 0;
     color: #ffffff;
+    padding-left: 10px;
     background: rgba(255, 255, 255, 0.34);
 }
 .bc-content-btn {

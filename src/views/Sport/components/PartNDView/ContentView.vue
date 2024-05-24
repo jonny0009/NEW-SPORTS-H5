@@ -53,7 +53,6 @@ import { PartNDcontentOptions } from '../../constants'
     font-style: italic;
 }
 .sp-nd-content-tips {
-    font-weight: 900;
     display: block;
     font-size: 20px;
     color: #ffffff;

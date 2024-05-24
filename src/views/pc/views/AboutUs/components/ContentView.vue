@@ -62,8 +62,8 @@ const store = useSwiperStore()
     display: flex;
 }
 .sf-content-icon {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
     cursor: pointer;
     transition: all 0.3s;

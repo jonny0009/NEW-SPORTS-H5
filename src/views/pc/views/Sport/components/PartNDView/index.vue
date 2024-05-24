@@ -88,7 +88,7 @@ const store = useSwiperStore()
 .sp-nd-icon {
     :deep(img) {
         margin-right: 5px;
-        width: 60px;
+        width: 45px;
         height: auto;
         object-fit: contain;
         cursor: pointer;
@@ -107,7 +107,6 @@ const store = useSwiperStore()
     font-style: italic;
 }
 .sp-nd-content-tips {
-    font-weight: 900;
     display: block;
     font-size: 12px;
     color: #ffffff;
