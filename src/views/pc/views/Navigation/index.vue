@@ -214,10 +214,10 @@ const onTouchMove = debounce((event) => {
         tabSelected.value = nextSwiper
         myRowSwiper.value.slideTo(nextIndex)
     }
-}, 100)
+}, 50)
 </script>
 <template>
-    <div @wheel="onTouchMove">
+    <div @wheel.prevent="onTouchMove">
         <div class="nav-wrap" ref="navRef">
             <img
                 @click="onChangePage(tabsOptions?.logo?.key)"
