@@ -55,7 +55,6 @@ import {
     :deep(img) {
         width: 400px;
         height: auto;
-        // height: 172.4px;
         object-fit: contain;
     }
 }
@@ -82,6 +81,6 @@ import {
     font-style: italic;
 }
 .sp-btn-wrap {
-    margin-top: 100px;
+    margin-top: 150px;
 }
 </style>
