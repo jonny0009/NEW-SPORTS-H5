@@ -71,20 +71,18 @@ export default defineComponent({
     <div class="video-background" :style="{ background: linearGradient }">
         <video
             :id="`${type}_player`"
-            playsinline
-            preload="auto"
-            webkit-playsinline
-            x5-playsinline
-            disablepictureinpicture
-            disableremoteplayback
             ref="videoRef"
-            x5-video-player-type="h5"
+            preload="auto"
+            webkit-playsinline=""
+            playsinline=""
+            x5-playsinline=""
+            t7-video-player-type="inline"
+            x5-video-player-type="h5-page"
+            x-webkit-airplay="allow"
             class="video-element"
             :poster="image"
             :src="src"
         >
-            <source :src="src" type="video/mp4" />
-            Your browser does not support the video tag.
         </video>
         <!-- 页面其他内容 -->
         <div class="content">
