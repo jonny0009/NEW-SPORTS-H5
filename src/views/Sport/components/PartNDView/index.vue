@@ -55,7 +55,6 @@ import { MultipleLangFileNameEunm, BottonSize, BottonLinkType } from '@/model'
     text-align: center;
 }
 .sp-content-text {
-    font-weight: 900;
     font-size: 24px;
     line-height: 30px;
     margin-top: 20px;

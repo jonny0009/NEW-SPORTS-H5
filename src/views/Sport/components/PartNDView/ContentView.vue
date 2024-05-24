@@ -38,7 +38,7 @@ import { PartNDcontentOptions } from '../../constants'
 
 .sp-nd-icon {
     :deep(img) {
-        margin-right: 20px;
+        margin-right: 10px;
         width: 55px;
         height: auto;
         object-fit: contain;
@@ -57,7 +57,7 @@ import { PartNDcontentOptions } from '../../constants'
     font-size: 20px;
     color: #ffffff;
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 2px;
 }
 .sp-nd-content-bottom {
     display: block;
