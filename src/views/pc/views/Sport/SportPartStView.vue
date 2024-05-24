@@ -58,7 +58,7 @@ import {
         transition: all 0.6s;
     }
     :deep(img:hover) {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 .sp-content {

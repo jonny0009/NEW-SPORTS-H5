@@ -41,12 +41,12 @@ const props = defineProps(['options'])
         transition: all 0.3s;
     }
     :deep(img:hover) {
-        transform: scale(1.5);
+        transform: scale(1.1);
     }
 }
 .lg-nd-text {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     color: #ffffff;
     white-space: pre-wrap;
     font-style: italic;

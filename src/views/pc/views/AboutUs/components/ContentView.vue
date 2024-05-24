@@ -69,7 +69,7 @@ const store = useSwiperStore()
     transition: all 0.3s;
 }
 :deep(.sf-content-icon:hover) {
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 
 .sf-content {

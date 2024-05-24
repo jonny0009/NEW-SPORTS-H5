@@ -36,13 +36,14 @@ import { personOptions } from '../../constants'
 }
 .sp-nd-icon {
     :deep(img) {
-        width: 60px;
+        width: 50px;
         height: auto;
         object-fit: contain;
         margin-right: 10px;
     }
 }
 .sp-nd-content {
+    font-weight: 900;
     font-size: 22px;
     color: #ffffff;
     white-space: pre-wrap;

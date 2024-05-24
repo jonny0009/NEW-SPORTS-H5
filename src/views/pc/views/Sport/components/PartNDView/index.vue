@@ -95,7 +95,7 @@ const store = useSwiperStore()
         transition: all 0.3s;
     }
     :deep(img:hover) {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 

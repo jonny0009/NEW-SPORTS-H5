@@ -74,7 +74,7 @@ const isAnimate = computed(() => store.index === SwiperActiveIndex.Sponsorship)
     transition: all 0.3s;
 }
 :deep(.spon-content-icon:hover) {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .spon-content-center {
     flex: 2;
@@ -114,7 +114,7 @@ const isAnimate = computed(() => store.index === SwiperActiveIndex.Sponsorship)
     transition: all 0.3s;
 }
 :deep(.spon-content-img:hover) {
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .spon-img-wrap {
     display: flex;

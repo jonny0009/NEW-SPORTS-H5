@@ -66,7 +66,7 @@ const onJump = (link: string) => {
     transition: all 0.3s;
 }
 :deep(.bc-addreess-icon:hover) {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .bc-addreess-text-wrap {
     margin-left: 15px;
