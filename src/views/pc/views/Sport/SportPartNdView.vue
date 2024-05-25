@@ -1,4 +1,6 @@
 <script  lang="ts" setup>
+import VideoBackGroundPc from '@/components/VideoBackGroundPc.vue';
+
 import { defineProps, computed } from 'vue'
 import {
     MultipleLangFileNameEunm,
@@ -22,7 +24,7 @@ const isAnimate = computed(
 
 
 <template>
-    <video-back-ground
+    <video-back-ground-pc
         :type="MultipleLangFileNameEunm.ProductAdvantages"
         :src="videoURL"
         :image="videoBGURL"
@@ -78,7 +80,7 @@ const isAnimate = computed(
                 </van-row>
             </div>
         </div>
-    </video-back-ground>
+    </video-back-ground-pc>
 </template>
 
 <style scoped lang="less">

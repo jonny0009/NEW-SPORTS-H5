@@ -1,6 +1,7 @@
 
 <script  lang="ts" setup>
 import logoURL from '@/assets/image/sport_logo.png'
+import gifURL from '@/assets/video/sp_part_01.gif'
 import videoURL from '@/assets/video/sp_part_01.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_01.jpg'
 import {
@@ -14,7 +15,8 @@ import {
 <template>
     <div>
         <video-back-ground
-            :src="videoURL"
+            :src="gifURL"
+            :videoSrc="videoURL"
             :image="videoBGURL"
             picture
             :type="MultipleLangFileNameEunm.Logo"

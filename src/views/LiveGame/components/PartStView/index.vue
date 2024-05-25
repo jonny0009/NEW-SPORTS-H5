@@ -1,5 +1,6 @@
 
 <script  lang="ts" setup>
+import gifURL from '@/assets/video/sp_part_02.gif'
 import videoURL from '@/assets/video/sp_part_02.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_02.jpg'
 import {
@@ -14,7 +15,8 @@ import ContentView from './ContentView.vue'
 <template>
     <div>
         <video-back-ground
-            :src="videoURL"
+            :src="gifURL"
+            :videoSrc="videoURL"
             :image="videoBGURL"
             :type="MultipleLangFileNameEunm.Sports"
             :mask="VideoMaskEnum.Both"

@@ -5,6 +5,7 @@ import {
     BottonSize,
     BottonLinkType
 } from '@/model'
+import gifURL from '@/assets/video/spon_part_01.gif'
 import videoURL from '@/assets/video/spon_part_01.mp4'
 import videoBGURL from '@/assets/video/span_part_bg_01.jpg'
 
@@ -14,7 +15,8 @@ import ContentView from './components/ContentView.vue'
 <template>
     <div>
         <video-back-ground
-            :src="videoURL"
+            :src="gifURL"
+            :videoSrc="videoURL"
             :image="videoBGURL"
             :type="MultipleLangFileNameEunm.Sponsorship"
             :mask="VideoMaskEnum.Both"
