@@ -26,11 +26,11 @@ const store = useSwiperStore()
                         'animate__animated',
                         props.show
                             ? 'animate__fadeInRightBig'
-                            : 'animate__fadeOutUpBig'
+                            : (!store.noAnimate && 'animate__fadeOutUpBig')
                     ]"
                     :style="{
                         'animation-delay':
-                            (props.show ? store.dealy : 0) +
+                            (props.show ? store.dealy - 0.2 : 0) +
                             child.animationDelay +
                             's'
                     }"

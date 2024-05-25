@@ -39,7 +39,7 @@ const isAnimate = computed(
                             'animate__animated',
                             isAnimate
                                 ? 'animate__bounceInRight'
-                                : 'animate__fadeOutUpBig'
+                                : (!store.noAnimate && 'animate__fadeOutUpBig')
                         ]"
                         src="@/assets/image/lg_part_st_bg.png"
                         alt=""
@@ -53,7 +53,7 @@ const isAnimate = computed(
                         :class="[
                             'sp-content-title',
                             'animate__animated',
-                            !isAnimate && 'animate__fadeOutUpBig'
+                            !store.noAnimate && !isAnimate ? 'animate__fadeOutUpBig' : ''
                         ]"
                     >
                         {{ $t(MultipleLangFileNameEunm.ProductAdvantages) }}
@@ -62,14 +62,14 @@ const isAnimate = computed(
                         :class="[
                             'sp-content-text',
                             'animate__animated',
-                            !isAnimate && 'animate__fadeOutUpBig'
+                            !store.noAnimate && !isAnimate ? 'animate__fadeOutUpBig' : ''
                         ]"
                     >
                         {{ $t(MultipleLangFileNameEunm.ProductAdvantagesTips) }}
                     </div>
                 </div>
 
-                <content-view :show="isAnimate"></content-view>
+                <content-view :show="isAnimate" :noAnimate="store.noAnimate" ></content-view>
 
                 <van-row justify="center">
                     <botton-confirm-pc

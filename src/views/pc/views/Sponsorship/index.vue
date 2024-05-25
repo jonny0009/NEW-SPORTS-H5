@@ -33,7 +33,7 @@ const isAnimate = computed(() => store.index === SwiperActiveIndex.Sponsorship)
                             :class="[
                                 'spon-title ',
                                 'animate__animated',
-                                !isAnimate && 'animate__fadeOutUpBig'
+                                !store.noAnimate && !isAnimate ? 'animate__fadeOutUpBig' : ''
                             ]"
                         >
                             {{ $t(MultipleLangFileNameEunm.Sponsorship) }}
@@ -42,7 +42,7 @@ const isAnimate = computed(() => store.index === SwiperActiveIndex.Sponsorship)
                             :class="[
                                 'spon-content',
                                 'animate__animated',
-                                !isAnimate && 'animate__fadeOutUpBig'
+                                !store.noAnimate && !isAnimate ? 'animate__fadeOutUpBig' : ''
                             ]"
                         >
                             {{

@@ -25,10 +25,10 @@ const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
                         :class="[
                           'sf-container-left',
                           'animate__animated',
-                          isAnimated ? 'animate__bounceInLeft' : 'animate__fadeOutUpBig'
+                          isAnimated ? 'animate__bounceInLeft' : (!store.noAnimate && 'animate__fadeOutUpBig')
                         ]"
                         :style="{
-                           'animation-delay': `${isAnimated ? store.dealy : 0.3}s`,
+                           'animation-delay': `${isAnimated ? store.dealy - 0.2 : 0.3}s`,
                         }"
                     >
                         <img :src="headURL" class="sf-head-img" alt="" />
@@ -36,9 +36,9 @@ const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
 
                     <div class="sf-container-right">
                         <div
-                            :class="['animate__animated', isAnimated ? 'animate__fadeInRightBig' : 'animate__fadeOutUpBig']"
+                            :class="['animate__animated', isAnimated ? 'animate__fadeInRightBig' : (!store.noAnimate && 'animate__fadeOutUpBig')]"
                             :style="{
-                              'animation-delay': `${isAnimated ? store.dealy : 0}s`,
+                              'animation-delay': `${isAnimated ? store.dealy - 0.2 : 0}s`,
                             }"
                         >
                             <div class="sf-content-title">
@@ -61,9 +61,9 @@ const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
                 <van-row
                     justify="center"
                     :style="{
-                           'animation-delay': `${isAnimated ? store.dealy : 0.3}s`,
+                           'animation-delay': `${isAnimated ? store.dealy - 0.2 : 0.3}s`,
                         }"
-                    :class="['sf-content-btn', 'animate__animated', isAnimated ? 'animate__fadeInUpBig' : 'animate__fadeOutUpBig']"
+                    :class="['sf-content-btn', 'animate__animated', isAnimated ? 'animate__fadeInUpBig' : (!store.noAnimate && 'animate__fadeOutUpBig')]"
                 >
                     <botton-confirm-pc
                         :size="BottonSize.Middle"

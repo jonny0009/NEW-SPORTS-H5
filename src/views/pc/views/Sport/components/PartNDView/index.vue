@@ -5,7 +5,8 @@ import { calculateAnimationDelay } from '@/utils'
 import { PartNDcontentOptions } from '../../constants'
 
 const props = defineProps({
-    show: Boolean
+    show: Boolean,
+    noAnimate: Boolean
 })
 
 const store = useSwiperStore()
@@ -30,7 +31,7 @@ const store = useSwiperStore()
                                 ? index > 0
                                     ? 'animate__bounceInRight'
                                     : 'animate__bounceInLeft'
-                                : 'animate__fadeOutUpBig'
+                                : (!props.noAnimate && 'animate__fadeOutUpBig')
                         ]"
                         :style="{
                             'animation-delay': `${

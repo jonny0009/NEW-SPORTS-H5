@@ -162,11 +162,12 @@ const handleMovue = (event) => {
 
     console.log('onTouchMove', value, store.index, nextSwiper)
     store.onChangeSwiper(swiperIndexToTabs[nextIndex])
+    deltaY < 0 && store.onChangeAnimate(true)
     tabSelected.value = nextSwiper
     if (nextSwiper === MultipleLangFileNameEunm.Sports) {
         onColumnChangePage(0)
     }
-    if (
+    if (deltaY > 0 &&
         [
             MultipleLangFileNameEunm.ProductAdvantages,
             MultipleLangFileNameEunm.AboutUs,
@@ -211,6 +212,7 @@ const onTouchMove = debounce((event) => {
         const nextIndex = _index + (deltaY < 0 ? -1 : 1)
         const nextSwiper = swiperIndexToTabs[nextIndex]
         store.onChangeSwiper(nextSwiper)
+        deltaY < 0 && store.onChangeAnimate(true)
         tabSelected.value = nextSwiper
         myRowSwiper.value.slideTo(nextIndex, 100)
     }
