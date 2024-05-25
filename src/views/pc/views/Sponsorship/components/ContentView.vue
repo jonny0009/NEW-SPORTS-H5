@@ -26,7 +26,7 @@ const isAnimate = computed(() => store.index === SwiperActiveIndex.Sponsorship)
                         :class="[
                             'spon-content-container',
                             'animate__animated',
-                            isAnimate ? '' : 'animate__fadeOutUpBig'
+                            !store.noAnimate && !isAnimate ? 'animate__fadeOutUpBig' : ''
                         ]"
                         :style="{
                             'animation-delay': `${index * 0.3 + i * 0.1}s`

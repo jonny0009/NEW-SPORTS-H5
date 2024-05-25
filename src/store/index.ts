@@ -9,7 +9,7 @@ export const useSwiperStore = defineStore(Store.SwiperActiveIndex, {
     state: () => {
         return {
             dealy: 0,
-            isScollUp:false,
+            noAnimate: false,
             index:MultipleLangFileNameEunm.Logo,
         }
     },
@@ -17,15 +17,15 @@ export const useSwiperStore = defineStore(Store.SwiperActiveIndex, {
         onChangeSwiper(value: string) {
             // this.index = value
             this.dealy = 0.2
-            const beforeIndex = TabsIndexToSwiper[this.index]
-            const currentIndex = TabsIndexToSwiper[value]
+            this.noAnimate = false
             this.index = value as MultipleLangFileNameEunm
-            console.log(currentIndex > beforeIndex )
-            this.isScollUp = currentIndex > beforeIndex 
 
         },
         onChangeDealy(value: number) {
             this.dealy = value
+        },
+        onChangeAnimate(value: boolean) {
+          this.noAnimate = value
         }
     }
 })
