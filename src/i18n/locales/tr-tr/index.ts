@@ -17,7 +17,7 @@ export default {
     [MultipleLangFileNameEunm.AboutUs]: "Hakkımızda",
     [MultipleLangFileNameEunm.Sponsorship]: "Bir takıma sponsor olun",
     [MultipleLangFileNameEunm.ContactUs]: "bize Ulaşın",
-    [MultipleLangFileNameEunm.SupplierTips]: "Dünyanın tercih edilen tek noktadan e-ticaret API sağlayıcısı",
+    [MultipleLangFileNameEunm.SupplierTips]: "Dünyanın tercih edilen\n tek noktadan e-ticaret API sağlayıcısı",
     [MultipleLangFileNameEunm.PlatformAdvantages]: "Son derece hızlı ve istikrarlı, sürükleyici deneyim, oyun çeşitliliği, adalet ve adalet",
     [MultipleLangFileNameEunm.WholeTextBotton]: "Şimdi dene",
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: "Her kapsamlı istasyon, spor istasyonu, gerçek kişi istasyonu ve diğer nakit veya kredi istasyonları için eksiksiz, verimli ve istikrarlı, tek noktadan profesyonel oyun tedarikçisi hizmetleri sağlayın. ",

@@ -20,6 +20,7 @@ export const useSwiperStore = defineStore(Store.SwiperActiveIndex, {
             const beforeIndex = TabsIndexToSwiper[this.index]
             const currentIndex = TabsIndexToSwiper[value]
             this.index = value as MultipleLangFileNameEunm
+            console.log(currentIndex > beforeIndex )
             this.isScollUp = currentIndex > beforeIndex 
 
         },

@@ -46,4 +46,7 @@ html.bobd {
     margin: 3px 0;
     font-size: 14px;
 }
+.el-loading-mask {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
 </style>

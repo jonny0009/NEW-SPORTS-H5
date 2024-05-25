@@ -17,7 +17,7 @@ export default {
     [MultipleLangFileNameEunm.AboutUs]: "tentang kami",
     [MultipleLangFileNameEunm.Sponsorship]: "Mensponsori sebuah tim",
     [MultipleLangFileNameEunm.ContactUs]: "Hubungi kami",
-    [MultipleLangFileNameEunm.SupplierTips]: "Penyedia API e-commerce terpadu pilihan di dunia",
+    [MultipleLangFileNameEunm.SupplierTips]: "Penyedia API \ne-commerce terpadu pilihan di dunia",
     [MultipleLangFileNameEunm.PlatformAdvantages]: "Pengalaman yang sangat cepat dan stabil, mendalam, keragaman permainan, keadilan dan keadilan",
     [MultipleLangFileNameEunm.WholeTextBotton]: "Coba sekarang",
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: "Menyediakan layanan pemasok permainan profesional terpadu yang lengkap, efisien, dan stabil untuk setiap stasiun komprehensif, stasiun olahraga, stasiun orang sungguhan, dan stasiun tunai atau kredit lainnya.",

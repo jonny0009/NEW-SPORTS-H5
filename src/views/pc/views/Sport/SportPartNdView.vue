@@ -1,5 +1,5 @@
 <script  lang="ts" setup>
-import VideoBackGroundPc from '@/components/VideoBackGroundPc.vue';
+import VideoBackGroundPc from '@/components/VideoBackGroundPc.vue'
 
 import { defineProps, computed } from 'vue'
 import {
@@ -19,6 +19,7 @@ const props = defineProps(['paddingTop'])
 const isAnimate = computed(
     () => store.index === SwiperActiveIndex.ProductAdvantages
 )
+const isScollUp = computed(() => store.isScollUp)
 </script>
 
 
@@ -37,9 +38,10 @@ const isAnimate = computed(
                         :class="[
                             'sp-bgimg',
                             'animate__animated',
-                            isAnimate
-                                ? 'animate__bounceInRight'
-                                : 'animate__fadeOutUpBig'
+                            !isScollUp &&
+                                (isAnimate
+                                    ? 'animate__bounceInRight'
+                                    : 'animate__fadeOutUpBig')
                         ]"
                         src="@/assets/image/lg_part_st_bg.png"
                         alt=""

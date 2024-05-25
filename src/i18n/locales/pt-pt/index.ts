@@ -17,7 +17,7 @@ export default {
     [MultipleLangFileNameEunm.AboutUs]: "sobre nós",
     [MultipleLangFileNameEunm.Sponsorship]: "Patrocine uma equipe",
     [MultipleLangFileNameEunm.ContactUs]: "Contate-nos",
-    [MultipleLangFileNameEunm.SupplierTips]: "O provedor de API de comércio eletrônico centralizado preferido do mundo",
+    [MultipleLangFileNameEunm.SupplierTips]: "O provedor de API de comércio \neletrônico centralizado preferido do mundo",
     [MultipleLangFileNameEunm.PlatformAdvantages]: "Experiência imersiva extremamente rápida e estável, diversidade de jogos, imparcialidade e justiça",
     [MultipleLangFileNameEunm.WholeTextBotton]: "Tente agora",
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: "Fornecer serviços completos, eficientes e estáveis ​​de fornecedores de jogos profissionais para todas as estações abrangentes, estações de esportes, estações de pessoas reais e outras estações de dinheiro ou crédito.",

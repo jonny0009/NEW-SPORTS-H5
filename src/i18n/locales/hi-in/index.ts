@@ -23,7 +23,7 @@ export default {
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: "प्रत्येक व्यापक स्टेशन, खेल स्टेशन, वास्तविक व्यक्ति स्टेशन और अन्य नकद या क्रेडिट स्टेशनों के लिए पूर्ण, कुशल और स्थिर वन-स्टॉप पेशेवर गेम आपूर्तिकर्ता सेवाएं प्रदान करें।",
     [MultipleLangFileNameEunm.ExtremelyFastExperience]: "बेहद तेज़ अनुभव",
     [MultipleLangFileNameEunm.FastAccess]: "अत्यंत तेज़ एक्सेस 2एस",
-    [MultipleLangFileNameEunm.ExtremelyFastExperienceContent]: "सुचारू और शीर्ष अनुभव सुनिश्चित करने के लिए विश्व स्तरीय सॉफ्टवेयर और हार्डवेयर सुविधाओं और पेशेवर कंप्यूटर कमरों के साथ 3 मिनट में बेहद तेज़ निपटान।\n",
+    [MultipleLangFileNameEunm.ExtremelyFastExperienceContent]: "सुचारू और शीर्ष अनुभव सुनिश्चित करने के लिए विश्व स्तरीय सॉफ्टवेयर और हार्डवेयर सुविधाओं और पेशेवर कंप्यूटर कमरों के साथ 3 मिनट में बेहद तेज़ निपटान।",
     [MultipleLangFileNameEunm.StableSecurityProtection]: "स्थिर सुरक्षा सुरक्षा",
     [MultipleLangFileNameEunm.StableSecurityProtectionContent]: "हमारे पास पूरे नेटवर्क में डेटा इंटरऑपरेबिलिटी का एहसास करने के लिए दुनिया की पहली पंक्ति के सुरक्षा सुरक्षा निर्माता हैं। हमारी वरिष्ठ संचालन और रखरखाव टीम सिस्टम की सुरक्षा करती है और यह सुनिश्चित करती है कि सिस्टम स्थिर और फुलप्रूफ है।",
     [MultipleLangFileNameEunm.ProfessionalManagementSystem]: "व्यावसायिक प्रबंधन प्रणाली",

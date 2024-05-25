@@ -17,7 +17,7 @@ export default {
     [MultipleLangFileNameEunm.AboutUs]: "Về chúng tôi",
     [MultipleLangFileNameEunm.Sponsorship]: "Tài trợ cho một đội",
     [MultipleLangFileNameEunm.ContactUs]: "liên hệ chúng tôi",
-    [MultipleLangFileNameEunm.SupplierTips]: "Nhà cung cấp API thương mại điện tử một cửa được ưa chuộng trên thế giới",
+    [MultipleLangFileNameEunm.SupplierTips]: "Nhà cung cấp API  thương mại \n điện tử  một cửa được ưa chuộng trên thế giới",
     [MultipleLangFileNameEunm.PlatformAdvantages]: "Cực kỳ nhanh và ổn định, trải nghiệm nhập vai, trò chơi đa dạng, công bằng và chính đáng",
     [MultipleLangFileNameEunm.WholeTextBotton]: "Thử ngay bây giờ",
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: "Đối với mỗi trạm tổng hợp, trạm thể thao\n, trạm người thực và các trạm tiền mặt hoặc tín dụng khác, cung cấp dịch vụ nhà cung cấp trò chơi chuyên nghiệp một cửa hoàn chỉnh, hiệu quả và ổn định. ",

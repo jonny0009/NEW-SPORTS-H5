@@ -14,7 +14,7 @@ import {
     MultipleLangFileNameEunm,
     StorageLangNameEnum
 } from '@/model'
-import { debounce, throttle, isNil } from 'lodash'
+import { debounce, throttle, isNil, uniqueId } from 'lodash'
 import { Mousewheel, Autoplay } from 'swiper/modules'
 import { useAudioStatus, useSwiperStore } from '@/store'
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -33,6 +33,7 @@ const myRowSwiper = ref<any>(null)
 const myColumnSwiper = ref<any>(null)
 const navRef = ref<any>(null)
 const navHeadHeight = ref(0)
+const uniqueIdnumber = ref(uniqueId())
 const langOptions = ref(LanguageOptions)
 const eventBus = inject('eventBus')
 
@@ -188,7 +189,9 @@ const handleMovue = (event) => {
     }
 }
 
-const onTouchMove = debounce((event) => {
+const onTouchMove = (event) => {
+    console.log(1223123)
+    uniqueIdnumber.value = uniqueId()
     const { deltaY } = event
     const _index = myRowSwiper.value.activeIndex
     if ((_index === 5 && deltaY > 0) || (_index === 0 && deltaY < 0)) {
@@ -214,11 +217,12 @@ const onTouchMove = debounce((event) => {
         tabSelected.value = nextSwiper
         myRowSwiper.value.slideTo(nextIndex)
     }
-}, 50)
+}
 </script>
 <template>
-    <div @wheel.prevent="onTouchMove">
+    <div>
         <div class="nav-wrap" ref="navRef">
+            <span style="color: red">{{ tabSelected }}</span>
             <img
                 @click="onChangePage(tabsOptions?.logo?.key)"
                 src="@/assets/image/pc_logo.png"
@@ -282,15 +286,17 @@ const onTouchMove = debounce((event) => {
         <swiper
             class="swiperBox"
             :loop="false"
-            :mousewheel="true"
+            :mousewheel="false"
             @swiper="onRowSwiper"
             direction="vertical"
             :autoplay="false"
             :allow-touch-move="false"
+            :key="uniqueIdnumber"
+            @wheel.once="onTouchMove"
         >
             <swiper-slide
-                v-for="item in components"
                 :key="item.key"
+                v-for="item in components"
                 :data-extra-info="item.index"
             >
                 <swiper-slide v-if="!!item.children">

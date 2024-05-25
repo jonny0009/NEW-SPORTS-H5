@@ -17,7 +17,7 @@ export default {
     [MultipleLangFileNameEunm.AboutUs]: "เกี่ยวกับเรา",
     [MultipleLangFileNameEunm.Sponsorship]: "สปอนเซอร์ทีม",
     [MultipleLangFileNameEunm.ContactUs]: "ติดต่อเรา",
-    [MultipleLangFileNameEunm.SupplierTips]: "ผู้ให้บริการ API อีคอมเมิร์ซแบบครบวงจรที่เป็นที่ต้องการของโลก",
+    [MultipleLangFileNameEunm.SupplierTips]: "ผู้ให้บริการ API \nอีคอมเมิร์ซแบบครบวงจรที่เป็นที่ต้องการของโลก",
     [MultipleLangFileNameEunm.PlatformAdvantages]: "รวดเร็วและเสถียรอย่างยิ่ง ประสบการณ์ที่ดื่มด่ำ ความหลากหลายของเกม ความยุติธรรมและความยุติธรรม",
     [MultipleLangFileNameEunm.WholeTextBotton]: "ลองตอนนี้",
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: "ให้บริการซัพพลายเออร์เกมมืออาชีพครบวงจร มีประสิทธิภาพ และมีเสถียรภาพสำหรับสถานีครบวงจร สถานีกีฬา สถานีบุคคลจริง และสถานีเงินสดหรือเครดิตอื่น ๆ ",

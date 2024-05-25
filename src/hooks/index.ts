@@ -1,7 +1,7 @@
-import { LanguageOptions,MultipleLangEunm } from '@/model'
+import { LanguageOptions, MultipleLangEunm } from '@/model'
 
 //判断是否是移动端
-export const useMobile = () => { 
+export const useMobile = () => {
     const ua = navigator.userAgent
     const equipments =
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
@@ -10,8 +10,8 @@ export const useMobile = () => {
 
 
 //获取浏览器默认语言
-export const useLanguages = () => { 
+export const useLanguages = () => {
     const browserLang = navigator?.language && navigator?.language?.toLocaleLowerCase()
-    const systemLang =  LanguageOptions.find(item=> item.value === browserLang)
+    const systemLang = LanguageOptions.find(item => item.value.includes(browserLang))
     return systemLang?.value || MultipleLangEunm.US
 }

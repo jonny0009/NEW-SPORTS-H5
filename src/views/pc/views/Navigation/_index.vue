@@ -14,7 +14,7 @@ import {
     MultipleLangFileNameEunm,
     StorageLangNameEnum
 } from '@/model'
-import { debounce, throttle, isNil } from 'lodash'
+import { debounce, throttle, isNil, uniqueId } from 'lodash'
 import { Mousewheel, Autoplay } from 'swiper/modules'
 import { useAudioStatus, useSwiperStore } from '@/store'
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -26,15 +26,14 @@ import {
 
 import 'swiper/css'
 
-const noScroll = ref(false)
-const tabSelected = ref('')
+const tabSelected = ref(MultipleLangFileNameEunm.Logo)
 const LangSelected = ref('')
-const isMousewheel = ref(false)
 const swiperIndex = ref('') //用于执行动画特效
 const myRowSwiper = ref<any>(null)
 const myColumnSwiper = ref<any>(null)
 const navRef = ref<any>(null)
 const navHeadHeight = ref(0)
+const uniqueIdnumber = ref(uniqueId())
 const langOptions = ref(LanguageOptions)
 const eventBus = inject('eventBus')
 
@@ -61,7 +60,6 @@ const tabsOptions = computed(() => {
 const components = computed(() => {
     return useTabsOptions()?.list
 })
-
 //切换菜单
 const onChangePage = (value: string) => {
     if (!!value) {
@@ -87,7 +85,6 @@ const onChangePage = (value: string) => {
 }
 //切换swiper
 const slideWrapChange = (swiper: any) => {
-    console.log(swiper, 'swiper')
     const activeIndex = swiper.activeIndex
     const activeSlideEl = swiper.slides[activeIndex]
     const index = activeSlideEl.dataset.extraInfo
@@ -102,20 +99,7 @@ const slideWrapChange = (swiper: any) => {
     ) {
         myColumnSwiper.value.slideTo(0)
     }
-    store.onChangeSwiper(value)
-    if (
-        [
-            MultipleLangFileNameEunm.ProductAdvantages,
-            MultipleLangFileNameEunm.AboutUs,
-            MultipleLangFileNameEunm.Sponsorship
-        ].includes(value)
-    ) {
-        // myRowSwiper.value.mousewheel.disable()
-        // nextTick(() => {
-        //     // isMousewheel.value = false
-        //     myRowSwiper.value.mousewheel.disable()
-        // })
-    }
+    // store.onChangeSwiper(value)
 }
 
 const onColumnChangePage = (index: number) => {
@@ -142,6 +126,7 @@ const handleAudioChange = () => {
 
 //实例化
 const onRowSwiper = (swiper: any) => {
+    console.log(swiper, 'swiper')
     myRowSwiper.value = swiper
 }
 const onColumnSwiper = (swiper: any) => {
@@ -163,6 +148,8 @@ onMounted(() => {
     )
 })
 
+const noScroll = ref(false)
+
 const handleMovue = (event) => {
     if (noScroll.value) {
         return
@@ -174,11 +161,9 @@ const handleMovue = (event) => {
     const nextIndex = index ?? _index + (deltaY < 0 ? -1 : 1)
     const nextSwiper = tab ?? swiperIndexToTabs[nextIndex]
 
-    // console.log('onTouchMove', value, store.index, nextSwiper)
+    console.log('onTouchMove', value, store.index, nextSwiper)
     store.onChangeSwiper(swiperIndexToTabs[nextIndex])
     tabSelected.value = nextSwiper
-    // isMousewheel.value = true
-    // myRowSwiper.value.mousewheel.enable()
     if (nextSwiper === MultipleLangFileNameEunm.Sports) {
         onColumnChangePage(0)
     }
@@ -192,37 +177,22 @@ const handleMovue = (event) => {
         store.onChangeDealy(0.6)
         setTimeout(() => {
             myRowSwiper.value.slideTo(nextIndex)
-            // myRowSwiper.value.mousewheel.enable()
             nextTick(() => {
                 noScroll.value = false
             })
         }, 600)
     } else {
         myRowSwiper.value.slideTo(nextIndex)
-        // myRowSwiper.value.mousewheel.enable()
         nextTick(() => {
             noScroll.value = false
         })
     }
 }
 
-const onTouchMove = debounce((event) => {
-    event.preventDefault()
+const onTouchMove = (event) => {
+    console.log(1223123)
+    uniqueIdnumber.value = uniqueId()
     const { deltaY } = event
-
-    if (!myRowSwiper.value.mousewheel.enabled) {
-        return
-    }
-
-    // if (deltaY < 0) {
-    //     nextTick(() => {
-    //         // console.warn(myRowSwiper.value.mousewheel, 'store.isScollUp')
-    //         myRowSwiper.value.mousewheel.enable()
-    //     })
-    //     return
-    // }
-
-    // const { deltaY } = event
     const _index = myRowSwiper.value.activeIndex
     if ((_index === 5 && deltaY > 0) || (_index === 0 && deltaY < 0)) {
         return
@@ -236,143 +206,23 @@ const onTouchMove = debounce((event) => {
         ].includes(tab)
     ) {
         // dealyFn(event)
-
+        event.preventDefault()
         handleMovue(event)
     } else {
         const _index = myRowSwiper.value.activeIndex
+
         const nextIndex = _index + (deltaY < 0 ? -1 : 1)
         const nextSwiper = swiperIndexToTabs[nextIndex]
         store.onChangeSwiper(nextSwiper)
         tabSelected.value = nextSwiper
         myRowSwiper.value.slideTo(nextIndex)
     }
-}, 300)
-
-let wheelTimeout: any = null
-const isCurrentPage = computed(() => {
-    return [
-        MultipleLangFileNameEunm.ProductAdvantages,
-        MultipleLangFileNameEunm.AboutUs,
-        MultipleLangFileNameEunm.Sponsorship
-    ].includes(tabSelected.value)
-})
-
-// console.log(isCurrentPage, 'isCurrentPage')
-
-const hanleChange = (swiper) => {
-    const activeIndex = swiper.activeIndex
-    // const activeSlideEl = swiper.slides[activeIndex]
-    // const index = activeSlideEl.dataset.extraInfo
-    const value = swiperIndexToTabs[activeIndex]
-    console.log(value, 'value')
-    tabSelected.value = value
-}
-
-const handleWheel1 = (event) => {
-    // event.preventDefault()
-    // myRowSwiper.value.slideNext()
-    // myRowSwiper.value.slidePrev()
-    // myRowSwiper.value.mousewheel.enable()
-    // myRowSwiper.value.mousewheel.disable()
-    // const isNext = event.deltaY > 0
-    // console.log(event, 'event')
-
-    event?.preventDefault()
-
-    if (wheelTimeout !== null) {
-        return
-    }
-    myRowSwiper.value.mousewheel.disable()
-    wheelTimeout = setTimeout(() => {
-        const isNext = event.deltaY > 0
-        if (isNext) {
-            myRowSwiper.value.slideNext()
-        } else {
-            myRowSwiper.value.slidePrev()
-        }
-
-        myRowSwiper.value.mousewheel.enable()
-        // store.onChangeSwiper(swiperIndexToTabs[swiper.activeIndex])
-        clearTimeout(wheelTimeout)
-        wheelTimeout = null
-    }, 1000)
-}
-
-const onTouchChangeMove = (data) => {
-    if (
-        [
-            MultipleLangFileNameEunm.ProductAdvantages,
-            MultipleLangFileNameEunm.AboutUs,
-            MultipleLangFileNameEunm.Sponsorship
-        ].includes(tabSelected.value)
-    ) {
-        handleWheel(data)
-    } else {
-        hanleChange(data)
-    }
-}
-
-// watch(store, (newvalue) => {
-//     console.log(newvalue, 'newvalue')
-// })
-
-// const beforeSlideChangeStart = (swiper) => {
-//     console.log(swiper, 'swiper')
-//     myRowSwiper.value.mousewheel.disable()
-//     if (wheelTimeout !== null) {
-//         return
-//     }
-//     wheelTimeout = setTimeout(() => {
-//         // store.onChangeSwiper(swiperIndexToTabs[swiper.activeIndex])
-//         myRowSwiper.value.mousewheel.enable()
-//         store.onChangeSwiper(swiperIndexToTabs[swiper.activeIndex])
-//         clearTimeout(wheelTimeout)
-//         wheelTimeout = null
-//     }, 1000)
-// }
-
-// @wheel.prevent="onTouchMove"
-// @wheel.prevent="onTouchMove"
-
-const handleWheel = debounce((event) => {
-    // 防止默认的滚动行为
-    event.preventDefault()
-    const swiper = myRowSwiper.value
-
-    // 清除之前的延迟（如果有）
-    if (wheelTimeout !== null) {
-        clearTimeout(wheelTimeout)
-        wheelTimeout = null
-    }
-
-    // 向上滚动时，所有页面都不停留
-    if (event.deltaY < 0) {
-        swiper.slidePrev()
-        return
-    }
-
-    // 根据当前幻灯片决定是否延迟
-    const delayForCurrentSlide = shouldDelayForSlide(swiper.activeIndex)
-
-    // 如果需要延迟，使用 setTimeout
-    if (delayForCurrentSlide) {
-        wheelTimeout = setTimeout(() => {
-            swiper.slideNext()
-        }, 2000) // 延迟2秒
-    } else {
-        swiper.slideNext()
-    }
-}, 1000)
-
-// 根据幻灯片索引决定是否延迟
-const shouldDelayForSlide = (index) => {
-    // 假设我们只在第二个幻灯片上延迟
-    return index === 1
 }
 </script>
 <template>
-    <div class="wrap">
+    <div>
         <div class="nav-wrap" ref="navRef">
+            <span style="color: red">{{ tabSelected }}</span>
             <img
                 @click="onChangePage(tabsOptions?.logo?.key)"
                 src="@/assets/image/pc_logo.png"
@@ -433,36 +283,22 @@ const shouldDelayForSlide = (index) => {
         <!-- :modules="[Mousewheel]" -->
 
         <!-- @slideChange="slideWrapChange" -->
-
-        <!-- :allow-touch-move="false" -->
-        <!-- @slideChange="slideWrapChange" -->
-
-        <!-- @slideChange="slideWrapChange" -->
-
-        <!-- @wheel.prevent="handleWheel" -->
-
-        <!-- @slideChange="slideWrapChange" -->
-        <!-- {
-                thresholdTime: 30
-            } -->
-
         <swiper
             class="swiperBox"
             :loop="false"
-            :speed="1000"
-            :mousewheel="true"
+            :mousewheel="false"
             @swiper="onRowSwiper"
             direction="vertical"
             :autoplay="false"
-            :modules="[Mousewheel]"
-            @slideChange="slideWrapChange"
+            :allow-touch-move="false"
+            :key="uniqueIdnumber"
+            @wheel.once="onTouchMove"
         >
             <swiper-slide
-                v-for="item in components"
                 :key="item.key"
+                v-for="item in components"
                 :data-extra-info="item.index"
             >
-                <span style="color: red">{{ isCurrentPage }}</span>
                 <swiper-slide v-if="!!item.children">
                     <swiper
                         class="swiperBox"
@@ -484,7 +320,6 @@ const shouldDelayForSlide = (index) => {
                         </swiper-slide>
                     </swiper>
                 </swiper-slide>
-
                 <component
                     class="swiper-slide-item"
                     :is="item.component"
@@ -498,10 +333,6 @@ const shouldDelayForSlide = (index) => {
 </template>
 
 <style lang="less" scoped>
-.wrap {
-    height: 100vh;
-    overflow-y: hidden;
-}
 .audio-logo-box {
     position: fixed;
     top: 100px;
@@ -576,5 +407,12 @@ const shouldDelayForSlide = (index) => {
 
 :deep(.el-dropdown-menu__item) {
     background: none !important;
+}
+
+:deep(.tab-item) {
+    font-weight: 600;
+}
+:deep(.tab-item:hover) {
+    color: #ff8727;
 }
 </style>

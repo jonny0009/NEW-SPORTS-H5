@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import VideoBackGroundPc from '@/components/VideoBackGroundPc.vue';
+import VideoBackGroundPc from '@/components/VideoBackGroundPc.vue'
 
 import logoURL from '@/assets/image/sport_logo.png'
 import videoURL from '@/assets/video/sp_part_01.mp4'
@@ -64,7 +64,7 @@ import {
     }
 }
 .sp-content {
-    width: 576px;
+    // width: 576px;
     display: flex;
     text-align: center;
     align-items: center;
@@ -76,6 +76,7 @@ import {
     line-height: 60px;
     color: #ff8727;
     margin-top: 27px;
+    white-space: pre-wrap;
 }
 .sp-platform-advantages {
     line-height: 20px;

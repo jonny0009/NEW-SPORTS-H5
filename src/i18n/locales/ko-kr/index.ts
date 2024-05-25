@@ -17,7 +17,7 @@ export default {
     [MultipleLangFileNameEunm.AboutUs]: "회사 소개",
     [MultipleLangFileNameEunm.Sponsorship]: "팀 후원",
     [MultipleLangFileNameEunm.ContactUs]: "문의하기",
-    [MultipleLangFileNameEunm.SupplierTips]: "세계에서 가장 선호하는 원스톱 전자상거래 API 제공업체",
+    [MultipleLangFileNameEunm.SupplierTips]: "세계에서 가장 선호하는 \n 원스톱 전자상거래 API 제공업체",
     [MultipleLangFileNameEunm.PlatformAdvantages]: "매우 빠르고 안정적이며 몰입감 넘치는 경험, 게임 다양성, 공정성 및 정의",
     [MultipleLangFileNameEunm.WholeTextBotton]: "지금 사용해 보세요",
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: "종합역, 스포츠역마다\n, 실제 스테이션 및 기타 현금 또는 신용 스테이션을 통해 완전하고 효율적이며 안정적인 원스톱 전문 게임 공급업체 서비스를 제공합니다. ",

@@ -17,7 +17,7 @@ export default {
     [MultipleLangFileNameEunm.AboutUs]: "sobre nosotros",
     [MultipleLangFileNameEunm.Sponsorship]: "Patrocinar un equipo",
     [MultipleLangFileNameEunm.ContactUs]: "Contáctenos",
-    [MultipleLangFileNameEunm.SupplierTips]: "El proveedor de API de comercio electrónico integral preferido del mundo",
+    [MultipleLangFileNameEunm.SupplierTips]: "El proveedor de API \nde comercio electrónico integral preferido del mundo",
     [MultipleLangFileNameEunm.PlatformAdvantages]: "Experiencia inmersiva extremadamente rápida y estable, diversidad de juegos, equidad y justicia.",
     [MultipleLangFileNameEunm.WholeTextBotton]: "Pruebalo ahora",
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: "Proporcionar servicios completos, eficientes y estables de proveedores de juegos profesionales integrales para cada estación integral, estación de deportes, estación de persona real y otras estaciones de efectivo o crédito.",

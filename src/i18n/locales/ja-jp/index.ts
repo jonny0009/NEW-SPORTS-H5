@@ -17,7 +17,7 @@ export default {
     [MultipleLangFileNameEunm.AboutUs]: "私たちについて",
     [MultipleLangFileNameEunm.Sponsorship]: "チームを後援",
     [MultipleLangFileNameEunm.ContactUs]: "お問い合わせ",
-    [MultipleLangFileNameEunm.SupplierTips]: "世界で選ばれるワンストップ e コマース API プロバイダー",
+    [MultipleLangFileNameEunm.SupplierTips]: "世界で選ばれるワ\nンストップ e コマース API プロバイダー",
     [MultipleLangFileNameEunm.PlatformAdvantages]: "非常に高速で安定した、没入型のエクスペリエンス、ゲームの多様性、公平性と正義",
     [MultipleLangFileNameEunm.WholeTextBotton]: "やってみよう",
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: "「あらゆる総合ステーション、スポーツステーション、実在の人物ステーション、その他の現金またはクレジットステーションに、完全で効率的かつ安定したワンストップのプロゲームサプライヤーサービスを提供します。」",
