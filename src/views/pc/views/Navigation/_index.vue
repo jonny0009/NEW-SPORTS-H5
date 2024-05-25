@@ -27,7 +27,7 @@ import {
 import 'swiper/css'
 
 const noScroll = ref(false)
-const tabSelected = ref(MultipleLangFileNameEunm.Logo)
+const tabSelected = ref('')
 const LangSelected = ref('')
 const isMousewheel = ref(false)
 const swiperIndex = ref('') //用于执行动画特效
@@ -110,10 +110,11 @@ const slideWrapChange = (swiper: any) => {
             MultipleLangFileNameEunm.Sponsorship
         ].includes(value)
     ) {
-        nextTick(() => {
-            // isMousewheel.value = false
-            myRowSwiper.value.mousewheel.disable()
-        })
+        // myRowSwiper.value.mousewheel.disable()
+        // nextTick(() => {
+        //     // isMousewheel.value = false
+        //     myRowSwiper.value.mousewheel.disable()
+        // })
     }
 }
 
@@ -191,7 +192,7 @@ const handleMovue = (event) => {
         store.onChangeDealy(0.6)
         setTimeout(() => {
             myRowSwiper.value.slideTo(nextIndex)
-            myRowSwiper.value.mousewheel.enable()
+            // myRowSwiper.value.mousewheel.enable()
             nextTick(() => {
                 noScroll.value = false
             })
@@ -206,19 +207,20 @@ const handleMovue = (event) => {
 }
 
 const onTouchMove = debounce((event) => {
+    event.preventDefault()
     const { deltaY } = event
 
-    if (myRowSwiper.value.mousewheel.enabled) {
+    if (!myRowSwiper.value.mousewheel.enabled) {
         return
     }
 
-    if (deltaY < 0) {
-        nextTick(() => {
-            // console.warn(myRowSwiper.value.mousewheel, 'store.isScollUp')
-            myRowSwiper.value.mousewheel.enable()
-        })
-        return
-    }
+    // if (deltaY < 0) {
+    //     nextTick(() => {
+    //         // console.warn(myRowSwiper.value.mousewheel, 'store.isScollUp')
+    //         myRowSwiper.value.mousewheel.enable()
+    //     })
+    //     return
+    // }
 
     // const { deltaY } = event
     const _index = myRowSwiper.value.activeIndex
@@ -234,7 +236,7 @@ const onTouchMove = debounce((event) => {
         ].includes(tab)
     ) {
         // dealyFn(event)
-        event.preventDefault()
+
         handleMovue(event)
     } else {
         const _index = myRowSwiper.value.activeIndex
@@ -243,51 +245,133 @@ const onTouchMove = debounce((event) => {
         store.onChangeSwiper(nextSwiper)
         tabSelected.value = nextSwiper
         myRowSwiper.value.slideTo(nextIndex)
-        myRowSwiper.value.mousewheel.enable()
     }
 }, 300)
 
 let wheelTimeout: any = null
+const isCurrentPage = computed(() => {
+    return [
+        MultipleLangFileNameEunm.ProductAdvantages,
+        MultipleLangFileNameEunm.AboutUs,
+        MultipleLangFileNameEunm.Sponsorship
+    ].includes(tabSelected.value)
+})
 
-const handleWheel = debounce((event) => {
-    const isNext = event.deltaY > 0
+// console.log(isCurrentPage, 'isCurrentPage')
 
-    myRowSwiper.value.mousewheel.disable()
-    if (isNext) {
-    }
+const hanleChange = (swiper) => {
+    const activeIndex = swiper.activeIndex
+    // const activeSlideEl = swiper.slides[activeIndex]
+    // const index = activeSlideEl.dataset.extraInfo
+    const value = swiperIndexToTabs[activeIndex]
+    console.log(value, 'value')
+    tabSelected.value = value
+}
 
-    event.preventDefault()
+const handleWheel1 = (event) => {
+    // event.preventDefault()
+    // myRowSwiper.value.slideNext()
+    // myRowSwiper.value.slidePrev()
+    // myRowSwiper.value.mousewheel.enable()
+    // myRowSwiper.value.mousewheel.disable()
+    // const isNext = event.deltaY > 0
+    // console.log(event, 'event')
+
+    event?.preventDefault()
+
     if (wheelTimeout !== null) {
-        // clearTimeout(wheelTimeout)
-
         return
     }
-    // console.log(myRowSwiper.value.slidePrev, 'wheelTimeout')
-    // myRowSwiper.value.mousewheel.disable()
-    if (isNext) {
-        myRowSwiper.value.slideNext()
+    myRowSwiper.value.mousewheel.disable()
+    wheelTimeout = setTimeout(() => {
+        const isNext = event.deltaY > 0
+        if (isNext) {
+            myRowSwiper.value.slideNext()
+        } else {
+            myRowSwiper.value.slidePrev()
+        }
+
+        myRowSwiper.value.mousewheel.enable()
+        // store.onChangeSwiper(swiperIndexToTabs[swiper.activeIndex])
+        clearTimeout(wheelTimeout)
+        wheelTimeout = null
+    }, 1000)
+}
+
+const onTouchChangeMove = (data) => {
+    if (
+        [
+            MultipleLangFileNameEunm.ProductAdvantages,
+            MultipleLangFileNameEunm.AboutUs,
+            MultipleLangFileNameEunm.Sponsorship
+        ].includes(tabSelected.value)
+    ) {
+        handleWheel(data)
     } else {
-        myRowSwiper.value.slidePrev()
+        hanleChange(data)
+    }
+}
+
+// watch(store, (newvalue) => {
+//     console.log(newvalue, 'newvalue')
+// })
+
+// const beforeSlideChangeStart = (swiper) => {
+//     console.log(swiper, 'swiper')
+//     myRowSwiper.value.mousewheel.disable()
+//     if (wheelTimeout !== null) {
+//         return
+//     }
+//     wheelTimeout = setTimeout(() => {
+//         // store.onChangeSwiper(swiperIndexToTabs[swiper.activeIndex])
+//         myRowSwiper.value.mousewheel.enable()
+//         store.onChangeSwiper(swiperIndexToTabs[swiper.activeIndex])
+//         clearTimeout(wheelTimeout)
+//         wheelTimeout = null
+//     }, 1000)
+// }
+
+// @wheel.prevent="onTouchMove"
+// @wheel.prevent="onTouchMove"
+
+const handleWheel = debounce((event) => {
+    // 防止默认的滚动行为
+    event.preventDefault()
+    const swiper = myRowSwiper.value
+
+    // 清除之前的延迟（如果有）
+    if (wheelTimeout !== null) {
+        clearTimeout(wheelTimeout)
+        wheelTimeout = null
     }
 
-    // wheelTimeout = setTimeout(() => {
-    //     const isNext = event.deltaY > 0
-    //     if (isNext) {
-    //         myRowSwiper.value.slideNext()
-    //     } else {
-    //         myRowSwiper.value.slidePrev()
-    //     }
-    //     wheelTimeout = null
+    // 向上滚动时，所有页面都不停留
+    if (event.deltaY < 0) {
+        swiper.slidePrev()
+        return
+    }
 
-    //     myRowSwiper.value.mousewheel.enable()
-    // }, 1000)
-}, 30)
+    // 根据当前幻灯片决定是否延迟
+    const delayForCurrentSlide = shouldDelayForSlide(swiper.activeIndex)
 
-// @wheel.prevent="onTouchMove"
-// @wheel.prevent="onTouchMove"
+    // 如果需要延迟，使用 setTimeout
+    if (delayForCurrentSlide) {
+        wheelTimeout = setTimeout(() => {
+            swiper.slideNext()
+        }, 2000) // 延迟2秒
+    } else {
+        swiper.slideNext()
+    }
+}, 1000)
+
+// 根据幻灯片索引决定是否延迟
+const shouldDelayForSlide = (index) => {
+    // 假设我们只在第二个幻灯片上延迟
+    return index === 1
+}
 </script>
 <template>
-    <div class="wrap" @wheel.prevent="onTouchMove">
+    <div class="wrap">
         <div class="nav-wrap" ref="navRef">
             <img
                 @click="onChangePage(tabsOptions?.logo?.key)"
@@ -353,23 +437,32 @@ const handleWheel = debounce((event) => {
         <!-- :allow-touch-move="false" -->
         <!-- @slideChange="slideWrapChange" -->
 
+        <!-- @slideChange="slideWrapChange" -->
+
         <!-- @wheel.prevent="handleWheel" -->
 
         <!-- @slideChange="slideWrapChange" -->
+        <!-- {
+                thresholdTime: 30
+            } -->
+
         <swiper
             class="swiperBox"
             :loop="false"
-            :mousewheel="false"
+            :speed="1000"
+            :mousewheel="true"
             @swiper="onRowSwiper"
             direction="vertical"
             :autoplay="false"
             :modules="[Mousewheel]"
+            @slideChange="slideWrapChange"
         >
             <swiper-slide
                 v-for="item in components"
                 :key="item.key"
                 :data-extra-info="item.index"
             >
+                <span style="color: red">{{ isCurrentPage }}</span>
                 <swiper-slide v-if="!!item.children">
                     <swiper
                         class="swiperBox"
@@ -391,6 +484,7 @@ const handleWheel = debounce((event) => {
                         </swiper-slide>
                     </swiper>
                 </swiper-slide>
+
                 <component
                     class="swiper-slide-item"
                     :is="item.component"
