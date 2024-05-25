@@ -14,7 +14,6 @@ const props = defineProps(['paddingTop'])
 const store = useSwiperStore()
 const isAnimated = computed(() => store.index === SwiperActiveIndex.AboutUs)
 // const noAnimate = computed(() => store.noAnimate)
-// console.log(noAnimate, 'noAnimate')
 </script>
 
 <template>

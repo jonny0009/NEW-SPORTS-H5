@@ -125,7 +125,6 @@ const handleAudioChange = () => {
 
 //实例化
 const onRowSwiper = (swiper: any) => {
-    console.log(swiper, 'swiper')
     myRowSwiper.value = swiper
 }
 const onColumnSwiper = (swiper: any) => {
@@ -160,7 +159,6 @@ const handleMovue = (event) => {
     const nextIndex = index ?? _index + (deltaY < 0 ? -1 : 1)
     const nextSwiper = tab ?? swiperIndexToTabs[nextIndex]
 
-    console.log('onTouchMove', value, store.index, nextSwiper)
     store.onChangeSwiper(swiperIndexToTabs[nextIndex])
     deltaY < 0 && store.onChangeAnimate(true)
     tabSelected.value = nextSwiper
@@ -176,11 +174,12 @@ const handleMovue = (event) => {
         ].includes(value)
     ) {
         store.onChangeDealy(0.6)
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             myRowSwiper.value.slideTo(nextIndex, 100)
             nextTick(() => {
                 noScroll.value = false
             })
+            clearTimeout(timer)
         }, 600)
     } else {
         myRowSwiper.value.slideTo(nextIndex, 100)
