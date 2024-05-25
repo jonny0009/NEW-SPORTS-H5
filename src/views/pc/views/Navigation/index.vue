@@ -175,13 +175,13 @@ const handleMovue = (event) => {
     ) {
         store.onChangeDealy(0.6)
         setTimeout(() => {
-            myRowSwiper.value.slideTo(nextIndex)
+            myRowSwiper.value.slideTo(nextIndex, 100)
             nextTick(() => {
                 noScroll.value = false
             })
         }, 600)
     } else {
-        myRowSwiper.value.slideTo(nextIndex)
+        myRowSwiper.value.slideTo(nextIndex, 100)
         nextTick(() => {
             noScroll.value = false
         })
@@ -212,7 +212,7 @@ const onTouchMove = debounce((event) => {
         const nextSwiper = swiperIndexToTabs[nextIndex]
         store.onChangeSwiper(nextSwiper)
         tabSelected.value = nextSwiper
-        myRowSwiper.value.slideTo(nextIndex)
+        myRowSwiper.value.slideTo(nextIndex, 100)
     }
 }, 50)
 </script>
