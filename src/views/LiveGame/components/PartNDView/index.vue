@@ -1,4 +1,5 @@
 <script  lang="ts" setup>
+import gifURL from '@/assets/video/lg_part_01.gif'
 import videoURL from '@/assets/video/lg_part_01.mp4'
 import videoBGURL from '@/assets/video/lg_part_bg_01.jpg'
 import {
@@ -12,7 +13,8 @@ import ContentView from './ContentView.vue'
 <template>
     <div>
         <video-back-ground
-            :src="videoURL"
+            :src="gifURL"
+            :videoSrc="videoURL"
             :image="videoBGURL"
             :type="MultipleLangFileNameEunm.LiveGame"
             :mask="VideoMaskEnum.Both"

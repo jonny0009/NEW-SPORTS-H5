@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import VideoBackGroundPc from '@/components/VideoBackGroundPc.vue';
+
 import logoURL from '@/assets/image/sport_logo.png'
 import videoURL from '@/assets/video/sp_part_01.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_01.jpg'
@@ -11,7 +13,7 @@ import {
 } from '@/model'
 </script>
 <template>
-    <video-back-ground
+    <video-back-ground-pc
         :type="MultipleLangFileNameEunm.Logo"
         :src="videoURL"
         :image="videoBGURL"
@@ -38,7 +40,7 @@ import {
                 </div>
             </div>
         </div>
-    </video-back-ground>
+    </video-back-ground-pc>
 </template>
 
 <style lang="less" scoped>
