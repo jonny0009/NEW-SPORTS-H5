@@ -46,7 +46,7 @@ export default {
     [MultipleLangFileNameEunm.LiveBroadcastOfTheGameByAnchorContent]: "専門的なスキルを習得し、熱心に対話的に説明し、まずはあなたのニーズに応えるために注意深く話を聞いてください。 プロフェッショナルで、熱心で、面白く、思いやりのあるライブ ストリーミング体験をお楽しみいただけます。",
     [MultipleLangFileNameEunm.OurGamesAndProducts]: "ゲーム製品",
     [MultipleLangFileNameEunm.ManBetXSport]: "マンベットXスポーツ",
-    [MultipleLangFileNameEunm.OurGamesAndProductsTips]: "水位は高く、ゲームプレイは多様で、ライブブロードキャストはレベル 3 より上のリーグをカバーしています",
+    [MultipleLangFileNameEunm.OurGamesAndProductsTips]: "水位は高く、ゲームプレイは多様で、\nライブブロードキャストはレベル 3 より上のリーグをカバーしています",
     [MultipleLangFileNameEunm.OurGamesAndProductsContent]: "毎日2,000以上の世界的なスポーツイベントを提供し、最高のオッズと早期決済と早期利益を提供します。試合中のリアルタイムでの試合状況を把握するためのライブブロードキャストアンカー配信サービスと、強化するためのマーチャントデータサポート。競争力。",
     [MultipleLangFileNameEunm.HighGamesCoverage]: "超充実イベント",
     [MultipleLangFileNameEunm.MultiapplicationTerminal]: "マルチアプリケーション端末",
