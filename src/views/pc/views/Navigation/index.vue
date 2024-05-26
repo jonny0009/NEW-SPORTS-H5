@@ -61,7 +61,7 @@ const components = computed(() => {
 })
 //切换菜单
 const onChangePage = (value: string) => {
-    if (!!value) {
+    if (!!value && !noScroll.value) {
         tabSelected.value = value
         let val = value
 
