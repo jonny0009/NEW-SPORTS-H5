@@ -6,7 +6,7 @@ import {
     BottonLinkType
 } from '@/model'
 import gifURL from '@/assets/video/spon_part_01.gif'
-import videoURL from '@/assets/video/spon_part_01.mp4'
+import videoURL from '@/assets/video/spon_part_01.mp3'
 import videoBGURL from '@/assets/video/span_part_bg_01.jpg'
 
 import ContentView from './components/ContentView.vue'
