@@ -1,5 +1,5 @@
 <script  lang="ts" setup>
-import VideoBackGroundPc from '@/components/VideoBackGroundPc.vue';
+import VideoBackGroundPc from '@/components/VideoBackGroundPc.vue'
 
 import videoURL from '@/assets/video/sp_part_02.mp4'
 import videoBGURL from '@/assets/video/lg_part_bg_01.jpg'
@@ -103,13 +103,14 @@ const onChangeTab = (index: number) => {
     font-weight: 600;
     text-align: center;
     font-style: italic;
+    white-space: pre-wrap;
 }
 
 .lg-nd-text {
     display: block;
     font-size: 16px;
     color: #ffffff;
-    margin-top: 5px;
+    margin-top: 10px;
     line-height: 25px;
     margin-bottom: 50px;
 }

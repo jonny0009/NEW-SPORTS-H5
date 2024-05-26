@@ -23,7 +23,7 @@ export default {
     [MultipleLangFileNameEunm.Cooperation]: '',
     [MultipleLangFileNameEunm.ContactUs]: 'Contact us',
 
-    [MultipleLangFileNameEunm.SupplierTips]: "The world's preferred \n one-stop API provider",
+    [MultipleLangFileNameEunm.SupplierTips]: "The world's preferred \none-stop API provider",
     [MultipleLangFileNameEunm.PlatformAdvantages]: 'Extremely fast and stable, immersive experience, diverse games, fair and just',
     [MultipleLangFileNameEunm.ProductAdvantagesTips]: 'For every comprehensive station, sports station, real-person stations and other cash or credit stations, providing complete, efficient and stable one-stop professional game supplier services. ',
     [MultipleLangFileNameEunm.ExtremelyFastExperience]: 'Extremely fast experience',
@@ -60,7 +60,7 @@ export default {
     [MultipleLangFileNameEunm.OurGamesAndProducts]: "Game products",
 
     [MultipleLangFileNameEunm.ManBetXSport]: "ManBetX Sports",
-    [MultipleLangFileNameEunm.OurGamesAndProductsTips]: "The water level is high, the gameplay is diverse, and the live broadcast covers leagues above level 3",
+    [MultipleLangFileNameEunm.OurGamesAndProductsTips]: "The water level is high, \nthe gameplay is diverse,and the live broadcast covers leagues above level 3",
     [MultipleLangFileNameEunm.OurGamesAndProductsContent]: "Provide 2,000+ global sports events every day, with the best odds and the ultimate experience; early settlement and early profits; data analysis to grasp the game situation in real time; live broadcast anchor delivery service during the game, and merchant data support to enhance competitiveness.",
     [MultipleLangFileNameEunm.HighGamesCoverage]: "Super full event",
     [MultipleLangFileNameEunm.MultiapplicationTerminal]: "Multi-application terminal",
@@ -73,7 +73,7 @@ export default {
 
 
     [MultipleLangFileNameEunm.ManBetXRealPerson]: "ManBetX Live",
-    [MultipleLangFileNameEunm.OurGamesAndProductsPersonTips]: "Celebrities and beauties interact with each other, and the unique microphone brand makes the heart beat faster",
+    [MultipleLangFileNameEunm.OurGamesAndProductsPersonTips]: "Celebrities and beauties interact with each other, \nand the unique microphone brand makes the heart beat faster",
     [MultipleLangFileNameEunm.OurGamesAndProductsPersonContent]: "ManBetX real person has a strong background and strong strength, providing unlimited tables every day; blockchain licensing, fair, open and just; 24-hour beautiful anchor chatting on the mic, immersive microphone experience, let your adrenaline surge; for users Create a top anchor video entertainment platform.",
     [MultipleLangFileNameEunm.Fair0penAndJust]: "fair, open and just",
     [MultipleLangFileNameEunm.RapidBettingInMilliseconds]: "Extremely fast betting in milliseconds",
