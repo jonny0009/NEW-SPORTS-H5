@@ -16,7 +16,6 @@ export default defineComponent({
         const clientHeight = ref(0)
         const audio = useAudioStatus()
         const videoRef = ref(null)
-        const init = ref(0);
         const timer = ref(0)
         const timerId = ref(0)
         const duration = ref(0)
@@ -61,7 +60,6 @@ export default defineComponent({
       timer,
       timerId,
       duration,
-      init,
       videoSrc,
       startTimer,
       cancelTimer,
@@ -94,11 +92,9 @@ export default defineComponent({
     },
     handleInit() {
       this.duration = this.audioRef.duration * 1000;
-      this.init += 1;
-      if (this.init >= 2 && this.type === MultipleLangFileNameEunm.Logo) {
-        this.startTimer();
+      if (this.type === MultipleLangFileNameEunm.Logo) {
+        this.isPlay  = true
       }
-      console.log(this.duration);
     },
     handleLoad() {
       this.startTimer();
