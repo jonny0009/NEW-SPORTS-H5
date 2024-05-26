@@ -70,7 +70,7 @@ export default defineComponent({
   methods: {
     handlePlay(page, isReload = true) {
       if (!isReload) {
-        if (this.audio.status && this.isPlay && page === this.type) {
+        if (this.audio.status && this.isPlay && this.isRelPlay && page === this.type) {
           console.log("handlePlay", this.timer);
           this.audioRef.currentTime = this.timer / 1000;
           this.audioRef?.play();
