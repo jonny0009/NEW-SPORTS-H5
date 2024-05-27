@@ -1,5 +1,4 @@
 <script  lang="ts" setup>
-import VideoBackGroundPc from '@/components/VideoBackGroundPc.vue'
 
 import videoURL from '@/assets/video/lg_part_01.mp4'
 import videoBGURL from '@/assets/video/lg_part_bg_01.jpg'
@@ -22,7 +21,7 @@ const onChangeTab = (index: number) => {
 
 <template>
     <div>
-        <video-back-ground-pc
+        <video-back-ground
             :type="MultipleLangFileNameEunm.LiveGame"
             :src="videoURL"
             :image="videoBGURL"
@@ -73,7 +72,7 @@ const onChangeTab = (index: number) => {
                     <div class="lg-nd-container-bottom"></div>
                 </div>
             </div>
-        </video-back-ground-pc>
+        </video-back-ground>
     </div>
 </template>
 
