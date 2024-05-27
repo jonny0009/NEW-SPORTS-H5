@@ -19,7 +19,7 @@ const isAnimate = computed(() => store.index === SwiperActiveIndex.Sponsorship)
 
 <template>
     <div>
-        <video-back-ground-pc
+        <video-back-ground
             :type="MultipleLangFileNameEunm.Sponsorship"
             :src="videoURL"
             :image="videoBGURL"
@@ -60,7 +60,7 @@ const isAnimate = computed(() => store.index === SwiperActiveIndex.Sponsorship)
                     </div>
                 </div>
             </div>
-        </video-back-ground-pc>
+        </video-back-ground>
     </div>
 </template>
 

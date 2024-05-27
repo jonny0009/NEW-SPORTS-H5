@@ -1,5 +1,4 @@
 <script  lang="ts" setup>
-import VideoBackGroundPc from '@/components/VideoBackGroundPc.vue'
 
 import { defineProps, computed } from 'vue'
 import {
@@ -25,7 +24,7 @@ const isScollUp = computed(() => store.isScollUp)
 
 
 <template>
-    <video-back-ground-pc
+    <video-back-ground
         :type="MultipleLangFileNameEunm.ProductAdvantages"
         :src="videoURL"
         :image="videoBGURL"
@@ -81,7 +80,7 @@ const isScollUp = computed(() => store.isScollUp)
                 </van-row>
             </div>
         </div>
-    </video-back-ground-pc>
+    </video-back-ground>
 </template>
 
 <style scoped lang="less">

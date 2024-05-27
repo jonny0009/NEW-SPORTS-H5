@@ -36,6 +36,7 @@ import {
     inject
 } from 'vue'
 import $ from 'jquery'
+import { getShowVideo } from "@/utils/system";
 import { throttle, get } from 'lodash'
 import { useAudioStatus } from '@/store'
 
@@ -43,6 +44,7 @@ export default defineComponent({
     name: 'Navigation',
     setup() {
         const { locale } = useI18n()
+        const showVidoe = ref(false);
         const { proxy } = getCurrentInstance() as any
 
         const audio = useAudioStatus()
@@ -99,6 +101,7 @@ export default defineComponent({
             tabSelected,
             tabScrollTop,
             showPicker,
+            showVidoe,
 
             TAB_BACK_GROUND,
             TITLE_ACTIVE_COLOR,
@@ -124,6 +127,8 @@ export default defineComponent({
         //     this.onScrollTab();
         //   }, 50)
         // );
+        const res = getShowVideo();
+        this.showVidoe = res.show;
         window.addEventListener(
             'scroll',
             throttle((event) => {
@@ -217,7 +222,7 @@ export default defineComponent({
             </van-row>
         </div>
 
-        <div @click="handleAudioChange" class="audio-logo-box">
+        <div v-if="showVidoe" @click="handleAudioChange" class="audio-logo-box">
             <img
                 v-if="audio.status"
                 src="@/assets/image/audio_open_icon.png"
