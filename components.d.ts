@@ -24,6 +24,5 @@ declare module 'vue' {
     VanTab: typeof import('vant/es')['Tab']
     VanTabs: typeof import('vant/es')['Tabs']
     VideoBackGround: typeof import('./src/components/VideoBackGround.vue')['default']
-    VideoBackGroundPc: typeof import('./src/components/VideoBackGroundPc.vue')['default']
   }
 }
