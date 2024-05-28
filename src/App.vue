@@ -13,7 +13,7 @@ const initFavicon = () => {
     const link: any =
         document.querySelector("link[rel*='icon']") ||
         document.createElement('link')
-    link.type = 'image/x-icon'
+    link.type = 'image/png/svg'
     link.rel = 'shortcut icon'
     link.href = relIcon
     // 将 link 元素添加到 head 中

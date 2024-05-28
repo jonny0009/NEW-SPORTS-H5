@@ -3,6 +3,7 @@
 import logoURL from '@/assets/image/sport_logo.png'
 import videoURL from '@/assets/video/sp_part_01.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_01.jpg'
+import posterImage from '@/assets/video/span_part_01_h5.jpg'
 import {
     MultipleLangFileNameEunm,
     VideoMaskEnum,
@@ -17,6 +18,7 @@ import {
             :src="videoURL"
             :image="videoBGURL"
             picture
+            :posterImage="posterImage"
             :type="MultipleLangFileNameEunm.Logo"
             :mask="VideoMaskEnum.Bottom"
         >

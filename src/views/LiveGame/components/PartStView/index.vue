@@ -2,6 +2,7 @@
 <script  lang="ts" setup>
 import videoURL from '@/assets/video/sp_part_02.mp4'
 import videoBGURL from '@/assets/video/sp_part_bg_02.jpg'
+import posterImage from '@/assets/video/sp_part_02_h5.jpg'
 import {
     MultipleLangFileNameEunm,
     VideoMaskEnum,
@@ -16,6 +17,7 @@ import ContentView from './ContentView.vue'
         <video-back-ground
             :src="videoURL"
             :image="videoBGURL"
+            :posterImage="posterImage"
             :type="MultipleLangFileNameEunm.Sports"
             :mask="VideoMaskEnum.Both"
         >

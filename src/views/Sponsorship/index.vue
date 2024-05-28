@@ -7,6 +7,7 @@ import {
 } from '@/model'
 import videoURL from '@/assets/video/spon_part_01.mp4'
 import videoBGURL from '@/assets/video/span_part_bg_01.jpg'
+import posterImage from '@/assets/video/spon_part_01_h5.jpg'
 
 import ContentView from './components/ContentView.vue'
 </script>
@@ -16,6 +17,7 @@ import ContentView from './components/ContentView.vue'
         <video-back-ground
             :src="videoURL"
             :image="videoBGURL"
+            :posterImage="posterImage"
             :type="MultipleLangFileNameEunm.Sponsorship"
             :mask="VideoMaskEnum.Both"
         >
