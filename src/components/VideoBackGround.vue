@@ -80,7 +80,7 @@ export default defineComponent({
 
 <template>
     <div class="video-background" :style="{ background: linearGradient }">
-        <!-- <video
+        <video
             ref="videoRef"
             preload="auto"
             v-if="showVidoe"
@@ -92,9 +92,8 @@ export default defineComponent({
             class="video-element"
             :poster="image"
             :src="src"
-        ></video> -->
-        <!-- <img v-else class="video-element" :src="posterImage" /> -->
-        <img class="video-element" :src="posterImage" />
+        ></video>
+        <img v-else class="video-element" :src="posterImage" />
         <!-- 页面其他内容 -->
         <div class="content">
             <slot></slot>
