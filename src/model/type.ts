@@ -29,6 +29,13 @@ export const BottonLinkSource: { [key in BottonLinkType]: string } = {
     // [BottonLinkType.Casino]: 'https://play.manbet-x.com/home'
 }
 
+export const BottonLinkSourcePc: { [key in BottonLinkType]: string } = {
+    [BottonLinkType.Home]: 'http://cn2.new-sports-pc.aisports.io/home',
+    [BottonLinkType.Casino]: 'http://cn2.new-sports-pc.aisports.io/casino'
+    // [BottonLinkType.Home]: 'https://play.manbet-x.com/home',
+    // [BottonLinkType.Casino]: 'https://play.manbet-x.com/home'
+}
+
 export const ContactInformationOptions = [
     { value: 1, text: ContactInformation.Telegram },
     { value: 4, text: ContactInformation.Email },

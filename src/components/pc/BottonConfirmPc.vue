@@ -4,7 +4,7 @@ import { useLanguages } from '@/hooks'
 import { getStore } from '@/config/storage'
 import {
     BottonSize,
-    BottonLinkSource,
+    BottonLinkSourcePc,
     BottonLinkType,
     StorageLangNameEnum
 } from '@/model'
@@ -44,7 +44,7 @@ const textStyle = selected ? 'botton-selected-text' : ''
 const imgUrl = ref(urlSource)
 
 const onJump = () => {
-    const source = BottonLinkSource[link as BottonLinkType]
+    const source = BottonLinkSourcePc[link as BottonLinkType]
     const lang =
         getStore(StorageLangNameEnum.LOCAL_LANGUAGE_NAME) || useLanguages()
     source && window.open(source + `?lang=${lang}`, '_blank')
