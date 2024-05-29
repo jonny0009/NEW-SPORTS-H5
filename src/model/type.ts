@@ -23,10 +23,10 @@ export const VideoMaskType = {
 
 
 export const BottonLinkSource: { [key in BottonLinkType]: string } = {
-    // [BottonLinkType.Home]: 'https://cn2.manbetx-sports.aisports.io/home',
-    // [BottonLinkType.Casino]: 'https://cn2.manbetx-sports.aisports.io/casino'
-    [BottonLinkType.Home]: 'https://play.manbet-x.com/home',
-    [BottonLinkType.Casino]: 'https://play.manbet-x.com/home'
+    [BottonLinkType.Home]: 'https://cn2.manbetx-sports.aisports.io/home',
+    [BottonLinkType.Casino]: 'https://cn2.manbetx-sports.aisports.io/casino'
+    // [BottonLinkType.Home]: 'https://play.manbet-x.com/home',
+    // [BottonLinkType.Casino]: 'https://play.manbet-x.com/home'
 }
 
 export const ContactInformationOptions = [
