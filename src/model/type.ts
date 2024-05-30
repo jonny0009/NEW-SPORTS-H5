@@ -30,8 +30,8 @@ export const BottonLinkSource: { [key in BottonLinkType]: string } = {
 }
 
 export const BottonLinkSourcePc: { [key in BottonLinkType]: string } = {
-    [BottonLinkType.Home]: 'http://cn2.new-sports-pc.aisports.io/home',
-    [BottonLinkType.Casino]: 'http://cn2.new-sports-pc.aisports.io/casino'
+    [BottonLinkType.Home]: 'https://cn2-mx-newpc.yuansport1.com/sports/hot',
+    [BottonLinkType.Casino]: 'https://cn2-mx-newpc.yuansport1.com/casino'
     // [BottonLinkType.Home]: 'https://play.manbet-x.com/home',
     // [BottonLinkType.Casino]: 'https://play.manbet-x.com/home'
 }
