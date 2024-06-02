@@ -14,7 +14,7 @@ import {
     MultipleLangFileNameEunm,
     StorageLangNameEnum
 } from '@/model'
-import { debounce, throttle, isNil } from 'lodash'
+import { debounce, throttle, isNil, uniqueId } from 'lodash'
 import { Mousewheel, Autoplay } from 'swiper/modules'
 import { useAudioStatus, useSwiperStore } from '@/store'
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -32,6 +32,7 @@ const swiperIndex = ref('') //用于执行动画特效
 const myRowSwiper = ref<any>(null)
 const myColumnSwiper = ref<any>(null)
 const navRef = ref<any>(null)
+const navKey = ref<any>(uniqueId())
 const navHeadHeight = ref(0)
 const langOptions = ref(LanguageOptions)
 const eventBus = inject('eventBus')
@@ -131,7 +132,7 @@ const onColumnSwiper = (swiper: any) => {
     myColumnSwiper.value = swiper
 }
 const onSelectLang = (value: string) => {
-    location.reload()
+    navKey.value = uniqueId()
     locale.value = value
     LangSelected.value = value
     proxy.$storage.setStore(StorageLangNameEnum.LOCAL_LANGUAGE_NAME, value)
@@ -189,38 +190,48 @@ const handleMovue = (event) => {
     }
 }
 
-const onTouchMove = debounce((event) => {
-    const { deltaY } = event
-    const _index = myRowSwiper.value.activeIndex
-    if ((_index === 5 && deltaY > 0) || (_index === 0 && deltaY < 0)) {
-        return
-    }
-    const tab = swiperIndexToTabs[_index]
-    if (
-        [
-            MultipleLangFileNameEunm.ProductAdvantages,
-            MultipleLangFileNameEunm.AboutUs,
-            MultipleLangFileNameEunm.Sponsorship
-        ].includes(tab)
-    ) {
-        // dealyFn(event)
-        event.preventDefault()
-        handleMovue(event)
-    } else {
+const onTouchMove = debounce(
+    (event) => {
+        const { deltaY } = event
         const _index = myRowSwiper.value.activeIndex
-
-        const nextIndex = _index + (deltaY < 0 ? -1 : 1)
-        const nextSwiper = swiperIndexToTabs[nextIndex]
-        store.onChangeSwiper(nextSwiper)
-        deltaY < 0 && store.onChangeAnimate(true)
-        tabSelected.value = nextSwiper
-        myRowSwiper.value.slideTo(nextIndex, 100)
+        if ((_index === 5 && deltaY > 0) || (_index === 0 && deltaY < 0)) {
+            return
+        }
+        const tab = swiperIndexToTabs[_index]
+        if (
+            [
+                MultipleLangFileNameEunm.ProductAdvantages,
+                MultipleLangFileNameEunm.AboutUs,
+                MultipleLangFileNameEunm.Sponsorship
+            ].includes(tab)
+        ) {
+            // dealyFn(event)
+            event.preventDefault()
+            handleMovue(event)
+        } else {
+            const _index = myRowSwiper.value.activeIndex
+            console.log('upupup')
+            const nextIndex = _index + (deltaY < 0 ? -1 : 1)
+            const nextSwiper = swiperIndexToTabs[nextIndex]
+            store.onChangeSwiper(nextSwiper)
+            deltaY < 0 && store.onChangeAnimate(true)
+            tabSelected.value = nextSwiper
+            myRowSwiper.value.slideTo(nextIndex, 50)
+        }
+    },
+    250,
+    // 200,
+    {
+        leading: true,
+        maxWait: 1000,
+        // maxWait: 900,
+        trailing: false
     }
-}, 50)
+)
 </script>
 <template>
     <div @wheel.prevent="onTouchMove">
-        <div class="nav-wrap" ref="navRef">
+        <div class="nav-wrap" ref="navRef" :key="navKey">
             <img
                 @click="onChangePage(tabsOptions?.logo?.key)"
                 src="@/assets/image/pc_logo.png"
