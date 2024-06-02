@@ -1,5 +1,4 @@
 <script  lang="ts" setup>
-
 import videoURL from '@/assets/video/sp_part_02.mp4'
 import videoBGURL from '@/assets/video/lg_part_bg_01.jpg'
 import { defineProps } from 'vue'
@@ -127,7 +126,7 @@ const onChangeTab = (index: number) => {
 }
 .lg-nd-container-center {
     flex: 1;
-    padding: 20px 378px 30px 378px;
+    padding: 20px 278px 30px 278px;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
