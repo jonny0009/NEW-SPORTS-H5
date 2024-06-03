@@ -1,18 +1,31 @@
-import { MultipleLangEunm, VideoMaskEnum, BottonLinkType ,ContactInformation} from './enum'
+import { MultipleLangEunm, VideoMaskEnum, BottonLinkType, ContactInformation } from './enum'
+import cnIcon from '@/assets/image/lang_icon_cn.png'
+import usIcon from '@/assets/image/lang_icon_us.png'
+import twIcon from '@/assets/image/lang_icon_tw.png'
+import vnIcon from '@/assets/image/lang_icon_vn.png'
+import jpIcon from '@/assets/image/lang_icon_jp.png'
+import koIcon from '@/assets/image/lang_icon_ko.png'
+import thIcon from '@/assets/image/lang_icon_th.png'
+import idIcon from '@/assets/image/lang_icon_id.png'
+import trIcon from '@/assets/image/lang_icon_tr.png'
+import ptIcon from '@/assets/image/lang_icon_pt.png'
+import esIcon from '@/assets/image/lang_icon_es.png'
+import hiIcon from '@/assets/image/lang_icon_hi.png'
+
 
 export const LanguageOptions = [
-    { value: MultipleLangEunm.CN, text: '简体中文', icon: null, color: '' },
-    { value: MultipleLangEunm.US, text: 'English', icon: null, color: '' },
-    { value: MultipleLangEunm.TW, text: '繁體', icon: null, color: '' },
-    { value: MultipleLangEunm.VN, text: 'Tiếng Việt', icon: null, color: '' },
-    { value: MultipleLangEunm.JP, text: '日本語', icon: null, color: '' },
-    { value: MultipleLangEunm.KO, text: '한국인', icon: null, color: '' },
-    { value: MultipleLangEunm.TH, text: 'ไทย', icon: null, color: '' },
-    { value: MultipleLangEunm.ID, text: 'bahasa indonesia', icon: null, color: '' },
-    { value: MultipleLangEunm.TR, text: 'Türkçe', icon: null, color: '' },
-    { value: MultipleLangEunm.PT, text: 'Português', icon: null, color: '' },
-    { value: MultipleLangEunm.ES, text: 'español', icon: null, color: '' },
-    { value: MultipleLangEunm.HI, text: 'हिंदी', icon: null, color: '' },
+    { value: MultipleLangEunm.CN, text: '简体中文', icon: cnIcon, color: '' },
+    { value: MultipleLangEunm.US, text: 'English', icon: usIcon, color: '' },
+    { value: MultipleLangEunm.TW, text: '繁體', icon: twIcon, color: '' },
+    { value: MultipleLangEunm.VN, text: 'Tiếng Việt', icon: vnIcon, color: '' },
+    { value: MultipleLangEunm.JP, text: '日本語', icon: jpIcon, color: '' },
+    { value: MultipleLangEunm.KO, text: '한국인', icon: koIcon, color: '' },
+    { value: MultipleLangEunm.TH, text: 'ไทย', icon: thIcon, color: '' },
+    { value: MultipleLangEunm.ID, text: 'bahasa indonesia', icon: idIcon, color: '' },
+    { value: MultipleLangEunm.TR, text: 'Türkçe', icon: trIcon, color: '' },
+    { value: MultipleLangEunm.PT, text: 'Português', icon: ptIcon, color: '' },
+    { value: MultipleLangEunm.ES, text: 'español', icon: esIcon, color: '' },
+    { value: MultipleLangEunm.HI, text: 'हिंदी', icon: hiIcon, color: '' },
 ]
 
 export const VideoMaskType = {
