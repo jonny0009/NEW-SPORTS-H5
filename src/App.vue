@@ -52,6 +52,14 @@ html.bobd {
 .el-loading-mask {
     background-color: rgba(0, 0, 0, 0.3) !important;
 }
+.el-dropdown-menu {
+    background: none;
+}
+.el-dropdown__popper.el-popper {
+    background: rgba(225, 225, 225, 0.9) !important;
+    border: 0px;
+    box-shadow: node;
+}
 </style>
 
 <!-- 

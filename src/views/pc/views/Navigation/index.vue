@@ -270,8 +270,14 @@ const onTouchMove = debounce(
                                         : '#000'
                             }"
                         >
-                            <img :src="item.icon" alt="" class="lang_icon" />
-                            <span>{{ item.text }}</span>
+                            <div class="lang_wrap">
+                                <img
+                                    :src="item.icon"
+                                    class="lang_icon"
+                                    alt=""
+                                />
+                                <div class="lang_text">{{ item.text }}</div>
+                            </div>
                         </el-dropdown-item>
                     </el-dropdown-menu>
                 </template>
@@ -408,10 +414,19 @@ const onTouchMove = debounce(
 .swiper-slide-item {
     height: 100%;
 }
+.lang_wrap {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
 .lang_icon {
     width: 15px;
     height: auto;
     margin-right: 5px;
+}
+.lang_text {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 :deep(.el-dropdown-menu__item):hover {

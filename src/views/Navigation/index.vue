@@ -36,15 +36,16 @@ import {
     inject
 } from 'vue'
 import $ from 'jquery'
-import { getShowVideo } from "@/utils/system";
+import { getShowVideo } from '@/utils/system'
 import { throttle, get } from 'lodash'
 import { useAudioStatus } from '@/store'
+import { text } from 'stream/consumers'
 
 export default defineComponent({
     name: 'Navigation',
     setup() {
         const { locale } = useI18n()
-        const showVidoe = ref(false);
+        const showVidoe = ref(false)
         const { proxy } = getCurrentInstance() as any
 
         const audio = useAudioStatus()
@@ -59,6 +60,12 @@ export default defineComponent({
         const state = reactive<any>({ langOptions: [] })
 
         const tabsOptions = computed(() => useTabsOptions())
+        const pickerOptions = computed(() => {
+            return LanguageOptions.map((item) => ({
+                text: `<img class="lang-icon" src='${item.icon}'><span class="lang-text">${item.text}</span>`,
+                value: item.value
+            }))
+        })
         const cancelText = computed(() =>
             i18n.global.t(MultipleLangFileNameEunm.CancelText)
         )
@@ -114,7 +121,7 @@ export default defineComponent({
             MultipleLangFileNameEunm,
 
             selectLang,
-            LanguageOptions,
+            pickerOptions,
 
             cancelText,
             confirmText
@@ -127,8 +134,8 @@ export default defineComponent({
         //     this.onScrollTab();
         //   }, 50)
         // );
-        const res = getShowVideo();
-        this.showVidoe = res.show;
+        const res = getShowVideo()
+        this.showVidoe = res.show
         window.addEventListener(
             'scroll',
             throttle((event) => {
@@ -289,8 +296,9 @@ export default defineComponent({
 
         <van-popup v-model:show="showPicker" round position="bottom">
             <van-picker
+                :allow-html="true"
                 v-model="selectLang"
-                :columns="LanguageOptions"
+                :columns="pickerOptions"
                 @cancel="showPicker = false"
                 @confirm="onSelectLang"
                 :cancel-button-text="cancelText"
@@ -381,6 +389,23 @@ export default defineComponent({
     width: 100vw;
     height: 30px;
     background-color: #000;
+}
+
+:deep(.van-picker__columns) {
+    background: rgba(225, 225, 225, 0.5);
+}
+:deep(.van-ellipsis) {
+    display: flex;
+    align-items: center;
+    .lang-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+    .lang-text {
+        font-size: 24px;
+        font-weight: 500;
+    }
 }
 
 :deep(.van-tabs__wrap) {
