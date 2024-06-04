@@ -34,6 +34,7 @@ const myColumnSwiper = ref<any>(null)
 const navRef = ref<any>(null)
 const navKey = ref<any>(uniqueId())
 const navHeadHeight = ref(0)
+const isShowVoiceIcon = ref(true)
 const langOptions = ref(LanguageOptions)
 const eventBus = inject('eventBus')
 
@@ -244,7 +245,11 @@ const onTouchMove = debounce(
                 :selected="tabSelected"
                 @update:selected="onChangePage"
             ></tabs-view>
-            <el-dropdown trigger="click" @command="onSelectLang">
+            <el-dropdown
+                trigger="click"
+                @command="onSelectLang"
+                @visible-change="(state:boolean) => (isShowVoiceIcon = !state)"
+            >
                 <div class="nav-lang-wrap">
                     <img
                         src="@/assets/image/nav_lang.png"
@@ -283,7 +288,11 @@ const onTouchMove = debounce(
                 </template>
             </el-dropdown>
         </div>
-        <div @click="handleAudioChange" class="audio-logo-box">
+        <div
+            @click="handleAudioChange"
+            class="audio-logo-box"
+            v-if="isShowVoiceIcon"
+        >
             <img
                 v-if="audio.status"
                 src="@/assets/image/audio_open_icon.png"
