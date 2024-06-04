@@ -136,6 +136,7 @@ const onSelectLang = (value: string) => {
     navKey.value = uniqueId()
     locale.value = value
     LangSelected.value = value
+    isShowVoiceIcon.value = true
     proxy.$storage.setStore(StorageLangNameEnum.LOCAL_LANGUAGE_NAME, value)
 }
 
