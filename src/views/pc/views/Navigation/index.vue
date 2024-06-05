@@ -423,6 +423,7 @@ const onTouchMove = debounce(
 
 .swiper-slide-item {
     height: 100%;
+    overflow: hidden;
 }
 .lang_wrap {
     display: flex;
