@@ -20,3 +20,8 @@ export const onSubmitUserInfo = async (req: UserProfile): Promise<void> => {
         ...req
     });
 };
+
+// 获取是否展示真人
+export const getLuckyCasino = async (): Promise<void> => {
+  return axios.get(`/ai/merchant/moduleConfig?groupId=3&modeType=4&lucky7_casino&enable=1`);
+};

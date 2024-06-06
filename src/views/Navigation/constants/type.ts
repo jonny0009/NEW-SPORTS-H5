@@ -13,7 +13,7 @@ import { MultipleLangFileNameEunm } from '@/model'
  * 1.必须是一个函数返回  否则computed失效
  * 2.数组必须封装在函数内部 否则i18n无法检查更新
 */
-export const useTabsOptions = () => { 
+export const useTabsOptions = (luckyCasino = false) => { 
     return [
         {
           component: PartSTView,
@@ -30,11 +30,11 @@ export const useTabsOptions = () => {
             key:MultipleLangFileNameEunm.Sports,
             fileName: i18n.global.t(MultipleLangFileNameEunm.Sports)
         },
-        {
+        ...(luckyCasino ? [{
             component: LiveGamePartNDView,
             key:MultipleLangFileNameEunm.LiveGame,
             fileName: i18n.global.t(MultipleLangFileNameEunm.LiveGame)
-        },
+        }] : []),
         {
             component: AboutUs,
             key:MultipleLangFileNameEunm.AboutUs,

@@ -5,8 +5,11 @@ import relIcon from '../public/rel.svg'
 import { ref, onMounted } from 'vue'
 import NavAppView from '@/views/Navigation/index.vue'
 import NavPcView from '@/views/pc/index.vue'
+import { getLuckyCasino } from './api'
+import { useSwiperStore } from './store'
 
 const isMobile = ref(useMobile())
+const store = useSwiperStore()
 
 const initFavicon = () => {
     // 查找现有的 link 元素或创建一个新的
@@ -20,8 +23,20 @@ const initFavicon = () => {
     document.getElementsByTagName('head')[0].appendChild(link)
 }
 
+const handleLuckyCasino = async () => {
+  const res = await getLuckyCasino()
+  const luckyCasino = (res?.data?.moduleList || [])?.some?.(item => {
+    if (item?.code === 'lucky7_casino' && item?.enable === 1) {
+      return true
+    }
+    return false
+  })
+  store.onChangeLuckyCasino(luckyCasino)
+}
+
 onMounted(() => {
     initFavicon()
+    handleLuckyCasino()
 })
 </script>
 

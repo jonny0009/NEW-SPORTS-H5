@@ -48,7 +48,7 @@ watch(tabSelected, (newValue) => {
 })
 
 const tabsOptions = computed(() => {
-    const { tabList, logo } = useTabsOptions()
+    const { tabList, logo } = useTabsOptions(store.luckyCasino)
     const list = tabList.map((item) => ({
         ...item,
         id: item.key,
@@ -59,7 +59,7 @@ const tabsOptions = computed(() => {
 })
 
 const components = computed(() => {
-    return useTabsOptions()?.list
+    return useTabsOptions(store.luckyCasino)?.list
 })
 //切换菜单
 const onChangePage = (value: string) => {

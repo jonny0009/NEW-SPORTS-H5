@@ -38,7 +38,7 @@ import {
 import $ from 'jquery'
 import { getShowVideo } from '@/utils/system'
 import { throttle, get } from 'lodash'
-import { useAudioStatus } from '@/store'
+import { useAudioStatus, useSwiperStore } from '@/store'
 import { text } from 'stream/consumers'
 
 export default defineComponent({
@@ -54,12 +54,13 @@ export default defineComponent({
         const sections = ref()
         const noScroll = ref(false)
         const showPicker = ref(false)
+        const store = useSwiperStore()
 
         const eventBus = inject('eventBus')
 
         const state = reactive<any>({ langOptions: [] })
 
-        const tabsOptions = computed(() => useTabsOptions())
+        const tabsOptions = computed(() => useTabsOptions(store.luckyCasino))
         const pickerOptions = computed(() => {
             return LanguageOptions.map((item) => ({
                 text: `<img class="lang-icon" src='${item.icon}'><span class="lang-text">${item.text}</span>`,

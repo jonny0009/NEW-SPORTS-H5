@@ -11,6 +11,7 @@ export const useSwiperStore = defineStore(Store.SwiperActiveIndex, {
             dealy: 0,
             noAnimate: false,
             index:MultipleLangFileNameEunm.Logo,
+            luckyCasino: false
         }
     },
     actions: {
@@ -26,6 +27,9 @@ export const useSwiperStore = defineStore(Store.SwiperActiveIndex, {
         },
         onChangeAnimate(value: boolean) {
           this.noAnimate = value
+        },
+        onChangeLuckyCasino(value: boolean) {
+          this.luckyCasino = value
         }
     }
 })

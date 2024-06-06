@@ -14,7 +14,7 @@ import { MultipleLangFileNameEunm, SwiperActiveIndex } from '@/model'
  * 2.数组必须封装在函数内部 否则i18n无法检查更新
 */
 
-export const useTabsOptions = () => {
+export const useTabsOptions = (luckyCasino = false) => {
     const tabList = [{
         key: MultipleLangFileNameEunm.ProductAdvantages,
         index: SwiperActiveIndex.PlatformAdvantages,
@@ -24,11 +24,11 @@ export const useTabsOptions = () => {
         index: SwiperActiveIndex.LiveGamePartSt,
         fileName: i18n.global.t(MultipleLangFileNameEunm.Sports)
     },
-    {
+    ...(luckyCasino ? [{
         key: MultipleLangFileNameEunm.LiveGame,
         index: SwiperActiveIndex.LiveGamePartSt,
         fileName: i18n.global.t(MultipleLangFileNameEunm.LiveGame),
-    },
+    }] : []),
     {
         index: SwiperActiveIndex.AboutUs,
         key: MultipleLangFileNameEunm.AboutUs,
@@ -62,9 +62,11 @@ export const useTabsOptions = () => {
             index: SwiperActiveIndex.LiveGamePartSt,
             fileName: i18n.global.t(MultipleLangFileNameEunm.LiveGame),
             children: [
-                { component: LiveGamePartStView, index: SwiperActiveIndex.LiveGamePartSt },
+            ...(luckyCasino ? [
+                { component: LiveGamePartStView, index: SwiperActiveIndex.LiveGamePartSt }] : []),
                 { component: LiveGamePartNdView, index: SwiperActiveIndex.LiveGamePartNd }
-            ]
+              ]
+            
         },
         {
             component: AboutUs,

@@ -8,6 +8,7 @@
                 @click="() => onChangeTab(0)"
             ></botton-confirm-pc>
             <botton-confirm-pc
+                v-if="store.luckyCasino"
                 :size="BottonSize.Middle"
                 :selected="props.active === BottonType.Bacccarat"
                 :text="MultipleLangFileNameEunm.LiveGameManBetXBotton"
@@ -20,7 +21,10 @@
 <script lang="ts" setup>
 import { BottonType } from '../constants'
 import { MultipleLangFileNameEunm, BottonSize } from '@/model'
+import { useSwiperStore } from '@/store'
 const props = defineProps(['active'])
+const store = useSwiperStore()
+
 const emit = defineEmits(['update:change'])
 const onChangeTab = (index: number) => {
     emit('update:change', index)
