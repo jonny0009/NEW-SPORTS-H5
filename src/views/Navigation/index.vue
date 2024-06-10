@@ -51,7 +51,6 @@ export default defineComponent({
         const audio = useAudioStatus()
         const tabSelected = ref()
         const tabScrollTop = ref()
-        const sections = ref()
         const noScroll = ref(false)
         const showPicker = ref(false)
         const store = useSwiperStore()
@@ -116,7 +115,6 @@ export default defineComponent({
             TITLE_INACTIVE_COLOR,
 
             onSelectLang,
-            sections,
             noScroll,
             eventBus,
             MultipleLangFileNameEunm,
@@ -145,7 +143,6 @@ export default defineComponent({
             }, 50),
             { passive: false }
         )
-        this.sections = $('.section')
         this.tabSelected = this.tabsOptions[0].key
     },
     methods: {
@@ -155,7 +152,7 @@ export default defineComponent({
             const height = this.tabScrollTop + 10
             const windowHeight = $(window).height() || 0
             let tab = this.tabsOptions[0].key
-            this.sections.each((index, item) => {
+            $('.section').each((index, item) => {
                 const nowTab = $(item).attr('id-component')
                 if (
                     height >=
